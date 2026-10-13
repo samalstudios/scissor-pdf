@@ -14,6 +14,15 @@ struct Jpeg {
     orientation: u8,
 }
 
+/// Colour space matching the number of components a JPEG actually contains.
+pub fn jpeg_color_space(data: &[u8]) -> &'static str {
+    match parse_jpeg(data).map(|j| j.components) {
+        Some(1) => "DeviceGray",
+        Some(4) => "DeviceCMYK",
+        _ => "DeviceRGB",
+    }
+}
+
 fn parse_jpeg(data: &[u8]) -> Option<Jpeg> {
     if data.get(0..2)? != [0xFF, 0xD8] {
         return None;

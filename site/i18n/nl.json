@@ -34,7 +34,8 @@
   "privacy": "Privacy",
   "note": "Scissor PDF verwerkt elk bestand in je browser met een Rust-engine die naar WebAssembly is gecompileerd. Geen uploads, geen accounts, geen tracking.",
   "updated": "Bijgewerkt",
-  "languages": "Talen"
+  "languages": "Talen",
+  "inspect": "Bekijken & controleren"
  },
  "common": {
   "assureLocal": "Bestanden blijven op je apparaat",
@@ -888,6 +889,1416 @@
      "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
     }
    ]
+  },
+  "png-to-pdf": {
+   "name": "PNG naar PDF",
+   "short": "Zet PNG-afbeeldingen en screenshots om in één PDF, één afbeelding per pagina.",
+   "action": "Omzetten naar PDF",
+   "title": "PNG naar PDF omzetten: gratis, zonder upload",
+   "description": "Zet PNG-afbeeldingen en screenshots om naar PDF in je browser. Herschik, kies paginaformaat en marge. Verliesvrij, geen upload, geen watermerk.",
+   "h1": "PNG naar PDF omzetten",
+   "howTo": "Zo zet je PNG om naar PDF",
+   "lead": "Verzamel screenshots, diagrammen of gescande pagina's in één PDF die je kunt versturen of afdrukken. Elke PNG wordt één pagina, opgeslagen zonder enig kwaliteitsverlies.",
+   "steps": [
+    "Kies of sleep je PNG-afbeeldingen. Screenshots werken ook.",
+    "Sleep de afbeeldingen in de gewenste volgorde en kies daarna een paginaformaat en marge.",
+    "Klik op Omzetten naar PDF en download het bestand."
+   ],
+   "sections": [
+    {
+     "h": "Verliesvrij, met transparantie",
+     "p": "PNG-afbeeldingen worden zonder hercompressie in de PDF opgeslagen, dus tekst in screenshots blijft scherp en elke pixel is gelijk aan het origineel. Transparante delen blijven transparant in plaats van zwart of grijs te worden."
+    },
+    {
+     "h": "Paginaformaat en marges",
+     "p": "Passend bij afbeelding maakt elke pagina precies zo groot als de afbeelding. A4 en US Letter zetten de afbeelding op een standaardpagina, passend geschaald en gecentreerd: ideaal om af te drukken. Marge voegt geen, een kleine of een grote rand rond de afbeelding toe."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik PNG naar PDF omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik meerdere PNG's op één pagina zetten?",
+     "a": "Nee. Elke afbeelding krijgt een eigen pagina. Wil je daarna meerdere pagina's op één vel, gebruik dan Pagina's per vel."
+    },
+    {
+     "q": "Gaan mijn screenshots in kwaliteit achteruit?",
+     "a": "Nee. PNG-gegevens worden verliesvrij opgeslagen, dus de PDF toont precies de pixels van je afbeeldingen."
+    },
+    {
+     "q": "Ik heb JPG-foto's, geen PNG. Wat gebruik ik dan?",
+     "a": "Gebruik JPG naar PDF. Daarmee behouden je foto's hun oorspronkelijke JPEG-kwaliteit."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "webp-to-pdf": {
+   "name": "WebP naar PDF",
+   "short": "Zet WebP-afbeeldingen van het web om in een PDF, één afbeelding per pagina.",
+   "action": "Omzetten naar PDF",
+   "title": "WebP naar PDF omzetten: gratis, zonder upload",
+   "description": "Zet WebP-afbeeldingen om naar PDF in je browser. Herschik, kies paginaformaat en marge en download. Bestanden worden nooit geüpload. Gratis, geen watermerk.",
+   "h1": "WebP naar PDF omzetten",
+   "howTo": "Zo zet je WebP om naar PDF",
+   "lead": "Veel websites slaan afbeeldingen op als WebP, een formaat dat sommige apps en printers nog altijd niet openen. Zet ze in een PDF die overal werkt, gewoon op je eigen apparaat.",
+   "steps": [
+    "Kies of sleep je WebP-afbeeldingen.",
+    "Sleep ze in de juiste volgorde en kies daarna een paginaformaat en marge.",
+    "Klik op Omzetten naar PDF en download het bestand."
+   ],
+   "sections": [
+    {
+     "h": "Waarom de PDF groter kan zijn",
+     "p": "Je browser decodeert elke WebP-afbeelding en de pixels worden verliesvrij in de PDF opgeslagen. WebP is een zeer compact formaat, dus de PDF is vaak groter dan de originele bestanden. Is de grootte belangrijk, haal het resultaat dan door PDF comprimeren."
+    },
+    {
+     "h": "Paginaformaat en marges",
+     "p": "Passend bij afbeelding maakt elke pagina precies zo groot als de afbeelding. A4 en US Letter zetten de afbeelding op een standaardpagina, passend geschaald en gecentreerd: ideaal om af te drukken. Marge voegt geen, een kleine of een grote rand rond de afbeelding toe."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik WebP naar PDF omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom is mijn PDF groter dan mijn WebP-bestanden?",
+     "a": "De afbeeldingen worden verliesvrij opgeslagen, wat meer ruimte inneemt dan WebP-compressie. Met PDF comprimeren maak je het bestand kleiner."
+    },
+    {
+     "q": "Krijgt elke afbeelding een eigen pagina?",
+     "a": "Ja. Eén afbeelding per pagina, in de volgorde waarin je ze zet."
+    },
+    {
+     "q": "Welk paginaformaat kies ik?",
+     "a": "Passend bij afbeelding als de PDF bedoeld is om op een scherm te bekijken. A4 of US Letter als je hem wilt afdrukken."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-to-png": {
+   "name": "PDF naar PNG",
+   "short": "Sla PDF-pagina's op als scherpe, verliesvrije PNG-afbeeldingen.",
+   "action": "Omzetten naar PNG",
+   "title": "PDF naar PNG omzetten: gratis, zonder upload",
+   "description": "Zet PDF-pagina's om naar PNG-afbeeldingen in je browser, op 108, 144 of 216 DPI. Alle pagina's of een paar. Verliesvrij en privé: er wordt niets geüpload.",
+   "h1": "PDF naar PNG omzetten",
+   "howTo": "Zo zet je PDF om naar PNG",
+   "lead": "Maak van pagina's afbeeldingen voor presentaties, documentatie, websites of chats. PNG is verliesvrij, dus tekst en lijnen blijven strak, zonder wazige randen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies alle pagina's of typ de pagina's die je nodig hebt, en kies 108, 144 of 216 DPI.",
+    "Klik op Omzetten naar PNG. Eén pagina download je als PNG, meerdere als ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Wanneer PNG in plaats van JPG",
+     "p": "PNG bewaart elke pixel exact, wat goed werkt voor tekst, grafieken, diagrammen en lijntekeningen. JPG-bestanden zijn kleiner en beter geschikt voor pagina's met veel foto's. Gebruik daarvoor PDF naar JPG."
+    },
+    {
+     "h": "Een resolutie kiezen",
+     "p": "108 DPI is genoeg om op een scherm te bekijken. 144 DPI ziet er scherp uit op schermen met hoge resolutie. 216 DPI geeft de meeste details om in te zoomen of af te drukken, met grotere bestanden. Elke afbeelding heeft een witte achtergrond."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik PDF naar PNG omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik maar een paar pagina's omzetten?",
+     "a": "Ja. Typ de pagina's die je wilt, bijvoorbeeld 1, 3-5. Alleen die pagina's worden omgezet."
+    },
+    {
+     "q": "Waarom is de achtergrond wit en niet transparant?",
+     "a": "Pagina's worden op wit gerenderd, zoals ze eruitzien in een lezer en op papier. Zo blijft tekst in elke app leesbaar."
+    },
+    {
+     "q": "Hoe krijg ik alle afbeeldingen in één keer?",
+     "a": "Zet je meer dan één pagina om, dan worden ze samen gedownload in één ZIP-bestand."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-to-text": {
+   "name": "PDF naar tekst",
+   "short": "Haal de tekst uit een PDF in een eenvoudig .txt-bestand.",
+   "action": "Tekst extraheren",
+   "title": "PDF naar tekst omzetten: gratis, zonder upload",
+   "description": "Haal tekst uit een PDF in een UTF-8 .txt-bestand, in je browser. Bekijk eerst een voorbeeld, met optionele paginamarkeringen. Er wordt niets geüpload.",
+   "h1": "PDF naar tekst omzetten",
+   "howTo": "Zo zet je een PDF om naar tekst",
+   "lead": "Haal de woorden uit een PDF om ze te citeren, te doorzoeken of in een andere app te plakken. Je ziet een voorbeeld voordat je downloadt.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Zet paginamarkeringen aan als je een regel tussen de pagina's wilt, en controleer het voorbeeld.",
+    "Klik op Tekst extraheren om een .txt-bestand te downloaden."
+   ],
+   "sections": [
+    {
+     "h": "Wat je krijgt",
+     "p": "De tekstlaag van elke pagina, in een UTF-8 .txt-bestand dat in elke editor opent en elke taal ondersteunt. Alleen tekst: opmaak, tabellen en kolommen worden niet exact overgenomen, dus sommige regels kunnen in elkaar overlopen of in een andere volgorde staan."
+    },
+    {
+     "h": "Gescande PDF's",
+     "p": "Een gescand document bestaat meestal alleen uit afbeeldingen van pagina's, zonder tekst erin. Scissor PDF doet geen OCR (tekstherkenning), dus het resultaat voor zo'n bestand is leeg. Kun je in je PDF-lezer tekst selecteren, dan kan die hier worden geëxtraheerd."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF naar tekst omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom is mijn tekstbestand leeg?",
+     "a": "De PDF bevat waarschijnlijk alleen afbeeldingen, bijvoorbeeld een scan. Er is geen tekstlaag om te extraheren, en Scissor PDF doet geen OCR."
+    },
+    {
+     "q": "Blijven tabellen behouden?",
+     "a": "Niet precies. De woorden worden geëxtraheerd, maar rijen, kolommen en witruimte staan misschien niet zo netjes onder elkaar als op de pagina."
+    },
+    {
+     "q": "Wat zijn paginamarkeringen?",
+     "a": "Een optionele regel tussen de pagina's, zodat je in het tekstbestand ziet waar elke pagina begint."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "extract-images-from-pdf": {
+   "name": "Afbeeldingen uit PDF halen",
+   "short": "Sla de foto's en afbeeldingen in een PDF op als losse bestanden.",
+   "action": "Afbeeldingen extraheren",
+   "title": "Afbeeldingen uit PDF halen, zonder upload",
+   "description": "Sla de afbeeldingen in een PDF op in een ZIP, in je browser. JPEG's behouden hun originele kwaliteit, andere worden als PNG opgeslagen. Er wordt niets geüpload.",
+   "h1": "Afbeeldingen uit een PDF halen",
+   "howTo": "Zo haal je afbeeldingen uit een PDF",
+   "lead": "Haal de originele foto's uit een brochure, rapport of catalogus in plaats van screenshots te maken. Alle afbeeldingen komen samen in één ZIP.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op Afbeeldingen extraheren.",
+    "Download de ZIP met alle afbeeldingen die in het bestand zijn gevonden."
+   ],
+   "sections": [
+    {
+     "h": "Originele kwaliteit",
+     "p": "JPEG-afbeeldingen worden byte voor byte opgeslagen, precies zoals ze in de PDF staan, zonder hercompressie. Andere afbeeldingen worden opgeslagen als PNG, dat verliesvrij is. Je krijgt de afbeelding in de resolutie waarin ze is ingesloten, niet in het formaat dat op de pagina wordt getoond."
+    },
+    {
+     "h": "Wat niet wordt geëxtraheerd",
+     "p": "Heel kleine afbeeldingen en transparantiemaskers worden overgeslagen, zodat de ZIP niet volloopt met piepkleine fragmenten. Logo's, grafieken en illustraties die als vectorafbeelding zijn getekend, zijn geen afbeeldingen en worden niet geëxtraheerd. Wil je die vastleggen, zet de pagina dan om met PDF naar PNG."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik afbeeldingen uit een PDF haal?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden de afbeeldingen opnieuw gecomprimeerd?",
+     "a": "Nee. JPEG-afbeeldingen worden byte voor byte gekopieerd. Andere afbeeldingstypen worden opgeslagen als verliesvrije PNG."
+    },
+    {
+     "q": "Waarom ontbreekt een grafiek of logo?",
+     "a": "Die is waarschijnlijk als vectorafbeelding getekend in plaats van als afbeelding opgeslagen. Gebruik PDF naar PNG om de hele pagina als afbeelding op te slaan."
+    },
+    {
+     "q": "Waarom ontbreken sommige piepkleine afbeeldingen?",
+     "a": "Heel kleine afbeeldingen en transparantiemaskers worden bewust overgeslagen. Meestal zijn het decoratieve fragmenten."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "grayscale-pdf": {
+   "name": "PDF in grijstinten",
+   "short": "Zet een kleuren-PDF om naar zwart-wit om inkt te besparen.",
+   "action": "Omzetten naar grijstinten",
+   "title": "PDF naar zwart-wit (grijstinten), geen upload",
+   "description": "Zet een PDF om naar grijstinten (zwart-wit) in je browser en bespaar kleureninkt. Tekst blijft scherp en doorzoekbaar. Er wordt niets geüpload.",
+   "h1": "Een PDF omzetten naar grijstinten",
+   "howTo": "Zo zet je een PDF om naar grijstinten",
+   "lead": "Druk kleurrijke presentaties, rapporten of tickets af zonder kleureninkt, of voldoe aan een verzoek om een zwart-witkopie. Je bestand blijft op je apparaat.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op Omzetten naar grijstinten.",
+    "Download de zwart-wit-PDF."
+   ],
+   "sections": [
+    {
+     "h": "Tekst blijft tekst",
+     "p": "Tekst en vectorafbeeldingen worden omgezet naar grijstinten, niet naar plaatjes. Ze blijven scherp bij elk zoomniveau, en je kunt de tekst nog steeds selecteren en doorzoeken. Foto's worden omgezet naar JPEG-afbeeldingen in grijstinten."
+    },
+    {
+     "h": "Beperkingen",
+     "p": "Kleurverlopen, patronen en sommige speciale kleurruimtes, zoals steunkleuren in professionele drukbestanden, kunnen hun kleur behouden. Bekijk het resultaat voordat je een grote printopdracht start."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF naar grijstinten omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik de tekst nog doorzoeken en kopiëren?",
+     "a": "Ja. Tekst wordt opnieuw ingekleurd, niet gerasterd, dus hij blijft selecteerbaar en doorzoekbaar."
+    },
+    {
+     "q": "Waarom is een deel van mijn pagina nog in kleur?",
+     "a": "Kleurverlopen, patronen en sommige speciale kleurruimtes, zoals steunkleuren, worden mogelijk niet omgezet. De rest van de pagina wel."
+    },
+    {
+     "q": "Waarom niet gewoon in grijstinten afdrukken?",
+     "a": "Dat kan, maar een bestand in grijstinten ziet er op elke printer en elk apparaat hetzelfde uit, en sommige kantoren en portalen vragen erom."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "reverse-pdf": {
+   "name": "PDF omkeren",
+   "short": "Keer de paginavolgorde om, zodat de laatste pagina eerst komt.",
+   "action": "Pagina's omkeren",
+   "title": "PDF-pagina's omkeren: gratis, zonder upload",
+   "description": "Keer de paginavolgorde van een PDF om met één klik, in je browser. De laatste pagina wordt de eerste. Inhoud ongewijzigd, er wordt niets geüpload.",
+   "h1": "PDF-pagina's omkeren",
+   "howTo": "Zo keer je de pagina's van een PDF om",
+   "lead": "Een stapel met de bedrukte kant naar beneden of achterstevoren gescand? Draai de hele paginavolgorde in één stap om in plaats van pagina's een voor een te verslepen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op Pagina's omkeren.",
+    "Download de PDF met de pagina's in omgekeerde volgorde."
+   ],
+   "sections": [
+    {
+     "h": "Wanneer je het nodig hebt",
+     "p": "Veel documentinvoeren scannen de laatste pagina eerst, en stapels gaan vaak ondersteboven of achterstevoren in de scanner. Omkeren zet de pagina's terug in leesvolgorde. Het helpt ook als je in omgekeerde volgorde afdrukt om met de hand te sorteren."
+    },
+    {
+     "h": "Verder verandert er niets",
+     "p": "Alleen de volgorde verandert. Elke pagina behoudt haar inhoud, formaat en rotatie. Staan pagina's ook ondersteboven, draai ze dan daarna met PDF draaien."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF omkeer?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden de pagina's ook gedraaid?",
+     "a": "Nee. De rotatie blijft zoals ze is. Gebruik PDF draaien als pagina's gedraaid moeten worden."
+    },
+    {
+     "q": "Kan ik maar een paar pagina's omkeren?",
+     "a": "PDF omkeren draait het hele document om. Om losse pagina's te verplaatsen gebruik je PDF ordenen."
+    },
+    {
+     "q": "Ik heb voor- en achterkanten apart gescand. Helpt dit?",
+     "a": "Gebruik Even en oneven pagina's combineren. Dat voegt de twee scans om en om samen en kan de achterkanten voor je omkeren."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "insert-blank-pages": {
+   "name": "Lege pagina's invoegen",
+   "short": "Voeg lege pagina's toe na elke pagina of op de plekken die jij kiest.",
+   "action": "Pagina's invoegen",
+   "title": "Lege pagina's invoegen in PDF, zonder upload",
+   "description": "Voeg lege pagina's toe aan een PDF in je browser: na elke pagina voor notities, of na de pagina's die je typt. Zelfde formaat als de vorige pagina. Geen upload.",
+   "h1": "Lege pagina's invoegen in een PDF",
+   "howTo": "Zo voeg je lege pagina's in een PDF in",
+   "lead": "Maak ruimte voor handgeschreven notities, laat hoofdstukken bij dubbelzijdig afdrukken op de rechterpagina beginnen, of houd ruimte vrij voor iets wat je later toevoegt.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies Na elke pagina, of typ posities, bijvoorbeeld na pagina 3.",
+    "Klik op Pagina's invoegen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Twee manieren om in te voegen",
+     "p": "Na elke pagina maakt van een hand-out of collegeslides een document met na elke pagina een lege pagina voor notities. Met specifieke posities voeg je precies één lege pagina toe waar je die nodig hebt, bijvoorbeeld na de voorpagina."
+    },
+    {
+     "h": "Passend paginaformaat",
+     "p": "Elke lege pagina heeft hetzelfde formaat als de pagina ervoor, zodat een gemengd document consistent blijft en goed wordt afgedrukt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik lege pagina's invoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik een lege pagina op een bepaalde plek toevoegen?",
+     "a": "Ja. Typ de posities, bijvoorbeeld na pagina 3, en daar wordt een lege pagina toegevoegd."
+    },
+    {
+     "q": "Welk formaat hebben de nieuwe pagina's?",
+     "a": "Elke lege pagina krijgt het formaat van de pagina direct ervoor."
+    },
+    {
+     "q": "Hoe verwijder ik juist lege pagina's?",
+     "a": "Gebruik Lege pagina's verwijderen, dat lege pagina's voor je vindt, of Pagina's verwijderen om specifieke pagina's weg te halen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "alternate-mix-pdf": {
+   "name": "Even en oneven pagina's combineren",
+   "short": "Voeg scans van voor- en achterkanten om en om samen tot één dubbelzijdige PDF.",
+   "action": "Pagina's combineren",
+   "title": "Even en oneven PDF-pagina's combineren",
+   "description": "Voeg scans van voor- en achterkanten samen tot één dubbelzijdige PDF in je browser. Pagina's uit twee bestanden wisselen elkaar af, achterkanten omkeerbaar.",
+   "h1": "Even en oneven pagina's combineren",
+   "howTo": "Zo combineer je even en oneven pagina's",
+   "lead": "Scant je scanner maar één kant? Scan alle voorkanten, draai de stapel om, scan alle achterkanten en laat Scissor PDF elke pagina weer op de juiste plek zetten.",
+   "steps": [
+    "Voeg de PDF met de voorkanten toe als eerste bestand en die met de achterkanten als tweede.",
+    "Zet Tweede bestand omkeren aan als de achterkanten vanaf de laatste pagina zijn gescand.",
+    "Klik op Pagina's combineren en download de dubbelzijdige PDF."
+   ],
+   "sections": [
+    {
+     "h": "Hoe de pagina's worden gemengd",
+     "p": "De pagina's wisselen elkaar af: pagina 1 uit het eerste bestand, pagina 1 uit het tweede, pagina 2 uit het eerste, enzovoort. Heeft één bestand meer pagina's, dan worden de overige pagina's achteraan toegevoegd."
+    },
+    {
+     "h": "Waarom het tweede bestand omkeren",
+     "p": "Als je de stapel omdraait om de achterkanten te scannen, wordt de laatste achterkant als eerste gescand. Tweede bestand omkeren corrigeert dat, zodat elke achterkant achter de bijbehorende voorkant komt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik even en oneven pagina's combineer?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Welk bestand moet eerst?",
+     "a": "Het bestand met de voorkanten (1, 3, 5...). Het tweede bestand levert de achterkanten."
+    },
+    {
+     "q": "Wanneer gebruik ik Tweede bestand omkeren?",
+     "a": "Als de achterkanten in omgekeerde volgorde zijn uitgekomen, wat gebruikelijk is als je de hele stapel omdraait en opnieuw invoert."
+    },
+    {
+     "q": "Wat als de twee bestanden een verschillend aantal pagina's hebben?",
+     "a": "De pagina's wisselen elkaar af zolang beide bestanden pagina's hebben. Extra pagina's uit het langere bestand worden achteraan toegevoegd."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "split-pdf-pages-in-half": {
+   "name": "PDF-pagina's halveren",
+   "short": "Knip elke pagina in tweeën: links en rechts, of boven en onder.",
+   "action": "Pagina's splitsen",
+   "title": "PDF-pagina's halveren: gratis, zonder upload",
+   "description": "Knip elke PDF-pagina in twee pagina's, links en rechts of boven en onder, in je browser. Voor gescande boekspreads. Verliesvrij, er wordt niets geüpload.",
+   "h1": "PDF-pagina's halveren",
+   "howTo": "Zo halveer je PDF-pagina's",
+   "lead": "Een boek twee pagina's tegelijk gescand? Maak van elke spread twee losse pagina's, zodat het document goed leest, afdrukt en op een telefoon wordt weergegeven.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies links en rechts of boven en onder. Zet voor boeken die van rechts naar links lezen de volgorde van rechts naar links aan.",
+    "Klik op Pagina's splitsen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Boeken in elke leesrichting",
+     "p": "Standaard komt de linkerhelft eerst. Kies voor boeken in het Arabisch, Perzisch, Hebreeuws of Koerdisch, en voor manga, de volgorde van rechts naar links, zodat de rechterhelft eerst komt. Boven en onder werkt voor documenten met twee pagina's boven elkaar op één vel."
+    },
+    {
+     "h": "Verliesvrij",
+     "p": "De helften tonen de oorspronkelijke pagina-inhoud. Er wordt niets opnieuw gerenderd, dus tekst blijft scherp en doorzoekbaar en gescande afbeeldingen behouden hun kwaliteit."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik PDF-pagina's halveer?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik een boek splitsen dat van rechts naar links leest?",
+     "a": "Ja. Kies de volgorde van rechts naar links, dan wordt de rechterhelft van elke spread de eerste pagina."
+    },
+    {
+     "q": "Gaat de kwaliteit achteruit?",
+     "a": "Nee. In elke helft wordt de oorspronkelijke inhoud getoond, niet opnieuw gerenderd."
+    },
+    {
+     "q": "Dit bedoel ik niet. Ik wil een PDF in meerdere bestanden splitsen.",
+     "a": "Gebruik PDF splitsen om een document per paginabereik in losse bestanden te verdelen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "resize-pdf": {
+   "name": "PDF-pagina's verkleinen of vergroten",
+   "short": "Schaal elke pagina naar A4, US Letter, A3, A5 of Legal.",
+   "action": "PDF-formaat wijzigen",
+   "title": "PDF-formaat wijzigen naar A4 of Letter",
+   "description": "Wijzig het paginaformaat van een PDF naar A4, US Letter, A3, A5 of Legal in je browser. Verhoudingen blijven, inhoud gecentreerd. Er wordt niets geüpload.",
+   "h1": "Paginaformaat van een PDF wijzigen",
+   "howTo": "Zo wijzig je het paginaformaat van een PDF",
+   "lead": "Een document in US Letter terwijl je A4 nodig hebt, of andersom? Zet elke pagina op één standaardformaat, zodat hij zonder afgesneden randen wordt afgedrukt.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies het nieuwe formaat: A4, US Letter, A3, A5 of Legal.",
+    "Klik op PDF-formaat wijzigen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Geschaald, niet uitgerekt",
+     "p": "Elke pagina wordt met behoud van verhoudingen geschaald naar het nieuwe formaat en daarna gecentreerd. Tekst en afbeeldingen blijven scherp, omdat ze als vectoren worden geschaald en niet in plaatjes worden omgezet. Pagina's van verschillende formaten krijgen uiteindelijk allemaal hetzelfde formaat."
+    },
+    {
+     "h": "Wat niet wordt overgenomen",
+     "p": "Links, opmerkingen en formuliervelden blijven niet behouden op de geschaalde pagina's. Heb je een invulbaar formulier nodig, vul het dan eerst in, of bewaar het originele bestand."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik het formaat van een PDF wijzig?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden mijn pagina's uitgerekt?",
+     "a": "Nee. De verhoudingen blijven behouden. Heeft het nieuwe formaat een andere vorm, dan wordt de pagina gecentreerd met witruimte eromheen."
+    },
+    {
+     "q": "Wordt de tekst wazig?",
+     "a": "Nee. Tekst en afbeeldingen blijven scherp op het nieuwe formaat."
+    },
+    {
+     "q": "Waarom werken mijn links niet meer?",
+     "a": "Links, opmerkingen en formuliervelden worden niet overgenomen als pagina's van formaat veranderen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "add-margins-to-pdf": {
+   "name": "Marges toevoegen aan PDF",
+   "short": "Voeg een witte rand in millimeters toe rond elke pagina.",
+   "action": "Marges toevoegen",
+   "title": "Marges toevoegen aan PDF: gratis, geen upload",
+   "description": "Voeg een witte rand van elke gewenste breedte in millimeters toe rond elke PDF-pagina, in je browser. De inhoud behoudt zijn grootte. Voor inbinden of notities.",
+   "h1": "Marges toevoegen aan een PDF",
+   "howTo": "Zo voeg je marges toe aan een PDF",
+   "lead": "Ruimte nodig om in te binden, te perforeren of in de kantlijn te schrijven? Voeg een witte rand toe rond elke pagina zonder de inhoud te verkleinen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Typ de margebreedte in millimeters.",
+    "Klik op Marges toevoegen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "De pagina groeit, de inhoud krimpt niet",
+     "p": "De rand wordt buiten de bestaande pagina toegevoegd, dus de pagina wordt groter en tekst en afbeeldingen blijven precies even groot. Er wordt niets geschaald of opnieuw gerenderd."
+    },
+    {
+     "h": "Veelgebruikte toepassingen",
+     "p": "Een marge houdt tekst weg van de rug of de perforatiegaten, geeft ruimte voor handgeschreven opmerkingen bij het nakijken, en helpt als een document voor je printer te dicht bij de rand komt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik marges aan een PDF toevoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Wordt mijn inhoud kleiner gemaakt?",
+     "a": "Nee. De pagina wordt groter en de inhoud behoudt zijn grootte."
+    },
+    {
+     "q": "In welke eenheid is de marge?",
+     "a": "In millimeters. Rond elke pagina wordt dezelfde breedte toegevoegd."
+    },
+    {
+     "q": "Mijn pagina's moeten A4 blijven. Wat kan ik doen?",
+     "a": "Voeg de marges toe en gebruik daarna PDF-pagina's verkleinen of vergroten om de pagina's terug te schalen naar A4."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-booklet": {
+   "name": "Boekje van PDF",
+   "short": "Zet pagina's klaar om een gevouwen, geniet boekje af te drukken.",
+   "action": "Boekje maken",
+   "title": "Boekje maken van PDF: gratis, zonder upload",
+   "description": "Maak van een PDF een afdrukbaar boekje in je browser: twee pagina's per vel in de volgorde voor rugnieten. Afdrukken, vouwen, nieten. Er wordt niets geüpload.",
+   "h1": "Een boekje maken van een PDF",
+   "howTo": "Zo maak je een boekje van een PDF",
+   "lead": "Druk een programmaboekje, zine, menukaart of kleine handleiding af als gevouwen boekje op een gewone printer. Scissor PDF zoekt de paginavolgorde voor je uit.",
+   "steps": [
+    "Kies of sleep de PDF en kies het velformaat: Zelfde als PDF, A4 of US Letter.",
+    "Klik op Boekje maken en download het resultaat.",
+    "Druk dubbelzijdig af en draai om over de korte kant. Vouw de stapel in het midden en zet nietjes langs de vouw."
+   ],
+   "sections": [
+    {
+     "h": "Hoe het werkt",
+     "p": "Pagina's worden twee aan twee naast elkaar op liggende vellen gezet in de volgorde voor rugnieten, zodat ze na het vouwen 1, 2, 3 enzovoort lezen. Een boekje heeft een aantal pagina's nodig dat deelbaar is door 4, dus waar nodig worden achteraan lege pagina's toegevoegd."
+    },
+    {
+     "h": "Afdruktips",
+     "p": "Kies dubbelzijdig afdrukken en omdraaien over de korte kant. Komen de achterkanten ondersteboven uit, dan draait je printer andersom: probeer dan de lange kant. Druk eerst één exemplaar af om te controleren."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een boekje maak?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom zijn er lege pagina's toegevoegd?",
+     "a": "Elk gevouwen vel bevat vier pagina's, dus het totaal moet deelbaar zijn door 4. Achteraan worden lege pagina's toegevoegd om het verschil aan te vullen."
+    },
+    {
+     "q": "Over welke kant draai ik om bij dubbelzijdig afdrukken?",
+     "a": "Over de korte kant. Komt de tweede kant ondersteboven uit, kies dan de lange kant."
+    },
+    {
+     "q": "Welk velformaat kies ik?",
+     "a": "Zelfde als PDF behoudt het oorspronkelijke paginaformaat per helft. Kies A4 of US Letter zodat het past bij het papier in je printer."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "remove-blank-pages": {
+   "name": "Lege pagina's verwijderen",
+   "short": "Vind lege pagina's automatisch, controleer ze en verwijder ze.",
+   "action": "Pagina's verwijderen",
+   "title": "Lege pagina's uit PDF verwijderen, geen upload",
+   "description": "Vind en verwijder lege pagina's uit een PDF in je browser. Lege pagina's worden voor je geselecteerd, zodat je ze controleert voordat je opslaat. Geen upload.",
+   "h1": "Lege pagina's uit een PDF verwijderen",
+   "howTo": "Zo verwijder je lege pagina's uit een PDF",
+   "lead": "Een stapel dubbelzijdig gescand en lege achterkanten overgehouden? Scissor PDF vindt de witte pagina's voor je. Jij controleert de selectie en slaat op.",
+   "steps": [
+    "Kies of sleep de PDF. Pagina's die leeg lijken, worden automatisch geselecteerd.",
+    "Controleer de selectie en selecteer of deselecteer pagina's waar nodig.",
+    "Klik op Pagina's verwijderen en download de opgeschoonde PDF."
+   ],
+   "sections": [
+    {
+     "h": "Hoe de detectie werkt",
+     "p": "Elke pagina wordt in je browser gerenderd, en pagina's die helemaal of bijna helemaal wit zijn, worden geselecteerd. Omdat dit gaat op hoe een pagina eruitziet, vindt het ook lege achterkanten van scans als daar wat scannerruis op staat."
+    },
+    {
+     "h": "Controleer altijd",
+     "p": "Een pagina met alleen een vage markering, zoals een licht paginanummer of een korte potloodnotitie, kan als leeg worden gezien. Loop de selectie na voordat je opslaat en deselecteer elke pagina die je wilt houden."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik lege pagina's verwijder?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden er pagina's verwijderd zonder het te vragen?",
+     "a": "Nee. Lege pagina's worden alleen geselecteerd. Jij controleert de selectie en beslist voordat er iets wordt opgeslagen."
+    },
+    {
+     "q": "Waarom is een pagina met een beetje tekst geselecteerd?",
+     "a": "De detectie gaat op uiterlijk, dus een pagina met alleen een vage markering kan er leeg uitzien. Deselecteer hem voordat je opslaat."
+    },
+    {
+     "q": "Kan ik tegelijk andere pagina's verwijderen?",
+     "a": "Ja. Selecteer alle extra pagina's die weg moeten voordat je opslaat."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "split-pdf-by-size": {
+   "name": "PDF splitsen op grootte",
+   "short": "Splits een PDF in delen onder een maximale grootte, zoals 5 MB.",
+   "action": "Splitsen op grootte",
+   "title": "PDF splitsen op bestandsgrootte, geen upload",
+   "description": "Splits een grote PDF in delen onder een grootte die jij kiest, zoals 5 MB, voor limieten van e-mail of uploads. Pagina's blijven heel. Er wordt niets geüpload.",
+   "h1": "Een PDF splitsen op bestandsgrootte",
+   "howTo": "Zo splits je een PDF op bestandsgrootte",
+   "lead": "Bijlage te groot voor de mail, of een portaal dat alleen kleine bestanden accepteert? Splits de PDF in delen die elk onder de limiet blijven.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Typ de maximale grootte per deel, bijvoorbeeld 5 MB.",
+    "Klik op Splitsen op grootte en download de delen als ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Pagina's blijven heel",
+     "p": "De delen bestaan uit complete pagina's, op volgorde, en elk deel blijft onder de gekozen grootte. Een losse pagina die op zichzelf al groter is dan de limiet, wordt een eigen deel, want een pagina kan niet worden opgedeeld."
+    },
+    {
+     "h": "Probeer eerst te comprimeren",
+     "p": "Wil je liever één bestand versturen, dan krijgt PDF comprimeren het misschien onder de limiet. Je kunt ook eerst comprimeren en daarna splitsen om minder delen te krijgen."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF op grootte splits?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom is één deel groter dan mijn limiet?",
+     "a": "Dat deel bevat één pagina die op zichzelf al groter is dan de limiet. Pagina's worden nooit opgedeeld."
+    },
+    {
+     "q": "Hoe krijg ik de delen?",
+     "a": "Alle delen worden samen gedownload in één ZIP-bestand."
+    },
+    {
+     "q": "Kan ik in plaats daarvan op paginanummers splitsen?",
+     "a": "Ja, gebruik PDF splitsen om een document per paginabereik te verdelen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-header-footer": {
+   "name": "Kop- en voettekst toevoegen",
+   "short": "Voeg tekst, paginanummers en datums toe boven- of onderaan elke pagina.",
+   "action": "Kop- en voettekst toevoegen",
+   "title": "Kop- en voettekst in PDF zetten, zonder upload",
+   "description": "Voeg een kop- en voettekst toe aan elke PDF-pagina in je browser: tekst links, midden en rechts met paginanummer, totaal aantal pagina's, datum en bestandsnaam.",
+   "h1": "Kop- en voettekst toevoegen aan een PDF",
+   "howTo": "Zo voeg je een kop- en voettekst toe aan een PDF",
+   "lead": "Zet een titel, een vertrouwelijkheidsvermelding, de datum of 'pagina X van Y' op elke pagina van een rapport, scriptie of contract. Werkt in elke taal.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Typ tekst voor links, midden en rechts in de koptekst, de voettekst of beide. Voeg velden in voor paginanummer, totaal aantal pagina's, datum en bestandsnaam.",
+    "Kies de tekstgrootte en de eerste pagina en klik daarna op Kop- en voettekst toevoegen."
+   ],
+   "sections": [
+    {
+     "h": "Automatische velden",
+     "p": "Velden worden op elke pagina automatisch ingevuld: het paginanummer, het totale aantal pagina's, de datum en de bestandsnaam. Combineer ze met je eigen woorden, bijvoorbeeld Pagina 3 van 12. Kies de eerste pagina om een voorpagina leeg te laten."
+    },
+    {
+     "h": "Elke taal, elk schrift",
+     "p": "De tekst wordt getekend met de lettertypen van je apparaat, dus Arabisch, Chinees, Perzisch, Hindi en elk ander schrift dat je apparaat kan weergeven, komen er goed uit. Het resultaat wordt deel van de pagina en is daarna geen bewerkbare tekst meer."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een kop- en voettekst toevoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik 'Pagina X van Y' schrijven?",
+     "a": "Ja. Combineer de velden voor paginanummer en totaal aantal pagina's met je eigen tekst."
+    },
+    {
+     "q": "Kan ik de voorpagina overslaan?",
+     "a": "Ja. Kies de pagina waarop de kop- en voettekst moeten beginnen."
+    },
+    {
+     "q": "Kan ik de koptekst later bewerken?",
+     "a": "Niet als tekst. Hij wordt deel van de pagina. Bewaar je originele bestand als je hem misschien nog wilt wijzigen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "bates-numbering": {
+   "name": "Bates-nummering",
+   "short": "Zet doorlopende Bates-nummers zoals ABC-000001 op elke pagina.",
+   "action": "Bates-nummers toevoegen",
+   "title": "Bates-nummering voor PDF: gratis, geen upload",
+   "description": "Zet Bates-nummers op elke PDF-pagina in je browser: voorvoegsel plus nummer met voorloopnullen, hoek, startnummer en aantal cijfers naar keuze. Geen upload.",
+   "h1": "Bates-nummering toevoegen aan een PDF",
+   "howTo": "Zo voeg je Bates-nummers toe aan een PDF",
+   "lead": "Geef elke pagina van een documentproductie een unieke, doorlopende code, zonder vertrouwelijke dossiers naar iemands server te sturen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Stel het voorvoegsel, het startnummer, het aantal cijfers en de hoek in.",
+    "Klik op Bates-nummers toevoegen en download de gestempelde PDF."
+   ],
+   "sections": [
+    {
+     "h": "Hoe het nummer is opgebouwd",
+     "p": "Elk nummer bestaat uit je voorvoegsel gevolgd door een reeks met voorloopnullen, bijvoorbeeld ABC-000001, ABC-000002 enzovoort. Kies het startnummer om verder te gaan na een eerdere batch, en het aantal cijfers zodat het past bij je protocol."
+    },
+    {
+     "h": "Eén bestand tegelijk",
+     "p": "Bates-nummering werkt op één PDF tegelijk. Is een productie over meerdere bestanden verdeeld, nummer dan het eerste en laat het volgende beginnen bij het nummer na de laatste pagina. Of voeg ze eerst samen met PDF samenvoegen."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik Bates-nummers toevoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Wat is Bates-nummering?",
+     "a": "Een juridische conventie die elke pagina in een set documenten een unieke, doorlopende code geeft, zodat pagina's tijdens de bewijsuitwisseling en in de rechtszaal exact kunnen worden aangehaald."
+    },
+    {
+     "q": "Kan ik de nummering van een ander bestand voortzetten?",
+     "a": "Ja. Zet het startnummer op het volgende nummer in je reeks."
+    },
+    {
+     "q": "Kan ik meerdere PDF's in één keer nummeren?",
+     "a": "Niet tegelijk. Verwerk één bestand per keer, of voeg de bestanden eerst samen met PDF samenvoegen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "add-image-to-pdf": {
+   "name": "Afbeelding toevoegen aan PDF",
+   "short": "Zet een logo, foto, stempel of handtekeningafbeelding op elke gewenste pagina.",
+   "action": "Afbeeldingen toevoegen",
+   "title": "Afbeelding toevoegen aan PDF, zonder upload",
+   "description": "Voeg een logo, foto, stempel of gescande handtekening toe aan een PDF in je browser. Versleep en schaal hem op elke pagina. Bestanden worden nooit geüpload.",
+   "h1": "Een afbeelding toevoegen aan een PDF",
+   "howTo": "Zo voeg je een afbeelding toe aan een PDF",
+   "lead": "Zet je bedrijfslogo op een brief, een foto op een sollicitatie of een bedrijfsstempel op een factuur. Sleep hem op zijn plek en pas het formaat aan.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Voeg een afbeelding toe en versleep en schaal hem op de pagina. Voeg zo nodig meer afbeeldingen toe op elke pagina.",
+    "Klik op Afbeeldingen toevoegen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Precies plaatsen",
+     "p": "Sleep een afbeelding naar elke plek op elke pagina en pas het formaat aan tot hij past. Je kunt meerdere afbeeldingen toevoegen, op dezelfde pagina of op verschillende pagina's."
+    },
+    {
+     "h": "Deel van de pagina",
+     "p": "Afbeeldingen worden deel van de pagina-inhoud, dus ze zien er in elke PDF-lezer hetzelfde uit. Voor een logo op elke pagina is Logo-watermerk sneller. Om een document te ondertekenen kun je met PDF ondertekenen ook een handtekening tekenen of typen."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een afbeelding aan een PDF toevoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik meer dan één afbeelding toevoegen?",
+     "a": "Ja. Voeg er zoveel toe als je nodig hebt, op elke pagina."
+    },
+    {
+     "q": "Kan ik de afbeelding later verplaatsen?",
+     "a": "Voor het opslaan wel. Na het opslaan is hij deel van de pagina, dus bewaar je originele bestand als je hem misschien nog wilt wijzigen."
+    },
+    {
+     "q": "Hoe zet ik mijn logo op elke pagina?",
+     "a": "Gebruik Logo-watermerk, dat in één keer een afbeelding op elke pagina zet."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "redact-pdf": {
+   "name": "PDF zwartlakken",
+   "short": "Lak tekst en afbeeldingen zwart, zodat ze echt verwijderd zijn.",
+   "action": "PDF zwartlakken",
+   "title": "PDF zwartlakken: gratis, zonder upload",
+   "description": "Lak gevoelige tekst en afbeeldingen in een PDF zwart, in je browser. Zwartgelakte pagina's worden plat gemaakt, zodat verborgen inhoud echt weg is.",
+   "h1": "Een PDF zwartlakken",
+   "howTo": "Zo lak je een PDF zwart",
+   "lead": "Verberg namen, rekeningnummers, adressen of wat dan ook voordat je een document deelt. De afgedekte inhoud wordt verwijderd, niet alleen overgeschilderd, en het bestand verlaat nooit je apparaat.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Teken zwarte vakken over alles wat verborgen moet worden, op elke pagina.",
+    "Klik op PDF zwartlakken, download het resultaat en controleer het."
+   ],
+   "sections": [
+    {
+     "h": "Echt zwartlakken",
+     "p": "Een zwart vak op zichzelf kan worden weggehaald, en de tekst eronder kan nog steeds worden gekopieerd. Daarom wordt elke pagina met een zwartlakking omgezet in een afbeelding van 200 DPI met de vakken erin gebrand. De verborgen inhoud zit dan helemaal niet meer in het bestand."
+    },
+    {
+     "h": "Wat er verandert",
+     "p": "Tekst op zwartgelakte pagina's kan niet meer worden geselecteerd of doorzocht, en die pagina's kunnen het bestand groter maken. Pagina's zonder zwartlakking blijven onaangetast. Open het resultaat altijd en controleer elke zwartlakking voordat je het deelt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF zwartlak?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Is de verborgen tekst echt weg?",
+     "a": "Ja. Pagina's met zwartlakkingen worden omgezet in afbeeldingen met de zwarte vakken erin gebrand, dus de oorspronkelijke tekst en afbeeldingen eronder zijn verwijderd."
+    },
+    {
+     "q": "Waarom kan ik op sommige pagina's geen tekst meer selecteren?",
+     "a": "Zwartgelakte pagina's worden omgezet in afbeeldingen. Dat maakt de zwartlakking definitief. Pagina's die je niet hebt zwartgelakt, behouden hun tekst."
+    },
+    {
+     "q": "Kan ik in plaats daarvan PDF bijsnijden gebruiken om informatie te verbergen?",
+     "a": "Nee. Bijsnijden verbergt inhoud alleen, en die kan weer zichtbaar worden gemaakt. Gebruik PDF zwartlakken voor alles wat gevoelig is."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "fill-pdf-form": {
+   "name": "PDF-formulier invullen",
+   "short": "Vul tekstvakken, selectievakjes en keuzelijsten in een PDF-formulier in.",
+   "action": "Ingevuld formulier opslaan",
+   "title": "PDF-formulier invullen: gratis, zonder upload",
+   "description": "Vul een interactief PDF-formulier in je browser in: tekstvakken, selectievakjes, keuzerondjes en keuzelijsten. Sla het op. Je gegevens worden nooit geüpload.",
+   "h1": "Een PDF-formulier invullen",
+   "howTo": "Zo vul je een PDF-formulier in",
+   "lead": "Belastingformulieren, aanvragen en inschrijfformulieren vragen vaak om persoonlijke gegevens. Vul ze hier in, en niets van wat je typt verlaat je apparaat.",
+   "steps": [
+    "Kies of sleep het PDF-formulier.",
+    "Klik in de velden en vul ze in: tekstvakken, selectievakjes, keuzerondjes en keuzelijsten.",
+    "Klik op Ingevuld formulier opslaan en download de ingevulde PDF."
+   ],
+   "sections": [
+    {
+     "h": "Formulieren met velden",
+     "p": "Deze tool werkt met PDF's die interactieve formuliervelden hebben, het soort waarin je in een PDF-lezer kunt klikken. Je invoer wordt in de velden opgeslagen, dus het formulier blijft invulbaar en kan later worden gewijzigd."
+    },
+    {
+     "h": "Formulieren zonder velden",
+     "p": "Een gescand formulier, of een plat formulier dat gewoon naar PDF is afgedrukt, heeft geen velden om in te vullen. Gebruik in plaats daarvan Tekst toevoegen aan PDF om eroverheen te typen. Om een ingevuld formulier vast te zetten zodat het niet meer kan worden gewijzigd, gebruik je daarna PDF plat maken."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF-formulier invul?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom kan ik niet in mijn formulier klikken?",
+     "a": "Het heeft waarschijnlijk geen interactieve velden, bijvoorbeeld omdat het een scan is. Gebruik Tekst toevoegen aan PDF om erop te typen."
+    },
+    {
+     "q": "Kan de ontvanger mijn antwoorden nog wijzigen?",
+     "a": "Ja, de velden blijven bewerkbaar. Gebruik daarna PDF plat maken om ze definitief te maken."
+    },
+    {
+     "q": "Kan ik het formulier ook ondertekenen?",
+     "a": "Ja. Sla het ingevulde formulier op en open het daarna in PDF ondertekenen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "flatten-pdf": {
+   "name": "PDF plat maken",
+   "short": "Voeg formuliervelden en opmerkingen samen met de pagina, zodat ze niet meer bewerkbaar zijn.",
+   "action": "PDF plat maken",
+   "title": "PDF plat maken (flatten): gratis, geen upload",
+   "description": "Maak formuliervelden en aantekeningen deel van de pagina-inhoud in je browser, zodat ze er overal hetzelfde uitzien en niet bewerkbaar zijn. Geen upload.",
+   "h1": "Een PDF plat maken",
+   "howTo": "Zo maak je een PDF plat",
+   "lead": "Verstuur een ingevuld formulier dat niemand kan wijzigen, of zorg dat opmerkingen en stempels in elke app en op elke printer hetzelfde verschijnen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op PDF plat maken.",
+    "Download het platte bestand."
+   ],
+   "sections": [
+    {
+     "h": "Wat plat maken doet",
+     "p": "Formuliervelden en aantekeningen, zoals opmerkingen, stempels, markeringen en tekeningen, worden samengevoegd met de pagina-inhoud. Ze zien er precies hetzelfde uit, maar zijn geen losse objecten meer die je kunt bewerken, verplaatsen of verwijderen. Sommige lezers en printers tonen aantekeningen helemaal niet; na het plat maken wel."
+    },
+    {
+     "h": "Goed om te weten",
+     "p": "Formulieren zijn daarna niet meer invulbaar. Aantekeningen zonder zichtbare weergave, zoals sommige verborgen opmerkingen, worden verwijderd. Bewaar een kopie van het origineel als je het later misschien opnieuw wilt bewerken."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF plat maak?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Kan ik het formulier na het plat maken nog invullen?",
+     "a": "Nee. De velden worden deel van de pagina. Vul het formulier eerst in met PDF-formulier invullen en maak het daarna plat."
+    },
+    {
+     "q": "Waarom zijn sommige opmerkingen verdwenen?",
+     "a": "Aantekeningen zonder zichtbare weergave kunnen niet op de pagina worden getekend en worden dus verwijderd."
+    },
+    {
+     "q": "Waarom zou ik een PDF plat maken?",
+     "a": "Om te voorkomen dat anderen je invoer wijzigen, en om ervoor te zorgen dat formulieren en markeringen er in elke app en bij het afdrukken hetzelfde uitzien."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "remove-pdf-annotations": {
+   "name": "Aantekeningen verwijderen",
+   "short": "Verwijder opmerkingen, markeringen, notities, stempels en tekeningen uit een PDF.",
+   "action": "Aantekeningen verwijderen",
+   "title": "Aantekeningen uit PDF verwijderen, geen upload",
+   "description": "Verwijder opmerkingen, markeringen, notities, stempels en tekeningen uit een PDF in je browser. Behoud links als je wilt. Er wordt niets geüpload.",
+   "h1": "Aantekeningen uit een PDF verwijderen",
+   "howTo": "Zo verwijder je aantekeningen uit een PDF",
+   "lead": "Deel na een reviewronde een schone kopie, zonder de opmerkingen, markeringen en notities die je team onderweg heeft achtergelaten.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies of je links wilt behouden.",
+    "Klik op Aantekeningen verwijderen en download de schone kopie."
+   ],
+   "sections": [
+    {
+     "h": "Wat er wordt verwijderd",
+     "p": "Opmerkingen, markeringen, notities, stempels en tekeningen worden verwijderd. Links kun je desgewenst behouden. Formuliervelden blijven altijd behouden, dus een invulbaar formulier blijft invulbaar."
+    },
+    {
+     "h": "De pagina zelf blijft ongewijzigd",
+     "p": "Alleen aantekeningen worden verwijderd. Tekst, afbeeldingen en alles wat deel is van de pagina-inhoud blijven zoals ze zijn. Markeringen die plat in de pagina zijn gemaakt, zijn geen aantekeningen meer en worden dus niet verwijderd."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik aantekeningen verwijder?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden mijn formuliervelden verwijderd?",
+     "a": "Nee. Formuliervelden blijven behouden."
+    },
+    {
+     "q": "Kan ik de links behouden?",
+     "a": "Ja. Kies ervoor om links te behouden, dan blijven ze klikbaar."
+    },
+    {
+     "q": "Waarom staat er nog een markering?",
+     "a": "Die is waarschijnlijk deel van de pagina-inhoud in plaats van een aantekening, bijvoorbeeld omdat het bestand plat is gemaakt. Zulke markeringen kun je op deze manier niet verwijderen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "remove-images-from-pdf": {
+   "name": "Afbeeldingen uit PDF verwijderen",
+   "short": "Haal foto's en afbeeldingen weg en behoud tekst en grafische elementen.",
+   "action": "Afbeeldingen verwijderen",
+   "title": "Afbeeldingen uit PDF verwijderen, geen upload",
+   "description": "Verwijder alle foto's en afbeeldingen uit een PDF in je browser, met behoud van tekst en vectorafbeeldingen. Kleinere bestanden, minder inkt. Geen upload.",
+   "h1": "Afbeeldingen uit een PDF verwijderen",
+   "howTo": "Zo verwijder je afbeeldingen uit een PDF",
+   "lead": "Heb je alleen de woorden nodig? Verwijder alle foto's om een tekstrijk document met minder inkt af te drukken, of om een groot bestand veel kleiner te maken.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op Afbeeldingen verwijderen.",
+    "Download de versie met alleen tekst."
+   ],
+   "sections": [
+    {
+     "h": "Wat blijft",
+     "p": "Tekst en vectorafbeeldingen, zoals lijnen, tabellen, grafieken en veel logo's, blijven behouden. Alleen afbeeldingen zoals foto's en plaatjes worden verwijderd. Tekst blijft selecteerbaar en doorzoekbaar."
+    },
+    {
+     "h": "Wanneer het helpt",
+     "p": "Afbeeldingen zijn vaak het grootste deel van een PDF, dus ze verwijderen kan het bestand veel kleiner maken. Het bespaart ook inkt als je leesmateriaal, handleidingen of artikelen afdrukt. Bij een gescand document, waarin elke pagina een afbeelding is, blijven de pagina's leeg."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik afbeeldingen uit een PDF verwijder?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Heeft dit invloed op de tekst?",
+     "a": "Nee. Tekst en vectorafbeeldingen blijven zoals ze zijn."
+    },
+    {
+     "q": "Waarom zijn mijn pagina's leeg na het verwijderen van afbeeldingen?",
+     "a": "De PDF is waarschijnlijk een scan, waarin elke pagina een afbeelding is. Er is geen losse tekst om te behouden."
+    },
+    {
+     "q": "Ik wil een kleiner bestand, maar de foto's houden.",
+     "a": "Gebruik PDF comprimeren, dat afbeeldingen kleiner maakt in plaats van ze te verwijderen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-viewer": {
+   "name": "PDF-viewer",
+   "short": "Open en lees een PDF privé in je browser.",
+   "action": "PDF openen",
+   "title": "PDF-viewer online: gratis, zonder upload",
+   "description": "Open en lees een PDF in je browser op elk apparaat, met zoom. Geen app nodig, er wordt niets geüpload. Werkt offline na je eerste bezoek.",
+   "h1": "Een PDF bekijken",
+   "howTo": "Zo bekijk je een PDF",
+   "lead": "Lees een PDF op een geleende computer, een werklaptop zonder PDF-app of een telefoon. Het document opent in deze pagina en wordt nergens naartoe gestuurd.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Lees hem in de browser en zoom zo nodig in of uit.",
+    "Sluit het tabblad als je klaar bent. Er wordt niets bewaard."
+   ],
+   "sections": [
+    {
+     "h": "Privé vanaf het ontwerp",
+     "p": "Het bestand wordt van je apparaat in de pagina gelezen en daar getoond. Het wordt niet geüpload, niet opgeslagen en niet toegevoegd aan een geschiedenis op een server. Sluit het tabblad en het is weg uit de pagina."
+    },
+    {
+     "h": "Op elk apparaat, zelfs offline",
+     "p": "De viewer werkt in elke moderne browser op een computer, tablet of telefoon, zonder iets te installeren. Na je eerste bezoek blijft hij werken zonder internetverbinding."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF bekijk?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Moet ik iets installeren?",
+     "a": "Nee. De viewer werkt in je browser op elk apparaat."
+    },
+    {
+     "q": "Werkt het offline?",
+     "a": "Ja, na je eerste bezoek aan de site."
+    },
+    {
+     "q": "Kan ik de PDF hier bewerken?",
+     "a": "De viewer is om te lezen. Wil je een document wijzigen, gebruik dan een van de andere tools, zoals Tekst toevoegen aan PDF of PDF ordenen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "compare-pdf": {
+   "name": "PDF vergelijken",
+   "short": "Markeer de woorden die tussen twee PDF's zijn toegevoegd of verwijderd.",
+   "action": "PDF's vergelijken",
+   "title": "PDF-bestanden vergelijken: gratis, geen upload",
+   "description": "Vergelijk de tekst van twee PDF's pagina voor pagina in je browser en zie toegevoegde en verwijderde woorden gemarkeerd. Bestanden worden nooit geüpload.",
+   "h1": "Twee PDF-bestanden vergelijken",
+   "howTo": "Zo vergelijk je twee PDF's",
+   "lead": "Ontdek wat er is veranderd tussen twee versies van een contract, beleid of concept, zonder beide regel voor regel te lezen en zonder ze naar een server te sturen.",
+   "steps": [
+    "Kies of sleep de originele PDF en de gewijzigde PDF.",
+    "Klik op PDF's vergelijken.",
+    "Loop de pagina's door. Toegevoegde en verwijderde woorden zijn gemarkeerd."
+   ],
+   "sections": [
+    {
+     "h": "Tekst, pagina voor pagina",
+     "p": "De tekst van de twee bestanden wordt pagina voor pagina vergeleken, en toegevoegde of verwijderde woorden worden gemarkeerd. Het is geschikt voor documenten waarin de formulering telt, zoals contracten, voorwaarden, specificaties en manuscripten."
+    },
+    {
+     "h": "Beperkingen",
+     "p": "Alleen tekst wordt vergeleken, geen afbeeldingen, opmaak of indeling. Gescande PDF's die alleen afbeeldingen van pagina's bevatten, hebben geen tekstlaag en kunnen dus niet worden vergeleken."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik PDF's vergelijk?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Worden afbeeldingen of opmaak vergeleken?",
+     "a": "Nee. Alleen de tekst wordt vergeleken."
+    },
+    {
+     "q": "Waarom toont mijn gescande PDF geen verschillen?",
+     "a": "Een scan heeft geen tekstlaag, dus er is niets te vergelijken. Scissor PDF doet geen OCR."
+    },
+    {
+     "q": "Is het veilig voor vertrouwelijke contracten?",
+     "a": "Ja. Beide bestanden worden in je browser vergeleken en verlaten nooit je apparaat."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-info": {
+   "name": "PDF-info",
+   "short": "Bekijk het aantal pagina's, paginaformaten, lettertypen, metadata en meer.",
+   "action": "Info tonen",
+   "title": "PDF-info en pagina's tellen, zonder upload",
+   "description": "Tel de pagina's van een PDF en bekijk paginaformaten, PDF-versie, lettertypen, afbeeldingen, formulieren, JavaScript, bijlagen, versleuteling en metadata.",
+   "h1": "PDF-info en pagina's tellen",
+   "howTo": "Zo bekijk je de informatie van een PDF",
+   "lead": "Controleer hoeveel pagina's een bestand heeft voordat je afdrukt, of de lettertypen zijn ingesloten voordat je het naar een drukkerij stuurt, of wat er in een onbekende PDF zit.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Klik op Info tonen.",
+    "Lees de details: pagina's, formaten, lettertypen, inhoud en metadata."
+   ],
+   "sections": [
+    {
+     "h": "Wat je ziet",
+     "p": "Het aantal pagina's en de paginaformaten, de PDF-versie en bestandsgrootte, de gebruikte lettertypen en of elk lettertype is ingesloten, en het aantal afbeeldingen. Ook de metadata van het document worden getoond, zoals titel en auteur."
+    },
+    {
+     "h": "Wat erin zit",
+     "p": "Ontdek of een bestand formuliervelden, JavaScript, bijlagen of versleuteling bevat. Dat helpt als een portaal een PDF weigert, als een drukkerij om ingesloten lettertypen vraagt, of als je wilt weten wat een onverwachte bijlage bevat voordat je hem ergens anders opent."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik de informatie van een PDF bekijk?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Hoe tel ik de pagina's van een PDF?",
+     "a": "Open hem hier. Het aantal pagina's wordt als eerste getoond, samen met het formaat van de pagina's."
+    },
+    {
+     "q": "Hoe weet ik of lettertypen zijn ingesloten?",
+     "a": "Elk lettertype in het bestand wordt vermeld, met de aanduiding of het is ingesloten. Drukkerijen eisen vaak dat alle lettertypen zijn ingesloten."
+    },
+    {
+     "q": "Kan ik de metadata hier wijzigen?",
+     "a": "Nee, deze tool toont ze alleen. Gebruik PDF-metadata om de titel, auteur en andere velden te wijzigen."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "split-pdf-by-bookmarks": {
+   "name": "PDF splitsen op bladwijzers",
+   "short": "Splits een PDF in één bestand per hoofdstuk, op basis van de bladwijzers.",
+   "action": "Splitsen op bladwijzers",
+   "title": "PDF splitsen op bladwijzers, zonder upload",
+   "description": "Splits een PDF in één bestand per bladwijzer op het hoogste niveau of per hoofdstuk, in je browser. Bestanden krijgen de naam van hun bladwijzer. Geen upload.",
+   "h1": "Een PDF splitsen op bladwijzers",
+   "howTo": "Zo splits je een PDF op bladwijzers",
+   "lead": "Deel een lang boek, handleiding of rapport in één stap op in hoofdstukken. Elk hoofdstuk wordt een eigen bestand, met de naam van zijn bladwijzer.",
+   "steps": [
+    "Kies of sleep een PDF met bladwijzers.",
+    "Klik op Splitsen op bladwijzers.",
+    "Download de ZIP met één PDF per hoofdstuk."
+   ],
+   "sections": [
+    {
+     "h": "Eén bestand per hoofdstuk",
+     "p": "De PDF wordt gesplitst bij elke bladwijzer op het hoogste niveau, en elk bestand krijgt de naam van zijn bladwijzer, zodat je de hoofdstukken in één oogopslag uit elkaar houdt. Pagina's vóór de eerste bladwijzer, zoals een voorpagina of inhoudsopgave, worden een eigen bestand. Alle bestanden worden samen als ZIP gedownload."
+    },
+    {
+     "h": "PDF's zonder bladwijzers",
+     "p": "Dit werkt alleen voor PDF's met bladwijzers, ook wel een overzicht genoemd. Heeft een bestand er geen, dan krijg je daar een melding van. Gebruik in dat geval PDF splitsen om het per paginabereik te verdelen."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF op bladwijzers splits?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Hoe weet ik of mijn PDF bladwijzers heeft?",
+     "a": "Open hem in een PDF-lezer en zoek naar een paneel met bladwijzers of een overzicht. Heeft het bestand er geen, dan meldt Scissor PDF dat wanneer je het hier opent."
+    },
+    {
+     "q": "Worden subbladwijzers ook gebruikt?",
+     "a": "Nee. Het bestand wordt alleen gesplitst bij bladwijzers op het hoogste niveau, zodat elk hoofdstuk bij elkaar blijft met zijn paragrafen."
+    },
+    {
+     "q": "Wat gebeurt er met de pagina's vóór de eerste bladwijzer?",
+     "a": "Die worden een apart bestand, dus er gaat niets verloren."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "highlight-pdf": {
+   "name": "PDF markeren",
+   "short": "Markeer tekst in geel, groen of roze op elke pagina.",
+   "action": "Markeringen opslaan",
+   "title": "PDF markeren: gratis, zonder upload",
+   "description": "Markeer tekst in een PDF in je browser met gele, groene of roze vakken op elke pagina. Markeringen worden deel van de pagina. Er wordt niets geüpload.",
+   "h1": "Een PDF markeren",
+   "howTo": "Zo markeer je een PDF",
+   "lead": "Markeer de belangrijkste passages in een tekst, de bedragen in een overzicht of de clausules in een contract die iemand anders moet zien.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies geel, groen of roze en teken markeervakken over tekst op elke pagina.",
+    "Klik op Markeringen opslaan en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Drie kleuren",
+     "p": "Teken doorschijnende vakken in geel, groen of roze over de tekst die je wilt markeren. Gebruik verschillende kleuren om onderwerpen te scheiden, of vragen van antwoorden."
+    },
+    {
+     "h": "Deel van de pagina",
+     "p": "De markeringen worden deel van de pagina, geen losse opmerkingen. Ze zien er in elke lezer en op papier hetzelfde uit, maar kunnen later niet met een tool voor aantekeningen worden verwijderd. Bewaar je origineel als je misschien een schone kopie wilt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF markeer?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Welke kleuren kan ik gebruiken?",
+     "a": "Geel, groen en roze."
+    },
+    {
+     "q": "Kan ik de markeringen later verwijderen?",
+     "a": "Niet uit het opgeslagen bestand, omdat ze deel van de pagina zijn. Bewaar het origineel als je een kopie zonder markeringen nodig hebt."
+    },
+    {
+     "q": "Blijft de tekst eronder leesbaar?",
+     "a": "Ja. Markeringen zijn doorschijnend, dus de tekst blijft zichtbaar."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "image-watermark-pdf": {
+   "name": "Logo-watermerk",
+   "short": "Zet je logo of een afbeelding als watermerk op elke pagina.",
+   "action": "Watermerk toevoegen",
+   "title": "Logo als watermerk in PDF: gratis, geen upload",
+   "description": "Zet een logo of afbeelding als watermerk op elke pagina van een PDF in je browser. Stel grootte, hoek en dekking in, enkel of herhaald. Er wordt niets geüpload.",
+   "h1": "Een logo-watermerk toevoegen aan een PDF",
+   "howTo": "Zo voeg je een logo-watermerk toe aan een PDF",
+   "lead": "Voorzie offertes en portfolio's van je logo, of markeer concepten en previews zodat ze niet voor definitief kunnen doorgaan. De afbeelding komt op elke pagina.",
+   "steps": [
+    "Kies of sleep de PDF en voeg daarna je afbeelding toe. Een PNG met transparante achtergrond geeft het strakste resultaat.",
+    "Kies de grootte, hoek en dekking, en of hij één keer of herhaald over de pagina komt.",
+    "Klik op Watermerk toevoegen en download het resultaat."
+   ],
+   "sections": [
+    {
+     "h": "Enkel of herhaald",
+     "p": "Een enkel watermerk staat één keer op elke pagina. Herhaald zet het over de hele pagina, waardoor het moeilijker is om het uit screenshots van je werk weg te knippen. Pas grootte, hoek en dekking aan tot het zichtbaar is zonder de inhoud te verbergen."
+    },
+    {
+     "h": "Een afbeelding kiezen",
+     "p": "Een PNG met transparante achtergrond ziet er het strakst uit, omdat alleen het logo verschijnt en geen wit vak eromheen. Gebruik voor een tekstwatermerk zoals VERTROUWELIJK Watermerk PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een logo-watermerk toevoeg?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Wat voor afbeelding kan ik het beste gebruiken?",
+     "a": "Een PNG met transparante achtergrond, zodat alleen het logo zelf op de pagina verschijnt."
+    },
+    {
+     "q": "Kan ik het subtiel maken?",
+     "a": "Ja. Verlaag de dekking tot het watermerk rustig achter de inhoud staat."
+    },
+    {
+     "q": "Kan ik tekst gebruiken in plaats van een afbeelding?",
+     "a": "Ja, met Watermerk PDF."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
+  },
+  "pdf-to-long-image": {
+   "name": "PDF naar lange afbeelding",
+   "short": "Plak PDF-pagina's aan elkaar tot één lange afbeelding om in een chat te delen.",
+   "action": "Afbeelding maken",
+   "title": "PDF naar lange afbeelding: gratis, geen upload",
+   "description": "Plak alle of enkele PDF-pagina's aan elkaar tot één lange PNG- of JPG-afbeelding in je browser, om een heel document in een chat of post te delen. Geen upload.",
+   "h1": "Een PDF omzetten naar één lange afbeelding",
+   "howTo": "Zo zet je een PDF om naar een lange afbeelding",
+   "lead": "Veel chat-apps en sociale netwerken tonen geen voorbeeld van PDF's. Maak van de pagina's één lange afbeelding waar mensen direct in het gesprek doorheen kunnen scrollen.",
+   "steps": [
+    "Kies of sleep de PDF.",
+    "Kies alle pagina's of de pagina's die je nodig hebt, en kies PNG of JPG.",
+    "Klik op Afbeelding maken en download hem."
+   ],
+   "sections": [
+    {
+     "h": "PNG of JPG",
+     "p": "PNG houdt tekst en lijnen scherp en past bij documenten, menukaarten en presentaties. JPG geeft een kleiner bestand, wat helpt bij pagina's met veel foto's en bij apps die de afbeeldingsgrootte beperken."
+    },
+    {
+     "h": "Heel lange documenten",
+     "p": "Browsers beperken hoe groot één afbeelding mag zijn. Is een document heel lang, dan wordt de resolutie automatisch verlaagd zodat het nog past. Selecteer bij veel pagina's alleen de pagina's die je nodig hebt, of gebruik PDF naar PNG om één afbeelding per pagina te krijgen."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Worden mijn bestanden geüpload als ik een PDF naar een lange afbeelding omzet?",
+     "a": "Nee. Scissor PDF draait een PDF-engine, geschreven in Rust en gecompileerd naar WebAssembly, in je browsertabblad. Je bestanden worden van je schijf in het geheugen van de pagina gelezen, daar verwerkt en weer op je apparaat opgeslagen. De site heeft geen upload-endpoint, en de Content Security Policy voorkomt dat de pagina gegevens naar een andere server stuurt."
+    },
+    {
+     "q": "Waarom is mijn lange afbeelding minder scherp dan verwacht?",
+     "a": "De browser heeft een maximale afbeeldingsgrootte. Bij lange documenten wordt de resolutie automatisch verlaagd om daarbinnen te blijven. Kies minder pagina's voor meer detail."
+    },
+    {
+     "q": "Kan ik maar een paar pagina's opnemen?",
+     "a": "Ja. Selecteer de pagina's die je wilt en alleen die worden aan elkaar geplakt."
+    },
+    {
+     "q": "Kies ik PNG of JPG?",
+     "a": "PNG voor tekst en afbeeldingen, JPG voor een kleiner bestand of pagina's met veel foto's."
+    },
+    {
+     "q": "Is het gratis? Heb ik een account nodig?",
+     "a": "Het is gratis, zonder account, zonder dagelijkse limiet en zonder watermerk in je documenten. Omdat het werk op je eigen computer gebeurt, hebben wij geen serverkosten per bestand die we moeten terugverdienen."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -1128,6 +2539,98 @@
   "useSignature": "Handtekening gebruiken",
   "clearPad": "Wissen",
   "signHere": "Teken hier",
-  "chooseImage": "Afbeelding kiezen"
+  "chooseImage": "Afbeelding kiezen",
+  "simpleSub": "Eén klik. Het resultaat is zo klaar.",
+  "keepLinks": "Links behouden",
+  "toTextSub": "De tekstlaag van elke pagina wordt opgeslagen als tekstbestand.",
+  "pageMarks": "Markeer waar elke pagina begint",
+  "readyText": "Je tekst is klaar",
+  "noText": "Er is geen tekst gevonden. Deze PDF bevat mogelijk alleen gescande afbeeldingen.",
+  "blankPagesSub": "Lege pagina's krijgen het formaat van de pagina ervoor.",
+  "where": "Waar",
+  "afterEvery": "Na elke pagina",
+  "afterSome": "Na bepaalde pagina's",
+  "afterPages": "Na pagina's",
+  "afterPagesHint": "Gebruik 0 om helemaal aan het begin een pagina toe te voegen.",
+  "mixSub": "Pagina's wisselen elkaar af: eerste bestand, tweede bestand, eerste, tweede…",
+  "reverseSecond": "Tweede bestand omkeren (voor achterkanten die omgekeerd zijn gescand)",
+  "compareSub": "Voeg de twee versies toe om te vergelijken: eerst het origineel, dan de nieuwe.",
+  "compareSame": "Geen tekstverschillen",
+  "compareChanged": "Verschillen op {pages}",
+  "halfSub": "Elke pagina wordt twee pagina's.",
+  "cut": "Knippen",
+  "leftRight": "Links en rechts",
+  "topBottom": "Boven en onder",
+  "rightToLeft": "Volgorde van rechts naar links (Arabisch, Perzisch, Hebreeuws, manga)",
+  "resizeSub": "Pagina's worden passend geschaald en gecentreerd.",
+  "marginsSub": "Rond elke pagina wordt een witte rand toegevoegd.",
+  "bookletSub": "Druk dubbelzijdig af, draai om over de korte kant en vouw.",
+  "splitSizeSub": "Elk deel blijft onder deze grootte.",
+  "maxSize": "Maximale grootte",
+  "batesSub": "Op elke pagina komt een doorlopend nummer.",
+  "prefix": "Voorvoegsel",
+  "digits": "Cijfers",
+  "headerFooterSub": "Links, midden en rechts. Laat een vak leeg om het over te slaan.",
+  "header": "Koptekst",
+  "footer": "Voettekst",
+  "center": "Midden",
+  "tokensHint": "Gebruik {page}, {total}, {date} of {file} voor automatische waarden.",
+  "viewSub": "Scroll om te lezen. Er wordt niets geüpload.",
+  "zoom": "Zoom",
+  "infoSub": "Alles wat in deze PDF is opgeslagen.",
+  "formSub": "Klik op een veld op de pagina om het in te vullen en sla daarna op.",
+  "noFields": "Deze PDF heeft geen invulbare velden.",
+  "useAddText": "Gebruik in plaats daarvan Tekst toevoegen",
+  "blankSub": "Lege pagina's zijn geselecteerd om te verwijderen. Controleer de selectie en sla daarna op.",
+  "scanning": "Zoeken naar lege pagina's…",
+  "blankFound": "Pagina's die leeg lijken: {pages}.",
+  "yes": "Ja",
+  "no": "Nee",
+  "embedded": "ingesloten",
+  "notEmbedded": "niet ingesloten",
+  "infoPages": "Pagina's",
+  "infoSize": "Bestandsgrootte",
+  "infoVersion": "Versie",
+  "infoPageSizes": "Paginaformaten",
+  "infoImages": "Afbeeldingen",
+  "infoForms": "Formuliervelden",
+  "infoBookmarks": "Bladwijzers",
+  "infoJs": "JavaScript",
+  "infoAttachments": "Bijlagen",
+  "infoTagged": "Getagd (toegankelijk)",
+  "infoEncrypted": "Was versleuteld",
+  "infoFonts": "Lettertypen",
+  "image": "Afbeelding",
+  "yellow": "Geel",
+  "green": "Groen",
+  "pink": "Roze",
+  "addHighlight": "Markering toevoegen",
+  "addRedaction": "Zwart vak toevoegen",
+  "redactHint": "Pagina's met vakken worden afbeeldingen, dus wat onder de vakken staat, wordt echt verwijderd.",
+  "studioTitle": "Scissor PDF",
+  "studioOpen": "PDF openen",
+  "studioDrop": "of sleep PDF’s of een map ergens naartoe. Er wordt niets geüpload.",
+  "studioAllActions": "Alle acties",
+  "studioActions": "Acties",
+  "studioActionsSub": "Kies wat je hierna wilt doen. Elke stap kun je ongedaan maken.",
+  "studioUndo": "Ongedaan maken",
+  "studioRedo": "Opnieuw",
+  "studioApplied": "{tool} klaar",
+  "studioReady": "{name} is klaar",
+  "studioOpenFiles": "Bestanden openen",
+  "studioOpenFolder": "Map openen",
+  "studioFiles": "Bestanden",
+  "studioDownloadAll": "Alles downloaden",
+  "studioClose": "{name} sluiten",
+  "studioNoPdfs": "Daar zijn geen PDF-bestanden gevonden.",
+  "studioHome": "Scissor PDF startpagina"
+ },
+ "studio": {
+  "title": "Scissor PDF: alle PDF-tools in één privé-app",
+  "description": "Open een PDF één keer en bewerk hem met elke tool: samenvoegen, comprimeren, ondertekenen, zwartlakken, draaien, omzetten. Alles ongedaan te maken.",
+  "h1": "Scissor PDF",
+  "lead": "Open een PDF één keer en gebruik er daarna elke tool op. Elke stap kun je ongedaan maken, en niets verlaat je apparaat.",
+  "nav": "App",
+  "cta": "Open de app"
  }
 }

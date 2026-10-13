@@ -1,6 +1,6 @@
 # Scissor PDF
 
-Free PDF tools that run entirely in your browser. Merge, split, compress, sign, convert and protect PDFs without uploading them anywhere.
+Free PDF tools that run entirely in your browser. Merge, split, compress, sign, redact, convert and protect PDFs without uploading them anywhere.
 
 **Live:** [pdf.scissor.studio](https://pdf.scissor.studio)
 
@@ -8,18 +8,16 @@ The PDF engine is written in Rust and compiled to WebAssembly. It runs in a web 
 
 ## Tools
 
-| Organize | Optimize and convert | Edit and secure |
-|---|---|---|
-| Merge PDF | Compress PDF | Sign PDF |
-| Split PDF | JPG to PDF | Add text to PDF |
-| Organize pages | PDF to JPG / PNG | Page numbers |
-| Rotate PDF | Repair PDF | Watermark |
-| Delete pages | | Protect PDF (AES-256) |
-| Extract pages | | Unlock PDF |
-| Crop PDF | | Edit or remove metadata |
-| Pages per sheet | | |
+49 tools, each with its own page:
 
-Everything works offline after the first visit (service worker) and the site can be installed as an app. The interface is available in 21 languages, including right-to-left Arabic, Persian and Sorani Kurdish.
+- **Organize:** Merge PDF, Split PDF, Organize PDF, Rotate PDF, Reverse PDF, Delete pages, Remove blank pages, Extract pages, Insert blank pages, Combine odd and even pages, Split PDF by size, Split PDF by bookmarks, Split PDF pages in half, Crop PDF, Resize PDF pages, Add margins to PDF, Pages per sheet, Booklet PDF
+- **Optimize and convert:** Compress PDF, JPG to PDF, PNG to PDF, WebP to PDF, PDF to JPG, PDF to PNG, PDF to long image, PDF to Text, Extract images from PDF, Grayscale PDF, Remove images from PDF, Repair PDF
+- **Edit and secure:** Sign PDF, Fill PDF form, Add text to PDF, Add image to PDF, Highlight PDF, Redact PDF, Page numbers, Add header and footer, Bates numbering, Watermark PDF, Logo watermark, Flatten PDF, Remove annotations, Protect PDF, Unlock PDF, PDF metadata
+- **View and check:** PDF viewer, Compare PDF, PDF info
+
+**The app** ([/app/](https://pdf.scissor.studio/app/)) puts every tool in one window: open several PDFs or a whole folder, apply any tool, undo any step, download one file or all of them. It installs as a PWA and, in Chrome and Edge, can open PDFs from the operating system.
+
+Everything works offline after the first visit (service worker). The interface is available in 21 languages, including right-to-left Arabic, Persian and Sorani Kurdish.
 
 ## How it is built
 

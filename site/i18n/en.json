@@ -34,7 +34,8 @@
   "privacy": "Privacy",
   "note": "Scissor PDF processes every file in your browser with a Rust engine compiled to WebAssembly. No uploads, no accounts, no tracking.",
   "updated": "Updated",
-  "languages": "Languages"
+  "languages": "Languages",
+  "inspect": "View & check"
  },
  "common": {
   "assureLocal": "Files never leave your device",
@@ -888,6 +889,1416 @@
      "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
     }
    ]
+  },
+  "png-to-pdf": {
+   "name": "PNG to PDF",
+   "short": "Turn PNG images and screenshots into one PDF, one image per page.",
+   "action": "Convert to PDF",
+   "title": "PNG to PDF Converter Free, Without Uploading",
+   "description": "Convert PNG images and screenshots to PDF in your browser. Reorder, pick a page size and margin. Lossless, nothing uploaded, no watermark.",
+   "h1": "Convert PNG to PDF",
+   "howTo": "How to convert PNG to PDF",
+   "lead": "Collect screenshots, diagrams or scanned pages into a single PDF you can send or print. Each PNG becomes one page, stored without any loss in quality.",
+   "steps": [
+    "Choose or drop your PNG images. Screenshots work too.",
+    "Drag the images into the order you want, then choose a page size and margin.",
+    "Select Convert to PDF and download the file."
+   ],
+   "sections": [
+    {
+     "h": "Lossless, with transparency kept",
+     "p": "PNG images are stored in the PDF without recompression, so text in screenshots stays crisp and every pixel is the same as in the original. Transparent areas stay transparent instead of turning black or grey."
+    },
+    {
+     "h": "Page size and margins",
+     "p": "Fit image makes each page exactly the size of its image. A4 and US Letter place the image on a standard page, scaled to fit and centred, which is what you want for printing. Margin adds no border, a small one or a large one around the image."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert PNG to PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I put several PNGs on one page?",
+     "a": "No. Each image gets its own page. To place several pages on one sheet afterwards, use Pages per sheet."
+    },
+    {
+     "q": "Will my screenshots lose quality?",
+     "a": "No. PNG data is stored losslessly, so the PDF shows exactly the pixels of your images."
+    },
+    {
+     "q": "I have JPG photos, not PNG. What should I use?",
+     "a": "Use JPG to PDF. It keeps your photos in their original JPEG quality."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "webp-to-pdf": {
+   "name": "WebP to PDF",
+   "short": "Turn WebP images saved from the web into a PDF, one image per page.",
+   "action": "Convert to PDF",
+   "title": "WebP to PDF Converter Free, No Upload",
+   "description": "Convert WebP images to PDF in your browser. Reorder, choose page size and margin, then download. Files are never uploaded. Free, no watermark.",
+   "h1": "Convert WebP to PDF",
+   "howTo": "How to convert WebP to PDF",
+   "lead": "Many websites save images as WebP, a format that some apps and printers still do not open. Put them into a PDF that works everywhere, right on your device.",
+   "steps": [
+    "Choose or drop your WebP images.",
+    "Drag them into order, then choose a page size and margin.",
+    "Select Convert to PDF and download the file."
+   ],
+   "sections": [
+    {
+     "h": "Why the PDF can be larger",
+     "p": "Your browser decodes each WebP image and the pixels are stored in the PDF without loss. WebP is a very compact format, so the PDF is often bigger than the original files. If size matters, run the result through Compress PDF."
+    },
+    {
+     "h": "Page size and margins",
+     "p": "Fit image makes each page exactly the size of its image. A4 and US Letter place the image on a standard page, scaled to fit and centred, which is what you want for printing. Margin adds no border, a small one or a large one around the image."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert WebP to PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why is my PDF bigger than my WebP files?",
+     "a": "The images are stored losslessly, which takes more space than WebP compression. Compress PDF can make the file smaller."
+    },
+    {
+     "q": "Does every image get its own page?",
+     "a": "Yes. One image per page, in the order you arrange them."
+    },
+    {
+     "q": "Which page size should I choose?",
+     "a": "Fit image if the PDF is for viewing on screen. A4 or US Letter if you plan to print it."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-to-png": {
+   "name": "PDF to PNG",
+   "short": "Save PDF pages as sharp, lossless PNG images.",
+   "action": "Convert to PNG",
+   "title": "PDF to PNG Converter Free, Without Uploading",
+   "description": "Convert PDF pages to PNG images in your browser at 108, 144 or 216 DPI. All pages or some. Lossless and private: nothing is uploaded.",
+   "h1": "Convert PDF to PNG",
+   "howTo": "How to convert PDF to PNG",
+   "lead": "Turn pages into images for slides, documentation, websites or chat. PNG is lossless, so text and lines stay clean with no blurry edges.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick all pages or type the ones you need, then choose 108, 144 or 216 DPI.",
+    "Select Convert to PNG. One page downloads as a PNG, several as a ZIP."
+   ],
+   "sections": [
+    {
+     "h": "When to choose PNG over JPG",
+     "p": "PNG keeps every pixel exactly, which suits text, charts, diagrams and line art. JPG files are smaller and work better for photo-heavy pages. For those, use PDF to JPG."
+    },
+    {
+     "h": "Choosing a resolution",
+     "p": "108 DPI is enough for viewing on screen. 144 DPI looks sharp on high-resolution displays. 216 DPI gives the most detail for zooming in or printing, with larger files. Every image has a white background."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert PDF to PNG?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I convert only some pages?",
+     "a": "Yes. Type the pages you want, for example 1, 3-5. Only those pages are converted."
+    },
+    {
+     "q": "Why is the background white and not transparent?",
+     "a": "Pages are rendered onto white, the way they look in a reader and on paper. This keeps text readable in any app."
+    },
+    {
+     "q": "How do I get all the images at once?",
+     "a": "When you convert more than one page, they download together in a single ZIP file."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-to-text": {
+   "name": "PDF to Text",
+   "short": "Extract the text from a PDF into a plain .txt file.",
+   "action": "Extract text",
+   "title": "PDF to Text Converter Free, Without Uploading",
+   "description": "Extract text from a PDF into a UTF-8 .txt file in your browser. Preview it first, with optional page markers. Nothing is uploaded.",
+   "h1": "Convert PDF to text",
+   "howTo": "How to convert PDF to text",
+   "lead": "Get the words out of a PDF so you can quote them, search them, or paste them into another app. You see a preview before you download.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Turn on page markers if you want a line between pages, and check the preview.",
+    "Select Extract text to download a .txt file."
+   ],
+   "sections": [
+    {
+     "h": "What you get",
+     "p": "The text layer of every page, in a UTF-8 .txt file that opens in any editor and supports every language. Text only: layout, tables and columns are not reproduced exactly, so some lines may run together or appear in a different order."
+    },
+    {
+     "h": "Scanned PDFs",
+     "p": "A scanned document is usually just pictures of pages, with no text inside. Scissor PDF does not do OCR (text recognition), so the result for such a file is empty. If you can select text in your PDF reader, it can be extracted here."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert PDF to text?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why is my text file empty?",
+     "a": "The PDF most likely contains only images, for example a scan. There is no text layer to extract, and Scissor PDF does not perform OCR."
+    },
+    {
+     "q": "Are tables kept?",
+     "a": "Not exactly. The words are extracted, but rows, columns and spacing may not line up the way they did on the page."
+    },
+    {
+     "q": "What are page markers?",
+     "a": "An optional line between pages, so you can tell where each page begins in the text file."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "extract-images-from-pdf": {
+   "name": "Extract images from PDF",
+   "short": "Save the photos and pictures inside a PDF as separate files.",
+   "action": "Extract images",
+   "title": "Extract Images from PDF Free, No Upload",
+   "description": "Save the images embedded in a PDF to a ZIP in your browser. JPEGs keep their original quality; others are saved as PNG. Nothing is uploaded.",
+   "h1": "Extract images from a PDF",
+   "howTo": "How to extract images from a PDF",
+   "lead": "Get the original photos out of a brochure, report or catalogue instead of taking screenshots. All images are collected into one ZIP.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Extract images.",
+    "Download the ZIP with every image found in the file."
+   ],
+   "sections": [
+    {
+     "h": "Original quality",
+     "p": "JPEG images are saved byte for byte, exactly as they are stored in the PDF, with no recompression. Other images are saved as PNG, which is lossless. You get the image at the resolution it was embedded, not at the size shown on the page."
+    },
+    {
+     "h": "What is not extracted",
+     "p": "Very small images and transparency masks are skipped, so the ZIP is not filled with tiny fragments. Logos, charts and illustrations drawn as vector graphics are not images and are not extracted. To capture those, convert the page with PDF to PNG."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I extract images from a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Are the images recompressed?",
+     "a": "No. JPEG images are copied byte for byte. Other image types are saved as lossless PNG."
+    },
+    {
+     "q": "Why is a chart or logo missing?",
+     "a": "It is probably drawn as vector graphics rather than stored as an image. Use PDF to PNG to save the whole page as a picture instead."
+    },
+    {
+     "q": "Why are some tiny images missing?",
+     "a": "Very small images and transparency masks are skipped on purpose. They are usually decorative fragments."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "grayscale-pdf": {
+   "name": "Grayscale PDF",
+   "short": "Convert a colour PDF to black and white to save ink.",
+   "action": "Convert to grayscale",
+   "title": "Grayscale PDF: Black and White, No Upload",
+   "description": "Convert a PDF to grayscale (black and white) in your browser to save colour ink. Text stays sharp and searchable. Nothing is uploaded.",
+   "h1": "Convert a PDF to grayscale",
+   "howTo": "How to convert a PDF to grayscale",
+   "lead": "Print colourful slides, reports or tickets without using colour ink, or meet a request for a black and white copy. Your file stays on your device.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Convert to grayscale.",
+    "Download the black and white PDF."
+   ],
+   "sections": [
+    {
+     "h": "Text stays text",
+     "p": "Text and vector graphics are converted to shades of grey, not turned into pictures. They stay sharp at any zoom, and you can still select and search the text. Photos are converted to grayscale JPEG images."
+    },
+    {
+     "h": "Limits",
+     "p": "Gradients, patterns and some special colour spaces, such as spot colours used in professional print files, may keep their colour. Look through the result before you print a large job."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert a PDF to grayscale?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I still search and copy the text?",
+     "a": "Yes. Text is recoloured, not rasterised, so it remains selectable and searchable."
+    },
+    {
+     "q": "Why is part of my page still in colour?",
+     "a": "Gradients, patterns and some special colour spaces, like spot colours, may not be converted. The rest of the page is."
+    },
+    {
+     "q": "Why not just print in grayscale?",
+     "a": "You can, but a grayscale file looks the same on every printer and device, and it is what some offices and portals ask for."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "reverse-pdf": {
+   "name": "Reverse PDF",
+   "short": "Reverse the page order so the last page comes first.",
+   "action": "Reverse pages",
+   "title": "Reverse PDF Pages Free, Without Uploading",
+   "description": "Reverse the page order of a PDF in one click, in your browser. The last page becomes the first. Content unchanged, nothing uploaded.",
+   "h1": "Reverse PDF pages",
+   "howTo": "How to reverse the pages of a PDF",
+   "lead": "Scanned a stack face down, or back to front? Flip the whole page order in one step instead of dragging pages around one by one.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Reverse pages.",
+    "Download the PDF with the pages in reverse order."
+   ],
+   "sections": [
+    {
+     "h": "When you need it",
+     "p": "Many document feeders scan the last page first, and stacks often go in upside down or back to front. Reversing puts the pages back in reading order. It also helps when you print in reverse to collate by hand."
+    },
+    {
+     "h": "Nothing else changes",
+     "p": "Only the order changes. Each page keeps its content, size and rotation. If pages are also upside down, fix them afterwards with Rotate PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I reverse a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Does it rotate the pages too?",
+     "a": "No. Rotation is left as it is. Use Rotate PDF if pages need turning."
+    },
+    {
+     "q": "Can I reverse only some pages?",
+     "a": "Reverse PDF flips the whole document. To move individual pages, use Organize PDF."
+    },
+    {
+     "q": "I scanned fronts and backs separately. Can this help?",
+     "a": "Use Combine odd and even pages. It interleaves the two scans and can reverse the backs for you."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "insert-blank-pages": {
+   "name": "Insert blank pages",
+   "short": "Add empty pages after every page or at the positions you choose.",
+   "action": "Insert pages",
+   "title": "Insert Blank Pages into PDF Free, No Upload",
+   "description": "Add blank pages to a PDF in your browser: after every page for notes, or after the pages you type. Same size as the page before. Nothing uploaded.",
+   "h1": "Insert blank pages into a PDF",
+   "howTo": "How to insert blank pages into a PDF",
+   "lead": "Make room for handwritten notes, keep chapters starting on the right-hand side when printing double-sided, or leave space for something you will add later.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Choose After every page, or type positions such as after page 3.",
+    "Select Insert pages and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Two ways to insert",
+     "p": "After every page turns a handout or lecture slides into a document with a blank page for notes after each one. Specific positions let you add a single blank page exactly where you need it, for example after the cover."
+    },
+    {
+     "h": "Matching page size",
+     "p": "Each blank page has the same size as the page before it, so a mixed document stays consistent and prints correctly."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I insert blank pages?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I add a blank page at a specific spot?",
+     "a": "Yes. Type the positions, for example after page 3, and a blank page is added there."
+    },
+    {
+     "q": "What size are the new pages?",
+     "a": "Each blank page matches the size of the page right before it."
+    },
+    {
+     "q": "How do I remove blank pages instead?",
+     "a": "Use Remove blank pages, which finds empty pages for you, or Delete pages to remove specific ones."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "alternate-mix-pdf": {
+   "name": "Combine odd and even pages",
+   "short": "Interleave front and back scans into one double-sided PDF.",
+   "action": "Combine pages",
+   "title": "Combine Odd and Even PDF Pages, No Upload",
+   "description": "Merge front and back scans into one double-sided PDF in your browser. Pages alternate from two files, with an option to reverse the backs.",
+   "h1": "Combine odd and even pages",
+   "howTo": "How to combine odd and even pages",
+   "lead": "Have a scanner that only scans one side? Scan all the fronts, flip the stack, scan all the backs, then let Scissor PDF put every page back in order.",
+   "steps": [
+    "Add the PDF with the front pages as the first file and the back pages as the second.",
+    "Turn on Reverse second file if the backs were scanned last page first.",
+    "Select Combine pages and download the double-sided PDF."
+   ],
+   "sections": [
+    {
+     "h": "How the pages are mixed",
+     "p": "Pages alternate: page 1 from the first file, page 1 from the second, page 2 from the first, and so on. If one file has more pages, its remaining pages are added at the end."
+    },
+    {
+     "h": "Why reverse the second file",
+     "p": "When you turn the stack over to scan the backs, the last back is scanned first. Reverse second file corrects this, so each back lands behind its own front."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I combine odd and even pages?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Which file should go first?",
+     "a": "The file with the front pages (1, 3, 5...). The second file supplies the back pages."
+    },
+    {
+     "q": "When should I use Reverse second file?",
+     "a": "When the backs came out in reverse order, which is usual when you flip the whole stack and feed it again."
+    },
+    {
+     "q": "What if the two files have different page counts?",
+     "a": "The pages alternate as long as both files have pages. Any extra pages from the longer file are added at the end."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "split-pdf-pages-in-half": {
+   "name": "Split PDF pages in half",
+   "short": "Cut each page into two: left and right, or top and bottom.",
+   "action": "Split pages",
+   "title": "Split PDF Pages in Half Free, No Upload",
+   "description": "Cut every PDF page into two pages, left and right or top and bottom, in your browser. For scanned book spreads. Lossless, nothing uploaded.",
+   "h1": "Split PDF pages in half",
+   "howTo": "How to split PDF pages in half",
+   "lead": "Scanned a book two pages at a time? Turn each spread into two single pages so the document reads, prints and displays on a phone the way it should.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Choose left and right or top and bottom. For right-to-left books, turn on right-to-left order.",
+    "Select Split pages and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Books in every direction",
+     "p": "By default the left half comes first. For books in Arabic, Persian, Hebrew or Kurdish, and for manga, choose right-to-left order so the right half comes first. Top and bottom works for two-up documents printed one above the other."
+    },
+    {
+     "h": "Lossless",
+     "p": "The halves show the original page content. Nothing is re-rendered, so text stays sharp and searchable and scanned images keep their quality."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I split PDF pages in half?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I split a right-to-left book?",
+     "a": "Yes. Choose right-to-left order and the right half of each spread becomes the first page."
+    },
+    {
+     "q": "Will the quality drop?",
+     "a": "No. The original content is shown in each half, not re-rendered."
+    },
+    {
+     "q": "This is not what I meant. I want to split a PDF into several files.",
+     "a": "Use Split PDF to divide a document into separate files by page range."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "resize-pdf": {
+   "name": "Resize PDF pages",
+   "short": "Scale every page to A4, US Letter, A3, A5 or Legal.",
+   "action": "Resize PDF",
+   "title": "Resize PDF Pages to A4 or Letter, No Upload",
+   "description": "Change the page size of a PDF to A4, US Letter, A3, A5 or Legal in your browser. Proportions kept, content centred. Nothing is uploaded.",
+   "h1": "Resize PDF pages",
+   "howTo": "How to resize PDF pages",
+   "lead": "Got a US Letter document and need A4, or the other way round? Change every page to one standard size so it prints without cut-off edges.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick the new size: A4, US Letter, A3, A5 or Legal.",
+    "Select Resize PDF and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Scaled, not stretched",
+     "p": "Each page is scaled to fit the new size with its proportions kept, then centred. Text and graphics stay sharp because they are scaled as vectors, not turned into images. Pages of mixed sizes all end up the same size."
+    },
+    {
+     "h": "What is not carried over",
+     "p": "Links, comments and form fields are not kept on the resized pages. If you need a fillable form, fill it in first, or keep the original file."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I resize a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Will my pages be stretched?",
+     "a": "No. Proportions are kept. If the shape of the new size differs, the page is centred with white space around it."
+    },
+    {
+     "q": "Does the text get blurry?",
+     "a": "No. Text and graphics stay sharp at the new size."
+    },
+    {
+     "q": "Why do my links no longer work?",
+     "a": "Links, comments and form fields are not carried over when pages are resized."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "add-margins-to-pdf": {
+   "name": "Add margins to PDF",
+   "short": "Add a white border around every page, in millimetres.",
+   "action": "Add margins",
+   "title": "Add Margins to PDF Free, Without Uploading",
+   "description": "Add a white border of any width in millimetres around every PDF page, in your browser. Content keeps its size. For binding or notes.",
+   "h1": "Add margins to a PDF",
+   "howTo": "How to add margins to a PDF",
+   "lead": "Need room to bind, hole-punch or write in the margins? Add a white border around every page without shrinking the content.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Type the margin width in millimetres.",
+    "Select Add margins and download the result."
+   ],
+   "sections": [
+    {
+     "h": "The page grows, the content does not shrink",
+     "p": "The border is added outside the existing page, so the page becomes larger and text and images stay exactly the same size. Nothing is scaled or re-rendered."
+    },
+    {
+     "h": "Common uses",
+     "p": "A margin keeps text clear of the binding or punch holes, gives space for handwritten comments when marking papers, and helps when a document runs too close to the edge for your printer."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add margins to a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Will my content be made smaller?",
+     "a": "No. The page gets larger and the content keeps its size."
+    },
+    {
+     "q": "What unit is the margin?",
+     "a": "Millimetres. The same width is added around every page."
+    },
+    {
+     "q": "I need the pages to stay A4. What can I do?",
+     "a": "Add the margins, then use Resize PDF to scale the pages back to A4."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-booklet": {
+   "name": "Booklet PDF",
+   "short": "Arrange pages for printing a folded, stapled booklet.",
+   "action": "Make booklet",
+   "title": "Make a Booklet PDF Free, Without Uploading",
+   "description": "Turn a PDF into a printable booklet in your browser: two pages per sheet in saddle-stitch order. Print, fold and staple. Nothing uploaded.",
+   "h1": "Make a booklet from a PDF",
+   "howTo": "How to make a booklet PDF",
+   "lead": "Print a programme, zine, menu or small manual as a folded booklet on an ordinary printer. Scissor PDF works out the page order for you.",
+   "steps": [
+    "Choose or drop the PDF and pick the sheet size: Same as PDF, A4 or US Letter.",
+    "Select Make booklet and download the result.",
+    "Print double-sided, flipping on the short edge. Fold the stack in the middle and staple along the fold."
+   ],
+   "sections": [
+    {
+     "h": "How it works",
+     "p": "Pages are placed two side by side on landscape sheets in saddle-stitch order, so after folding they read 1, 2, 3 and so on. A booklet needs a page count that is a multiple of 4, so blank pages are added at the end when needed."
+    },
+    {
+     "h": "Printing tips",
+     "p": "Choose double-sided printing and flip on the short edge. If the backs come out upside down, your printer flips the other way: try long edge instead. Print one copy first to check."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I make a booklet?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why were blank pages added?",
+     "a": "Each folded sheet holds four pages, so the total must be a multiple of 4. Blank pages are added at the end to make up the difference."
+    },
+    {
+     "q": "Which way should I flip when printing double-sided?",
+     "a": "On the short edge. If the second side comes out upside down, switch to long edge."
+    },
+    {
+     "q": "What sheet size should I choose?",
+     "a": "Same as PDF keeps the original page size per side. Choose A4 or US Letter to match the paper in your printer."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "remove-blank-pages": {
+   "name": "Remove blank pages",
+   "short": "Find empty pages automatically, review them and delete them.",
+   "action": "Remove pages",
+   "title": "Remove Blank Pages from PDF Free, No Upload",
+   "description": "Detect and delete blank pages from a PDF in your browser. Empty pages are selected for you to review before saving. Nothing is uploaded.",
+   "h1": "Remove blank pages from a PDF",
+   "howTo": "How to remove blank pages from a PDF",
+   "lead": "Scanned a stack double-sided and ended up with empty backs? Scissor PDF finds the white pages for you. You check the selection, then save.",
+   "steps": [
+    "Choose or drop the PDF. Pages that look blank are selected automatically.",
+    "Review the selection, and select or deselect pages as needed.",
+    "Select Remove pages and download the cleaned PDF."
+   ],
+   "sections": [
+    {
+     "h": "How detection works",
+     "p": "Every page is rendered in your browser, and pages that are completely or almost completely white are selected. Because this goes by how a page looks, it finds blank backs of scans even when they contain a little scanner noise."
+    },
+    {
+     "h": "Always review",
+     "p": "A page with only a faint mark, such as a light page number or a short pencil note, may be counted as blank. Look through the selection before saving and deselect any page you want to keep."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I remove blank pages?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Will it delete pages without asking?",
+     "a": "No. Blank pages are only selected. You review the selection and decide before anything is saved."
+    },
+    {
+     "q": "Why was a page with a little text selected?",
+     "a": "Detection is based on appearance, so a page with only a faint mark can look blank. Deselect it before saving."
+    },
+    {
+     "q": "Can I remove other pages at the same time?",
+     "a": "Yes. Select any extra pages you want gone before you save."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "split-pdf-by-size": {
+   "name": "Split PDF by size",
+   "short": "Split a PDF into parts under a size limit, like 5 MB.",
+   "action": "Split by size",
+   "title": "Split PDF by File Size Free, No Upload",
+   "description": "Split a large PDF into parts under a size you choose, such as 5 MB, for email or upload limits. Pages are kept whole. Nothing is uploaded.",
+   "h1": "Split a PDF by file size",
+   "howTo": "How to split a PDF by file size",
+   "lead": "Email attachment too large, or a portal that only accepts small files? Split the PDF into parts that each fit under the limit.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Type the maximum size for each part, for example 5 MB.",
+    "Select Split by size and download the parts as a ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Pages stay whole",
+     "p": "Parts are made of complete pages, in order, and each part stays under the size you choose. A single page that is larger than the limit on its own becomes its own part, because a page cannot be divided."
+    },
+    {
+     "h": "Try compressing first",
+     "p": "If you would rather send one file, Compress PDF may bring it under the limit. You can also compress first and split afterwards to get fewer parts."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I split a PDF by size?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why is one part bigger than my limit?",
+     "a": "That part holds a single page that is larger than the limit by itself. Pages are never split."
+    },
+    {
+     "q": "How do I get the parts?",
+     "a": "All parts download together in one ZIP file."
+    },
+    {
+     "q": "Can I split by page numbers instead?",
+     "a": "Yes, use Split PDF to divide a document by page ranges."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-header-footer": {
+   "name": "Add header and footer",
+   "short": "Add text, page numbers and dates to the top or bottom of every page.",
+   "action": "Add header and footer",
+   "title": "Add Header and Footer to PDF, No Upload",
+   "description": "Add a header and footer to every PDF page in your browser: left, centre and right text with page number, total pages, date and file name.",
+   "h1": "Add a header and footer to a PDF",
+   "howTo": "How to add a header and footer to a PDF",
+   "lead": "Put a title, a confidentiality note, the date or page X of Y on every page of a report, thesis or contract. Works in any language.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Type text for the left, centre and right of the header, footer or both. Insert placeholders for page number, total pages, date and file name.",
+    "Choose the text size and the first page, then select Add header and footer."
+   ],
+   "sections": [
+    {
+     "h": "Placeholders",
+     "p": "Placeholders fill in automatically on each page: the page number, the total number of pages, the date and the file name. Combine them with your own words, for example Page 3 of 12. Choose the first page to leave a cover page clean."
+    },
+    {
+     "h": "Any language, any script",
+     "p": "The text is drawn with your device's fonts, so Arabic, Chinese, Persian, Hindi and every other script your device can display come out correctly. The result is part of the page and is not editable text afterwards."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add a header and footer?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I write Page X of Y?",
+     "a": "Yes. Combine the page number and total pages placeholders with your own text."
+    },
+    {
+     "q": "Can I skip the cover page?",
+     "a": "Yes. Choose the page where the header and footer should start."
+    },
+    {
+     "q": "Can I edit the header later?",
+     "a": "Not as text. It becomes part of the page. Keep your original file if you may need to change it."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "bates-numbering": {
+   "name": "Bates numbering",
+   "short": "Stamp sequential Bates numbers like ABC-000001 on every page.",
+   "action": "Add Bates numbers",
+   "title": "Bates Numbering for PDF Free, No Upload",
+   "description": "Add Bates numbers to every PDF page in your browser: prefix plus zero-padded number, chosen corner, start number and digits. Nothing uploaded.",
+   "h1": "Add Bates numbering to a PDF",
+   "howTo": "How to add Bates numbers to a PDF",
+   "lead": "Label every page of a document production with a unique, sequential identifier, without sending confidential case files to anyone's server.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Set the prefix, start number, number of digits and corner.",
+    "Select Add Bates numbers and download the stamped PDF."
+   ],
+   "sections": [
+    {
+     "h": "How the number is built",
+     "p": "Each number is your prefix followed by a zero-padded sequence, for example ABC-000001, ABC-000002 and so on. Choose the start number to continue from a previous batch, and the number of digits to match your protocol."
+    },
+    {
+     "h": "One file at a time",
+     "p": "Bates numbering works on one PDF at a time. For a production spread over several files, number the first, then start the next file at the number after its last page. Or combine them first with Merge PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add Bates numbers?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "What is Bates numbering?",
+     "a": "A legal convention that gives every page in a set of documents a unique sequential identifier, so pages can be referenced exactly during discovery and in court."
+    },
+    {
+     "q": "Can I continue numbering from another file?",
+     "a": "Yes. Set the start number to the next number in your sequence."
+    },
+    {
+     "q": "Can I number several PDFs in one go?",
+     "a": "Not at once. Process one file at a time, or merge the files first with Merge PDF."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "add-image-to-pdf": {
+   "name": "Add image to PDF",
+   "short": "Place a logo, photo, stamp or signature image on any page.",
+   "action": "Add images",
+   "title": "Add Image to PDF Free, Without Uploading",
+   "description": "Insert a logo, photo, stamp or scanned signature into a PDF in your browser. Drag and resize it on any page. Files are never uploaded.",
+   "h1": "Add an image to a PDF",
+   "howTo": "How to add an image to a PDF",
+   "lead": "Put your company logo on a letter, a photo on an application, or a company stamp on an invoice. Drag it into place and resize it.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Add an image and drag and resize it on the page. Add more images on any page if you need them.",
+    "Select Add images and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Place it exactly",
+     "p": "Drag an image anywhere on any page and resize it until it fits. You can add several images, on the same page or on different pages."
+    },
+    {
+     "h": "Part of the page",
+     "p": "Images become part of the page content, so they look the same in every PDF reader. For a logo repeated on every page, Logo watermark is quicker. To sign a document, Sign PDF also lets you draw or type a signature."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add an image to a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I add more than one image?",
+     "a": "Yes. Add as many as you need, on any pages."
+    },
+    {
+     "q": "Can I move the image later?",
+     "a": "Before you save, yes. After saving it is part of the page, so keep your original file if you may want to change it."
+    },
+    {
+     "q": "How do I put my logo on every page?",
+     "a": "Use Logo watermark, which places an image on every page at once."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "redact-pdf": {
+   "name": "Redact PDF",
+   "short": "Black out text and images so they are truly removed.",
+   "action": "Redact PDF",
+   "title": "Redact PDF Free, Without Uploading",
+   "description": "Black out sensitive text and images in a PDF, in your browser. Redacted pages are flattened so hidden content is really removed. Nothing uploaded.",
+   "h1": "Redact a PDF",
+   "howTo": "How to redact a PDF",
+   "lead": "Hide names, account numbers, addresses or anything else before you share a document. The covered content is removed, not just painted over, and the file never leaves your device.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Draw black boxes over everything you need to hide, on any page.",
+    "Select Redact PDF, download the result and check it."
+   ],
+   "sections": [
+    {
+     "h": "True redaction",
+     "p": "A black rectangle on its own can be lifted off, and the text underneath can still be copied. So every page with a redaction is converted into an image at 200 DPI with the boxes burned in. The hidden content is no longer in the file at all."
+    },
+    {
+     "h": "What changes",
+     "p": "Text on redacted pages can no longer be selected or searched, and those pages may make the file larger. Pages without redactions are left untouched. Always open the result and check every redaction before you share it."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I redact a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Is the hidden text really gone?",
+     "a": "Yes. Pages with redactions are turned into images with the black boxes burned in, so the original text and images under them are removed."
+    },
+    {
+     "q": "Why can I no longer select text on some pages?",
+     "a": "Redacted pages are converted to images. That is what makes the redaction permanent. Pages you did not redact keep their text."
+    },
+    {
+     "q": "Can I use Crop PDF to hide information instead?",
+     "a": "No. Cropping only hides content, which can be revealed again. Use Redact PDF for anything sensitive."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "fill-pdf-form": {
+   "name": "Fill PDF form",
+   "short": "Fill in text boxes, checkboxes and drop-downs in a PDF form.",
+   "action": "Save filled form",
+   "title": "Fill PDF Form Free, Without Uploading",
+   "description": "Fill in an interactive PDF form in your browser: text boxes, checkboxes, radio buttons and drop-downs. Save it. Your data is never uploaded.",
+   "h1": "Fill in a PDF form",
+   "howTo": "How to fill in a PDF form",
+   "lead": "Tax forms, applications and registration forms often ask for personal details. Fill them in here and nothing you type leaves your device.",
+   "steps": [
+    "Choose or drop the PDF form.",
+    "Click into the fields and fill them in: text boxes, checkboxes, radio buttons and drop-downs.",
+    "Select Save filled form and download the completed PDF."
+   ],
+   "sections": [
+    {
+     "h": "Forms with fields",
+     "p": "This tool works with PDFs that have interactive form fields, the kind you can click into in a PDF reader. Your entries are saved into the fields, so the form stays fillable and can be changed later."
+    },
+    {
+     "h": "Forms without fields",
+     "p": "A scanned form, or a flat one that was simply printed to PDF, has no fields to fill. Use Add text to PDF to type on top of it instead. To lock a filled form so it cannot be changed, use Flatten PDF afterwards."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I fill a PDF form?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why can't I click into my form?",
+     "a": "It probably has no interactive fields, for example because it is a scan. Use Add text to PDF to type on it."
+    },
+    {
+     "q": "Can the recipient still change my answers?",
+     "a": "Yes, the fields stay editable. Use Flatten PDF afterwards to make them permanent."
+    },
+    {
+     "q": "Can I sign the form too?",
+     "a": "Yes. Save the filled form, then open it in Sign PDF."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "flatten-pdf": {
+   "name": "Flatten PDF",
+   "short": "Merge form fields and comments into the page so they cannot be edited.",
+   "action": "Flatten PDF",
+   "title": "Flatten PDF Free, Without Uploading",
+   "description": "Flatten form fields and annotations into the page content in your browser, so they look the same everywhere and cannot be edited. No upload.",
+   "h1": "Flatten a PDF",
+   "howTo": "How to flatten a PDF",
+   "lead": "Send a filled form that nobody can change, or make comments and stamps show up the same in every app and on every printer.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Flatten PDF.",
+    "Download the flattened file."
+   ],
+   "sections": [
+    {
+     "h": "What flattening does",
+     "p": "Form fields and annotations, such as comments, stamps, highlights and drawings, are merged into the page content. They look exactly as they did, but are no longer separate objects that can be edited, moved or deleted. Some readers and printers do not show annotations at all; after flattening, they do."
+    },
+    {
+     "h": "Good to know",
+     "p": "Forms stop being fillable. Annotations without a visual appearance, such as some hidden comments, are removed. Keep a copy of the original if you may need to edit it again."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I flatten a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I still fill in the form after flattening?",
+     "a": "No. The fields become part of the page. Fill in the form first with Fill PDF form, then flatten."
+    },
+    {
+     "q": "Why did some comments disappear?",
+     "a": "Annotations that have no visual appearance cannot be drawn onto the page, so they are removed."
+    },
+    {
+     "q": "Why would I flatten a PDF?",
+     "a": "To stop others changing your entries, and to make sure forms and markup look the same in every app and when printed."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "remove-pdf-annotations": {
+   "name": "Remove annotations",
+   "short": "Delete comments, highlights, notes, stamps and drawings from a PDF.",
+   "action": "Remove annotations",
+   "title": "Remove Annotations from PDF Free, No Upload",
+   "description": "Delete comments, highlights, sticky notes, stamps and drawings from a PDF in your browser. Keep links if you like. Nothing is uploaded.",
+   "h1": "Remove annotations from a PDF",
+   "howTo": "How to remove annotations from a PDF",
+   "lead": "Share a clean copy after a review round, without the comments, highlights and sticky notes your team left along the way.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Choose whether to keep links.",
+    "Select Remove annotations and download the clean copy."
+   ],
+   "sections": [
+    {
+     "h": "What is removed",
+     "p": "Comments, highlights, sticky notes, stamps and drawings are deleted. Links can be kept if you choose. Form fields are always kept, so a fillable form stays fillable."
+    },
+    {
+     "h": "The page itself is unchanged",
+     "p": "Only annotations are removed. Text, images and anything that is part of the page content stay as they are. Markup that has been flattened into the page is no longer an annotation, so it is not removed."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I remove annotations?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Will my form fields be removed?",
+     "a": "No. Form fields are kept."
+    },
+    {
+     "q": "Can I keep the links?",
+     "a": "Yes. Choose to keep links and they stay clickable."
+    },
+    {
+     "q": "Why is a highlight still there?",
+     "a": "It is probably part of the page content rather than an annotation, for example because the file was flattened. Those cannot be removed this way."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "remove-images-from-pdf": {
+   "name": "Remove images from PDF",
+   "short": "Strip out photos and pictures, keeping text and graphics.",
+   "action": "Remove images",
+   "title": "Remove Images from PDF Free, No Upload",
+   "description": "Delete all photos and pictures from a PDF in your browser, keeping text and vector graphics. Smaller files, less ink. Nothing is uploaded.",
+   "h1": "Remove images from a PDF",
+   "howTo": "How to remove images from a PDF",
+   "lead": "Need only the words? Remove every photo to print a text-heavy document with less ink, or to make a large file much smaller.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Remove images.",
+    "Download the text-only version."
+   ],
+   "sections": [
+    {
+     "h": "What stays",
+     "p": "Text and vector graphics, such as lines, tables, charts and many logos, are kept. Only images like photos and pictures are removed. Text remains selectable and searchable."
+    },
+    {
+     "h": "When it helps",
+     "p": "Images are often most of a PDF's size, so removing them can make the file much smaller. It also saves ink when you print reading material, manuals or articles. For a scanned document, where every page is an image, the pages will be left empty."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I remove images from a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Will the text be affected?",
+     "a": "No. Text and vector graphics are kept as they are."
+    },
+    {
+     "q": "Why are my pages empty after removing images?",
+     "a": "The PDF is probably a scan, where each page is an image. There is no separate text to keep."
+    },
+    {
+     "q": "I want a smaller file but keep the photos.",
+     "a": "Use Compress PDF, which reduces image size instead of removing images."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-viewer": {
+   "name": "PDF viewer",
+   "short": "Open and read a PDF privately in your browser.",
+   "action": "Open PDF",
+   "title": "PDF Viewer Online Free, Without Uploading",
+   "description": "Open and read a PDF in your browser on any device, with zoom. No app to install, nothing uploaded. Works offline after your first visit.",
+   "h1": "View a PDF",
+   "howTo": "How to view a PDF",
+   "lead": "Read a PDF on a borrowed computer, a work laptop without a PDF app, or a phone. The document opens in this page and is never sent anywhere.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Read it in the browser and zoom in or out as needed.",
+    "Close the tab when you are done. Nothing is kept."
+   ],
+   "sections": [
+    {
+     "h": "Private by design",
+     "p": "The file is read from your device into the page and displayed there. It is not uploaded, stored or added to any history on a server. Close the tab and it is gone from the page."
+    },
+    {
+     "h": "Any device, even offline",
+     "p": "The viewer runs in any modern browser on a computer, tablet or phone, with nothing to install. After your first visit, it keeps working without an internet connection."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I view a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Do I need to install anything?",
+     "a": "No. The viewer runs in your browser on any device."
+    },
+    {
+     "q": "Does it work offline?",
+     "a": "Yes, after your first visit to the site."
+    },
+    {
+     "q": "Can I edit the PDF here?",
+     "a": "The viewer is for reading. To change a document, use one of the other tools, such as Add text to PDF or Organize PDF."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "compare-pdf": {
+   "name": "Compare PDF",
+   "short": "Highlight the words added or removed between two PDFs.",
+   "action": "Compare PDFs",
+   "title": "Compare PDF Files Free, Without Uploading",
+   "description": "Compare the text of two PDFs page by page in your browser and see added and removed words highlighted. Files are never uploaded.",
+   "h1": "Compare two PDF files",
+   "howTo": "How to compare two PDFs",
+   "lead": "Find out what changed between two versions of a contract, policy or draft, without reading both line by line and without sending them to a server.",
+   "steps": [
+    "Choose or drop the original PDF and the changed PDF.",
+    "Select Compare PDFs.",
+    "Go through the pages. Added and removed words are highlighted."
+   ],
+   "sections": [
+    {
+     "h": "Text, page by page",
+     "p": "The text of the two files is compared page by page, and words that were added or removed are highlighted. It suits documents where wording matters, such as contracts, terms, specifications and manuscripts."
+    },
+    {
+     "h": "Limits",
+     "p": "Only text is compared, not images, formatting or layout. Scanned PDFs that contain only pictures of pages have no text layer, so they cannot be compared."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I compare PDFs?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Does it compare images or formatting?",
+     "a": "No. Only the text is compared."
+    },
+    {
+     "q": "Why does my scanned PDF show no differences?",
+     "a": "A scan has no text layer, so there is nothing to compare. Scissor PDF does not perform OCR."
+    },
+    {
+     "q": "Is it safe for confidential contracts?",
+     "a": "Yes. Both files are compared inside your browser and never leave your device."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-info": {
+   "name": "PDF info",
+   "short": "See page count, page sizes, fonts, metadata and more.",
+   "action": "Show info",
+   "title": "PDF Info and Page Counter Free, No Upload",
+   "description": "Count PDF pages and see page sizes, PDF version, fonts, images, forms, JavaScript, attachments, encryption and metadata. Nothing uploaded.",
+   "h1": "PDF info and page counter",
+   "howTo": "How to check a PDF's information",
+   "lead": "Check how many pages a file has before printing, see whether its fonts are embedded before sending it to a print shop, or find out what is inside an unfamiliar PDF.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Select Show info.",
+    "Read the details: pages, sizes, fonts, contents and metadata."
+   ],
+   "sections": [
+    {
+     "h": "What you see",
+     "p": "The page count and page sizes, the PDF version and file size, the fonts used and whether each one is embedded, and the number of images. It also shows the document's metadata, such as title and author."
+    },
+    {
+     "h": "What is inside",
+     "p": "Find out whether a file has form fields, JavaScript, attachments or encryption. That helps when a portal rejects a PDF, when a print shop asks for embedded fonts, or when you want to know what an unexpected attachment contains before opening it elsewhere."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I check a PDF's information?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "How do I count the pages in a PDF?",
+     "a": "Open it here. The page count is shown first, together with the size of the pages."
+    },
+    {
+     "q": "How do I know if fonts are embedded?",
+     "a": "Every font in the file is listed with whether it is embedded. Print shops often require all fonts to be embedded."
+    },
+    {
+     "q": "Can I change the metadata here?",
+     "a": "No, this tool only shows it. Use Edit PDF metadata to change the title, author and other fields."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "split-pdf-by-bookmarks": {
+   "name": "Split PDF by bookmarks",
+   "short": "Split a PDF into one file per chapter, using its bookmarks.",
+   "action": "Split by bookmarks",
+   "title": "Split PDF by Bookmarks Free, No Upload",
+   "description": "Split a PDF into one file per top-level bookmark or chapter, in your browser. Files are named after each bookmark. Nothing is uploaded.",
+   "h1": "Split a PDF by bookmarks",
+   "howTo": "How to split a PDF by bookmarks",
+   "lead": "Break a long book, manual or report into its chapters in one step. Each chapter becomes its own file, named after its bookmark.",
+   "steps": [
+    "Choose or drop a PDF that has bookmarks.",
+    "Select Split by bookmarks.",
+    "Download the ZIP with one PDF per chapter."
+   ],
+   "sections": [
+    {
+     "h": "One file per chapter",
+     "p": "The PDF is split at every top-level bookmark, and each file is named after its bookmark, so you can tell the chapters apart at a glance. Pages before the first bookmark, such as a cover or contents page, become their own file. All files download together as a ZIP."
+    },
+    {
+     "h": "PDFs without bookmarks",
+     "p": "This only works for PDFs that have bookmarks, also called an outline. If a file has none, you will see a message saying so. In that case, use Split PDF to divide it by page ranges instead."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I split a PDF by bookmarks?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "How do I know if my PDF has bookmarks?",
+     "a": "Open it in a PDF reader and look for a bookmarks or outline panel. If the file has none, Scissor PDF tells you when you open it here."
+    },
+    {
+     "q": "Are sub-bookmarks used too?",
+     "a": "No. The file is split at top-level bookmarks only, so each chapter stays together with its sections."
+    },
+    {
+     "q": "What happens to the pages before the first bookmark?",
+     "a": "They become a separate file, so nothing is lost."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "highlight-pdf": {
+   "name": "Highlight PDF",
+   "short": "Mark text in yellow, green or pink on any page.",
+   "action": "Save highlights",
+   "title": "Highlight PDF Free, Without Uploading",
+   "description": "Highlight text in a PDF in your browser with yellow, green or pink boxes on any page. Highlights become part of the page. Nothing uploaded.",
+   "h1": "Highlight a PDF",
+   "howTo": "How to highlight a PDF",
+   "lead": "Mark the key passages in a reading, the figures in a statement or the clauses in a contract that someone else needs to see.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick yellow, green or pink, and draw highlight boxes over text on any page.",
+    "Select Save highlights and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Three colours",
+     "p": "Draw translucent boxes in yellow, green or pink over the text you want to mark. Use different colours to separate topics, or questions from answers."
+    },
+    {
+     "h": "Part of the page",
+     "p": "The highlights become part of the page, not separate comments. They look the same in every reader and when printed, but cannot be removed with an annotation tool later. Keep your original if you might want a clean copy."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I highlight a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Which colours can I use?",
+     "a": "Yellow, green and pink."
+    },
+    {
+     "q": "Can I remove the highlights later?",
+     "a": "Not from the saved file, because they are part of the page. Keep the original if you need an unmarked copy."
+    },
+    {
+     "q": "Will the text underneath still be readable?",
+     "a": "Yes. Highlights are translucent, so the text shows through."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "image-watermark-pdf": {
+   "name": "Logo watermark",
+   "short": "Put your logo or an image on every page as a watermark.",
+   "action": "Add watermark",
+   "title": "Add Logo Watermark to PDF Free, No Upload",
+   "description": "Add a logo or image watermark to every page of a PDF in your browser. Set size, angle and opacity, single or tiled. Nothing is uploaded.",
+   "h1": "Add a logo watermark to a PDF",
+   "howTo": "How to add a logo watermark to a PDF",
+   "lead": "Brand proposals and portfolios with your logo, or mark drafts and previews so they are not passed off as final. The image goes on every page.",
+   "steps": [
+    "Choose or drop the PDF, then add your image. A PNG with a transparent background gives the cleanest result.",
+    "Choose the size, angle and opacity, and whether to place it once or tiled across the page.",
+    "Select Add watermark and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Single or tiled",
+     "p": "A single watermark sits once on each page. Tiled repeats it across the whole page, which makes it harder to crop out of screenshots of your work. Adjust size, angle and opacity until it is visible without hiding the content."
+    },
+    {
+     "h": "Choosing an image",
+     "p": "A PNG with a transparent background looks cleanest, because only the logo appears, not a white box around it. For a text watermark such as CONFIDENTIAL, use Watermark PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add a logo watermark?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "What kind of image should I use?",
+     "a": "A PNG with a transparent background, so only the logo itself shows on the page."
+    },
+    {
+     "q": "Can I make it faint?",
+     "a": "Yes. Lower the opacity until the watermark sits quietly behind the content."
+    },
+    {
+     "q": "Can I use text instead of an image?",
+     "a": "Yes, with Watermark PDF."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-to-long-image": {
+   "name": "PDF to long image",
+   "short": "Stitch PDF pages into one tall image to share in chat.",
+   "action": "Create image",
+   "title": "PDF to Long Image Free, Without Uploading",
+   "description": "Stitch all or some PDF pages into one tall PNG or JPG image in your browser, to share a whole document in a chat or post. Nothing uploaded.",
+   "h1": "Convert a PDF to one long image",
+   "howTo": "How to convert a PDF to a long image",
+   "lead": "Many chat apps and social networks do not preview PDFs. Turn the pages into one tall image that people can scroll through right in the conversation.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick all pages or the ones you need, and choose PNG or JPG.",
+    "Select Create image and download it."
+   ],
+   "sections": [
+    {
+     "h": "PNG or JPG",
+     "p": "PNG keeps text and lines crisp and suits documents, menus and slides. JPG makes a smaller file, which helps with photo-heavy pages and with apps that limit image size."
+    },
+    {
+     "h": "Very long documents",
+     "p": "Browsers limit how large a single image can be. When a document is very long, the resolution is lowered automatically so it still fits. For many pages, select only the ones you need, or use PDF to PNG to get one image per page."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert a PDF to a long image?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Why is my long image less sharp than expected?",
+     "a": "The browser has a maximum image size. For long documents the resolution is reduced automatically to stay within it. Choose fewer pages for more detail."
+    },
+    {
+     "q": "Can I include only some pages?",
+     "a": "Yes. Select the pages you want and only those are stitched together."
+    },
+    {
+     "q": "Should I choose PNG or JPG?",
+     "a": "PNG for text and graphics, JPG for a smaller file or pages with lots of photos."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -1128,6 +2539,98 @@
   "useSignature": "Use signature",
   "clearPad": "Clear",
   "signHere": "Sign here",
-  "chooseImage": "Choose image"
+  "chooseImage": "Choose image",
+  "simpleSub": "One click. The result is ready in a moment.",
+  "keepLinks": "Keep links",
+  "toTextSub": "The text layer of every page is saved as a plain text file.",
+  "pageMarks": "Mark where each page starts",
+  "readyText": "Your text is ready",
+  "noText": "No text was found. This PDF may contain only scanned images.",
+  "blankPagesSub": "Blank pages take the size of the page before them.",
+  "where": "Where",
+  "afterEvery": "After every page",
+  "afterSome": "After specific pages",
+  "afterPages": "After pages",
+  "afterPagesHint": "Use 0 to add a page at the very start.",
+  "mixSub": "Pages alternate: first file, second file, first, second…",
+  "reverseSecond": "Reverse second file (for backs scanned in reverse)",
+  "compareSub": "Add the two versions to compare: original first, then the new one.",
+  "compareSame": "No text differences",
+  "compareChanged": "Differences on {pages}",
+  "halfSub": "Every page becomes two pages.",
+  "cut": "Cut",
+  "leftRight": "Left and right",
+  "topBottom": "Top and bottom",
+  "rightToLeft": "Right-to-left order (Arabic, Persian, Hebrew, manga)",
+  "resizeSub": "Pages are scaled to fit and centred.",
+  "marginsSub": "A white border is added around every page.",
+  "bookletSub": "Print double-sided, flip on the short edge, then fold.",
+  "splitSizeSub": "Each part stays under this size.",
+  "maxSize": "Maximum size",
+  "batesSub": "A sequential number is added to every page.",
+  "prefix": "Prefix",
+  "digits": "Digits",
+  "headerFooterSub": "Left, centre and right. Leave a box empty to skip it.",
+  "header": "Header",
+  "footer": "Footer",
+  "center": "Centre",
+  "tokensHint": "Use {page}, {total}, {date} or {file} for automatic values.",
+  "viewSub": "Scroll to read. Nothing is uploaded.",
+  "zoom": "Zoom",
+  "infoSub": "Everything stored inside this PDF.",
+  "formSub": "Click a field on the page to fill it in, then save.",
+  "noFields": "This PDF has no fillable fields.",
+  "useAddText": "Use Add text instead",
+  "blankSub": "Blank pages are selected for removal. Check the selection, then save.",
+  "scanning": "Looking for blank pages…",
+  "blankFound": "Found {pages} that look blank.",
+  "yes": "Yes",
+  "no": "No",
+  "embedded": "embedded",
+  "notEmbedded": "not embedded",
+  "infoPages": "Pages",
+  "infoSize": "File size",
+  "infoVersion": "Version",
+  "infoPageSizes": "Page sizes",
+  "infoImages": "Images",
+  "infoForms": "Form fields",
+  "infoBookmarks": "Bookmarks",
+  "infoJs": "JavaScript",
+  "infoAttachments": "Attachments",
+  "infoTagged": "Tagged (accessible)",
+  "infoEncrypted": "Was encrypted",
+  "infoFonts": "Fonts",
+  "image": "Image",
+  "yellow": "Yellow",
+  "green": "Green",
+  "pink": "Pink",
+  "addHighlight": "Add highlight",
+  "addRedaction": "Add black box",
+  "redactHint": "Pages with boxes become images, so what is under the boxes is really removed.",
+  "studioTitle": "Scissor PDF",
+  "studioOpen": "Open PDF",
+  "studioDrop": "or drop PDFs or a folder anywhere. Nothing is uploaded.",
+  "studioAllActions": "All actions",
+  "studioActions": "Actions",
+  "studioActionsSub": "Pick what to do next. Every step can be undone.",
+  "studioUndo": "Undo",
+  "studioRedo": "Redo",
+  "studioApplied": "{tool} done",
+  "studioReady": "{name} is ready",
+  "studioOpenFiles": "Open files",
+  "studioOpenFolder": "Open folder",
+  "studioFiles": "Files",
+  "studioDownloadAll": "Download all",
+  "studioClose": "Close {name}",
+  "studioNoPdfs": "No PDF files found there.",
+  "studioHome": "Scissor PDF home"
+ },
+ "studio": {
+  "title": "Scissor PDF: Every PDF Tool in One Private App",
+  "description": "Open a PDF once and edit it with every tool: merge, compress, sign, redact, rotate, convert. Undo any step. Runs in your browser, nothing is uploaded.",
+  "h1": "Scissor PDF",
+  "lead": "Open a PDF once, then use any tool on it. Every step can be undone, and nothing leaves your device.",
+  "nav": "App",
+  "cta": "Open the app"
  }
 }

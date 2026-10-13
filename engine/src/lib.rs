@@ -4,6 +4,7 @@
 pub mod compress;
 pub mod edit;
 pub mod images;
+pub mod more;
 pub mod ops;
 pub mod pages;
 pub mod security;
@@ -183,4 +184,82 @@ pub fn metadata(pdf: &[u8], title: &str, author: &str, subject: &str, keywords: 
 #[wasm_bindgen]
 pub fn repair(pdf: &[u8]) -> Result<Vec<u8>, JsError> {
     js(edit::repair(pdf).map(|(bytes, _)| bytes))
+}
+
+#[wasm_bindgen]
+pub fn grayscale(pdf: &[u8]) -> Result<Vec<u8>, JsError> {
+    js(more::grayscale(pdf))
+}
+
+#[wasm_bindgen]
+pub fn flatten(pdf: &[u8]) -> Result<Vec<u8>, JsError> {
+    js(more::flatten(pdf))
+}
+
+#[wasm_bindgen(js_name = removeAnnotations)]
+pub fn remove_annotations(pdf: &[u8], keep_links: bool) -> Result<Vec<u8>, JsError> {
+    js(more::remove_annotations(pdf, keep_links))
+}
+
+#[wasm_bindgen(js_name = extractImages)]
+pub fn extract_images(pdf: &[u8]) -> Result<Vec<u8>, JsError> {
+    js(more::extract_images(pdf))
+}
+
+#[wasm_bindgen(js_name = removeImages)]
+pub fn remove_images(pdf: &[u8]) -> Result<Vec<u8>, JsError> {
+    js(more::remove_images(pdf))
+}
+
+/// `jpegs[i]` (sizes `sizes[2i] x sizes[2i+1]`) replaces page `pages[i]`.
+#[wasm_bindgen(js_name = rasterizePages)]
+pub fn rasterize_pages(pdf: &[u8], pages: &[u32], sizes: &[u32], jpegs: js_sys::Array) -> Result<Vec<u8>, JsError> {
+    let data: Vec<Vec<u8>> = jpegs.iter().map(|j| js_sys::Uint8Array::new(&j).to_vec()).collect();
+    let dims: Vec<(u32, u32)> = sizes.chunks(2).map(|c| (c[0], c[1])).collect();
+    js(more::rasterize_pages(pdf, pages, &data, &dims))
+}
+
+#[wasm_bindgen(js_name = insertBlank)]
+pub fn insert_blank(pdf: &[u8], after: &[u32], every: bool) -> Result<Vec<u8>, JsError> {
+    js(more::insert_blank(pdf, after, every))
+}
+
+#[wasm_bindgen]
+pub fn interleave(a: &[u8], b: &[u8], reverse_b: bool) -> Result<Vec<u8>, JsError> {
+    js(more::interleave(a, b, reverse_b))
+}
+
+#[wasm_bindgen(js_name = splitHalf)]
+pub fn split_half(pdf: &[u8], vertical_cut: bool, right_to_left: bool) -> Result<Vec<u8>, JsError> {
+    js(more::split_half(pdf, vertical_cut, right_to_left))
+}
+
+#[wasm_bindgen(js_name = addMargins)]
+pub fn add_margins(pdf: &[u8], points: f32) -> Result<Vec<u8>, JsError> {
+    js(more::add_margins(pdf, points))
+}
+
+#[wasm_bindgen]
+pub fn resize(pdf: &[u8], paper: &str) -> Result<Vec<u8>, JsError> {
+    js(more::resize(pdf, paper))
+}
+
+#[wasm_bindgen]
+pub fn booklet(pdf: &[u8], paper: &str) -> Result<Vec<u8>, JsError> {
+    js(more::booklet(pdf, paper))
+}
+
+#[wasm_bindgen(js_name = splitBySize)]
+pub fn split_by_size(pdf: &[u8], max_bytes: u32, base_name: &str) -> Result<Vec<u8>, JsError> {
+    js(more::split_by_size(pdf, max_bytes as usize, base_name))
+}
+
+#[wasm_bindgen(js_name = splitByBookmarks)]
+pub fn split_by_bookmarks(pdf: &[u8], base_name: &str) -> Result<Vec<u8>, JsError> {
+    js(more::split_by_bookmarks(pdf, base_name))
+}
+
+#[wasm_bindgen]
+pub fn info(pdf: &[u8]) -> Result<String, JsError> {
+    js(more::info(pdf))
 }

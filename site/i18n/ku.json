@@ -34,7 +34,8 @@
   "privacy": "Nepenî",
   "note": "Scissor PDF her pelî di geroka te de bi motoreke Rust a ku bo WebAssembly hatiye berhevkirin pêvajo dike. Bê barkirin, bê hesab, bê şopandin.",
   "updated": "Nûkirin",
-  "languages": "Ziman"
+  "languages": "Ziman",
+  "inspect": "Dîtin û kontrol"
  },
  "common": {
   "assureLocal": "Pel qet ji amûra te dernakevin",
@@ -888,6 +889,1416 @@
      "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
     }
    ]
+  },
+  "png-to-pdf": {
+   "name": "PNG bo PDF",
+   "short": "Wêneyên PNG û dîmenên ekranê bike yek PDF, li her rûpelî wêneyek.",
+   "action": "Veguherîne PDF",
+   "title": "PNG bo PDF: Belaş û Bê Barkirin",
+   "description": "Wêneyên PNG û dîmenên ekranê di geroka xwe de veguherîne PDF. Rêz bike, mezinahiya rûpelê û kenarê hilbijêre. Bê windakirin, bê barkirin, bê nîşana avê.",
+   "h1": "PNG veguherîne PDF",
+   "howTo": "PNG çawa tê veguherandin PDF",
+   "lead": "Dîmenên ekranê, diyagram an rûpelên skankirî di yek PDF-ê de kom bike ku tu bikarî bişînî an çap bikî. Her PNG dibe rûpelek û bê tu windakirina kalîteyê tê hilanîn.",
+   "steps": [
+    "Wêneyên xwe yên PNG hilbijêre an berde. Dîmenên ekranê jî dixebitin.",
+    "Wêneyan bikişîne rêza ku tu dixwazî, paşê mezinahiya rûpelê û kenarê hilbijêre.",
+    "«Veguherîne PDF» hilbijêre û pelê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Bê windakirin, zelalî tê parastin",
+     "p": "Wêneyên PNG bêyî ji nû ve tepeserkirinê di PDF-ê de tên hilanîn, loma nivîsa di dîmenên ekranê de zelal dimîne û her pîksel wekî ya resen e. Deverên şeffaf şeffaf dimînin, li şûna ku reş an gewr bibin."
+    },
+    {
+     "h": "Mezinahiya rûpelê û kenar",
+     "p": "«Li gorî wêneyê» her rûpelî tam bi qasî wêneyê wê dike. A4 û US Letter wêneyê li ser rûpeleke standard datînin, li gorî wê eyar dikin û di navendê de bi cih dikin; ji bo çapkirinê ev e ya ku tu dixwazî. Kenar li dora wêneyê tu çarçove, çarçoveyeke piçûk an mezin zêde dike."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PNG vediguherînim PDF, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim çend PNG-an li ser rûpelekê deynim?",
+     "a": "Na. Her wêne rûpela xwe digire. Ji bo ku paşê çend rûpelan li ser kaxezekê deynî, Çend Rûpel li Ser Kaxezekê bi kar bîne."
+    },
+    {
+     "q": "Dîmenên min ên ekranê dê kalîteya xwe winda bikin?",
+     "a": "Na. Daneyên PNG bê windakirin tên hilanîn, loma PDF tam pîkselên wêneyên te nîşan dide."
+    },
+    {
+     "q": "Wêneyên min JPG ne, ne PNG. Ez çi bi kar bînim?",
+     "a": "JPG bo PDF bi kar bîne. Ew wêneyên te bi kalîteya wan a JPEG ya resen diparêze."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "webp-to-pdf": {
+   "name": "WebP bo PDF",
+   "short": "Wêneyên WebP yên ji webê tomarkirî bike PDF, li her rûpelî wêneyek.",
+   "action": "Veguherîne PDF",
+   "title": "WebP bo PDF: Belaş û Bê Barkirin",
+   "description": "Wêneyên WebP di geroka xwe de veguherîne PDF. Rêz bike, mezinahiya rûpelê û kenarê hilbijêre, paşê daxe. Pel qet nayên barkirin. Belaş, bê nîşana avê.",
+   "h1": "WebP veguherîne PDF",
+   "howTo": "WebP çawa tê veguherandin PDF",
+   "lead": "Gelek malper wêneyan wekî WebP tomar dikin, formatek ku hin sepan û çapker hîn venakin. Wan têxe PDF-eke ku li her derê dixebite, rasterast li ser amûra xwe.",
+   "steps": [
+    "Wêneyên xwe yên WebP hilbijêre an berde.",
+    "Wan bikişîne rêzê, paşê mezinahiya rûpelê û kenarê hilbijêre.",
+    "«Veguherîne PDF» hilbijêre û pelê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Çima PDF dikare mezintir be",
+     "p": "Geroka te her wêneyê WebP vedike û pîksel bê windakirin di PDF-ê de tên hilanîn. WebP formateke pir tepeserkirî ye, loma PDF pir caran ji pelên resen mezintir e. Heke mezinahî girîng be, encamê bi PDF Piçûk Bike re derbas bike."
+    },
+    {
+     "h": "Mezinahiya rûpelê û kenar",
+     "p": "«Li gorî wêneyê» her rûpelî tam bi qasî wêneyê wê dike. A4 û US Letter wêneyê li ser rûpeleke standard datînin, li gorî wê eyar dikin û di navendê de bi cih dikin; ji bo çapkirinê ev e ya ku tu dixwazî. Kenar li dora wêneyê tu çarçove, çarçoveyeke piçûk an mezin zêde dike."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez WebP vediguherînim PDF, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima PDF-a min ji pelên min ên WebP mezintir e?",
+     "a": "Wêne bê windakirin tên hilanîn, ku ji tepeserkirina WebP cihê zêdetir digire. PDF Piçûk Bike dikare pelê piçûktir bike."
+    },
+    {
+     "q": "Her wêne rûpela xwe digire?",
+     "a": "Erê. Li her rûpelî wêneyek, bi rêza ku tu didî wan."
+    },
+    {
+     "q": "Ez kîjan mezinahiya rûpelê hilbijêrim?",
+     "a": "«Li gorî wêneyê» heke PDF ji bo dîtina li ser ekranê be. A4 an US Letter heke tu dixwazî wê çap bikî."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-to-png": {
+   "name": "PDF bo PNG",
+   "short": "Rûpelên PDF wekî wêneyên PNG yên zelal û bê windakirin tomar bike.",
+   "action": "Veguherîne PNG",
+   "title": "PDF bo PNG: Belaş û Bê Barkirin",
+   "description": "Rûpelên PDF di geroka xwe de bi 108, 144 an 216 DPI veguherîne wêneyên PNG. Hemû rûpel an hin rûpel. Bê windakirin û taybet: tiştek nayê barkirin.",
+   "h1": "PDF veguherîne PNG",
+   "howTo": "PDF çawa tê veguherandin PNG",
+   "lead": "Rûpelan ji bo slayt, belgekirin, malper an çatê bike wêne. PNG bê windakirin e, loma nivîs û xet paqij dimînin, bê keviyên şêlû.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Hemû rûpelan hilbijêre an yên ku hewce dikî binivîse, paşê 108, 144 an 216 DPI hilbijêre.",
+    "«Veguherîne PNG» hilbijêre. Rûpelek wekî PNG, çend rûpel wekî ZIP tên daxistin."
+   ],
+   "sections": [
+    {
+     "h": "Kengê PNG li şûna JPG",
+     "p": "PNG her pîkselî tam diparêze, ku ji bo nivîs, grafîk, diyagram û xêzên xetî guncav e. Pelên JPG piçûktir in û ji bo rûpelên bi gelek fotoyan baştir dixebitin. Ji bo wan, PDF bo JPG bi kar bîne."
+    },
+    {
+     "h": "Hilbijartina çareseriyê",
+     "p": "108 DPI ji bo dîtina li ser ekranê bes e. 144 DPI li ser ekranên bi çareseriya bilind zelal xuya dike. 216 DPI ji bo zoomkirin an çapkirinê hûrguliyên herî zêde dide, bi pelên mezintir. Her wêne paşxaneyeke spî heye."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF vediguherînim PNG, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim tenê hin rûpelan veguherînim?",
+     "a": "Erê. Rûpelên ku tu dixwazî binivîse, mînak 1, 3-5. Tenê ew rûpel tên veguherandin."
+    },
+    {
+     "q": "Çima paşxane spî ye û ne şeffaf e?",
+     "a": "Rûpel li ser spî tên nîşandan, wekî ku di xwînerekê de û li ser kaxezê xuya dikin. Ev yek nivîsê di her sepanê de xwendî dihêle."
+    },
+    {
+     "q": "Ez çawa hemû wêneyan bi carekê bistînim?",
+     "a": "Dema tu ji rûpelekê zêdetir vediguherînî, ew bi hev re di yek pelê ZIP de tên daxistin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-to-text": {
+   "name": "PDF bo Nivîs",
+   "short": "Nivîsa PDF-ekê derxe pelekî .txt yê sade.",
+   "action": "Nivîsê derxe",
+   "title": "PDF bo Nivîs: Belaş û Bê Barkirin",
+   "description": "Nivîsa PDF-ekê di geroka xwe de derxe pelekî .txt yê UTF-8. Pêşî pêşdîtinê bibîne, bi nîşanên rûpelan ên vebijarkî. Tiştek nayê barkirin.",
+   "h1": "PDF veguherîne nivîs",
+   "howTo": "PDF çawa tê veguherandin nivîs",
+   "lead": "Peyvan ji PDF-ekê derxe da ku tu wan bikî jêgirtin, li wan bigerî an wan têxî sepaneke din. Berî daxistinê tu pêşdîtinekê dibînî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Heke tu xetekê di navbera rûpelan de dixwazî nîşanên rûpelan veke, û pêşdîtinê kontrol bike.",
+    "Ji bo daxistina pelekî .txt «Nivîsê derxe» hilbijêre."
+   ],
+   "sections": [
+    {
+     "h": "Tu çi distînî",
+     "p": "Qata nivîsê ya her rûpelî, di pelekî .txt yê UTF-8 de ku di her edîtorê de vedibe û piştgiriya hemû zimanan dike. Tenê nivîs: rêxistina rûpelê, tablo û stûn tam nayên dubarekirin, loma dibe ku hin rêz tevlî hev bibin an bi rêzeke cuda xuya bibin."
+    },
+    {
+     "h": "PDF-ên skankirî",
+     "p": "Belgeyeke skankirî bi gelemperî tenê wêneyên rûpelan e, bê nivîs di hundir de. Scissor PDF naskirina nivîsê (OCR) nake, loma encam ji bo pelekî wisa vala ye. Heke tu dikarî di xwînera xwe ya PDF de nivîsê hilbijêrî, ew li vir dikare were derxistin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF vediguherînim nivîs, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima pelê min ê nivîsê vala ye?",
+     "a": "Bi îhtimaleke mezin PDF tenê wêne dihewîne, mînak skanek. Qateke nivîsê ji bo derxistinê tune, û Scissor PDF OCR nake."
+    },
+    {
+     "q": "Tablo tên parastin?",
+     "a": "Ne tam. Peyv tên derxistin, lê dibe ku rêz, stûn û valahî wekî li ser rûpelê li hev nekevin."
+    },
+    {
+     "q": "Nîşanên rûpelan çi ne?",
+     "a": "Xeteke vebijarkî di navbera rûpelan de, da ku tu bizanî her rûpel li ku derê pelê nivîsê dest pê dike."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "extract-images-from-pdf": {
+   "name": "Wêneyan ji PDF derxe",
+   "short": "Wêne û fotoyên di nav PDF-ekê de wekî pelên cuda tomar bike.",
+   "action": "Wêneyan derxe",
+   "title": "Wêneyan ji PDF Derxe: Belaş û Bê Barkirin",
+   "description": "Wêneyên di PDF-ekê de bicihkirî di geroka xwe de di ZIP-ekê de tomar bike. JPEG kalîteya xwe ya resen diparêzin; yên din wekî PNG. Tiştek nayê barkirin.",
+   "h1": "Wêneyan ji PDF-ekê derxe",
+   "howTo": "Wêne çawa ji PDF-ekê tên derxistin",
+   "lead": "Fotoyên resen ji broşûr, rapor an katalogekê derxe li şûna ku dîmenên ekranê bigirî. Hemû wêne di yek ZIP-ê de tên berhevkirin.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Wêneyan derxe» hilbijêre.",
+    "ZIP-a bi hemû wêneyên ku di pelê de hatine dîtin daxe."
+   ],
+   "sections": [
+    {
+     "h": "Kalîteya resen",
+     "p": "Wêneyên JPEG byte bi byte tên tomarkirin, tam wekî ku di PDF-ê de hatine hilanîn, bê ji nû ve tepeserkirin. Wêneyên din wekî PNG tên tomarkirin, ku bê windakirin e. Tu wêneyê bi çareseriya ku pê hatiye bicihkirin distînî, ne bi mezinahiya ku li ser rûpelê tê nîşandan."
+    },
+    {
+     "h": "Çi nayê derxistin",
+     "p": "Wêneyên pir piçûk û maskeyên şeffafiyê tên derbaskirin, da ku ZIP bi perçeyên piçûk tije nebe. Logo, grafîk û nîgarên ku wekî grafîkên vektorî hatine xêzkirin ne wêne ne û nayên derxistin. Ji bo girtina wan, rûpelê bi PDF bo PNG veguherîne."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez wêneyan ji PDF-ekê derdixim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Wêne ji nû ve tên tepeserkirin?",
+     "a": "Na. Wêneyên JPEG byte bi byte tên kopîkirin. Cureyên din ên wêneyan wekî PNG-ya bê windakirin tên tomarkirin."
+    },
+    {
+     "q": "Çima grafîkek an logoyek tune ye?",
+     "a": "Bi îhtimaleke mezin ew wekî grafîkên vektorî hatiye xêzkirin, ne wekî wêne hatiye hilanîn. Li şûna wê PDF bo PNG bi kar bîne da ku tevahiya rûpelê wekî wêne tomar bikî."
+    },
+    {
+     "q": "Çima hin wêneyên piçûk tune ne?",
+     "a": "Wêneyên pir piçûk û maskeyên şeffafiyê bi zanebûn tên derbaskirin. Bi gelemperî ew perçeyên xemilandinê ne."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "grayscale-pdf": {
+   "name": "PDF Reş û Spî",
+   "short": "PDF-eke rengîn veguherîne reş û spî da ku boyax kêm biçe.",
+   "action": "Veguherîne gewr",
+   "title": "PDF Bike Reş û Spî: Bê Barkirin",
+   "description": "PDF-ekê di geroka xwe de veguherîne gewr (reş û spî) da ku boyaxa rengîn biparêzî. Nivîs zelal û lêgerbar dimîne. Tiştek nayê barkirin.",
+   "h1": "PDF-ekê veguherîne gewr",
+   "howTo": "PDF çawa tê veguherandin gewr",
+   "lead": "Slayt, rapor an bilêtên rengîn bêyî boyaxa rengîn çap bike, an daxwaza kopiyeke reş û spî bicih bîne. Pelê te li ser amûra te dimîne.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Veguherîne gewr» hilbijêre.",
+    "PDF-a reş û spî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Nivîs nivîs dimîne",
+     "p": "Nivîs û grafîkên vektorî vediguherin rengên gewr, nabin wêne. Ew di her zoomê de zelal dimînin, û tu hîn dikarî nivîsê hilbijêrî û lê bigerî. Foto vediguherin wêneyên JPEG yên gewr."
+    },
+    {
+     "h": "Sînor",
+     "p": "Dibe ku gradyan, pater û hin cihên rengan ên taybet, wekî rengên spot ên ku di pelên çapê yên profesyonel de tên bikaranîn, rengê xwe biparêzin. Berî çapkirina karekî mezin li encamê binêre."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê vediguherînim gewr, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez hîn dikarim li nivîsê bigerim û wê kopî bikim?",
+     "a": "Erê. Nivîs ji nû ve tê rengkirin, nabe wêne, loma hilbijartbar û lêgerbar dimîne."
+    },
+    {
+     "q": "Çima beşek ji rûpela min hîn rengîn e?",
+     "a": "Dibe ku gradyan, pater û hin cihên rengan ên taybet, wekî rengên spot, neyên veguherandin. Yên din ên rûpelê tên veguherandin."
+    },
+    {
+     "q": "Çima ez tenê bi gewr çap nekim?",
+     "a": "Tu dikarî, lê pelekî gewr li ser her çapker û amûrê wekî hev xuya dike, û ev e ya ku hin ofîs û portal dixwazin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "reverse-pdf": {
+   "name": "Rêza PDF Berevajî Bike",
+   "short": "Rêza rûpelan berevajî bike da ku rûpela dawî bibe ya yekem.",
+   "action": "Rûpelan berevajî bike",
+   "title": "Rêza Rûpelên PDF Berevajî Bike: Belaş",
+   "description": "Rêza rûpelên PDF-ekê bi yek tikandinê di geroka xwe de berevajî bike. Rûpela dawî dibe ya yekem. Naverok nayê guhertin, tiştek nayê barkirin.",
+   "h1": "Rêza rûpelên PDF berevajî bike",
+   "howTo": "Rêza rûpelên PDF-ekê çawa tê berevajîkirin",
+   "lead": "Te stûyek kaxez bi rûyê wan ber bi jêr, an ji paş ber bi pêş skan kir? Tevahiya rêza rûpelan bi yek gavê biguherîne li şûna ku rûpelan yek bi yek bikişînî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Rûpelan berevajî bike» hilbijêre.",
+    "PDF-a bi rûpelên bi rêza berevajî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Kengê hewce ye",
+     "p": "Gelek skanerên otomatîk pêşî rûpela dawî skan dikin, û stûyên kaxezan pir caran serobino an ji paş ber bi pêş dikevin hundir. Berevajîkirin rûpelan vedigerîne rêza xwendinê. Her wiha dema ku tu berevajî çap dikî da ku bi destan rêz bikî jî alîkar e."
+    },
+    {
+     "h": "Tiştekî din nayê guhertin",
+     "p": "Tenê rêz diguhere. Her rûpel naverok, mezinahî û zivirandina xwe diparêze. Heke rûpel serobino jî bin, paşê wan bi PDF Bizivirîne rast bike."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez rêza PDF-ekê berevajî dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ew rûpelan jî dizivirîne?",
+     "a": "Na. Zivirandin wekî xwe dimîne. Heke rûpel hewceyî zivirandinê bin, PDF Bizivirîne bi kar bîne."
+    },
+    {
+     "q": "Ez dikarim tenê rêza hin rûpelan berevajî bikim?",
+     "a": "Rêza PDF Berevajî Bike tevahiya belgeyê berevajî dike. Ji bo guhastina rûpelên yekane, PDF Rêxe bi kar bîne."
+    },
+    {
+     "q": "Min pêşrû û paşrû cuda skan kirin. Ev dikare alîkariyê bike?",
+     "a": "Rûpelên Fer û Cot Bike Yek bi kar bîne. Ew du skanan tevlî hev dike û dikare paşrûyan ji bo te berevajî bike."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "insert-blank-pages": {
+   "name": "Rûpelên vala têxe",
+   "short": "Piştî her rûpelî an li cihên ku tu hildibijêrî rûpelên vala zêde bike.",
+   "action": "Rûpelan têxe",
+   "title": "Rûpelên Vala Têxe PDF: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de rûpelên vala li PDF-ekê zêde bike: piştî her rûpelî ji bo notan, an piştî rûpelên ku tu dinivîsî. Bi mezinahiya rûpela berê. Bê barkirin.",
+   "h1": "Rûpelên vala têxe PDF-ekê",
+   "howTo": "Rûpelên vala çawa dikevin PDF-ekê",
+   "lead": "Ji bo notên bi destnivîs cih veke, dema herdu rûyan çap dikî beşan li aliyê rastê bide destpêkirin, an ji bo tiştekî ku tu ê paşê zêde bikî valahiyê bihêle.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Piştî her rûpelî» hilbijêre, an cihan binivîse, wekî piştî rûpela 3.",
+    "«Rûpelan têxe» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Du awayên têxistinê",
+     "p": "«Piştî her rûpelî» belavokek an slaytên dersê dike belgeyek ku piştî her yekê rûpeleke vala ji bo notan heye. Cihên diyarkirî dihêlin ku tu tam li cihê ku hewce dikî rûpeleke vala ya yekane zêde bikî, mînak piştî bergê."
+    },
+    {
+     "h": "Mezinahiya rûpelê ya li hev",
+     "p": "Her rûpela vala bi qasî rûpela berî xwe ye, loma belgeyeke bi mezinahiyên tevlihev rêkûpêk dimîne û rast tê çapkirin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez rûpelên vala dixim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim li cihekî diyar rûpeleke vala zêde bikim?",
+     "a": "Erê. Cihan binivîse, mînak piştî rûpela 3, û li wir rûpeleke vala tê zêdekirin."
+    },
+    {
+     "q": "Rûpelên nû çi qas mezin in?",
+     "a": "Her rûpela vala bi mezinahiya rûpela rasterast berî xwe re li hev dike."
+    },
+    {
+     "q": "Li şûna wê ez çawa rûpelên vala rakim?",
+     "a": "Rûpelên Vala Rake bi kar bîne, ku rûpelên vala ji bo te dibîne, an Rûpelan jê bibe ji bo rakirina rûpelên diyarkirî."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "alternate-mix-pdf": {
+   "name": "Rûpelên fer û cot bike yek",
+   "short": "Skanên pêşrû û paşrû tevlî hev bike yek PDF-eke du-rû.",
+   "action": "Rûpelan bike yek",
+   "title": "Rûpelên Fer û Cot ên PDF Bike Yek",
+   "description": "Skanên pêşrû û paşrû di geroka xwe de bike yek PDF-eke du-rû. Rûpel ji du pelan li dû hev tên, bi vebijarka berevajîkirina paşrûyan.",
+   "h1": "Rûpelên fer û cot bike yek",
+   "howTo": "Rûpelên fer û cot çawa dibin yek",
+   "lead": "Skanerek te heye ku tenê aliyekî skan dike? Hemû pêşrûyan skan bike, stûyê bizivirîne, hemû paşrûyan skan bike, paşê bihêle Scissor PDF her rûpelî vegerîne rêza wê.",
+   "steps": [
+    "PDF-a bi rûpelên pêşrû wekî pelê yekem û ya bi rûpelên paşrû wekî pelê duyem zêde bike.",
+    "Heke paşrû ji rûpela dawî dest pê kirine hatibin skankirin, «Pelê duyem berevajî bike» veke.",
+    "«Rûpelan bike yek» hilbijêre û PDF-a du-rû daxe."
+   ],
+   "sections": [
+    {
+     "h": "Rûpel çawa tevlî hev dibin",
+     "p": "Rûpel li dû hev tên: rûpela 1 ji pelê yekem, rûpela 1 ji ya duyem, rûpela 2 ji ya yekem, û wisa berdewam. Heke di pelekî de rûpel zêdetir hebin, rûpelên wê yên mayî li dawiyê tên zêdekirin."
+    },
+    {
+     "h": "Çima pelê duyem berevajî bibe",
+     "p": "Dema tu stûyê dizivirînî da ku paşrûyan skan bikî, paşrûya dawî pêşî tê skankirin. «Pelê duyem berevajî bike» vê rast dike, da ku her paşrû li pişt pêşrûya xwe bikeve."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez rûpelên fer û cot dikim yek, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Kîjan pel divê pêşî be?",
+     "a": "Pelê bi rûpelên pêşrû (1, 3, 5...). Pelê duyem rûpelên paşrû dide."
+    },
+    {
+     "q": "Kengê ez «Pelê duyem berevajî bike» bi kar bînim?",
+     "a": "Dema paşrû bi rêza berevajî derketin, ku asayî ye dema tu tevahiya stûyê dizivirînî û dîsa dixî hundir."
+    },
+    {
+     "q": "Heke hejmara rûpelên herdu pelan cuda be çi dibe?",
+     "a": "Rûpel li dû hev tên heta ku di herdu pelan de rûpel hebin. Rûpelên zêde yên pelê dirêjtir li dawiyê tên zêdekirin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "split-pdf-pages-in-half": {
+   "name": "Rûpelên PDF bike du nîv",
+   "short": "Her rûpelî bike du: çep û rast, an jor û jêr.",
+   "action": "Rûpelan parçe bike",
+   "title": "Rûpelên PDF Bike Du Nîv: Belaş û Bê Barkirin",
+   "description": "Her rûpela PDF di geroka xwe de bike du rûpel, çep û rast an jor û jêr. Ji bo rûpelên cot ên pirtûkên skankirî. Bê windakirin, tiştek nayê barkirin.",
+   "h1": "Rûpelên PDF bike du nîv",
+   "howTo": "Rûpelên PDF çawa dibin du nîv",
+   "lead": "Te pirtûkek du rûpel bi du rûpel skan kir? Her cotekê bike du rûpelên yekane da ku belge wekî ku divê were xwendin, çapkirin û li ser telefonê nîşandan.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Çep û rast an jor û jêr hilbijêre. Ji bo pirtûkên ji rastê ber bi çepê, rêza ji rastê ber bi çepê veke.",
+    "«Rûpelan parçe bike» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Pirtûk bi her alî",
+     "p": "Wekî standard nîvê çepê pêşî tê. Ji bo pirtûkên bi erebî, farisî, îbranî an kurdî, û ji bo manga, rêza ji rastê ber bi çepê hilbijêre da ku nîvê rastê pêşî were. Jor û jêr ji bo belgeyên ku du rûpel yek li ser ya din hatine çapkirin dixebite."
+    },
+    {
+     "h": "Bê windakirin",
+     "p": "Nîv naveroka resen a rûpelê nîşan didin. Tiştek ji nû ve nayê çêkirin, loma nivîs zelal û lêgerbar dimîne û wêneyên skankirî kalîteya xwe diparêzin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez rûpelên PDF dikim du nîv, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim pirtûkeke ji rastê ber bi çepê parçe bikim?",
+     "a": "Erê. Rêza ji rastê ber bi çepê hilbijêre û nîvê rastê yê her cotekê dibe rûpela yekem."
+    },
+    {
+     "q": "Kalîte dê dakeve?",
+     "a": "Na. Naveroka resen di her nîvî de tê nîşandan, ji nû ve nayê çêkirin."
+    },
+    {
+     "q": "Mebesta min ne ev bû. Ez dixwazim PDF-ekê bikim çend pel.",
+     "a": "PDF Parçe Bike bi kar bîne da ku belgeyekê li gorî navberên rûpelan bikî pelên cuda."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "resize-pdf": {
+   "name": "Mezinahiya rûpelên PDF biguherîne",
+   "short": "Her rûpelî bike A4, US Letter, A3, A5 an Legal.",
+   "action": "Mezinahiya PDF biguherîne",
+   "title": "Mezinahiya Rûpelên PDF Bike A4 an Letter",
+   "description": "Mezinahiya rûpelên PDF-ekê di geroka xwe de bike A4, US Letter, A3, A5 an Legal. Rêjeyên tên parastin, naverok di navendê de. Tiştek nayê barkirin.",
+   "h1": "Mezinahiya rûpelên PDF biguherîne",
+   "howTo": "Mezinahiya rûpelên PDF çawa tê guhertin",
+   "lead": "Belgeyeke te ya US Letter heye û A4 hewce dikî, an berevajî? Hemû rûpelan bike yek mezinahiya standard da ku bê keviyên jêkirî çap bibe.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Mezinahiya nû hilbijêre: A4, US Letter, A3, A5 an Legal.",
+    "«Mezinahiya PDF biguherîne» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Eyarkirî, ne kişandî",
+     "p": "Her rûpel li gorî mezinahiya nû tê eyarkirin û rêjeyên wê tên parastin, paşê di navendê de tê danîn. Nivîs û grafîk zelal dimînin ji ber ku wekî vektor tên mezin an piçûkkirin, nabin wêne. Rûpelên bi mezinahiyên cuda hemû dibin heman mezinahî."
+    },
+    {
+     "h": "Çi naye veguhastin",
+     "p": "Girêdan, şîrove û qadên formê li ser rûpelên ku mezinahiya wan hatiye guhertin nayên parastin. Heke formeke dagirtinê hewce dikî, pêşî wê dagire, an pelê resen biparêze."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez mezinahiya PDF-ekê diguherînim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Rûpelên min dê bên kişandin?",
+     "a": "Na. Rêjeyên tên parastin. Heke şiklê mezinahiya nû cuda be, rûpel di navendê de tê danîn û li dora wê valahiya spî heye."
+    },
+    {
+     "q": "Nivîs şêlû dibe?",
+     "a": "Na. Nivîs û grafîk di mezinahiya nû de zelal dimînin."
+    },
+    {
+     "q": "Çima girêdanên min êdî naxebitin?",
+     "a": "Dema mezinahiya rûpelan tê guhertin, girêdan, şîrove û qadên formê nayên veguhastin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "add-margins-to-pdf": {
+   "name": "Kenaran li PDF zêde bike",
+   "short": "Li dora her rûpelî çarçoveyeke spî bi milîmetreyan zêde bike.",
+   "action": "Kenaran zêde bike",
+   "title": "Kenaran li PDF Zêde Bike: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de li dora her rûpela PDF çarçoveyeke spî bi her firehiyê bi milîmetreyan zêde bike. Naverok mezinahiya xwe diparêze. Ji bo cildkirin an notan.",
+   "h1": "Kenaran li PDF-ekê zêde bike",
+   "howTo": "Kenar çawa li PDF-ekê tên zêdekirin",
+   "lead": "Ji bo cildkirin, qulkirin an nivîsandina di kenaran de cih hewce dikî? Li dora her rûpelî çarçoveyeke spî zêde bike bêyî ku naverokê piçûk bikî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Firehiya kenarê bi milîmetreyan binivîse.",
+    "«Kenaran zêde bike» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Rûpel mezin dibe, naverok piçûk nabe",
+     "p": "Çarçove li derveyî rûpela heyî tê zêdekirin, loma rûpel mezintir dibe û nivîs û wêne tam bi heman mezinahiyê dimînin. Tiştek nayê eyarkirin an ji nû ve çêkirin."
+    },
+    {
+     "h": "Bikaranînên asayî",
+     "p": "Kenar nivîsê ji cildê an qulên kunkirinê dûr dihêle, dema kaxezan nirxandin dikî ji bo şîroveyên bi destnivîs cih dide, û dema belgeyek ji bo çapkera te pir nêzî keviyê ye alîkar e."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez kenaran li PDF-ekê zêde dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Naveroka min dê piçûk bibe?",
+     "a": "Na. Rûpel mezintir dibe û naverok mezinahiya xwe diparêze."
+    },
+    {
+     "q": "Yekeya kenarê çi ye?",
+     "a": "Milîmetre. Heman firehî li dora her rûpelî tê zêdekirin."
+    },
+    {
+     "q": "Divê rûpel A4 bimînin. Ez çi bikim?",
+     "a": "Kenaran zêde bike, paşê Mezinahiya Rûpelên PDF Biguherîne bi kar bîne da ku rûpelan vegerînî A4."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-booklet": {
+   "name": "Pirtûkoka PDF",
+   "short": "Rûpelan ji bo çapkirina pirtûkokeke qatkirî û bi zimbê girêdayî rêz bike.",
+   "action": "Pirtûkokê çêke",
+   "title": "Pirtûkoka PDF Çêke: Belaş û Bê Barkirin",
+   "description": "PDF-ekê di geroka xwe de bike pirtûkokeke çapbar: li her kaxezê du rûpel bi rêza zimba navîn. Çap bike, biqatîne û bi zimbê girê bide. Bê barkirin.",
+   "h1": "Ji PDF-ekê pirtûkokekê çêke",
+   "howTo": "Pirtûkoka PDF çawa tê çêkirin",
+   "lead": "Bernameyekê, kovareke piçûk, menû an rêbereke piçûk wekî pirtûkokeke qatkirî li ser çapkereke asayî çap bike. Scissor PDF rêza rûpelan ji bo te hesab dike.",
+   "steps": [
+    "PDF-ê hilbijêre an berde û mezinahiya kaxezê hilbijêre: Wekî PDF, A4 an US Letter.",
+    "«Pirtûkokê çêke» hilbijêre û encamê daxe.",
+    "Herdu rûyan çap bike û li ser keviya kurt bizivirîne. Stûyê ji navê biqatîne û li dirêjahiya qatê bi zimbê girê bide."
+   ],
+   "sections": [
+    {
+     "h": "Çawa dixebite",
+     "p": "Rûpel du bi du li kêleka hev li ser kaxezên asoyî bi rêza zimba navîn tên danîn, loma piştî qatkirinê ew wekî 1, 2, 3 û hwd tên xwendin. Pirtûkok hewceyî hejmareke rûpelan e ku pirjimara 4 be, loma dema hewce be rûpelên vala li dawiyê tên zêdekirin."
+    },
+    {
+     "h": "Şîretên çapkirinê",
+     "p": "Çapkirina du-rû hilbijêre û li ser keviya kurt bizivirîne. Heke paşrû serobino derkevin, çapkera te bi aliyê din dizivirîne: li şûna wê keviya dirêj biceribîne. Pêşî kopiyekê çap bike da ku kontrol bikî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez pirtûkokekê çêdikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima rûpelên vala hatin zêdekirin?",
+     "a": "Her kaxeza qatkirî çar rûpelan hildigire, loma divê kom pirjimara 4 be. Rûpelên vala li dawiyê tên zêdekirin da ku ferq were temamkirin."
+    },
+    {
+     "q": "Di çapkirina du-rû de ez bi kîjan aliyî bizivirînim?",
+     "a": "Li ser keviya kurt. Heke aliyê duyem serobino derkeve, derbasî keviya dirêj bibe."
+    },
+    {
+     "q": "Ez kîjan mezinahiya kaxezê hilbijêrim?",
+     "a": "«Wekî PDF» ji bo her aliyî mezinahiya rûpelê ya resen diparêze. A4 an US Letter hilbijêre da ku bi kaxeza di çapkera te de li hev bike."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "remove-blank-pages": {
+   "name": "Rûpelên vala rake",
+   "short": "Rûpelên vala bixweber bibîne, kontrol bike û jê bibe.",
+   "action": "Rûpelan rake",
+   "title": "Rûpelên Vala ji PDF Rake: Belaş û Bê Barkirin",
+   "description": "Rûpelên vala yên PDF-ekê di geroka xwe de bibîne û jê bibe. Rûpelên vala ji bo te tên hilbijartin da ku berî tomarkirinê kontrol bikî. Tiştek nayê barkirin.",
+   "h1": "Rûpelên vala ji PDF-ekê rake",
+   "howTo": "Rûpelên vala çawa ji PDF-ekê tên rakirin",
+   "lead": "Te stûyek du-rû skan kir û paşrûyên vala man? Scissor PDF rûpelên spî ji bo te dibîne. Tu hilbijartinê kontrol dikî, paşê tomar dikî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde. Rûpelên ku vala xuya dikin bixweber tên hilbijartin.",
+    "Hilbijartinê kontrol bike, û li gorî hewcedariyê rûpelan hilbijêre an hilbijartina wan rake.",
+    "«Rûpelan rake» hilbijêre û PDF-a paqijkirî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Dîtin çawa dixebite",
+     "p": "Her rûpel di geroka te de tê nîşandan, û rûpelên ku bi tevahî an hema bi tevahî spî ne tên hilbijartin. Ji ber ku ev li gorî xuyabûna rûpelê ye, ew paşrûyên vala yên skanan dibîne her çend hinekî xişxişa skanerê tê de hebe jî."
+    },
+    {
+     "h": "Her dem kontrol bike",
+     "p": "Dibe ku rûpeleke ku tenê nîşaneke qels tê de heye, wekî hejmareke rûpelê ya kal an noteke kurt a bi qelema risasê, wekî vala were hesibandin. Berî tomarkirinê li hilbijartinê binêre û hilbijartina her rûpela ku dixwazî biparêzî rake."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez rûpelên vala radikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ew ê bêyî pirsînê rûpelan jê bibe?",
+     "a": "Na. Rûpelên vala tenê tên hilbijartin. Tu hilbijartinê kontrol dikî û berî ku tiştek were tomarkirin biryarê didî."
+    },
+    {
+     "q": "Çima rûpeleke bi hinekî nivîs hat hilbijartin?",
+     "a": "Dîtin li gorî xuyabûnê ye, loma rûpeleke ku tenê nîşaneke qels tê de heye dikare vala xuya bike. Berî tomarkirinê hilbijartina wê rake."
+    },
+    {
+     "q": "Ez dikarim di heman demê de rûpelên din jî rakim?",
+     "a": "Erê. Berî tomarkirinê her rûpela din a ku dixwazî nemîne hilbijêre."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "split-pdf-by-size": {
+   "name": "PDF li gorî mezinahiyê parçe bike",
+   "short": "PDF-ekê bike beşên di bin sînorekî mezinahiyê de, wekî 5 MB.",
+   "action": "Li gorî mezinahiyê parçe bike",
+   "title": "PDF li Gorî Mezinahiya Pelê Parçe Bike",
+   "description": "PDF-eke mezin bike beşên di bin mezinahiyeke ku tu hildibijêrî de, wekî 5 MB, ji bo sînorên e-name an barkirinê. Rûpel tevahî dimînin. Bê barkirin.",
+   "h1": "PDF-ekê li gorî mezinahiya pelê parçe bike",
+   "howTo": "PDF çawa li gorî mezinahiya pelê tê parçekirin",
+   "lead": "Pêveka e-nameyê pir mezin e, an portalek tenê pelên piçûk qebûl dike? PDF-ê bike beşên ku her yek di bin sînor de be.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Mezinahiya herî zêde ji bo her beşî binivîse, mînak 5 MB.",
+    "«Li gorî mezinahiyê parçe bike» hilbijêre û beşan wekî ZIP daxe."
+   ],
+   "sections": [
+    {
+     "h": "Rûpel tevahî dimînin",
+     "p": "Beş ji rûpelên tevahî pêk tên, bi rêzê, û her beş di bin mezinahiya ku tu hildibijêrî de dimîne. Rûpeleke yekane ya ku bi tena serê xwe ji sînor mezintir e dibe beşeke cuda, ji ber ku rûpel nayê parvekirin."
+    },
+    {
+     "h": "Pêşî piçûkkirinê biceribîne",
+     "p": "Heke tu dixwazî yek pel bişînî, dibe ku PDF Piçûk Bike wê bixe bin sînor. Her wiha tu dikarî pêşî piçûk bikî û paşê parçe bikî da ku beşên kêmtir bistînî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê li gorî mezinahiyê parçe dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima beşek ji sînorê min mezintir e?",
+     "a": "Ew beş rûpeleke yekane dihewîne ku bi tena serê xwe ji sînor mezintir e. Rûpel qet nayên parçekirin."
+    },
+    {
+     "q": "Ez beşan çawa bistînim?",
+     "a": "Hemû beş bi hev re di yek pelê ZIP de tên daxistin."
+    },
+    {
+     "q": "Li şûna wê ez dikarim li gorî hejmarên rûpelan parçe bikim?",
+     "a": "Erê, PDF Parçe Bike bi kar bîne da ku belgeyekê li gorî navberên rûpelan parve bikî."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-header-footer": {
+   "name": "Serrûpel û binrûpel zêde bike",
+   "short": "Li jor an jêrê her rûpelî nivîs, hejmarên rûpelan û dîrokan zêde bike.",
+   "action": "Serrûpel û binrûpel zêde bike",
+   "title": "Serrûpel û Binrûpel li PDF Zêde Bike",
+   "description": "Di geroka xwe de li her rûpela PDF serrûpel û binrûpel zêde bike: nivîsa çep, navend û rast bi hejmara rûpelê, hejmara giştî, dîrok û navê pelê.",
+   "h1": "Serrûpel û binrûpel li PDF-ekê zêde bike",
+   "howTo": "Serrûpel û binrûpel çawa li PDF-ekê tên zêdekirin",
+   "lead": "Sernavek, noteke nepeniyê, dîrokê an «Rûpel X ji Y» li ser her rûpela raporek, tez an peymanekê deyne. Bi her zimanî dixebite.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Ji bo çep, navend û rastê serrûpelê, binrûpelê an herduyan nivîsê binivîse. Ji bo hejmara rûpelê, hejmara giştî ya rûpelan, dîrok û navê pelê cihgiran têxe.",
+    "Mezinahiya nivîsê û rûpela yekem hilbijêre, paşê «Serrûpel û binrûpel zêde bike» hilbijêre."
+   ],
+   "sections": [
+    {
+     "h": "Cihgir",
+     "p": "Cihgir li her rûpelî bixweber tên dagirtin: hejmara rûpelê, hejmara giştî ya rûpelan, dîrok û navê pelê. Wan bi peyvên xwe re tevlî hev bike, mînak «Rûpel 3 ji 12». Rûpela yekem hilbijêre da ku rûpela bergê paqij bimîne."
+    },
+    {
+     "h": "Her ziman, her alfabe",
+     "p": "Nivîs bi fontên amûra te tê xêzkirin, loma erebî, çînî, farisî, hindî û her alfabeya din a ku amûra te dikare nîşan bide rast derdikevin. Encam dibe beşek ji rûpelê û paşê ne nivîseke guherbar e."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez serrûpel û binrûpel zêde dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim «Rûpel X ji Y» binivîsim?",
+     "a": "Erê. Cihgirên hejmara rûpelê û hejmara giştî ya rûpelan bi nivîsa xwe re tevlî hev bike."
+    },
+    {
+     "q": "Ez dikarim rûpela bergê derbas bikim?",
+     "a": "Erê. Rûpela ku divê serrûpel û binrûpel jê dest pê bikin hilbijêre."
+    },
+    {
+     "q": "Ez dikarim paşê serrûpelê biguherînim?",
+     "a": "Ne wekî nivîs. Ew dibe beşek ji rûpelê. Heke dibe ku hewce bike tu wê biguherînî, pelê xwe yê resen biparêze."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "bates-numbering": {
+   "name": "Hejmarkirina Bates",
+   "short": "Li her rûpelî hejmarên Bates yên li pey hev wekî ABC-000001 bixe.",
+   "action": "Hejmarên Bates zêde bike",
+   "title": "Hejmarkirina Bates ji bo PDF: Belaş",
+   "description": "Di geroka xwe de li her rûpela PDF hejmarên Bates zêde bike: pêşgir û hejmara bi sifiran dagirtî, goşeya hilbijartî, hejmara destpêkê û reqem. Bê barkirin.",
+   "h1": "Hejmarkirina Bates li PDF-ekê zêde bike",
+   "howTo": "Hejmarên Bates çawa li PDF-ekê tên zêdekirin",
+   "lead": "Her rûpela belgeyên pêşkêşkirî bi nasnameyeke yekta û li pey hev nîşan bike, bêyî ku dosyayên nepenî yên dozê bişînî servera kesî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Pêşgir, hejmara destpêkê, hejmara reqeman û goşeyê diyar bike.",
+    "«Hejmarên Bates zêde bike» hilbijêre û PDF-a hejmarkirî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Hejmar çawa tê avakirin",
+     "p": "Her hejmar pêşgira te ye û li pey wê rêzeke bi sifiran dagirtî tê, mînak ABC-000001, ABC-000002 û hwd. Hejmara destpêkê hilbijêre da ku ji komeke berê berdewam bikî, û hejmara reqeman da ku bi protokola xwe re li hev bike."
+    },
+    {
+     "h": "Her car yek pel",
+     "p": "Hejmarkirina Bates her car li ser yek PDF-ê dixebite. Ji bo pêşkêşkirineke ku li ser çend pelan belav bûye, ya yekem hejmar bike, paşê pelê din bi hejmara piştî rûpela wê ya dawî bide destpêkirin. An jî pêşî wan bi PDF Bike Yek bike yek."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez hejmarên Bates zêde dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Hejmarkirina Bates çi ye?",
+     "a": "Adeteke hiqûqî ye ku nasnameyeke yekta ya li pey hev dide her rûpelê di komeke belgeyan de, da ku di qonaxa aşkerekirinê de û li dadgehê bi hûrgulî behsa rûpelan were kirin."
+    },
+    {
+     "q": "Ez dikarim hejmarkirinê ji pelekî din berdewam bikim?",
+     "a": "Erê. Hejmara destpêkê bike hejmara din a rêza xwe."
+    },
+    {
+     "q": "Ez dikarim çend PDF-an bi carekê hejmar bikim?",
+     "a": "Ne di heman demê de. Her car pelekî pêvajo bike, an pêşî pelan bi PDF Bike Yek bike yek."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "add-image-to-pdf": {
+   "name": "Wêneyê li PDF zêde bike",
+   "short": "Logo, foto, mor an wêneyê îmzeyê li ser her rûpelî deyne.",
+   "action": "Wêneyan zêde bike",
+   "title": "Wêneyê li PDF Zêde Bike: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de logo, foto, mor an îmzeyeke skankirî têxe PDF-ekê. Li ser her rûpelî bikişîne û mezinahiya wê biguherîne. Pel qet nayên barkirin.",
+   "h1": "Wêneyekî li PDF-ekê zêde bike",
+   "howTo": "Wêne çawa li PDF-ekê tê zêdekirin",
+   "lead": "Logoya şirketa xwe li ser nameyekê, foto li ser serlêdanekê, an mora şirketê li ser fatûreyekê deyne. Bikişîne cihê wê û mezinahiya wê biguherîne.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Wêneyekî zêde bike, li ser rûpelê bikişîne û mezinahiya wê biguherîne. Heke hewce be li ser her rûpelî wêneyên din zêde bike.",
+    "«Wêneyan zêde bike» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Tam li cihê wê deyne",
+     "p": "Wêneyekî bikişîne her derê her rûpelî û mezinahiya wê biguherîne heta ku li hev bike. Tu dikarî çend wêneyan zêde bikî, li ser heman rûpelê an li ser rûpelên cuda."
+    },
+    {
+     "h": "Beşek ji rûpelê",
+     "p": "Wêne dibin beşek ji naveroka rûpelê, loma di her xwînera PDF de wekî hev xuya dikin. Ji bo logoyeke ku li ser her rûpelî dubare dibe, Nîşana Avê ya Logoyê zûtir e. Ji bo îmzekirina belgeyekê, PDF Îmze Bike jî dihêle ku tu îmzeyekê xêz bikî an binivîsî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez wêneyekî li PDF-ekê zêde dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim ji wêneyekî zêdetir zêde bikim?",
+     "a": "Erê. Çiqas hewce dikî zêde bike, li ser her rûpelî."
+    },
+    {
+     "q": "Ez dikarim paşê wêneyê bilivînim?",
+     "a": "Berî tomarkirinê, erê. Piştî tomarkirinê ew dibe beşek ji rûpelê, loma heke dibe ku bixwazî wê biguherînî pelê xwe yê resen biparêze."
+    },
+    {
+     "q": "Ez çawa logoya xwe li ser her rûpelî deynim?",
+     "a": "Nîşana Avê ya Logoyê bi kar bîne, ku bi carekê wêneyekî li ser her rûpelî datîne."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "redact-pdf": {
+   "name": "Naveroka PDF veşêre",
+   "short": "Nivîs û wêneyan reş bike da ku bi rastî werin rakirin.",
+   "action": "Naverokê veşêre",
+   "title": "Naveroka PDF Reş Bike: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de nivîs û wêneyên hesas ên PDF-ekê reş bike. Rûpelên reşkirî tên pehnkirin loma naveroka veşartî bi rastî tê rakirin. Bê barkirin.",
+   "h1": "Naveroka PDF-ekê veşêre",
+   "howTo": "Naveroka PDF-ekê çawa tê veşartin",
+   "lead": "Berî ku belgeyekê parve bikî nav, hejmarên hesaban, navnîşan an her tiştekî din veşêre. Naveroka nixumandî tê rakirin, ne tenê li ser wê tê boyaxkirin, û pel qet ji amûra te dernakeve.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Li ser her tiştê ku divê veşêrî qutiyên reş xêz bike, li ser her rûpelî.",
+    "«Naverokê veşêre» hilbijêre, encamê daxe û kontrol bike."
+   ],
+   "sections": [
+    {
+     "h": "Veşartina rastîn",
+     "p": "Çargoşeyeke reş bi tena serê xwe dikare were rakirin, û nivîsa di binê wê de hîn dikare were kopîkirin. Loma her rûpela ku veşartin tê de heye bi 200 DPI vediguhere wêneyekî û qutî tê de tên bicihkirin. Naveroka veşartî êdî qet di pelê de nîne."
+    },
+    {
+     "h": "Çi diguhere",
+     "p": "Nivîsa li ser rûpelên reşkirî êdî nayê hilbijartin an lêgerîn, û dibe ku ew rûpel pelê mezintir bikin. Rûpelên bê veşartin wekî xwe dimînin. Berî parvekirinê her dem encamê veke û her veşartinê kontrol bike."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez naveroka PDF-ekê vedişêrim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Nivîsa veşartî bi rastî çûye?",
+     "a": "Erê. Rûpelên bi veşartinê dibin wêne û qutiyên reş tê de tên bicihkirin, loma nivîs û wêneyên resen ên di binê wan de tên rakirin."
+    },
+    {
+     "q": "Çima ez êdî nikarim li ser hin rûpelan nivîsê hilbijêrim?",
+     "a": "Rûpelên reşkirî vediguherin wêne. Ev e ya ku veşartinê mayînde dike. Rûpelên ku te tiştek li ser wan venaşart nivîsa xwe diparêzin."
+    },
+    {
+     "q": "Li şûna wê ez dikarim PDF Bibire bi kar bînim da ku agahiyan veşêrim?",
+     "a": "Na. Birîn tenê naverokê vedişêre, ku dikare dîsa were xuyakirin. Ji bo her tiştê hesas Naveroka PDF Veşêre bi kar bîne."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "fill-pdf-form": {
+   "name": "Forma PDF dagire",
+   "short": "Qutiyên nivîsê, qutiyên nîşankirinê û lîsteyên daketî yên formeke PDF dagire.",
+   "action": "Forma dagirtî tomar bike",
+   "title": "Forma PDF Dagire: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de formeke PDF ya înteraktîf dagire: qutiyên nivîsê, qutiyên nîşankirinê, bişkokên radyoyê û lîsteyên daketî. Tomar bike. Dane qet nayên barkirin.",
+   "h1": "Formeke PDF dagire",
+   "howTo": "Formeke PDF çawa tê dagirtin",
+   "lead": "Formên bacê, serlêdan û qeydkirinê pir caran agahiyên kesane dixwazin. Wan li vir dagire û tiştek ji yên ku tu dinivîsî ji amûra te dernakeve.",
+   "steps": [
+    "Forma PDF hilbijêre an berde.",
+    "Li nav qadan bitikîne û wan dagire: qutiyên nivîsê, qutiyên nîşankirinê, bişkokên radyoyê û lîsteyên daketî.",
+    "«Forma dagirtî tomar bike» hilbijêre û PDF-a temamkirî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Formên bi qadan",
+     "p": "Ev amûr bi PDF-ên ku qadên formê yên înteraktîf hene dixebite, ew cure ku tu dikarî di xwînera PDF de li nav wan bitikînî. Têketinên te di nav qadan de tên tomarkirin, loma form dagirtbar dimîne û paşê dikare were guhertin."
+    },
+    {
+     "h": "Formên bê qad",
+     "p": "Formeke skankirî, an formeke pehn a ku tenê bo PDF hatiye çapkirin, qadên dagirtinê nîne. Li şûna wê Nivîsê li PDF Zêde Bike bi kar bîne da ku li ser wê binivîsî. Ji bo kilîtkirina formeke dagirtî da ku neyê guhertin, paşê PDF Pehn Bike bi kar bîne."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez formeke PDF dagirim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima ez nikarim li nav forma xwe bitikînim?",
+     "a": "Bi îhtimaleke mezin qadên wê yên înteraktîf tune ne, mînak ji ber ku skan e. Nivîsê li PDF Zêde Bike bi kar bîne da ku li ser wê binivîsî."
+    },
+    {
+     "q": "Wergir hîn dikare bersivên min biguherîne?",
+     "a": "Erê, qad guherbar dimînin. Paşê PDF Pehn Bike bi kar bîne da ku wan mayînde bikî."
+    },
+    {
+     "q": "Ez dikarim formê îmze jî bikim?",
+     "a": "Erê. Forma dagirtî tomar bike, paşê wê di PDF Îmze Bike de veke."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "flatten-pdf": {
+   "name": "PDF Pehn Bike",
+   "short": "Qadên formê û şîroveyan têxe nav rûpelê da ku neyên guhertin.",
+   "action": "PDF Pehn Bike",
+   "title": "PDF Pehn Bike: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de qadên formê û şîroveyan têxe nav naveroka rûpelê, da ku li her derê wekî hev xuya bikin û neyên guhertin. Bê barkirin.",
+   "h1": "PDF-ekê pehn bike",
+   "howTo": "PDF çawa tê pehnkirin",
+   "lead": "Formeke dagirtî bişîne ku kes nikaribe biguherîne, an bike ku şîrove û mor di her sepanê de û li ser her çapkerê wekî hev xuya bikin.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«PDF Pehn Bike» hilbijêre.",
+    "Pelê pehnkirî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Pehnkirin çi dike",
+     "p": "Qadên formê û şîrove, wekî şîrove, mor, nîşankirin û xêz, dikevin nav naveroka rûpelê. Ew tam wekî berê xuya dikin, lê êdî ne tiştên cuda ne ku bikarin werin guhertin, guhastin an jêbirin. Hin xwîner û çapker qet şîroveyan nîşan nadin; piştî pehnkirinê, nîşan didin."
+    },
+    {
+     "h": "Baş e ku bizanî",
+     "p": "Form êdî nayên dagirtin. Şîroveyên ku xuyabûneke dîtbar nîne, wekî hin şîroveyên veşartî, tên rakirin. Heke dibe ku dîsa hewce bike tu wê biguherînî, kopiyeke resen biparêze."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê pehn dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Piştî pehnkirinê ez hîn dikarim formê dagirim?",
+     "a": "Na. Qad dibin beşek ji rûpelê. Pêşî formê bi Forma PDF Dagire dagire, paşê pehn bike."
+    },
+    {
+     "q": "Çima hin şîrove winda bûn?",
+     "a": "Şîroveyên ku xuyabûneke dîtbar nîne nikarin li ser rûpelê werin xêzkirin, loma tên rakirin."
+    },
+    {
+     "q": "Çima ez PDF-ekê pehn bikim?",
+     "a": "Ji bo ku yên din têketinên te neguherînin, û ji bo ku bê guman be ku form û nîşan di her sepanê de û dema çapkirinê wekî hev xuya dikin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "remove-pdf-annotations": {
+   "name": "Şîroveyan rake",
+   "short": "Şîrove, nîşankirin, not, mor û xêzan ji PDF-ekê jê bibe.",
+   "action": "Şîroveyan rake",
+   "title": "Şîroveyan ji PDF Rake: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de şîrove, nîşankirin, notên zeliqok, mor û xêzan ji PDF-ekê jê bibe. Heke bixwazî girêdanan biparêze. Tiştek nayê barkirin.",
+   "h1": "Şîroveyan ji PDF-ekê rake",
+   "howTo": "Şîrove çawa ji PDF-ekê tên rakirin",
+   "lead": "Piştî gera nirxandinê kopiyeke paqij parve bike, bê şîrove, nîşankirin û notên zeliqok ên ku tîma te di rê de hiştine.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Hilbijêre ka girêdan bên parastin an na.",
+    "«Şîroveyan rake» hilbijêre û kopiya paqij daxe."
+   ],
+   "sections": [
+    {
+     "h": "Çi tê rakirin",
+     "p": "Şîrove, nîşankirin, notên zeliqok, mor û xêz tên jêbirin. Heke tu hilbijêrî girêdan dikarin bimînin. Qadên formê her dem tên parastin, loma formeke dagirtbar dagirtbar dimîne."
+    },
+    {
+     "h": "Rûpel bi xwe nayê guhertin",
+     "p": "Tenê şîrove tên rakirin. Nivîs, wêne û her tiştê ku beşek ji naveroka rûpelê ye wekî xwe dimînin. Nîşanên ku di nav rûpelê de hatine pehnkirin êdî ne şîrove ne, loma nayên rakirin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez şîroveyan radikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Qadên min ên formê dê werin rakirin?",
+     "a": "Na. Qadên formê tên parastin."
+    },
+    {
+     "q": "Ez dikarim girêdanan biparêzim?",
+     "a": "Erê. Parastina girêdanan hilbijêre û ew tikandbar dimînin."
+    },
+    {
+     "q": "Çima nîşankirinek hîn li wir e?",
+     "a": "Bi îhtimaleke mezin ew beşek ji naveroka rûpelê ye ne şîroveyek, mînak ji ber ku pel hatiye pehnkirin. Ew bi vî awayî nayên rakirin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "remove-images-from-pdf": {
+   "name": "Wêneyan ji PDF rake",
+   "short": "Wêne û fotoyan rake, nivîs û grafîkan biparêze.",
+   "action": "Wêneyan rake",
+   "title": "Wêneyan ji PDF Rake: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de hemû wêne û fotoyan ji PDF-ekê jê bibe, nivîs û grafîkên vektorî biparêze. Pelên piçûktir, boyaxa kêmtir. Tiştek nayê barkirin.",
+   "h1": "Wêneyan ji PDF-ekê rake",
+   "howTo": "Wêne çawa ji PDF-ekê tên rakirin",
+   "lead": "Tenê peyv hewce ne? Hemû fotoyan rake da ku belgeyeke bi gelek nivîs bi boyaxa kêmtir çap bikî, an pelekî mezin gelekî piçûktir bikî.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Wêneyan rake» hilbijêre.",
+    "Guhertoya tenê nivîs daxe."
+   ],
+   "sections": [
+    {
+     "h": "Çi dimîne",
+     "p": "Nivîs û grafîkên vektorî, wekî xet, tablo, grafîk û gelek logo, tên parastin. Tenê wêneyên wekî foto û nîgaran tên rakirin. Nivîs hilbijartbar û lêgerbar dimîne."
+    },
+    {
+     "h": "Kengê alîkar e",
+     "p": "Wêne pir caran piraniya mezinahiya PDF-ekê ne, loma rakirina wan dikare pelê gelekî piçûktir bike. Her wiha dema tu materyalên xwendinê, rêber an gotaran çap dikî boyaxê diparêze. Ji bo belgeyeke skankirî, ku her rûpel wêne ye, rûpel dê vala bimînin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez wêneyan ji PDF-ekê radikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Nivîs dê bandor bibe?",
+     "a": "Na. Nivîs û grafîkên vektorî wekî xwe dimînin."
+    },
+    {
+     "q": "Çima piştî rakirina wêneyan rûpelên min vala ne?",
+     "a": "Bi îhtimaleke mezin PDF skanek e, ku her rûpel wêneyek e. Nivîseke cuda tune ku were parastin."
+    },
+    {
+     "q": "Ez pelekî piçûktir dixwazim lê bila foto bimînin.",
+     "a": "PDF Piçûk Bike bi kar bîne, ku li şûna rakirina wêneyan mezinahiya wan kêm dike."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-viewer": {
+   "name": "Dîtera PDF",
+   "short": "PDF-ekê bi taybetî di geroka xwe de veke û bixwîne.",
+   "action": "PDF veke",
+   "title": "Dîtera PDF ya Serhêl: Belaş û Bê Barkirin",
+   "description": "PDF-ekê di geroka xwe de li ser her amûrê veke û bixwîne, bi zoomê. Bê sazkirina sepanê, tiştek nayê barkirin. Piştî serdana yekem bê înternetê dixebite.",
+   "h1": "PDF-ekê bibîne",
+   "howTo": "PDF çawa tê dîtin",
+   "lead": "PDF-ekê li ser komputereke deynkirî, laptopeke kar a bê sepana PDF, an telefonekê bixwîne. Belge di vê rûpelê de vedibe û qet ji cihekî re nayê şandin.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Di gerokê de bixwîne û li gorî hewcedariyê zoom bike an dûr bike.",
+    "Dema qediya tabê bigire. Tiştek nayê hilanîn."
+   ],
+   "sections": [
+    {
+     "h": "Ji bingehê ve taybet",
+     "p": "Pel ji amûra te tê xwendin nav rûpelê û li wir tê nîşandan. Ew nayê barkirin, hilanîn an li dîrokeke li ser serverekê zêdekirin. Tabê bigire û ew ji rûpelê diçe."
+    },
+    {
+     "h": "Her amûr, bê înternetê jî",
+     "p": "Dîter di her geroka nûjen de li ser komputer, tablet an telefonê dixebite, bê ku tiştek were sazkirin. Piştî serdana te ya yekem, bê girêdana înternetê jî dixebite."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê dibînim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Divê ez tiştekî saz bikim?",
+     "a": "Na. Dîter di geroka te de li ser her amûrê dixebite."
+    },
+    {
+     "q": "Bê înternetê dixebite?",
+     "a": "Erê, piştî serdana te ya yekem a malperê."
+    },
+    {
+     "q": "Ez dikarim PDF-ê li vir biguherînim?",
+     "a": "Dîter ji bo xwendinê ye. Ji bo guhertina belgeyekê, yek ji amûrên din bi kar bîne, wekî Nivîsê li PDF Zêde Bike an PDF Rêxe."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "compare-pdf": {
+   "name": "PDF-an Bide Ber Hev",
+   "short": "Peyvên ku di navbera du PDF-an de hatine zêdekirin an rakirin nîşan bike.",
+   "action": "PDF-an bide ber hev",
+   "title": "Pelên PDF Bide Ber Hev: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de nivîsa du PDF-an rûpel bi rûpel bide ber hev û peyvên zêdekirî û rakirî nîşankirî bibîne. Pel qet nayên barkirin.",
+   "h1": "Du pelên PDF bide ber hev",
+   "howTo": "Du PDF çawa tên berhevdan",
+   "lead": "Bibîne ka di navbera du guhertoyên peymanek, siyasetek an reşnivîsekê de çi guheriye, bêyî ku herduyan rêz bi rêz bixwînî û bêyî ku wan bişînî serverekê.",
+   "steps": [
+    "PDF-a resen û PDF-a guhertî hilbijêre an berde.",
+    "«PDF-an bide ber hev» hilbijêre.",
+    "Di nav rûpelan re derbas bibe. Peyvên zêdekirî û rakirî nîşankirî ne."
+   ],
+   "sections": [
+    {
+     "h": "Nivîs, rûpel bi rûpel",
+     "p": "Nivîsa herdu pelan rûpel bi rûpel tê berhevdan, û peyvên ku hatine zêdekirin an rakirin tên nîşankirin. Ev ji bo belgeyên ku tê de gotin girîng e guncav e, wekî peyman, merc, taybetmendî û destnivîs."
+    },
+    {
+     "h": "Sînor",
+     "p": "Tenê nivîs tê berhevdan, ne wêne, formatkirin an rêxistina rûpelê. PDF-ên skankirî yên ku tenê wêneyên rûpelan dihewînin qateke nivîsê nîne, loma nayên berhevdan."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-an didim ber hev, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ew wêne an formatkirinê dide ber hev?",
+     "a": "Na. Tenê nivîs tê berhevdan."
+    },
+    {
+     "q": "Çima PDF-a min a skankirî tu cudahiyê nîşan nade?",
+     "a": "Skan qateke nivîsê nîne, loma tiştek tune ku were berhevdan. Scissor PDF OCR nake."
+    },
+    {
+     "q": "Ji bo peymanên nepenî ewle ye?",
+     "a": "Erê. Herdu pel di nav geroka te de tên berhevdan û qet ji amûra te dernakevin."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-info": {
+   "name": "Agahiyên PDF",
+   "short": "Hejmara rûpelan, mezinahiyên rûpelan, font, metadata û bêtir bibîne.",
+   "action": "Agahiyan nîşan bide",
+   "title": "Agahiyên PDF û Hejmarkera Rûpelan: Belaş",
+   "description": "Rûpelên PDF bijmêre û mezinahiyên rûpelan, guhertoya PDF, font, wêne, form, JavaScript, pêvek, şîfrekirin û metadatayê bibîne. Tiştek nayê barkirin.",
+   "h1": "Agahiyên PDF û hejmarkera rûpelan",
+   "howTo": "Agahiyên PDF-ekê çawa tên kontrolkirin",
+   "lead": "Berî çapkirinê kontrol bike ka pelek çend rûpel e, berî şandina çapxaneyê bibîne ka fontên wê bicihkirî ne an na, an bibîne ka di PDF-eke nenas de çi heye.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "«Agahiyan nîşan bide» hilbijêre.",
+    "Hûrguliyan bixwîne: rûpel, mezinahî, font, naverok û metadata."
+   ],
+   "sections": [
+    {
+     "h": "Tu çi dibînî",
+     "p": "Hejmara rûpelan û mezinahiyên rûpelan, guhertoya PDF û mezinahiya pelê, fontên ku hatine bikaranîn û ka her yek bicihkirî ye an na, û hejmara wêneyan. Her wiha metadataya belgeyê nîşan dide, wekî sernav û nivîskar."
+    },
+    {
+     "h": "Di hundir de çi heye",
+     "p": "Bibîne ka pelek qadên formê, JavaScript, pêvek an şîfrekirin heye an na. Ev alîkar e dema portalek PDF-ekê red dike, dema çapxaneyek fontên bicihkirî dixwaze, an dema tu dixwazî bizanî pêvekeke nehêvîkirî çi dihewîne berî ku wê li cihekî din vekî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez agahiyên PDF-ekê kontrol dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez çawa rûpelên PDF-ekê bijmêrim?",
+     "a": "Li vir veke. Hejmara rûpelan pêşî tê nîşandan, ligel mezinahiya rûpelan."
+    },
+    {
+     "q": "Ez çawa bizanim ka font bicihkirî ne?",
+     "a": "Her fonta di pelê de bi agahiya ka bicihkirî ye an na tê lîstekirin. Çapxane pir caran dixwazin ku hemû font bicihkirî bin."
+    },
+    {
+     "q": "Ez dikarim li vir metadatayê biguherînim?",
+     "a": "Na, ev amûr tenê wê nîşan dide. Metadataya PDF bi kar bîne da ku sernav, nivîskar û qadên din biguherînî."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "split-pdf-by-bookmarks": {
+   "name": "PDF li gorî nîşanan parçe bike",
+   "short": "PDF-ekê bi karanîna nîşanên wê ji bo her beşî bike pelek.",
+   "action": "Li gorî nîşanan parçe bike",
+   "title": "PDF li Gorî Nîşanan (Bookmark) Parçe Bike",
+   "description": "Di geroka xwe de PDF-ekê ji bo her nîşana sereke an beşê bike pelek. Pel bi navê her nîşanê tên binavkirin. Tiştek nayê barkirin.",
+   "h1": "PDF-ekê li gorî nîşanan parçe bike",
+   "howTo": "PDF çawa li gorî nîşanan tê parçekirin",
+   "lead": "Pirtûk, rêber an raporeke dirêj bi yek gavê bike beşên wê. Her beş dibe pelekî serbixwe, bi navê nîşana xwe.",
+   "steps": [
+    "PDF-eke ku nîşan hene hilbijêre an berde.",
+    "«Li gorî nîşanan parçe bike» hilbijêre.",
+    "ZIP-a bi PDF-ekê ji bo her beşî daxe."
+   ],
+   "sections": [
+    {
+     "h": "Ji bo her beşî pelek",
+     "p": "PDF li her nîşana sereke tê parçekirin, û her pel bi navê nîşana xwe tê binavkirin, loma tu bi nêrînekê beşan ji hev cuda dikî. Rûpelên berî nîşana yekem, wekî berg an rûpela naverokê, dibin pelekî cuda. Hemû pel bi hev re wekî ZIP tên daxistin."
+    },
+    {
+     "h": "PDF-ên bê nîşan",
+     "p": "Ev tenê ji bo PDF-ên ku nîşan hene dixebite, ku jê re outline jî tê gotin. Heke di pelekî de tu nîşan tune bin, tu ê peyamekê bibînî ku vê dibêje. Wê demê, li şûna wê PDF Parçe Bike bi kar bîne da ku wê li gorî navberên rûpelan parve bikî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê li gorî nîşanan parçe dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez çawa bizanim ka PDF-a min nîşan hene?",
+     "a": "Wê di xwînereke PDF de veke û li panela nîşanan an outline bigere. Heke tu nîşan di pelê de tune bin, Scissor PDF dema tu wê li vir vekî ji te re dibêje."
+    },
+    {
+     "q": "Nîşanên jêrîn jî tên bikaranîn?",
+     "a": "Na. Pel tenê li nîşanên sereke tê parçekirin, loma her beş bi beşên xwe yên jêrîn re bi hev re dimîne."
+    },
+    {
+     "q": "Rûpelên berî nîşana yekem çi dibin?",
+     "a": "Ew dibin pelekî cuda, loma tiştek winda nabe."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "highlight-pdf": {
+   "name": "Di PDF de nîşan bike",
+   "short": "Nivîsê li ser her rûpelî bi zer, kesk an pembe nîşan bike.",
+   "action": "Nîşankirinan tomar bike",
+   "title": "Nivîsê di PDF de Nîşan Bike (Highlight)",
+   "description": "Di geroka xwe de nivîsa PDF-ekê bi qutiyên zer, kesk an pembe li ser her rûpelî nîşan bike. Nîşankirin dibin beşek ji rûpelê. Tiştek nayê barkirin.",
+   "h1": "PDF-ekê nîşan bike",
+   "howTo": "Nivîs çawa di PDF-ekê de tê nîşankirin",
+   "lead": "Beşên sereke yên xwendinekê, hejmarên daxuyaniyeke hesabê an xalên peymanekê yên ku kesekî din divê bibîne nîşan bike.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Zer, kesk an pembe hilbijêre, û li ser her rûpelî li ser nivîsê qutiyên nîşankirinê xêz bike.",
+    "«Nîşankirinan tomar bike» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Sê reng",
+     "p": "Li ser nivîsa ku dixwazî nîşan bikî qutiyên nîv-şeffaf bi zer, kesk an pembe xêz bike. Rengên cuda bi kar bîne da ku mijaran, an pirsan ji bersivan cuda bikî."
+    },
+    {
+     "h": "Beşek ji rûpelê",
+     "p": "Nîşankirin dibin beşek ji rûpelê, ne şîroveyên cuda. Ew di her xwînerê de û dema çapkirinê wekî hev xuya dikin, lê paşê bi amûreke şîroveyan nayên rakirin. Heke dibe ku kopiyeke paqij bixwazî, ya resen biparêze."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê nîşan dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez dikarim kîjan rengan bi kar bînim?",
+     "a": "Zer, kesk û pembe."
+    },
+    {
+     "q": "Ez dikarim paşê nîşankirinan rakim?",
+     "a": "Ne ji pelê tomarkirî, ji ber ku ew beşek ji rûpelê ne. Heke kopiyeke bê nîşan hewce dikî, ya resen biparêze."
+    },
+    {
+     "q": "Nivîsa di bin de dê hîn were xwendin?",
+     "a": "Erê. Nîşankirin nîv-şeffaf in, loma nivîs di nav wan re xuya dike."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "image-watermark-pdf": {
+   "name": "Nîşana avê ya logoyê",
+   "short": "Logoya xwe an wêneyekî wekî nîşana avê li ser her rûpelî deyne.",
+   "action": "Nîşana avê zêde bike",
+   "title": "Nîşana Avê ya Logoyê li PDF Zêde Bike",
+   "description": "Di geroka xwe de logoyek an wêneyek wekî nîşana avê li her rûpela PDF-ekê zêde bike. Mezinahî, goşe û zelaliyê eyar bike, yekane an dubare. Bê barkirin.",
+   "h1": "Nîşana avê ya logoyê li PDF-ekê zêde bike",
+   "howTo": "Nîşana avê ya logoyê çawa li PDF-ekê tê zêdekirin",
+   "lead": "Pêşniyar û portfolyoyan bi logoya xwe nîşan bike, an reşnivîs û pêşdîtinan nîşan bike da ku wekî guhertoya dawî neyên pêşkêşkirin. Wêne li ser her rûpelî tê danîn.",
+   "steps": [
+    "PDF-ê hilbijêre an berde, paşê wêneyê xwe zêde bike. PNG-eke bi paşxaneya şeffaf encama herî paqij dide.",
+    "Mezinahî, goşe û zelaliyê hilbijêre, û ka carekê were danîn an li ser rûpelê dubare bibe.",
+    "«Nîşana avê zêde bike» hilbijêre û encamê daxe."
+   ],
+   "sections": [
+    {
+     "h": "Yekane an dubare",
+     "p": "Nîşana avê ya yekane carekê li ser her rûpelî cih digire. Ya dubare wê li ser tevahiya rûpelê dubare dike, ku birîna wê ji dîmenên ekranê yên karê te dijwartir dike. Mezinahî, goşe û zelaliyê eyar bike heta ku xuya bibe bêyî ku naverokê veşêre."
+    },
+    {
+     "h": "Hilbijartina wêneyê",
+     "p": "PNG-eke bi paşxaneya şeffaf herî paqij xuya dike, ji ber ku tenê logo xuya dike, ne qutiyeke spî li dora wê. Ji bo nîşaneke avê ya nivîsî wekî NIHÊNÎ, Nîşana avê li PDF bi kar bîne."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez nîşana avê ya logoyê zêde dikim, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Ez çi cure wêneyî bi kar bînim?",
+     "a": "PNG-eke bi paşxaneya şeffaf, da ku tenê logo bi xwe li ser rûpelê xuya bike."
+    },
+    {
+     "q": "Ez dikarim wê kal bikim?",
+     "a": "Erê. Zelaliyê kêm bike heta ku nîşana avê bi aramî li pişt naverokê bimîne."
+    },
+    {
+     "q": "Li şûna wêneyekî ez dikarim nivîsê bi kar bînim?",
+     "a": "Erê, bi Nîşana avê li PDF."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
+  },
+  "pdf-to-long-image": {
+   "name": "PDF bo Wêneyekî Dirêj",
+   "short": "Rûpelên PDF bike yek wêneyekî dirêj da ku di çatê de parve bikî.",
+   "action": "Wêneyê çêke",
+   "title": "PDF bo Wêneyekî Dirêj: Belaş û Bê Barkirin",
+   "description": "Di geroka xwe de hemû an hin rûpelên PDF bike yek wêneyekî dirêj ê PNG an JPG, da ku belgeyeke tevahî di çat an postekê de parve bikî. Bê barkirin.",
+   "h1": "PDF-ekê veguherîne yek wêneyekî dirêj",
+   "howTo": "PDF çawa tê veguherandin wêneyekî dirêj",
+   "lead": "Gelek sepanên çatê û torên civakî pêşdîtina PDF nîşan nadin. Rûpelan bike yek wêneyekî dirêj ku mirov dikarin rasterast di nav axaftinê de bişemitînin.",
+   "steps": [
+    "PDF-ê hilbijêre an berde.",
+    "Hemû rûpelan an yên ku hewce dikî hilbijêre, û PNG an JPG hilbijêre.",
+    "«Wêneyê çêke» hilbijêre û daxe."
+   ],
+   "sections": [
+    {
+     "h": "PNG an JPG",
+     "p": "PNG nivîs û xetan zelal dihêle û ji bo belge, menû û slaytan guncav e. JPG pelekî piçûktir çêdike, ku ji bo rûpelên bi gelek fotoyan û ji bo sepanên ku mezinahiya wêneyan sînordar dikin alîkar e."
+    },
+    {
+     "h": "Belgeyên pir dirêj",
+     "p": "Gerok sînor datînin ka wêneyek dikare çiqas mezin be. Dema belgeyek pir dirêj be, çareserî bixweber tê kêmkirin da ku hîn li hev bike. Ji bo gelek rûpelan, tenê yên ku hewce dikî hilbijêre, an PDF bo PNG bi kar bîne da ku ji bo her rûpelî wêneyek bistînî."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Dema ez PDF-ekê vediguherînim wêneyekî dirêj, pelên min tên barkirin?",
+     "a": "Na. Scissor PDF di tabloya geroka te de motoreke PDF dixebitîne ku bi Rust hatiye nivîsîn û bo WebAssembly hatiye berhevkirin. Pelên te ji dîska te tên xwendin nav bîra rûpelê, li wir tên pêvajokirin û dîsa li ser amûra te tên tomarkirin. Xala barkirinê ya malperê tune, û Siyaseta Ewlehiya Naverokê (Content Security Policy) ya wê nahêle rûpel daneyan ji serverekî din re bişîne."
+    },
+    {
+     "q": "Çima wêneyê min ê dirêj ji ya ku min hêvî dikir kêmtir zelal e?",
+     "a": "Mezinahiyeke herî zêde ya gerokê ji bo wêneyan heye. Ji bo belgeyên dirêj çareserî bixweber tê kêmkirin da ku di nav wê de bimîne. Ji bo hûrguliyên zêdetir rûpelên kêmtir hilbijêre."
+    },
+    {
+     "q": "Ez dikarim tenê hin rûpelan têxim?",
+     "a": "Erê. Rûpelên ku dixwazî hilbijêre û tenê ew bi hev ve tên girêdan."
+    },
+    {
+     "q": "Ez PNG hilbijêrim an JPG?",
+     "a": "PNG ji bo nivîs û grafîkan, JPG ji bo pelekî piçûktir an rûpelên bi gelek fotoyan."
+    },
+    {
+     "q": "Belaş e? Hesab hewce ye?",
+     "a": "Belaş e, bê hesab, bê sînorê karên rojane û bê ku nîşana avê li belgeyên te were zêdekirin. Ji ber ku kar li ser komputera te bi xwe pêk tê, ji bo her pelî lêçûneke serverê tune ku em vegerînin."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -1128,6 +2539,98 @@
   "useSignature": "Îmzeyê bi kar bîne",
   "clearPad": "Paqij bike",
   "signHere": "Li vir îmze bike",
-  "chooseImage": "Wêneyekî hilbijêre"
+  "chooseImage": "Wêneyekî hilbijêre",
+  "simpleSub": "Yek tikandin. Encam di demeke kurt de amade ye.",
+  "keepLinks": "Girêdanan biparêze",
+  "toTextSub": "Qata nivîsê ya her rûpelî wekî pelekî nivîsê yê sade tê tomarkirin.",
+  "pageMarks": "Destpêka her rûpelî nîşan bide",
+  "readyText": "Nivîsa te amade ye",
+  "noText": "Tu nivîs nehat dîtin. Dibe ku di vê PDF-ê de tenê wêneyên skankirî hebin.",
+  "blankPagesSub": "Rûpelên vala mezinahiya rûpelê berî xwe digirin.",
+  "where": "Li ku",
+  "afterEvery": "Piştî her rûpelî",
+  "afterSome": "Piştî rûpelên diyarkirî",
+  "afterPages": "Piştî rûpelan",
+  "afterPagesHint": "Ji bo ku rûpelekê li destpêka destpêkê zêde bikî 0 bi kar bîne.",
+  "mixSub": "Rûpel li dû hev tên: pelê yekem, pelê duyem, yekem, duyem…",
+  "reverseSecond": "Pelê duyem berevajî bike (ji bo paşrûyên ku berevajî hatine skankirin)",
+  "compareSub": "Du guhertoyên ji bo berhevdanê zêde bike: pêşî ya resen, paşê ya nû.",
+  "compareSame": "Di nivîsê de cudahî tune",
+  "compareChanged": "Cudahî li {pages}",
+  "halfSub": "Her rûpel dibe du rûpel.",
+  "cut": "Birîn",
+  "leftRight": "Çep û rast",
+  "topBottom": "Jor û jêr",
+  "rightToLeft": "Rêza ji rastê ber bi çepê (erebî, farisî, îbranî, manga)",
+  "resizeSub": "Rûpel li gorî mezinahiyê tên eyarkirin û di navendê de tên danîn.",
+  "marginsSub": "Li dora her rûpelî çarçoveyeke spî tê zêdekirin.",
+  "bookletSub": "Herdu rûyan çap bike, li ser keviya kurt bizivirîne, paşê biqatîne.",
+  "splitSizeSub": "Her beş ji vê mezinahiyê piçûktir dimîne.",
+  "maxSize": "Mezinahiya herî zêde",
+  "batesSub": "Li her rûpelî hejmareke li pey hev tê zêdekirin.",
+  "prefix": "Pêşgir",
+  "digits": "Hejmara reqeman",
+  "headerFooterSub": "Çep, navend û rast. Ji bo derbaskirinê qadekê vala bihêle.",
+  "header": "Serrûpel",
+  "footer": "Binrûpel",
+  "center": "Navend",
+  "tokensHint": "Ji bo nirxên otomatîk {page}, {total}, {date} an {file} bi kar bîne.",
+  "viewSub": "Ji bo xwendinê bişemitîne. Tiştek nayê barkirin.",
+  "zoom": "Zoom",
+  "infoSub": "Her tiştê ku di nav vê PDF-ê de hatiye hilanîn.",
+  "formSub": "Ji bo dagirtinê li qadeke li ser rûpelê bitikîne, paşê tomar bike.",
+  "noFields": "Di vê PDF-ê de qadên dagirtinê tune ne.",
+  "useAddText": "Li şûna wê Nivîsê zêde bike bi kar bîne",
+  "blankSub": "Rûpelên vala ji bo rakirinê hatine hilbijartin. Hilbijartinê kontrol bike, paşê tomar bike.",
+  "scanning": "Li rûpelên vala tê gerîn…",
+  "blankFound": "{pages} hatin dîtin ku vala xuya dikin.",
+  "yes": "Erê",
+  "no": "Na",
+  "embedded": "bicihkirî",
+  "notEmbedded": "ne bicihkirî",
+  "infoPages": "Rûpel",
+  "infoSize": "Mezinahiya pelê",
+  "infoVersion": "Guherto",
+  "infoPageSizes": "Mezinahiyên rûpelan",
+  "infoImages": "Wêne",
+  "infoForms": "Qadên formê",
+  "infoBookmarks": "Nîşan (bookmark)",
+  "infoJs": "JavaScript",
+  "infoAttachments": "Pêvek",
+  "infoTagged": "Etîketkirî (gihîştbar)",
+  "infoEncrypted": "Şîfrekirî bû",
+  "infoFonts": "Font",
+  "image": "Wêne",
+  "yellow": "Zer",
+  "green": "Kesk",
+  "pink": "Pembe",
+  "addHighlight": "Nîşankirinê zêde bike",
+  "addRedaction": "Qutiya reş zêde bike",
+  "redactHint": "Rûpelên bi qutiyan dibin wêne, loma tiştê di bin qutiyan de bi rastî tê rakirin.",
+  "studioTitle": "Scissor PDF",
+  "studioOpen": "PDF veke",
+  "studioDrop": "an PDF-an an peldankekê li her derê berde. Tiştek nayê barkirin.",
+  "studioAllActions": "Hemû çalakî",
+  "studioActions": "Çalakî",
+  "studioActionsSub": "Hilbijêre ka paşê çi bikî. Her gav dikare were paşvekirin.",
+  "studioUndo": "Paşve",
+  "studioRedo": "Dîsa",
+  "studioApplied": "{tool} qediya",
+  "studioReady": "{name} amade ye",
+  "studioOpenFiles": "Pelan veke",
+  "studioOpenFolder": "Peldankê veke",
+  "studioFiles": "Pel",
+  "studioDownloadAll": "Hemûyan daxe",
+  "studioClose": "{name} bigire",
+  "studioNoPdfs": "Li wir tu pelê PDF nehat dîtin.",
+  "studioHome": "Rûpela sereke ya Scissor PDF"
+ },
+ "studio": {
+  "title": "Scissor PDF: Hemû amûrên PDF di sepanek taybet de",
+  "description": "PDF-ê carekê veke û bi hemû amûran biguherîne: bike yek, piçûk bike, îmze bike, veşêre, bizivirîne, veguherîne. Her gavê paşve bibe. Tiştek nayê barkirin.",
+  "h1": "Scissor PDF",
+  "lead": "PDF-ê carekê veke, paşê her amûrê li ser bikar bîne. Her gav dikare were paşvekirin û tiştek ji amûra te dernakeve.",
+  "nav": "Sepan",
+  "cta": "Sepanê veke"
  }
 }

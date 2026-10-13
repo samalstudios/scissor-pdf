@@ -4,7 +4,7 @@ export async function feed(names) {
   const dt = new DataTransfer();
   for (const n of names) {
     const b = await (await fetch('/_test/' + n)).blob();
-    dt.items.add(new File([b], n, { type: n.endsWith('.pdf') ? 'application/pdf' : 'image/jpeg' }));
+    dt.items.add(new File([b], n, { type: n.endsWith('.pdf') ? 'application/pdf' : n.endsWith('.png') ? 'image/png' : 'image/jpeg' }));
   }
   const i = document.querySelector('input[type=file]');
   i.files = dt.files;

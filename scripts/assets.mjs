@@ -26,10 +26,10 @@ for (const [name, size] of [['favicon-32.png', 32], ['apple-touch-icon.png', 180
   render(svg, join(PUB, name), size, size);
 }
 
-const glyph = (name) => icon(name).replace(/<svg[^>]*>/, '').replace('</svg>', '');
+const glyph = (name) => icon(name).replace(/<svg[^>]*>/, '').replace('</svg>', '').replace(/var\(--icon-bg, #fff\)/g, '#fff');
 const og = ({ title, subtitle, iconName }) => `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#ffffff"/>
-<g transform="translate(96 112) scale(3.2)" fill="none" stroke="#1d1d1f" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">${glyph(iconName)}</g>
+<g transform="translate(90 100) scale(3)" fill="none" stroke="#1d1d1f" stroke-width="1.3" style="--icon-bg:#fff" stroke-linecap="round" stroke-linejoin="round">${glyph(iconName)}</g>
 <text x="90" y="372" font-family="SF Pro Display, -apple-system, Helvetica Neue, sans-serif" font-size="${title.length > 14 ? 92 : 104}" font-weight="600" letter-spacing="-2" fill="#1d1d1f">${title}</text>
 <text x="94" y="438" font-family="SF Pro Text, -apple-system, Helvetica Neue, sans-serif" font-size="34" fill="#86868b">${subtitle}</text>
 <g transform="translate(96 520) scale(1.25)" fill="none" stroke="#1d1d1f" stroke-width="1.9" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></g>

@@ -34,7 +34,8 @@
   "privacy": "Prywatność",
   "note": "Scissor PDF przetwarza każdy plik w Twojej przeglądarce za pomocą silnika w Rust skompilowanego do WebAssembly. Bez wysyłania, bez kont, bez śledzenia.",
   "updated": "Zaktualizowano",
-  "languages": "Języki"
+  "languages": "Języki",
+  "inspect": "Podgląd i sprawdzanie"
  },
  "common": {
   "assureLocal": "Pliki nie opuszczają urządzenia",
@@ -888,6 +889,1416 @@
      "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
     }
    ]
+  },
+  "png-to-pdf": {
+   "name": "PNG na PDF",
+   "short": "Zamień obrazy PNG i zrzuty ekranu w jeden PDF, jeden obraz na stronę.",
+   "action": "Konwertuj do PDF",
+   "title": "PNG na PDF za darmo, bez wysyłania plików",
+   "description": "Konwertuj obrazy PNG i zrzuty ekranu do PDF w przeglądarce. Ustal kolejność, rozmiar strony i margines. Bezstratnie, bez wysyłania i bez znaku wodnego.",
+   "h1": "Konwertuj PNG na PDF",
+   "howTo": "Jak konwertować PNG na PDF",
+   "lead": "Zbierz zrzuty ekranu, diagramy lub zeskanowane strony w jeden PDF, który możesz wysłać lub wydrukować. Każdy PNG staje się jedną stroną, zapisaną bez żadnej utraty jakości.",
+   "steps": [
+    "Wybierz lub upuść obrazy PNG. Zrzuty ekranu też się nadają.",
+    "Przeciągnij obrazy w wybranej kolejności, a potem wybierz rozmiar strony i margines.",
+    "Kliknij Konwertuj do PDF i pobierz plik."
+   ],
+   "sections": [
+    {
+     "h": "Bezstratnie, z zachowaniem przezroczystości",
+     "p": "Obrazy PNG są zapisywane w PDF bez ponownej kompresji, więc tekst na zrzutach ekranu pozostaje ostry, a każdy piksel jest taki sam jak w oryginale. Przezroczyste obszary pozostają przezroczyste, zamiast stawać się czarne lub szare."
+    },
+    {
+     "h": "Rozmiar strony i marginesy",
+     "p": "Dopasuj do obrazu nadaje każdej stronie dokładnie rozmiar jej obrazu. A4 i US Letter umieszczają obraz na standardowej stronie, przeskalowany i wyśrodkowany, czyli tak, jak trzeba do druku. Margines dodaje wokół obrazu brak obramowania, małe lub duże."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji PNG do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę umieścić kilka plików PNG na jednej stronie?",
+     "a": "Nie. Każdy obraz trafia na osobną stronę. Aby potem umieścić kilka stron na jednej kartce, użyj narzędzia Kilka stron na kartce."
+    },
+    {
+     "q": "Czy moje zrzuty ekranu stracą na jakości?",
+     "a": "Nie. Dane PNG są zapisywane bezstratnie, więc PDF pokazuje dokładnie te same piksele co Twoje obrazy."
+    },
+    {
+     "q": "Mam zdjęcia JPG, nie PNG. Czego użyć?",
+     "a": "Użyj narzędzia JPG na PDF. Zachowuje ono zdjęcia w oryginalnej jakości JPEG."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "webp-to-pdf": {
+   "name": "WebP na PDF",
+   "short": "Zamień obrazy WebP zapisane z internetu w PDF, jeden obraz na stronę.",
+   "action": "Konwertuj do PDF",
+   "title": "WebP na PDF za darmo, bez wysyłania plików",
+   "description": "Konwertuj obrazy WebP do PDF w przeglądarce. Ustal kolejność, rozmiar strony i margines, a potem pobierz. Pliki nie są wysyłane. Za darmo, bez znaku wodnego.",
+   "h1": "Konwertuj WebP na PDF",
+   "howTo": "Jak konwertować WebP na PDF",
+   "lead": "Wiele stron internetowych zapisuje obrazy w formacie WebP, którego niektóre aplikacje i drukarki wciąż nie otwierają. Umieść je w PDF, który działa wszędzie, bezpośrednio na swoim urządzeniu.",
+   "steps": [
+    "Wybierz lub upuść obrazy WebP.",
+    "Przeciągnij je w odpowiedniej kolejności, a potem wybierz rozmiar strony i margines.",
+    "Kliknij Konwertuj do PDF i pobierz plik."
+   ],
+   "sections": [
+    {
+     "h": "Dlaczego PDF może być większy",
+     "p": "Przeglądarka dekoduje każdy obraz WebP, a piksele są zapisywane w PDF bezstratnie. WebP to bardzo oszczędny format, więc PDF jest często większy niż oryginalne pliki. Jeśli rozmiar ma znaczenie, przepuść wynik przez Kompresuj PDF."
+    },
+    {
+     "h": "Rozmiar strony i marginesy",
+     "p": "Dopasuj do obrazu nadaje każdej stronie dokładnie rozmiar jej obrazu. A4 i US Letter umieszczają obraz na standardowej stronie, przeskalowany i wyśrodkowany, czyli tak, jak trzeba do druku. Margines dodaje wokół obrazu brak obramowania, małe lub duże."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji WebP do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego mój PDF jest większy niż pliki WebP?",
+     "a": "Obrazy są zapisywane bezstratnie, co zajmuje więcej miejsca niż kompresja WebP. Kompresuj PDF może zmniejszyć plik."
+    },
+    {
+     "q": "Czy każdy obraz trafia na osobną stronę?",
+     "a": "Tak. Jeden obraz na stronę, w ustalonej przez Ciebie kolejności."
+    },
+    {
+     "q": "Jaki rozmiar strony wybrać?",
+     "a": "Dopasuj do obrazu, jeśli PDF ma być oglądany na ekranie. A4 lub US Letter, jeśli planujesz go wydrukować."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-to-png": {
+   "name": "PDF na PNG",
+   "short": "Zapisz strony PDF jako ostre, bezstratne obrazy PNG.",
+   "action": "Konwertuj do PNG",
+   "title": "PDF na PNG za darmo, bez wysyłania plików",
+   "description": "Konwertuj strony PDF na obrazy PNG w przeglądarce w rozdzielczości 108, 144 lub 216 DPI. Wszystkie lub wybrane strony. Bezstratnie, nic nie jest wysyłane.",
+   "h1": "Konwertuj PDF na PNG",
+   "howTo": "Jak konwertować PDF na PNG",
+   "lead": "Zamień strony w obrazy do prezentacji, dokumentacji, na strony internetowe lub do czatu. PNG jest bezstratny, więc tekst i linie pozostają czyste, bez rozmytych krawędzi.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz wszystkie strony lub wpisz te, których potrzebujesz, a potem wybierz 108, 144 lub 216 DPI.",
+    "Kliknij Konwertuj do PNG. Jedna strona pobiera się jako PNG, kilka jako ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Kiedy wybrać PNG zamiast JPG",
+     "p": "PNG zachowuje każdy piksel dokładnie, co sprawdza się przy tekście, wykresach, diagramach i grafice liniowej. Pliki JPG są mniejsze i lepiej nadają się do stron z dużą liczbą zdjęć. Do nich użyj narzędzia PDF na JPG."
+    },
+    {
+     "h": "Wybór rozdzielczości",
+     "p": "108 DPI wystarczy do oglądania na ekranie. 144 DPI wygląda ostro na ekranach o wysokiej rozdzielczości. 216 DPI daje najwięcej szczegółów do powiększania lub druku, kosztem większych plików. Każdy obraz ma białe tło."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji PDF do PNG?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę przekonwertować tylko niektóre strony?",
+     "a": "Tak. Wpisz potrzebne strony, na przykład 1, 3-5. Konwertowane są tylko te strony."
+    },
+    {
+     "q": "Dlaczego tło jest białe, a nie przezroczyste?",
+     "a": "Strony są renderowane na białym tle, tak jak wyglądają w czytniku i na papierze. Dzięki temu tekst jest czytelny w każdej aplikacji."
+    },
+    {
+     "q": "Jak pobrać wszystkie obrazy naraz?",
+     "a": "Gdy konwertujesz więcej niż jedną stronę, pobierają się one razem w jednym pliku ZIP."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-to-text": {
+   "name": "PDF na tekst",
+   "short": "Wyodrębnij tekst z PDF do zwykłego pliku .txt.",
+   "action": "Wyodrębnij tekst",
+   "title": "PDF na tekst (TXT) za darmo, bez wysyłania",
+   "description": "Wyodrębnij tekst z PDF do pliku .txt w UTF-8 w przeglądarce. Najpierw zobacz podgląd, z opcjonalnymi znacznikami stron. Nic nie jest wysyłane.",
+   "h1": "Konwertuj PDF na tekst",
+   "howTo": "Jak konwertować PDF na tekst",
+   "lead": "Wydobądź słowa z PDF, aby je zacytować, przeszukać lub wkleić do innej aplikacji. Przed pobraniem zobaczysz podgląd.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Włącz znaczniki stron, jeśli chcesz mieć linię między stronami, i sprawdź podgląd.",
+    "Kliknij Wyodrębnij tekst, aby pobrać plik .txt."
+   ],
+   "sections": [
+    {
+     "h": "Co otrzymujesz",
+     "p": "Warstwę tekstową każdej strony w pliku .txt w UTF-8, który otworzysz w każdym edytorze i który obsługuje każdy język. Tylko tekst: układ, tabele i kolumny nie są odwzorowywane dokładnie, więc niektóre wiersze mogą się zlewać lub pojawić w innej kolejności."
+    },
+    {
+     "h": "Zeskanowane pliki PDF",
+     "p": "Zeskanowany dokument to zwykle same zdjęcia stron, bez tekstu w środku. Scissor PDF nie wykonuje OCR (rozpoznawania tekstu), więc wynik dla takiego pliku jest pusty. Jeśli w czytniku PDF możesz zaznaczyć tekst, można go tu wyodrębnić."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji PDF na tekst?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego mój plik tekstowy jest pusty?",
+     "a": "PDF najprawdopodobniej zawiera tylko obrazy, na przykład skan. Nie ma warstwy tekstowej do wyodrębnienia, a Scissor PDF nie wykonuje OCR."
+    },
+    {
+     "q": "Czy tabele są zachowywane?",
+     "a": "Nie dokładnie. Słowa są wyodrębniane, ale wiersze, kolumny i odstępy mogą nie układać się tak jak na stronie."
+    },
+    {
+     "q": "Czym są znaczniki stron?",
+     "a": "To opcjonalna linia między stronami, dzięki której widać, gdzie w pliku tekstowym zaczyna się każda strona."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "extract-images-from-pdf": {
+   "name": "Wyodrębnij obrazy z PDF",
+   "short": "Zapisz zdjęcia i grafiki z PDF jako osobne pliki.",
+   "action": "Wyodrębnij obrazy",
+   "title": "Wyodrębnij obrazy z PDF, bez wysyłania plików",
+   "description": "Zapisz obrazy osadzone w PDF do archiwum ZIP w przeglądarce. JPEG zachowują oryginalną jakość, pozostałe są zapisywane jako PNG. Nic nie jest wysyłane.",
+   "h1": "Wyodrębnij obrazy z PDF",
+   "howTo": "Jak wyodrębnić obrazy z PDF",
+   "lead": "Wydobądź oryginalne zdjęcia z broszury, raportu lub katalogu zamiast robić zrzuty ekranu. Wszystkie obrazy trafiają do jednego pliku ZIP.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Wyodrębnij obrazy.",
+    "Pobierz ZIP ze wszystkimi obrazami znalezionymi w pliku."
+   ],
+   "sections": [
+    {
+     "h": "Oryginalna jakość",
+     "p": "Obrazy JPEG są zapisywane bajt w bajt, dokładnie tak, jak są przechowywane w PDF, bez ponownej kompresji. Pozostałe obrazy są zapisywane jako PNG, czyli bezstratnie. Otrzymujesz obraz w rozdzielczości, w jakiej został osadzony, a nie w rozmiarze widocznym na stronie."
+    },
+    {
+     "h": "Czego nie da się wyodrębnić",
+     "p": "Bardzo małe obrazy i maski przezroczystości są pomijane, więc ZIP nie jest zapchany drobnymi fragmentami. Logo, wykresy i ilustracje narysowane jako grafika wektorowa nie są obrazami i nie są wyodrębniane. Aby je zachować, przekonwertuj stronę narzędziem PDF na PNG."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas wyodrębniania obrazów z PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy obrazy są ponownie kompresowane?",
+     "a": "Nie. Obrazy JPEG są kopiowane bajt w bajt. Pozostałe typy obrazów są zapisywane jako bezstratne PNG."
+    },
+    {
+     "q": "Dlaczego brakuje wykresu lub logo?",
+     "a": "Prawdopodobnie jest narysowane jako grafika wektorowa, a nie zapisane jako obraz. Użyj narzędzia PDF na PNG, aby zapisać całą stronę jako obraz."
+    },
+    {
+     "q": "Dlaczego brakuje niektórych małych obrazów?",
+     "a": "Bardzo małe obrazy i maski przezroczystości są celowo pomijane. Zwykle są to fragmenty dekoracyjne."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "grayscale-pdf": {
+   "name": "PDF w skali szarości",
+   "short": "Zamień kolorowy PDF na czarno-biały, aby oszczędzić tusz.",
+   "action": "Konwertuj do skali szarości",
+   "title": "PDF na czarno-biały za darmo, bez wysyłania",
+   "description": "Konwertuj PDF do skali szarości (czarno-biały) w przeglądarce, aby oszczędzić kolorowy tusz. Tekst pozostaje ostry i przeszukiwalny. Nic nie jest wysyłane.",
+   "h1": "Konwertuj PDF do skali szarości",
+   "howTo": "Jak przekonwertować PDF do skali szarości",
+   "lead": "Drukuj kolorowe slajdy, raporty lub bilety bez zużywania kolorowego tuszu albo spełnij prośbę o czarno-białą kopię. Plik pozostaje na Twoim urządzeniu.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Konwertuj do skali szarości.",
+    "Pobierz czarno-biały PDF."
+   ],
+   "sections": [
+    {
+     "h": "Tekst pozostaje tekstem",
+     "p": "Tekst i grafika wektorowa są zamieniane na odcienie szarości, a nie na obrazy. Pozostają ostre przy każdym powiększeniu, a tekst nadal można zaznaczać i przeszukiwać. Zdjęcia są zamieniane na obrazy JPEG w skali szarości."
+    },
+    {
+     "h": "Ograniczenia",
+     "p": "Gradienty, wzory i niektóre specjalne przestrzenie barw, takie jak kolory dodatkowe (spot) w profesjonalnych plikach do druku, mogą zachować kolor. Przejrzyj wynik przed wydrukowaniem dużego nakładu."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji PDF do skali szarości?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy nadal mogę przeszukiwać i kopiować tekst?",
+     "a": "Tak. Tekst jest przebarwiany, a nie rasteryzowany, więc nadal można go zaznaczać i przeszukiwać."
+    },
+    {
+     "q": "Dlaczego część strony jest wciąż kolorowa?",
+     "a": "Gradienty, wzory i niektóre specjalne przestrzenie barw, np. kolory dodatkowe (spot), mogą nie zostać przekonwertowane. Reszta strony tak."
+    },
+    {
+     "q": "Dlaczego po prostu nie drukować w skali szarości?",
+     "a": "Możesz, ale plik w skali szarości wygląda tak samo na każdej drukarce i urządzeniu, a niektóre biura i portale właśnie takiego wymagają."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "reverse-pdf": {
+   "name": "Odwróć kolejność stron",
+   "short": "Odwróć kolejność stron, aby ostatnia strona była pierwsza.",
+   "action": "Odwróć strony",
+   "title": "Odwróć kolejność stron PDF, bez wysyłania",
+   "description": "Odwróć kolejność stron PDF jednym kliknięciem w przeglądarce. Ostatnia strona staje się pierwszą. Treść bez zmian, nic nie jest wysyłane.",
+   "h1": "Odwróć kolejność stron PDF",
+   "howTo": "Jak odwrócić kolejność stron w PDF",
+   "lead": "Zeskanowałeś stos stron zadrukiem do dołu albo od końca? Odwróć kolejność wszystkich stron w jednym kroku, zamiast przeciągać strony jedna po drugiej.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Odwróć strony.",
+    "Pobierz PDF ze stronami w odwrotnej kolejności."
+   ],
+   "sections": [
+    {
+     "h": "Kiedy się przydaje",
+     "p": "Wiele automatycznych podajników dokumentów skanuje ostatnią stronę jako pierwszą, a stosy często trafiają do skanera do góry nogami lub od końca. Odwrócenie przywraca kolejność czytania. Pomaga też, gdy drukujesz w odwrotnej kolejności, aby ręcznie kompletować strony."
+    },
+    {
+     "h": "Nic innego się nie zmienia",
+     "p": "Zmienia się tylko kolejność. Każda strona zachowuje treść, rozmiar i obrót. Jeśli strony są też do góry nogami, popraw je potem narzędziem Obróć PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas odwracania kolejności stron PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy strony są też obracane?",
+     "a": "Nie. Obrót pozostaje bez zmian. Użyj narzędzia Obróć PDF, jeśli strony trzeba obrócić."
+    },
+    {
+     "q": "Czy mogę odwrócić tylko niektóre strony?",
+     "a": "Odwróć kolejność stron obejmuje cały dokument. Aby przenieść pojedyncze strony, użyj narzędzia Organizuj PDF."
+    },
+    {
+     "q": "Zeskanowałem przody i tyły osobno. Czy to pomoże?",
+     "a": "Użyj narzędzia Połącz strony nieparzyste i parzyste. Przeplata ono oba skany i może za Ciebie odwrócić kolejność tyłów."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "insert-blank-pages": {
+   "name": "Wstaw puste strony",
+   "short": "Dodaj puste strony po każdej stronie lub w wybranych miejscach.",
+   "action": "Wstaw strony",
+   "title": "Wstaw puste strony do PDF, bez wysyłania",
+   "description": "Dodaj puste strony do PDF w przeglądarce: po każdej stronie na notatki lub po wpisanych stronach. Ten sam rozmiar co strona przed nią. Nic nie jest wysyłane.",
+   "h1": "Wstaw puste strony do PDF",
+   "howTo": "Jak wstawić puste strony do PDF",
+   "lead": "Zrób miejsce na odręczne notatki, zadbaj, by rozdziały przy druku dwustronnym zaczynały się po prawej stronie, lub zostaw miejsce na coś, co dodasz później.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz Po każdej stronie albo wpisz pozycje, np. po stronie 3.",
+    "Kliknij Wstaw strony i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Dwa sposoby wstawiania",
+     "p": "Po każdej stronie zamienia materiały lub slajdy z wykładu w dokument z pustą stroną na notatki po każdej z nich. Wybrane pozycje pozwalają dodać pojedynczą pustą stronę dokładnie tam, gdzie jej potrzebujesz, na przykład po okładce."
+    },
+    {
+     "h": "Dopasowany rozmiar strony",
+     "p": "Każda pusta strona ma ten sam rozmiar co strona przed nią, więc dokument z różnymi rozmiarami stron pozostaje spójny i drukuje się poprawnie."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas wstawiania pustych stron do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę dodać pustą stronę w konkretnym miejscu?",
+     "a": "Tak. Wpisz pozycje, na przykład po stronie 3, a pusta strona zostanie tam dodana."
+    },
+    {
+     "q": "Jaki rozmiar mają nowe strony?",
+     "a": "Każda pusta strona ma rozmiar strony bezpośrednio przed nią."
+    },
+    {
+     "q": "Jak zamiast tego usunąć puste strony?",
+     "a": "Użyj narzędzia Usuń puste strony, które samo znajdzie puste strony, lub Usuń strony, aby usunąć konkretne."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "alternate-mix-pdf": {
+   "name": "Połącz strony nieparzyste i parzyste",
+   "short": "Przeplataj skany przodów i tyłów w jeden dwustronny PDF.",
+   "action": "Połącz strony",
+   "title": "Połącz strony parzyste i nieparzyste PDF",
+   "description": "Połącz skany przodów i tyłów w jeden dwustronny PDF w przeglądarce. Strony z dwóch plików są przeplatane, z opcją odwrócenia kolejności tyłów.",
+   "h1": "Połącz strony nieparzyste i parzyste",
+   "howTo": "Jak połączyć strony nieparzyste i parzyste",
+   "lead": "Masz skaner, który skanuje tylko jedną stronę kartki? Zeskanuj wszystkie przody, odwróć stos, zeskanuj wszystkie tyły, a Scissor PDF ułoży każdą stronę z powrotem we właściwej kolejności.",
+   "steps": [
+    "Dodaj PDF z przodami stron jako pierwszy plik, a PDF z tyłami jako drugi.",
+    "Włącz Odwróć drugi plik, jeśli tyły zeskanowano od ostatniej strony.",
+    "Kliknij Połącz strony i pobierz dwustronny PDF."
+   ],
+   "sections": [
+    {
+     "h": "Jak strony są przeplatane",
+     "p": "Strony występują na przemian: strona 1 z pierwszego pliku, strona 1 z drugiego, strona 2 z pierwszego i tak dalej. Jeśli jeden plik ma więcej stron, pozostałe strony są dodawane na końcu."
+    },
+    {
+     "h": "Po co odwracać drugi plik",
+     "p": "Gdy odwracasz stos, aby zeskanować tyły, ostatni tył jest skanowany jako pierwszy. Odwróć drugi plik to koryguje, więc każdy tył trafia za swój przód."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas łączenia stron nieparzystych i parzystych?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Który plik powinien być pierwszy?",
+     "a": "Plik z przodami stron (1, 3, 5...). Drugi plik dostarcza tyły stron."
+    },
+    {
+     "q": "Kiedy używać opcji Odwróć drugi plik?",
+     "a": "Gdy tyły wyszły w odwrotnej kolejności, co jest typowe, gdy odwracasz cały stos i ponownie wkładasz go do podajnika."
+    },
+    {
+     "q": "Co, jeśli oba pliki mają różną liczbę stron?",
+     "a": "Strony są przeplatane, dopóki oba pliki mają strony. Nadmiarowe strony z dłuższego pliku są dodawane na końcu."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "split-pdf-pages-in-half": {
+   "name": "Podziel strony PDF na pół",
+   "short": "Przetnij każdą stronę na dwie: lewą i prawą lub górną i dolną.",
+   "action": "Podziel strony",
+   "title": "Podziel strony PDF na pół, bez wysyłania",
+   "description": "Przetnij każdą stronę PDF na dwie strony, lewą i prawą lub górną i dolną, w przeglądarce. Do skanów rozkładówek książek. Bezstratnie, nic nie jest wysyłane.",
+   "h1": "Podziel strony PDF na pół",
+   "howTo": "Jak podzielić strony PDF na pół",
+   "lead": "Zeskanowałeś książkę po dwie strony naraz? Zamień każdą rozkładówkę w dwie pojedyncze strony, aby dokument dobrze się czytał, drukował i wyświetlał na telefonie.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz lewa i prawa lub górna i dolna. Dla książek czytanych od prawej do lewej włącz kolejność od prawej do lewej.",
+    "Kliknij Podziel strony i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Książki w każdym kierunku pisma",
+     "p": "Domyślnie pierwsza jest lewa połowa. Dla książek po arabsku, persku, hebrajsku lub kurdyjsku oraz dla mangi wybierz kolejność od prawej do lewej, aby pierwsza była prawa połowa. Górna i dolna sprawdza się przy dokumentach z dwiema stronami wydrukowanymi jedna nad drugą."
+    },
+    {
+     "h": "Bezstratnie",
+     "p": "Połówki pokazują oryginalną treść strony. Nic nie jest ponownie renderowane, więc tekst pozostaje ostry i przeszukiwalny, a zeskanowane obrazy zachowują jakość."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dzielenia stron PDF na pół?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę podzielić książkę czytaną od prawej do lewej?",
+     "a": "Tak. Wybierz kolejność od prawej do lewej, a prawa połowa każdej rozkładówki stanie się pierwszą stroną."
+    },
+    {
+     "q": "Czy jakość się pogorszy?",
+     "a": "Nie. W każdej połowie widać oryginalną treść, bez ponownego renderowania."
+    },
+    {
+     "q": "Nie o to mi chodziło. Chcę podzielić PDF na kilka plików.",
+     "a": "Użyj narzędzia Podziel PDF, aby rozdzielić dokument na osobne pliki według zakresów stron."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "resize-pdf": {
+   "name": "Zmień rozmiar stron PDF",
+   "short": "Przeskaluj każdą stronę do A4, US Letter, A3, A5 lub Legal.",
+   "action": "Zmień rozmiar PDF",
+   "title": "Zmień rozmiar stron PDF na A4 lub Letter",
+   "description": "Zmień rozmiar stron PDF na A4, US Letter, A3, A5 lub Legal w przeglądarce. Proporcje zachowane, treść wyśrodkowana. Nic nie jest wysyłane.",
+   "h1": "Zmień rozmiar stron PDF",
+   "howTo": "Jak zmienić rozmiar stron PDF",
+   "lead": "Masz dokument w formacie US Letter, a potrzebujesz A4, albo odwrotnie? Ustaw dla wszystkich stron jeden standardowy rozmiar, aby drukowały się bez uciętych krawędzi.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz nowy rozmiar: A4, US Letter, A3, A5 lub Legal.",
+    "Kliknij Zmień rozmiar PDF i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Skalowanie, nie rozciąganie",
+     "p": "Każda strona jest skalowana do nowego rozmiaru z zachowaniem proporcji, a potem wyśrodkowana. Tekst i grafika pozostają ostre, bo są skalowane jako wektory, a nie zamieniane w obrazy. Strony o różnych rozmiarach otrzymują ten sam rozmiar."
+    },
+    {
+     "h": "Co nie zostaje przeniesione",
+     "p": "Linki, komentarze i pola formularzy nie są zachowywane na stronach o zmienionym rozmiarze. Jeśli potrzebujesz wypełnialnego formularza, najpierw go wypełnij lub zachowaj oryginalny plik."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas zmiany rozmiaru stron PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy moje strony zostaną rozciągnięte?",
+     "a": "Nie. Proporcje są zachowane. Jeśli nowy rozmiar ma inny kształt, strona jest wyśrodkowana z białym marginesem wokół."
+    },
+    {
+     "q": "Czy tekst stanie się rozmyty?",
+     "a": "Nie. Tekst i grafika pozostają ostre w nowym rozmiarze."
+    },
+    {
+     "q": "Dlaczego moje linki przestały działać?",
+     "a": "Linki, komentarze i pola formularzy nie są przenoszone przy zmianie rozmiaru stron."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "add-margins-to-pdf": {
+   "name": "Dodaj marginesy do PDF",
+   "short": "Dodaj białe obramowanie wokół każdej strony, w milimetrach.",
+   "action": "Dodaj marginesy",
+   "title": "Dodaj marginesy do PDF za darmo, bez wysyłania",
+   "description": "Dodaj białe obramowanie o dowolnej szerokości w milimetrach wokół każdej strony PDF w przeglądarce. Treść zachowuje rozmiar. Do bindowania lub notatek.",
+   "h1": "Dodaj marginesy do PDF",
+   "howTo": "Jak dodać marginesy do PDF",
+   "lead": "Potrzebujesz miejsca na oprawę, dziurkowanie lub notatki na marginesach? Dodaj białe obramowanie wokół każdej strony bez zmniejszania treści.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wpisz szerokość marginesu w milimetrach.",
+    "Kliknij Dodaj marginesy i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Strona rośnie, treść się nie zmniejsza",
+     "p": "Obramowanie jest dodawane na zewnątrz istniejącej strony, więc strona staje się większa, a tekst i obrazy zachowują dokładnie ten sam rozmiar. Nic nie jest skalowane ani ponownie renderowane."
+    },
+    {
+     "h": "Typowe zastosowania",
+     "p": "Margines odsuwa tekst od oprawy lub dziurek, daje miejsce na odręczne uwagi przy sprawdzaniu prac i pomaga, gdy dokument sięga zbyt blisko krawędzi dla Twojej drukarki."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dodawania marginesów do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy moja treść zostanie zmniejszona?",
+     "a": "Nie. Strona staje się większa, a treść zachowuje swój rozmiar."
+    },
+    {
+     "q": "W jakiej jednostce jest margines?",
+     "a": "W milimetrach. Ta sama szerokość jest dodawana wokół każdej strony."
+    },
+    {
+     "q": "Strony muszą pozostać w formacie A4. Co mogę zrobić?",
+     "a": "Dodaj marginesy, a potem użyj narzędzia Zmień rozmiar stron PDF, aby przeskalować strony z powrotem do A4."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-booklet": {
+   "name": "Broszura PDF",
+   "short": "Ułóż strony do druku składanej, zszywanej broszury.",
+   "action": "Utwórz broszurę",
+   "title": "Utwórz broszurę z PDF za darmo, bez wysyłania",
+   "description": "Zamień PDF w broszurę do druku w przeglądarce: dwie strony na kartce w kolejności do zszycia grzbietowego. Wydrukuj, złóż i zszyj. Nic nie jest wysyłane.",
+   "h1": "Utwórz broszurę z PDF",
+   "howTo": "Jak utworzyć broszurę PDF",
+   "lead": "Wydrukuj program, zin, menu lub krótką instrukcję jako składaną broszurę na zwykłej drukarce. Scissor PDF sam ustali kolejność stron.",
+   "steps": [
+    "Wybierz lub upuść plik PDF i wybierz rozmiar kartki: Jak w PDF, A4 lub US Letter.",
+    "Kliknij Utwórz broszurę i pobierz wynik.",
+    "Drukuj dwustronnie, z obracaniem wzdłuż krótszej krawędzi. Złóż stos na pół i zszyj wzdłuż zgięcia."
+   ],
+   "sections": [
+    {
+     "h": "Jak to działa",
+     "p": "Strony są umieszczane po dwie obok siebie na poziomych kartkach w kolejności do zszycia grzbietowego, więc po złożeniu czyta się je 1, 2, 3 i tak dalej. Liczba stron broszury musi być wielokrotnością 4, więc w razie potrzeby na końcu dodawane są puste strony."
+    },
+    {
+     "h": "Wskazówki dotyczące druku",
+     "p": "Wybierz druk dwustronny z obracaniem wzdłuż krótszej krawędzi. Jeśli tyły wychodzą do góry nogami, Twoja drukarka obraca kartki w drugą stronę: spróbuj dłuższej krawędzi. Najpierw wydrukuj jedną kopię, aby sprawdzić."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas tworzenia broszury PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego dodano puste strony?",
+     "a": "Każda złożona kartka mieści cztery strony, więc ich łączna liczba musi być wielokrotnością 4. Puste strony są dodawane na końcu, aby uzupełnić różnicę."
+    },
+    {
+     "q": "Wzdłuż której krawędzi obracać przy druku dwustronnym?",
+     "a": "Wzdłuż krótszej krawędzi. Jeśli druga strona wychodzi do góry nogami, przełącz na dłuższą krawędź."
+    },
+    {
+     "q": "Jaki rozmiar kartki wybrać?",
+     "a": "Jak w PDF zachowuje oryginalny rozmiar strony dla każdej połowy. Wybierz A4 lub US Letter, aby dopasować go do papieru w drukarce."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "remove-blank-pages": {
+   "name": "Usuń puste strony",
+   "short": "Automatycznie znajdź puste strony, sprawdź je i usuń.",
+   "action": "Usuń strony",
+   "title": "Usuń puste strony z PDF, bez wysyłania plików",
+   "description": "Wykryj i usuń puste strony z PDF w przeglądarce. Puste strony są zaznaczane, abyś mógł je sprawdzić przed zapisaniem. Nic nie jest wysyłane.",
+   "h1": "Usuń puste strony z PDF",
+   "howTo": "Jak usunąć puste strony z PDF",
+   "lead": "Zeskanowałeś stos dwustronnie i masz puste tyły? Scissor PDF sam znajdzie białe strony. Ty sprawdzasz zaznaczenie, a potem zapisujesz.",
+   "steps": [
+    "Wybierz lub upuść plik PDF. Strony, które wyglądają na puste, są zaznaczane automatycznie.",
+    "Sprawdź zaznaczenie i w razie potrzeby zaznacz lub odznacz strony.",
+    "Kliknij Usuń strony i pobierz oczyszczony PDF."
+   ],
+   "sections": [
+    {
+     "h": "Jak działa wykrywanie",
+     "p": "Każda strona jest renderowana w przeglądarce, a strony całkowicie lub prawie całkowicie białe zostają zaznaczone. Ponieważ liczy się wygląd strony, znajdowane są puste tyły skanów, nawet jeśli zawierają trochę szumu ze skanera."
+    },
+    {
+     "h": "Zawsze sprawdzaj",
+     "p": "Strona z ledwie widocznym śladem, np. jasnym numerem strony lub krótką notatką ołówkiem, może zostać uznana za pustą. Przejrzyj zaznaczenie przed zapisaniem i odznacz strony, które chcesz zachować."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas usuwania pustych stron z PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy strony zostaną usunięte bez pytania?",
+     "a": "Nie. Puste strony są tylko zaznaczane. Sprawdzasz zaznaczenie i decydujesz, zanim cokolwiek zostanie zapisane."
+    },
+    {
+     "q": "Dlaczego zaznaczono stronę z odrobiną tekstu?",
+     "a": "Wykrywanie opiera się na wyglądzie, więc strona z ledwie widocznym śladem może wyglądać na pustą. Odznacz ją przed zapisaniem."
+    },
+    {
+     "q": "Czy mogę jednocześnie usunąć inne strony?",
+     "a": "Tak. Przed zapisaniem zaznacz dodatkowe strony, których chcesz się pozbyć."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "split-pdf-by-size": {
+   "name": "Podziel PDF według rozmiaru",
+   "short": "Podziel PDF na części mniejsze niż limit, np. 5 MB.",
+   "action": "Podziel według rozmiaru",
+   "title": "Podziel PDF według rozmiaru, bez wysyłania",
+   "description": "Podziel duży PDF na części mniejsze niż wybrany rozmiar, np. 5 MB, na potrzeby limitów e-maila lub przesyłania. Strony pozostają całe. Nic nie jest wysyłane.",
+   "h1": "Podziel PDF według rozmiaru pliku",
+   "howTo": "Jak podzielić PDF według rozmiaru pliku",
+   "lead": "Załącznik jest za duży do e-maila albo portal przyjmuje tylko małe pliki? Podziel PDF na części, z których każda zmieści się w limicie.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wpisz maksymalny rozmiar każdej części, na przykład 5 MB.",
+    "Kliknij Podziel według rozmiaru i pobierz części jako ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Strony pozostają całe",
+     "p": "Części składają się z całych stron, w kolejności, a każda część mieści się w wybranym rozmiarze. Pojedyncza strona, która sama przekracza limit, staje się osobną częścią, bo strony nie da się podzielić."
+    },
+    {
+     "h": "Najpierw spróbuj kompresji",
+     "p": "Jeśli wolisz wysłać jeden plik, Kompresuj PDF może zmieścić go w limicie. Możesz też najpierw skompresować, a potem podzielić, aby otrzymać mniej części."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dzielenia PDF według rozmiaru?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego jedna część jest większa niż mój limit?",
+     "a": "Ta część zawiera jedną stronę, która sama przekracza limit. Strony nigdy nie są dzielone."
+    },
+    {
+     "q": "Jak otrzymam części?",
+     "a": "Wszystkie części pobierają się razem w jednym pliku ZIP."
+    },
+    {
+     "q": "Czy mogę zamiast tego dzielić według numerów stron?",
+     "a": "Tak, użyj narzędzia Podziel PDF, aby rozdzielić dokument według zakresów stron."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-header-footer": {
+   "name": "Nagłówek i stopka",
+   "short": "Dodaj tekst, numery stron i daty na górze lub na dole każdej strony.",
+   "action": "Dodaj nagłówek i stopkę",
+   "title": "Dodaj nagłówek i stopkę do PDF, bez wysyłania",
+   "description": "Dodaj nagłówek i stopkę do każdej strony PDF w przeglądarce: tekst po lewej, na środku i po prawej z numerem strony, liczbą stron, datą i nazwą pliku.",
+   "h1": "Dodaj nagłówek i stopkę do PDF",
+   "howTo": "Jak dodać nagłówek i stopkę do PDF",
+   "lead": "Umieść tytuł, klauzulę poufności, datę lub numer „strona X z Y” na każdej stronie raportu, pracy dyplomowej lub umowy. Działa w każdym języku.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wpisz tekst po lewej, na środku i po prawej w nagłówku, stopce lub obu. Wstaw symbole zastępcze dla numeru strony, liczby stron, daty i nazwy pliku.",
+    "Wybierz rozmiar tekstu i pierwszą stronę, a potem kliknij Dodaj nagłówek i stopkę."
+   ],
+   "sections": [
+    {
+     "h": "Symbole zastępcze",
+     "p": "Symbole zastępcze uzupełniają się automatycznie na każdej stronie: numer strony, łączna liczba stron, data i nazwa pliku. Łącz je z własnym tekstem, na przykład Strona 3 z 12. Wybierz pierwszą stronę, aby okładka pozostała czysta."
+    },
+    {
+     "h": "Każdy język, każde pismo",
+     "p": "Tekst jest rysowany czcionkami Twojego urządzenia, więc arabski, chiński, perski, hindi i każde inne pismo, które Twoje urządzenie potrafi wyświetlić, wygląda poprawnie. Wynik staje się częścią strony i nie jest potem edytowalnym tekstem."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dodawania nagłówka i stopki do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę napisać Strona X z Y?",
+     "a": "Tak. Połącz symbole zastępcze numeru strony i liczby stron z własnym tekstem."
+    },
+    {
+     "q": "Czy mogę pominąć okładkę?",
+     "a": "Tak. Wybierz stronę, od której mają zaczynać się nagłówek i stopka."
+    },
+    {
+     "q": "Czy mogę później edytować nagłówek?",
+     "a": "Nie jako tekst. Staje się on częścią strony. Zachowaj oryginalny plik, jeśli możesz chcieć go zmienić."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "bates-numbering": {
+   "name": "Numeracja Bates",
+   "short": "Nanieś kolejne numery Bates, np. ABC-000001, na każdą stronę.",
+   "action": "Dodaj numery Bates",
+   "title": "Numeracja Bates w PDF za darmo, bez wysyłania",
+   "description": "Dodaj numery Bates do każdej strony PDF w przeglądarce: prefiks i numer uzupełniony zerami, wybrany róg, numer początkowy i liczba cyfr. Nic nie jest wysyłane.",
+   "h1": "Dodaj numerację Bates do PDF",
+   "howTo": "Jak dodać numery Bates do PDF",
+   "lead": "Oznacz każdą stronę przekazywanych dokumentów unikalnym, kolejnym identyfikatorem, bez wysyłania poufnych akt sprawy na czyjkolwiek serwer.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Ustaw prefiks, numer początkowy, liczbę cyfr i róg.",
+    "Kliknij Dodaj numery Bates i pobierz ostemplowany PDF."
+   ],
+   "sections": [
+    {
+     "h": "Jak powstaje numer",
+     "p": "Każdy numer to Twój prefiks, po którym następuje kolejna liczba uzupełniona zerami, na przykład ABC-000001, ABC-000002 i tak dalej. Wybierz numer początkowy, aby kontynuować poprzednią partię, i liczbę cyfr zgodną z Twoimi zasadami."
+    },
+    {
+     "h": "Jeden plik naraz",
+     "p": "Numeracja Bates działa na jednym pliku PDF naraz. Jeśli dokumenty są rozłożone na kilka plików, ponumeruj pierwszy, a następny zacznij od numeru po jego ostatniej stronie. Możesz też najpierw połączyć je narzędziem Połącz PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dodawania numeracji Bates do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czym jest numeracja Bates?",
+     "a": "To konwencja prawnicza, która nadaje każdej stronie w zbiorze dokumentów unikalny, kolejny identyfikator, aby można było precyzyjnie odwoływać się do stron w postępowaniu dowodowym i w sądzie."
+    },
+    {
+     "q": "Czy mogę kontynuować numerację z innego pliku?",
+     "a": "Tak. Ustaw numer początkowy na kolejny numer w Twojej sekwencji."
+    },
+    {
+     "q": "Czy mogę ponumerować kilka plików PDF za jednym razem?",
+     "a": "Nie jednocześnie. Przetwarzaj jeden plik naraz lub najpierw połącz pliki narzędziem Połącz PDF."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "add-image-to-pdf": {
+   "name": "Dodaj obraz do PDF",
+   "short": "Umieść logo, zdjęcie, pieczątkę lub obraz podpisu na dowolnej stronie.",
+   "action": "Dodaj obrazy",
+   "title": "Dodaj obraz do PDF za darmo, bez wysyłania",
+   "description": "Wstaw logo, zdjęcie, pieczątkę lub zeskanowany podpis do PDF w przeglądarce. Przeciągnij i zmień rozmiar na dowolnej stronie. Pliki nie są wysyłane.",
+   "h1": "Dodaj obraz do PDF",
+   "howTo": "Jak dodać obraz do PDF",
+   "lead": "Umieść logo firmy na piśmie, zdjęcie we wniosku lub firmową pieczątkę na fakturze. Przeciągnij obraz na miejsce i zmień jego rozmiar.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Dodaj obraz, przeciągnij go i zmień jego rozmiar na stronie. W razie potrzeby dodaj więcej obrazów na dowolnych stronach.",
+    "Kliknij Dodaj obrazy i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Dokładne umiejscowienie",
+     "p": "Przeciągnij obraz w dowolne miejsce na dowolnej stronie i zmieniaj jego rozmiar, aż będzie pasował. Możesz dodać kilka obrazów, na tej samej lub na różnych stronach."
+    },
+    {
+     "h": "Część strony",
+     "p": "Obrazy stają się częścią treści strony, więc wyglądają tak samo w każdym czytniku PDF. W przypadku logo powtarzanego na każdej stronie szybsze będzie narzędzie Logo jako znak wodny. Aby podpisać dokument, Podpisz PDF pozwala też narysować lub wpisać podpis."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dodawania obrazu do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy mogę dodać więcej niż jeden obraz?",
+     "a": "Tak. Dodaj ich tyle, ile potrzebujesz, na dowolnych stronach."
+    },
+    {
+     "q": "Czy mogę później przesunąć obraz?",
+     "a": "Przed zapisaniem tak. Po zapisaniu staje się częścią strony, więc zachowaj oryginalny plik, jeśli możesz chcieć go zmienić."
+    },
+    {
+     "q": "Jak umieścić logo na każdej stronie?",
+     "a": "Użyj narzędzia Logo jako znak wodny, które umieszcza obraz na wszystkich stronach naraz."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "redact-pdf": {
+   "name": "Zaczernij PDF",
+   "short": "Zaczernij tekst i obrazy, aby zostały naprawdę usunięte.",
+   "action": "Zaczernij PDF",
+   "title": "Zaczernij dane w PDF za darmo, bez wysyłania",
+   "description": "Zaczernij poufny tekst i obrazy w PDF w przeglądarce. Zaczernione strony są spłaszczane, więc ukryta treść jest naprawdę usuwana. Nic nie jest wysyłane.",
+   "h1": "Zaczernij dane w PDF",
+   "howTo": "Jak zaczernić dane w PDF",
+   "lead": "Ukryj nazwiska, numery kont, adresy lub cokolwiek innego, zanim udostępnisz dokument. Zakryta treść jest usuwana, a nie tylko zamalowana, a plik nigdy nie opuszcza Twojego urządzenia.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Narysuj czarne prostokąty na wszystkim, co chcesz ukryć, na dowolnej stronie.",
+    "Kliknij Zaczernij PDF, pobierz wynik i sprawdź go."
+   ],
+   "sections": [
+    {
+     "h": "Prawdziwe zaczernienie",
+     "p": "Sam czarny prostokąt można zdjąć, a tekst pod nim nadal da się skopiować. Dlatego każda strona z zaczernieniem jest zamieniana w obraz o rozdzielczości 200 DPI z wtopionymi prostokątami. Ukrytej treści w ogóle nie ma już w pliku."
+    },
+    {
+     "h": "Co się zmienia",
+     "p": "Tekstu na zaczernionych stronach nie można już zaznaczać ani przeszukiwać, a te strony mogą powiększyć plik. Strony bez zaczernień pozostają nietknięte. Zawsze otwórz wynik i sprawdź każde zaczernienie przed udostępnieniem."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas zaczerniania danych w PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy ukryty tekst naprawdę znika?",
+     "a": "Tak. Strony z zaczernieniami są zamieniane w obrazy z wtopionymi czarnymi prostokątami, więc oryginalny tekst i obrazy pod nimi są usuwane."
+    },
+    {
+     "q": "Dlaczego na niektórych stronach nie mogę już zaznaczyć tekstu?",
+     "a": "Zaczernione strony są zamieniane w obrazy. Właśnie dzięki temu zaczernienie jest trwałe. Strony, których nie zaczerniłeś, zachowują tekst."
+    },
+    {
+     "q": "Czy zamiast tego mogę ukryć informacje narzędziem Przytnij PDF?",
+     "a": "Nie. Przycinanie tylko ukrywa treść, którą można ponownie odsłonić. Do wszystkiego, co poufne, używaj narzędzia Zaczernij PDF."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "fill-pdf-form": {
+   "name": "Wypełnij formularz PDF",
+   "short": "Wypełnij pola tekstowe, pola wyboru i listy rozwijane w formularzu PDF.",
+   "action": "Zapisz wypełniony formularz",
+   "title": "Wypełnij formularz PDF online, bez wysyłania",
+   "description": "Wypełnij interaktywny formularz PDF w przeglądarce: pola tekstowe, pola wyboru, przyciski opcji i listy rozwijane. Zapisz go. Twoje dane nie są wysyłane.",
+   "h1": "Wypełnij formularz PDF",
+   "howTo": "Jak wypełnić formularz PDF",
+   "lead": "Formularze podatkowe, wnioski i formularze rejestracyjne często wymagają danych osobowych. Wypełnij je tutaj, a nic, co wpiszesz, nie opuści Twojego urządzenia.",
+   "steps": [
+    "Wybierz lub upuść formularz PDF.",
+    "Klikaj w pola i wypełniaj je: pola tekstowe, pola wyboru, przyciski opcji i listy rozwijane.",
+    "Kliknij Zapisz wypełniony formularz i pobierz gotowy PDF."
+   ],
+   "sections": [
+    {
+     "h": "Formularze z polami",
+     "p": "To narzędzie działa z plikami PDF, które mają interaktywne pola formularza, czyli takie, w które można kliknąć w czytniku PDF. Wpisy są zapisywane w polach, więc formularz pozostaje wypełnialny i można go później zmienić."
+    },
+    {
+     "h": "Formularze bez pól",
+     "p": "Zeskanowany formularz lub płaski formularz po prostu wydrukowany do PDF nie ma pól do wypełnienia. Zamiast tego użyj narzędzia Dodaj tekst do PDF, aby pisać na nim. Aby zablokować wypełniony formularz przed zmianami, użyj potem narzędzia Spłaszcz PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas wypełniania formularza PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego nie mogę kliknąć w mój formularz?",
+     "a": "Prawdopodobnie nie ma interaktywnych pól, na przykład dlatego, że jest skanem. Użyj narzędzia Dodaj tekst do PDF, aby na nim pisać."
+    },
+    {
+     "q": "Czy odbiorca nadal może zmienić moje odpowiedzi?",
+     "a": "Tak, pola pozostają edytowalne. Użyj potem narzędzia Spłaszcz PDF, aby je utrwalić."
+    },
+    {
+     "q": "Czy mogę też podpisać formularz?",
+     "a": "Tak. Zapisz wypełniony formularz, a potem otwórz go w narzędziu Podpisz PDF."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "flatten-pdf": {
+   "name": "Spłaszcz PDF",
+   "short": "Scal pola formularzy i komentarze ze stroną, aby nie dało się ich edytować.",
+   "action": "Spłaszcz PDF",
+   "title": "Spłaszcz PDF za darmo, bez wysyłania plików",
+   "description": "Spłaszcz pola formularzy i adnotacje do treści strony w przeglądarce, aby wszędzie wyglądały tak samo i nie dało się ich edytować. Bez wysyłania.",
+   "h1": "Spłaszcz PDF",
+   "howTo": "Jak spłaszczyć PDF",
+   "lead": "Wyślij wypełniony formularz, którego nikt nie zmieni, albo spraw, by komentarze i pieczątki wyglądały tak samo w każdej aplikacji i na każdej drukarce.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Spłaszcz PDF.",
+    "Pobierz spłaszczony plik."
+   ],
+   "sections": [
+    {
+     "h": "Na czym polega spłaszczanie",
+     "p": "Pola formularzy i adnotacje, takie jak komentarze, pieczątki, zakreślenia i rysunki, są scalane z treścią strony. Wyglądają dokładnie tak jak wcześniej, ale nie są już osobnymi obiektami, które można edytować, przesuwać lub usuwać. Niektóre czytniki i drukarki w ogóle nie pokazują adnotacji; po spłaszczeniu je pokazują."
+    },
+    {
+     "h": "Warto wiedzieć",
+     "p": "Formularze przestają być wypełnialne. Adnotacje bez wyglądu wizualnego, np. niektóre ukryte komentarze, są usuwane. Zachowaj kopię oryginału, jeśli możesz potrzebować ponownie go edytować."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas spłaszczania PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy po spłaszczeniu mogę nadal wypełnić formularz?",
+     "a": "Nie. Pola stają się częścią strony. Najpierw wypełnij formularz narzędziem Wypełnij formularz PDF, a potem go spłaszcz."
+    },
+    {
+     "q": "Dlaczego niektóre komentarze zniknęły?",
+     "a": "Adnotacji bez wyglądu wizualnego nie da się narysować na stronie, więc są usuwane."
+    },
+    {
+     "q": "Po co spłaszczać PDF?",
+     "a": "Aby inni nie mogli zmienić Twoich wpisów i aby formularze oraz oznaczenia wyglądały tak samo w każdej aplikacji i po wydrukowaniu."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "remove-pdf-annotations": {
+   "name": "Usuń adnotacje",
+   "short": "Usuń komentarze, zakreślenia, notatki, pieczątki i rysunki z PDF.",
+   "action": "Usuń adnotacje",
+   "title": "Usuń komentarze i adnotacje z PDF za darmo",
+   "description": "Usuń komentarze, zakreślenia, karteczki, pieczątki i rysunki z PDF w przeglądarce. Linki możesz zachować. Nic nie jest wysyłane.",
+   "h1": "Usuń adnotacje z PDF",
+   "howTo": "Jak usunąć adnotacje z PDF",
+   "lead": "Udostępnij czystą kopię po rundzie recenzji, bez komentarzy, zakreśleń i karteczek, które zostawił po drodze Twój zespół.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz, czy zachować linki.",
+    "Kliknij Usuń adnotacje i pobierz czystą kopię."
+   ],
+   "sections": [
+    {
+     "h": "Co jest usuwane",
+     "p": "Komentarze, zakreślenia, karteczki, pieczątki i rysunki są usuwane. Linki można zachować, jeśli tak wybierzesz. Pola formularzy są zawsze zachowywane, więc wypełnialny formularz pozostaje wypełnialny."
+    },
+    {
+     "h": "Sama strona pozostaje bez zmian",
+     "p": "Usuwane są tylko adnotacje. Tekst, obrazy i wszystko, co jest częścią treści strony, pozostaje bez zmian. Oznaczenia spłaszczone do strony nie są już adnotacjami, więc nie są usuwane."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas usuwania adnotacji z PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy moje pola formularzy zostaną usunięte?",
+     "a": "Nie. Pola formularzy są zachowywane."
+    },
+    {
+     "q": "Czy mogę zachować linki?",
+     "a": "Tak. Wybierz zachowanie linków, a pozostaną klikalne."
+    },
+    {
+     "q": "Dlaczego zakreślenie wciąż jest widoczne?",
+     "a": "Prawdopodobnie jest częścią treści strony, a nie adnotacją, na przykład dlatego, że plik został spłaszczony. Takich elementów nie da się usunąć w ten sposób."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "remove-images-from-pdf": {
+   "name": "Usuń obrazy z PDF",
+   "short": "Usuń zdjęcia i grafiki, zachowując tekst i grafikę wektorową.",
+   "action": "Usuń obrazy",
+   "title": "Usuń obrazy z PDF za darmo, bez wysyłania",
+   "description": "Usuń wszystkie zdjęcia i grafiki z PDF w przeglądarce, zachowując tekst i grafikę wektorową. Mniejsze pliki, mniej tuszu. Nic nie jest wysyłane.",
+   "h1": "Usuń obrazy z PDF",
+   "howTo": "Jak usunąć obrazy z PDF",
+   "lead": "Potrzebujesz tylko tekstu? Usuń wszystkie zdjęcia, aby wydrukować dokument z dużą ilością tekstu przy mniejszym zużyciu tuszu lub znacznie zmniejszyć duży plik.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Usuń obrazy.",
+    "Pobierz wersję zawierającą tylko tekst."
+   ],
+   "sections": [
+    {
+     "h": "Co zostaje",
+     "p": "Tekst i grafika wektorowa, takie jak linie, tabele, wykresy i wiele logo, są zachowywane. Usuwane są tylko obrazy, takie jak zdjęcia i grafiki. Tekst nadal można zaznaczać i przeszukiwać."
+    },
+    {
+     "h": "Kiedy to pomaga",
+     "p": "Obrazy często stanowią większość rozmiaru PDF, więc ich usunięcie może znacznie zmniejszyć plik. Oszczędza też tusz przy drukowaniu materiałów do czytania, instrukcji czy artykułów. W zeskanowanym dokumencie, w którym każda strona jest obrazem, strony pozostaną puste."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas usuwania obrazów z PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy tekst zostanie naruszony?",
+     "a": "Nie. Tekst i grafika wektorowa pozostają bez zmian."
+    },
+    {
+     "q": "Dlaczego po usunięciu obrazów moje strony są puste?",
+     "a": "PDF jest prawdopodobnie skanem, w którym każda strona jest obrazem. Nie ma osobnego tekstu do zachowania."
+    },
+    {
+     "q": "Chcę mniejszy plik, ale z zachowaniem zdjęć.",
+     "a": "Użyj narzędzia Kompresuj PDF, które zmniejsza rozmiar obrazów zamiast je usuwać."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-viewer": {
+   "name": "Przeglądarka PDF",
+   "short": "Otwórz i czytaj PDF prywatnie w przeglądarce.",
+   "action": "Otwórz PDF",
+   "title": "Przeglądarka PDF online, bez wysyłania plików",
+   "description": "Otwórz i czytaj PDF w przeglądarce na dowolnym urządzeniu, z powiększaniem. Bez instalacji, nic nie jest wysyłane. Działa offline po pierwszej wizycie.",
+   "h1": "Wyświetl PDF",
+   "howTo": "Jak wyświetlić PDF",
+   "lead": "Czytaj PDF na pożyczonym komputerze, służbowym laptopie bez aplikacji do PDF lub na telefonie. Dokument otwiera się na tej stronie i nigdy nie jest nigdzie wysyłany.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Czytaj go w przeglądarce i w razie potrzeby powiększaj lub pomniejszaj.",
+    "Gdy skończysz, zamknij kartę. Nic nie jest przechowywane."
+   ],
+   "sections": [
+    {
+     "h": "Prywatność z założenia",
+     "p": "Plik jest wczytywany z Twojego urządzenia do strony i tam wyświetlany. Nie jest wysyłany, przechowywany ani dodawany do żadnej historii na serwerze. Zamknij kartę, a zniknie ze strony."
+    },
+    {
+     "h": "Każde urządzenie, nawet offline",
+     "p": "Przeglądarka PDF działa w każdej nowoczesnej przeglądarce internetowej na komputerze, tablecie lub telefonie, bez instalowania czegokolwiek. Po pierwszej wizycie działa dalej bez połączenia z internetem."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas wyświetlania PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy muszę coś instalować?",
+     "a": "Nie. Przeglądarka PDF działa w Twojej przeglądarce internetowej na każdym urządzeniu."
+    },
+    {
+     "q": "Czy działa offline?",
+     "a": "Tak, po pierwszej wizycie na stronie."
+    },
+    {
+     "q": "Czy mogę tu edytować PDF?",
+     "a": "Przeglądarka służy do czytania. Aby zmienić dokument, użyj jednego z pozostałych narzędzi, np. Dodaj tekst do PDF lub Organizuj PDF."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "compare-pdf": {
+   "name": "Porównaj PDF",
+   "short": "Zaznacz słowa dodane lub usunięte między dwoma plikami PDF.",
+   "action": "Porównaj pliki PDF",
+   "title": "Porównaj pliki PDF za darmo, bez wysyłania",
+   "description": "Porównaj tekst dwóch plików PDF strona po stronie w przeglądarce i zobacz zaznaczone dodane i usunięte słowa. Pliki nie są wysyłane.",
+   "h1": "Porównaj dwa pliki PDF",
+   "howTo": "Jak porównać dwa pliki PDF",
+   "lead": "Sprawdź, co się zmieniło między dwiema wersjami umowy, regulaminu lub szkicu, bez czytania obu linijka po linijce i bez wysyłania ich na serwer.",
+   "steps": [
+    "Wybierz lub upuść oryginalny PDF i zmieniony PDF.",
+    "Kliknij Porównaj pliki PDF.",
+    "Przejrzyj strony. Dodane i usunięte słowa są zaznaczone."
+   ],
+   "sections": [
+    {
+     "h": "Tekst, strona po stronie",
+     "p": "Tekst obu plików jest porównywany strona po stronie, a słowa dodane lub usunięte są zaznaczane. Sprawdza się to przy dokumentach, w których liczy się sformułowanie, takich jak umowy, regulaminy, specyfikacje i rękopisy."
+    },
+    {
+     "h": "Ograniczenia",
+     "p": "Porównywany jest tylko tekst, a nie obrazy, formatowanie czy układ. Zeskanowane pliki PDF zawierające tylko zdjęcia stron nie mają warstwy tekstowej, więc nie da się ich porównać."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas porównywania plików PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Czy porównywane są obrazy lub formatowanie?",
+     "a": "Nie. Porównywany jest tylko tekst."
+    },
+    {
+     "q": "Dlaczego mój zeskanowany PDF nie pokazuje żadnych różnic?",
+     "a": "Skan nie ma warstwy tekstowej, więc nie ma czego porównywać. Scissor PDF nie wykonuje OCR."
+    },
+    {
+     "q": "Czy to bezpieczne dla poufnych umów?",
+     "a": "Tak. Oba pliki są porównywane w Twojej przeglądarce i nigdy nie opuszczają Twojego urządzenia."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-info": {
+   "name": "Informacje o PDF",
+   "short": "Zobacz liczbę stron, rozmiary stron, czcionki, metadane i więcej.",
+   "action": "Pokaż informacje",
+   "title": "Licznik stron PDF i informacje, bez wysyłania",
+   "description": "Policz strony PDF i zobacz rozmiary stron, wersję PDF, czcionki, obrazy, formularze, JavaScript, załączniki, szyfrowanie i metadane. Nic nie jest wysyłane.",
+   "h1": "Informacje o PDF i licznik stron",
+   "howTo": "Jak sprawdzić informacje o pliku PDF",
+   "lead": "Sprawdź, ile stron ma plik, zanim go wydrukujesz, zobacz, czy czcionki są osadzone, zanim wyślesz go do drukarni, lub dowiedz się, co zawiera nieznany PDF.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Kliknij Pokaż informacje.",
+    "Przeczytaj szczegóły: strony, rozmiary, czcionki, zawartość i metadane."
+   ],
+   "sections": [
+    {
+     "h": "Co zobaczysz",
+     "p": "Liczbę stron i ich rozmiary, wersję PDF i rozmiar pliku, użyte czcionki wraz z informacją, czy każda z nich jest osadzona, oraz liczbę obrazów. Widoczne są też metadane dokumentu, takie jak tytuł i autor."
+    },
+    {
+     "h": "Co jest w środku",
+     "p": "Sprawdź, czy plik zawiera pola formularzy, JavaScript, załączniki lub szyfrowanie. To pomaga, gdy portal odrzuca PDF, gdy drukarnia wymaga osadzonych czcionek lub gdy chcesz wiedzieć, co zawiera nieoczekiwany załącznik, zanim otworzysz go gdzie indziej."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas sprawdzania informacji o PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Jak policzyć strony w PDF?",
+     "a": "Otwórz plik tutaj. Liczba stron jest pokazywana na początku, razem z rozmiarem stron."
+    },
+    {
+     "q": "Jak sprawdzić, czy czcionki są osadzone?",
+     "a": "Każda czcionka w pliku jest wymieniona wraz z informacją, czy jest osadzona. Drukarnie często wymagają osadzenia wszystkich czcionek."
+    },
+    {
+     "q": "Czy mogę tu zmienić metadane?",
+     "a": "Nie, to narzędzie tylko je pokazuje. Użyj narzędzia Metadane PDF, aby zmienić tytuł, autora i inne pola."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "split-pdf-by-bookmarks": {
+   "name": "Podziel PDF według zakładek",
+   "short": "Podziel PDF na osobne pliki dla każdego rozdziału, według zakładek.",
+   "action": "Podziel według zakładek",
+   "title": "Podziel PDF według zakładek, bez wysyłania",
+   "description": "Podziel PDF na osobny plik dla każdej zakładki najwyższego poziomu lub rozdziału, w przeglądarce. Pliki są nazywane od zakładek. Nic nie jest wysyłane.",
+   "h1": "Podziel PDF według zakładek",
+   "howTo": "Jak podzielić PDF według zakładek",
+   "lead": "Rozdziel długą książkę, instrukcję lub raport na rozdziały w jednym kroku. Każdy rozdział staje się osobnym plikiem, nazwanym od swojej zakładki.",
+   "steps": [
+    "Wybierz lub upuść PDF, który ma zakładki.",
+    "Kliknij Podziel według zakładek.",
+    "Pobierz ZIP z osobnym plikiem PDF dla każdego rozdziału."
+   ],
+   "sections": [
+    {
+     "h": "Jeden plik na rozdział",
+     "p": "PDF jest dzielony przy każdej zakładce najwyższego poziomu, a każdy plik otrzymuje nazwę swojej zakładki, dzięki czemu od razu odróżnisz rozdziały. Strony przed pierwszą zakładką, np. okładka lub spis treści, stają się osobnym plikiem. Wszystkie pliki pobierają się razem jako ZIP."
+    },
+    {
+     "h": "Pliki PDF bez zakładek",
+     "p": "To działa tylko z plikami PDF, które mają zakładki, nazywane też konspektem. Jeśli plik ich nie ma, zobaczysz odpowiedni komunikat. W takim przypadku użyj narzędzia Podziel PDF, aby podzielić go według zakresów stron."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dzielenia PDF według zakładek?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Jak sprawdzić, czy mój PDF ma zakładki?",
+     "a": "Otwórz go w czytniku PDF i poszukaj panelu zakładek lub konspektu. Jeśli plik ich nie ma, Scissor PDF poinformuje Cię o tym, gdy otworzysz go tutaj."
+    },
+    {
+     "q": "Czy używane są też zakładki podrzędne?",
+     "a": "Nie. Plik jest dzielony tylko przy zakładkach najwyższego poziomu, więc każdy rozdział pozostaje razem ze swoimi podrozdziałami."
+    },
+    {
+     "q": "Co dzieje się ze stronami przed pierwszą zakładką?",
+     "a": "Stają się osobnym plikiem, więc nic nie ginie."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "highlight-pdf": {
+   "name": "Zakreśl PDF",
+   "short": "Zaznacz tekst na żółto, zielono lub różowo na dowolnej stronie.",
+   "action": "Zapisz zakreślenia",
+   "title": "Zakreśl tekst w PDF za darmo, bez wysyłania",
+   "description": "Zakreślaj tekst w PDF w przeglądarce żółtymi, zielonymi lub różowymi prostokątami na dowolnej stronie. Zakreślenia stają się częścią strony. Bez wysyłania.",
+   "h1": "Zakreśl tekst w PDF",
+   "howTo": "Jak zakreślić tekst w PDF",
+   "lead": "Zaznacz kluczowe fragmenty lektury, kwoty w wyciągu lub klauzule umowy, które ktoś inny musi zobaczyć.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz kolor żółty, zielony lub różowy i rysuj prostokąty zakreślenia na tekście na dowolnej stronie.",
+    "Kliknij Zapisz zakreślenia i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Trzy kolory",
+     "p": "Rysuj półprzezroczyste prostokąty w kolorze żółtym, zielonym lub różowym na tekście, który chcesz zaznaczyć. Używaj różnych kolorów, aby oddzielić tematy albo pytania od odpowiedzi."
+    },
+    {
+     "h": "Część strony",
+     "p": "Zakreślenia stają się częścią strony, a nie osobnymi komentarzami. Wyglądają tak samo w każdym czytniku i po wydrukowaniu, ale nie da się ich później usunąć narzędziem do adnotacji. Zachowaj oryginał, jeśli możesz potrzebować czystej kopii."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas zakreślania tekstu w PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Jakich kolorów mogę użyć?",
+     "a": "Żółtego, zielonego i różowego."
+    },
+    {
+     "q": "Czy mogę później usunąć zakreślenia?",
+     "a": "Nie z zapisanego pliku, bo są częścią strony. Zachowaj oryginał, jeśli potrzebujesz kopii bez oznaczeń."
+    },
+    {
+     "q": "Czy tekst pod spodem nadal będzie czytelny?",
+     "a": "Tak. Zakreślenia są półprzezroczyste, więc tekst jest przez nie widoczny."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "image-watermark-pdf": {
+   "name": "Logo jako znak wodny",
+   "short": "Umieść swoje logo lub obraz na każdej stronie jako znak wodny.",
+   "action": "Dodaj znak wodny",
+   "title": "Logo jako znak wodny w PDF, bez wysyłania",
+   "description": "Dodaj logo lub obraz jako znak wodny na każdej stronie PDF w przeglądarce. Ustaw rozmiar, kąt i krycie, pojedynczo lub kafelkowo. Nic nie jest wysyłane.",
+   "h1": "Dodaj logo jako znak wodny do PDF",
+   "howTo": "Jak dodać logo jako znak wodny do PDF",
+   "lead": "Oznacz oferty i portfolio swoim logo albo oznacz szkice i podglądy, aby nikt nie podawał ich za wersję ostateczną. Obraz trafia na każdą stronę.",
+   "steps": [
+    "Wybierz lub upuść plik PDF, a potem dodaj obraz. PNG z przezroczystym tłem daje najczystszy efekt.",
+    "Wybierz rozmiar, kąt i krycie oraz to, czy obraz ma się pojawić raz, czy kafelkowo na całej stronie.",
+    "Kliknij Dodaj znak wodny i pobierz wynik."
+   ],
+   "sections": [
+    {
+     "h": "Pojedynczy lub kafelkowy",
+     "p": "Pojedynczy znak wodny pojawia się raz na każdej stronie. Kafelkowy powtarza go na całej stronie, co utrudnia wycięcie go ze zrzutów ekranu Twojej pracy. Dostosuj rozmiar, kąt i krycie, aż znak będzie widoczny, ale nie zasłoni treści."
+    },
+    {
+     "h": "Wybór obrazu",
+     "p": "PNG z przezroczystym tłem wygląda najczyściej, bo widać tylko logo, a nie białe pole wokół niego. Do tekstowego znaku wodnego, np. POUFNE, użyj narzędzia Znak wodny PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas dodawania logo jako znaku wodnego do PDF?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Jakiego obrazu użyć?",
+     "a": "PNG z przezroczystym tłem, aby na stronie było widać tylko samo logo."
+    },
+    {
+     "q": "Czy mogę sprawić, by był ledwo widoczny?",
+     "a": "Tak. Zmniejszaj krycie, aż znak wodny będzie dyskretnie widoczny za treścią."
+    },
+    {
+     "q": "Czy mogę użyć tekstu zamiast obrazu?",
+     "a": "Tak, za pomocą narzędzia Znak wodny PDF."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
+  },
+  "pdf-to-long-image": {
+   "name": "PDF na długi obraz",
+   "short": "Połącz strony PDF w jeden wysoki obraz do udostępnienia na czacie.",
+   "action": "Utwórz obraz",
+   "title": "PDF na jeden długi obraz, bez wysyłania",
+   "description": "Połącz wszystkie lub wybrane strony PDF w jeden wysoki obraz PNG lub JPG w przeglądarce, aby udostępnić cały dokument na czacie lub w poście. Bez wysyłania.",
+   "h1": "Konwertuj PDF na jeden długi obraz",
+   "howTo": "Jak przekonwertować PDF na długi obraz",
+   "lead": "Wiele komunikatorów i serwisów społecznościowych nie wyświetla podglądu plików PDF. Zamień strony w jeden wysoki obraz, który można przewijać bezpośrednio w rozmowie.",
+   "steps": [
+    "Wybierz lub upuść plik PDF.",
+    "Wybierz wszystkie strony lub te, których potrzebujesz, oraz format PNG lub JPG.",
+    "Kliknij Utwórz obraz i pobierz go."
+   ],
+   "sections": [
+    {
+     "h": "PNG czy JPG",
+     "p": "PNG zachowuje ostrość tekstu i linii, więc sprawdza się przy dokumentach, menu i slajdach. JPG daje mniejszy plik, co pomaga przy stronach z dużą liczbą zdjęć i w aplikacjach, które ograniczają rozmiar obrazów."
+    },
+    {
+     "h": "Bardzo długie dokumenty",
+     "p": "Przeglądarki ograniczają maksymalny rozmiar pojedynczego obrazu. Gdy dokument jest bardzo długi, rozdzielczość jest automatycznie obniżana, aby obraz nadal się zmieścił. Przy wielu stronach wybierz tylko potrzebne albo użyj narzędzia PDF na PNG, aby uzyskać osobny obraz dla każdej strony."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Czy moje pliki są wysyłane podczas konwersji PDF na długi obraz?",
+     "a": "Nie. Scissor PDF uruchamia w karcie przeglądarki silnik PDF napisany w Rust i skompilowany do WebAssembly. Pliki są wczytywane z dysku do pamięci strony, tam przetwarzane i zapisywane z powrotem na Twoim urządzeniu. Strona nie ma żadnego punktu odbioru plików, a jej Content Security Policy blokuje wysyłanie danych na jakikolwiek inny serwer."
+    },
+    {
+     "q": "Dlaczego mój długi obraz jest mniej ostry, niż się spodziewałem?",
+     "a": "Przeglądarka ma maksymalny rozmiar obrazu. W przypadku długich dokumentów rozdzielczość jest automatycznie obniżana, aby się w nim zmieścić. Wybierz mniej stron, aby uzyskać więcej szczegółów."
+    },
+    {
+     "q": "Czy mogę uwzględnić tylko niektóre strony?",
+     "a": "Tak. Wybierz potrzebne strony, a tylko one zostaną połączone."
+    },
+    {
+     "q": "Wybrać PNG czy JPG?",
+     "a": "PNG do tekstu i grafiki, JPG dla mniejszego pliku lub stron z dużą liczbą zdjęć."
+    },
+    {
+     "q": "Czy to jest darmowe? Czy potrzebuję konta?",
+     "a": "Tak, jest darmowe: bez konta, bez dziennego limitu zadań i bez znaku wodnego na Twoich dokumentach. Ponieważ praca odbywa się na Twoim komputerze, nie ponosimy kosztów serwera za każdy plik, które musielibyśmy odzyskać."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -1136,6 +2547,98 @@
   "useSignature": "Użyj podpisu",
   "clearPad": "Wyczyść",
   "signHere": "Podpisz tutaj",
-  "chooseImage": "Wybierz obraz"
+  "chooseImage": "Wybierz obraz",
+  "simpleSub": "Jedno kliknięcie. Wynik będzie gotowy za chwilę.",
+  "keepLinks": "Zachowaj linki",
+  "toTextSub": "Warstwa tekstowa każdej strony zostanie zapisana jako zwykły plik tekstowy.",
+  "pageMarks": "Zaznacz początek każdej strony",
+  "readyText": "Twój tekst jest gotowy",
+  "noText": "Nie znaleziono tekstu. Ten PDF może zawierać tylko zeskanowane obrazy.",
+  "blankPagesSub": "Puste strony mają rozmiar strony, która je poprzedza.",
+  "where": "Gdzie",
+  "afterEvery": "Po każdej stronie",
+  "afterSome": "Po wybranych stronach",
+  "afterPages": "Po stronach",
+  "afterPagesHint": "Wpisz 0, aby dodać stronę na samym początku.",
+  "mixSub": "Strony na przemian: pierwszy plik, drugi plik, pierwszy, drugi…",
+  "reverseSecond": "Odwróć drugi plik (gdy tyły zeskanowano od końca)",
+  "compareSub": "Dodaj dwie wersje do porównania: najpierw oryginał, potem nową.",
+  "compareSame": "Brak różnic w tekście",
+  "compareChanged": "Różnice: {pages}",
+  "halfSub": "Każda strona staje się dwiema stronami.",
+  "cut": "Cięcie",
+  "leftRight": "Lewa i prawa",
+  "topBottom": "Górna i dolna",
+  "rightToLeft": "Kolejność od prawej do lewej (arabski, perski, hebrajski, manga)",
+  "resizeSub": "Strony są skalowane, by się zmieściły, i wyśrodkowane.",
+  "marginsSub": "Wokół każdej strony dodawane jest białe obramowanie.",
+  "bookletSub": "Drukuj dwustronnie z obracaniem wzdłuż krótszej krawędzi, a potem złóż.",
+  "splitSizeSub": "Każda część będzie mniejsza niż ten rozmiar.",
+  "maxSize": "Maksymalny rozmiar",
+  "batesSub": "Na każdą stronę nanoszony jest kolejny numer.",
+  "prefix": "Prefiks",
+  "digits": "Cyfry",
+  "headerFooterSub": "Po lewej, na środku i po prawej. Zostaw pole puste, aby je pominąć.",
+  "header": "Nagłówek",
+  "footer": "Stopka",
+  "center": "Środek",
+  "tokensHint": "Użyj {page}, {total}, {date} lub {file}, aby wstawić wartości automatycznie.",
+  "viewSub": "Przewijaj, aby czytać. Nic nie jest wysyłane.",
+  "zoom": "Powiększenie",
+  "infoSub": "Wszystko, co zapisano w tym PDF.",
+  "formSub": "Kliknij pole na stronie, aby je wypełnić, a potem zapisz.",
+  "noFields": "Ten PDF nie ma pól do wypełnienia.",
+  "useAddText": "Użyj zamiast tego narzędzia Dodaj tekst do PDF",
+  "blankSub": "Puste strony są zaznaczone do usunięcia. Sprawdź zaznaczenie, a potem zapisz.",
+  "scanning": "Szukanie pustych stron…",
+  "blankFound": "Znaleziono strony wyglądające na puste: {pages}.",
+  "yes": "Tak",
+  "no": "Nie",
+  "embedded": "osadzona",
+  "notEmbedded": "nieosadzona",
+  "infoPages": "Strony",
+  "infoSize": "Rozmiar pliku",
+  "infoVersion": "Wersja",
+  "infoPageSizes": "Rozmiary stron",
+  "infoImages": "Obrazy",
+  "infoForms": "Pola formularzy",
+  "infoBookmarks": "Zakładki",
+  "infoJs": "JavaScript",
+  "infoAttachments": "Załączniki",
+  "infoTagged": "Ze znacznikami (dostępny)",
+  "infoEncrypted": "Był zaszyfrowany",
+  "infoFonts": "Czcionki",
+  "image": "Obraz",
+  "yellow": "Żółty",
+  "green": "Zielony",
+  "pink": "Różowy",
+  "addHighlight": "Dodaj zakreślenie",
+  "addRedaction": "Dodaj czarny prostokąt",
+  "redactHint": "Strony z prostokątami stają się obrazami, więc to, co jest pod nimi, zostaje naprawdę usunięte.",
+  "studioTitle": "Scissor PDF",
+  "studioOpen": "Otwórz PDF",
+  "studioDrop": "lub upuść pliki PDF albo folder w dowolnym miejscu. Nic nie jest wysyłane.",
+  "studioAllActions": "Wszystkie działania",
+  "studioActions": "Działania",
+  "studioActionsSub": "Wybierz, co zrobić dalej. Każdy krok można cofnąć.",
+  "studioUndo": "Cofnij",
+  "studioRedo": "Ponów",
+  "studioApplied": "{tool}: gotowe",
+  "studioReady": "{name} jest gotowy",
+  "studioOpenFiles": "Otwórz pliki",
+  "studioOpenFolder": "Otwórz folder",
+  "studioFiles": "Pliki",
+  "studioDownloadAll": "Pobierz wszystko",
+  "studioClose": "Zamknij {name}",
+  "studioNoPdfs": "Nie znaleziono tam plików PDF.",
+  "studioHome": "Strona główna Scissor PDF"
+ },
+ "studio": {
+  "title": "Scissor PDF: wszystkie narzędzia PDF w prywatnej aplikacji",
+  "description": "Otwórz PDF raz i edytuj go każdym narzędziem: połącz, kompresuj, podpisz, zaczernij, obróć, konwertuj. Cofnij każdy krok. Nic nie jest wysyłane.",
+  "h1": "Scissor PDF",
+  "lead": "Otwórz PDF raz i używaj na nim dowolnego narzędzia. Każdy krok można cofnąć, a nic nie opuszcza urządzenia.",
+  "nav": "Aplikacja",
+  "cta": "Otwórz aplikację"
  }
 }

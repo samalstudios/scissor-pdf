@@ -71,6 +71,9 @@ const vendor = join(DIST, PDFJS_PATH);
 mkdirSync(vendor, { recursive: true });
 for (const f of ['pdf.min', 'pdf.worker.min']) cpSync(join(pdfjs, `build/${f}.mjs`), join(vendor, `${f}.js`));
 for (const d of ['cmaps', 'standard_fonts', 'wasm', 'iccs']) cpSync(join(pdfjs, d), join(vendor, d), { recursive: true });
+// Form filling uses PDF.js's own field styles and icons.
+cpSync(join(pdfjs, 'web/pdf_viewer.css'), join(vendor, 'pdf_viewer.css'));
+cpSync(join(pdfjs, 'web/images'), join(vendor, 'images'), { recursive: true });
 cpSync(join(pdfjs, 'LICENSE'), join(vendor, 'LICENSE'));
 
 // Version every app file by content so browsers and the service worker never mix builds.
@@ -118,7 +121,7 @@ function render(L, slugPath, html) {
   if (L === 'en') pages.push(slugPath);
 }
 
-function layout(L, { slugPath, title, description, ogImage, jsonld, body, tint }) {
+function layout(L, { slugPath, title, description, ogImage, jsonld, body, bare = false }) {
   const S = STRINGS[L];
   const path = `${prefix(L)}${slugPath}`;
   const alternates = LANGS.map((c) => `<link rel="alternate" hreflang="${hreflang(c)}" href="${url(prefix(c) + slugPath)}">`).join('\n');
@@ -160,12 +163,12 @@ ${LANGS.filter((c) => c !== L).map((c) => `<meta property="og:locale:alternate" 
 <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>
 <script type="application/json" id="i18n">${JSON.stringify(i18n).replace(/</g, '\\u003c')}</script>
 </head>
-<body>
-${nav(L)}
+<body${bare ? ' class="app-mode"' : ''}>
+${bare ? '' : nav(L)}
 <main>
 ${body}
 </main>
-${footer(L, slugPath)}
+${bare ? '' : footer(L, slugPath)}
 <script type="module" src="/assets/app.js?v=${V}"></script>
 </body></html>`;
 }
@@ -175,7 +178,7 @@ function nav(L) {
   const p = prefix(L);
   return `<header class="nav"><div class="wrap">
 <a class="brand" href="${p}/" aria-label="${SITE.name}">${MARK}${SITE.name}</a>
-<nav class="nav-links" aria-label="Main"><a href="${p}/#tools">${esc(S.nav.allTools)}</a><a class="opt" href="${p}/compress-pdf/">${esc(S.nav.compress)}</a><a class="opt" href="${p}/merge-pdf/">${esc(S.nav.merge)}</a><a class="opt" href="${p}/how-it-works/">${esc(S.nav.how)}</a><a class="lang-link" href="#languages" aria-label="${esc(S.nav.language)}">${GLOBE}<span>${esc(S.meta.name)}</span></a></nav>
+<nav class="nav-links" aria-label="Main"><a href="${p}/app/"><b>${esc(S.studio?.nav ?? STUDIO_TEXT.nav)}</b></a><a href="${p}/#tools">${esc(S.nav.allTools)}</a><a class="opt" href="${p}/compress-pdf/">${esc(S.nav.compress)}</a><a class="opt" href="${p}/merge-pdf/">${esc(S.nav.merge)}</a><a class="opt" href="${p}/how-it-works/">${esc(S.nav.how)}</a><a class="lang-link" href="#languages" aria-label="${esc(S.nav.language)}">${GLOBE}<span>${esc(S.meta.name)}</span></a></nav>
 </div></header>`;
 }
 
@@ -196,16 +199,50 @@ ${GROUPS.map(([k, slugs]) => `<div><h2>${esc(S.footer[k])}</h2><ul>${slugs.map(l
 const chiclet = (L, t) => `<a class="chiclet" href="${prefix(L)}/${t.slug}/">${icon(t.icon, 40)}<span>${esc(STRINGS[L].tools[t.slug].name)}</span></a>`;
 const chiclets = (L, slugs) => `<div class="chiclets">${slugs.map((s) => chiclet(L, toolBySlug[s])).join('')}</div>`;
 const GROUPS = [
-  ['organize', ['merge-pdf', 'split-pdf', 'organize-pdf', 'rotate-pdf', 'delete-pdf-pages', 'extract-pdf-pages', 'crop-pdf', 'pages-per-sheet']],
-  ['optimize', ['compress-pdf', 'jpg-to-pdf', 'pdf-to-jpg', 'repair-pdf']],
-  ['edit', ['sign-pdf', 'add-text-to-pdf', 'add-page-numbers', 'watermark-pdf', 'protect-pdf', 'unlock-pdf', 'edit-pdf-metadata']],
+  ['organize', ['merge-pdf', 'split-pdf', 'organize-pdf', 'rotate-pdf', 'reverse-pdf', 'delete-pdf-pages', 'remove-blank-pages', 'extract-pdf-pages', 'insert-blank-pages', 'alternate-mix-pdf', 'split-pdf-by-size', 'split-pdf-by-bookmarks', 'split-pdf-pages-in-half', 'crop-pdf', 'resize-pdf', 'add-margins-to-pdf', 'pages-per-sheet', 'pdf-booklet']],
+  ['optimize', ['compress-pdf', 'jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-long-image', 'pdf-to-text', 'extract-images-from-pdf', 'grayscale-pdf', 'remove-images-from-pdf', 'repair-pdf']],
+  ['edit', ['sign-pdf', 'fill-pdf-form', 'add-text-to-pdf', 'add-image-to-pdf', 'highlight-pdf', 'redact-pdf', 'add-page-numbers', 'pdf-header-footer', 'bates-numbering', 'watermark-pdf', 'image-watermark-pdf', 'flatten-pdf', 'remove-pdf-annotations', 'protect-pdf', 'unlock-pdf', 'edit-pdf-metadata']],
+  ['inspect', ['pdf-viewer', 'compare-pdf', 'pdf-info']],
 ];
 const toolGroups = (L) => GROUPS.map(([k, slugs]) => `<div class="tool-group"><h3>${esc(STRINGS[L].footer[k])}</h3>${chiclets(L, slugs)}</div>`).join('');
 const faqHtml = (faqs) => `<div class="faq">${faqs.map((f) => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div>`;
 const points = (L) => {
   const c = STRINGS[L].common;
-  return `<div class="points">${[['lock', c.f1t, c.f1p], ['bolt', c.f2t, c.f2p], ['tag', c.f3t, c.f3p]].map(([i, h, p]) => `<div class="point">${icon(i, 32)}<h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('')}</div>`;
+  return `<div class="points">${[['padlock', c.f1t, c.f1p], ['bolt', c.f2t, c.f2p], ['tag', c.f3t, c.f3p]].map(([i, h, p]) => `<div class="point">${icon(i, 32)}<h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('')}</div>`;
 };
+// What the browser app needs to run a tool, in the page's language.
+function toolConfig(L, t) {
+  const S = STRINGS[L];
+  const s = S.tools[t.slug];
+  const p = prefix(L);
+  return {
+    slug: t.slug,
+    name: s.name,
+    mode: t.mode,
+    accept: t.accept,
+    multiple: !!t.multiple,
+    action: s.action,
+    op: t.op,
+    option: t.option,
+    editor: t.editor,
+    defaults: t.defaults,
+    autoBlank: t.autoBlank,
+    watermarkImage: t.watermarkImage,
+    next: t.related.map((r) => toolBySlug[r]).filter((r) => r.accept === 'pdf').map((r) => ({ href: `${p}/${r.slug}/`, name: S.tools[r.slug].name, color: r.color, icon: icon(r.icon, 16) })),
+  };
+}
+
+// Tools offered inside PDF Studio: everything that works on one open PDF.
+const STUDIO_SKIP = new Set(['jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-viewer', 'repair-pdf', 'unlock-pdf']);
+const STUDIO_FINAL = new Set(['protect-pdf']);
+const STUDIO_TEXT = {
+  title: 'PDF Studio: Every PDF Tool in One Private App',
+  description: 'Open a PDF once and edit it with every tool: merge, compress, sign, redact, rotate, convert. Undo any step. Runs in your browser, nothing is uploaded.',
+  h1: 'PDF Studio',
+  lead: 'Open a PDF once, then use any tool on it. Every step can be undone, and nothing leaves your device.',
+  nav: 'Studio',
+};
+
 const section = (inner, cls = '', id = '') => `<section class="section ${cls}"${id ? ` id="${id}"` : ''}><div class="wrap">${inner}</div></section>`;
 
 // Breaks text into lines for SVG; scripts without spaces are cut by character count.
@@ -382,15 +419,7 @@ for (const L of LANGS) {
     const path = `${p}${slugPath}`;
     const multi = t.multiple;
     const choose = t.accept === 'images' ? (multi ? S.common.chooseImages : S.common.chooseImage) : multi ? S.common.choosePdfs : S.common.choosePdf;
-    const config = {
-      slug: t.slug,
-      name: s.name,
-      mode: t.mode,
-      accept: t.accept,
-      multiple: !!multi,
-      action: s.action,
-      next: t.related.map((r) => toolBySlug[r]).filter((r) => r.accept === 'pdf').map((r) => ({ href: `${p}/${r.slug}/`, name: S.tools[r.slug].name, color: r.color, icon: icon(r.icon, 16) })),
-    };
+    const config = toolConfig(L, t);
     const jsonld = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -418,7 +447,7 @@ ${crumbs(s.name)}
 <div id="app" class="app" data-tool="${esc(JSON.stringify(config))}">
 <div class="drop">
 <div class="glyph">${icon(t.icon, 56)}</div>
-<label class="btn primary big"><input type="file" accept="${t.accept === 'images' ? 'image/*,.heic,.heif' : 'application/pdf,.pdf'}" ${multi ? 'multiple' : ''}>${esc(choose)}</label>
+<label class="btn primary big"><input type="file" accept="${t.mime || (t.accept === 'images' ? 'image/*,.heic,.heif' : 'application/pdf,.pdf')}" ${multi ? 'multiple' : ''}>${esc(choose)}</label>
 <p class="drop-hint">${esc(multi ? S.common.dropThem : S.common.dropIt)}</p>
 </div>
 </div>
@@ -459,15 +488,53 @@ ${section(`<h2 class="headline">${esc(S.common.moreTools)}</h2>${chiclets(L, t.r
         body: `<section class="hero home-hero wrap">
 <h1>${esc(S.site.homeH1a)}<br><span class="soft">${esc(S.site.homeH1b)}</span></h1>
 <p class="lead">${esc(S.site.homeLead)}</p>
-<div class="hero-ctas"><a class="btn primary big" href="${p}/merge-pdf/">${esc(S.tools['merge-pdf'].name)}</a><a class="more" href="#tools">${esc(S.site.allTools)}</a></div>
+<div class="hero-ctas"><a class="btn primary big" href="${p}/app/">${esc(S.studio?.cta ?? 'Open PDF Studio')}</a><a class="more" href="#tools">${esc(S.site.allTools)}</a></div>
 <div class="hero-art"><div class="art-wide">${heroArt(L)}</div><div class="art-phone">${heroArt(L, true)}</div></div>
 </section>
 ${section(`<h2 class="headline">${esc(S.site.allTools)}</h2>${toolGroups(L)}`, 'alt', 'tools')}
-<section class="section dark"><div class="wrap statement">${icon('lock', 44)}<h2 class="headline">${esc(S.site.privateH2)}</h2><p>${S.site.privateP1}</p><p>${fill(S.site.privateP2, { how: `${p}/how-it-works/` })}</p></div></section>
+<section class="section dark"><div class="wrap statement">${icon('padlock', 44)}<h2 class="headline">${esc(S.site.privateH2)}</h2><p>${S.site.privateP1}</p><p>${fill(S.site.privateP2, { how: `${p}/how-it-works/` })}</p></div></section>
 ${section(`<h2 class="headline">${esc(S.site.whySwitch)}</h2>${points(L)}`)}
 ${section(`<h2 class="headline">${esc(S.site.faqTitle)}</h2>${faqHtml(S.homeFaqs)}`, 'alt', 'faq')}`,
       }),
     );
+  }
+
+  /* PDF Studio */
+  {
+    const st = { ...STUDIO_TEXT, ...(S.studio || {}) };
+    const slugPath = '/app/';
+    const path = `${p}${slugPath}`;
+    const tools = GROUPS.flatMap(([, slugs]) => slugs)
+      .filter((slug) => !STUDIO_SKIP.has(slug))
+      .map((slug) => ({ ...toolConfig(L, toolBySlug[slug]), iconSvg: icon(toolBySlug[slug].icon, 28), final: STUDIO_FINAL.has(slug) }));
+    const groups = GROUPS.map(([k, slugs]) => [S.footer[k], slugs.filter((x) => !STUDIO_SKIP.has(x))]);
+    const jsonld = {
+      '@context': 'https://schema.org',
+      '@graph': [organization, website, webPage(L, path, st.title, st.description, { mainEntity: { '@id': url(`${path}#app`) } }), appLd(L, url(`${path}#app`), `${st.h1} · ${SITE.name}`, st.description, tools.map((x) => x.name), path), crumbsLd(path, [[S.nav.home, `${p}/`], [st.h1, path]])],
+    };
+    render(
+      L,
+      slugPath,
+      layout(L, {
+        slugPath,
+        title: `${st.title}`.length > 60 ? st.title : `${st.title}`,
+        description: st.description,
+        ogImage: '/og/home.png',
+        jsonld,
+        bare: true,
+        body: `<h1 class="visually-hidden">${esc(st.h1)}</h1>
+<div id="studio" class="studio" data-home="${p}/" data-tools="${esc(JSON.stringify(tools))}" data-groups="${esc(JSON.stringify(groups))}"></div>
+<noscript><p class="alert">${esc(S.common.noscript)}</p></noscript>
+<p class="visually-hidden">${esc(st.lead)}</p>`,
+      }),
+    );
+  }
+
+  // The app used to live at /studio/; keep old links working.
+  {
+    const dir = join(DIST, prefix(L), 'studio');
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, 'index.html'), `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="${url(`${p}/app/`)}"><meta http-equiv="refresh" content="0; url=${p}/app/"><title>Scissor PDF</title><a href="${p}/app/">${esc(S.studio?.cta ?? 'Open the app')}</a>`);
   }
 
   /* How it works, privacy */
@@ -583,7 +650,8 @@ writeFileSync(
       name: SITE.name,
       short_name: 'Scissor PDF',
       description: STRINGS.en.site.description,
-      start_url: '/',
+      id: '/app/',
+      start_url: '/app/',
       scope: '/',
       display: 'standalone',
       background_color: '#fbfbfd',
@@ -594,7 +662,9 @@ writeFileSync(
         { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
       ],
       shortcuts: ['merge-pdf', 'compress-pdf', 'split-pdf', 'jpg-to-pdf'].map((s) => ({ name: STRINGS.en.tools[s].name, url: `/${s}/` })),
-      file_handlers: [{ action: '/organize-pdf/', accept: { 'application/pdf': ['.pdf'] } }],
+      categories: ['productivity', 'utilities'],
+      file_handlers: [{ action: '/app/', accept: { 'application/pdf': ['.pdf'] }, launch_type: 'single-client' }],
+      launch_handler: { client_mode: 'focus-existing' },
     },
     null,
     2,

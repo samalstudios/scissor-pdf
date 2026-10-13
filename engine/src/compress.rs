@@ -58,6 +58,11 @@ pub fn compress(bytes: &[u8], level_index: u8) -> Res<Vec<u8>> {
                 && let Ok(Object::Stream(stream)) = doc.get_object_mut(id)
             {
                 stream.dict.set("Filter", "DCTDecode");
+                // The encoder may write grey images as three channels; describe what it wrote.
+                let space = crate::images::jpeg_color_space(&content);
+                if space != "DeviceRGB" || stream.dict.get(b"ColorSpace").and_then(Object::as_name).ok() == Some(b"DeviceGray") {
+                    stream.dict.set("ColorSpace", space);
+                }
                 stream.dict.remove(b"DecodeParms");
                 stream.dict.set("Width", w as i64);
                 stream.dict.set("Height", h as i64);

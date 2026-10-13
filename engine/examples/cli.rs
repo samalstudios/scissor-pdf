@@ -3,7 +3,7 @@
 
 use std::fs;
 
-use engine::{compress, edit, images, ops, security, stamp};
+use engine::{compress, edit, images, more, ops, security, stamp};
 
 fn main() {
     let args: Vec<String> = std::env::args().skip(1).collect();
@@ -49,6 +49,20 @@ fn main() {
         "meta" => edit::metadata(&read(0), &[("Title", "Ünïcode title ✓"), ("Author", "Sia")], false),
         "wipe" => edit::metadata(&read(0), &[], true),
         "repair" => edit::repair(&read(0)).map(|(b, _)| b),
+        "gray" => more::grayscale(&read(0)),
+        "flatten" => more::flatten(&read(0)),
+        "unannot" => more::remove_annotations(&read(0), true),
+        "extract" => more::extract_images(&read(0)),
+        "noimg" => more::remove_images(&read(0)),
+        "blank" => more::insert_blank(&read(0), &[], true),
+        "mix" => more::interleave(&read(0), &read(1), true),
+        "half" => more::split_half(&read(0), true, false),
+        "margins" => more::add_margins(&read(0), 36.0),
+        "resize" => more::resize(&read(0), "a5"),
+        "booklet" => more::booklet(&read(0), "a4"),
+        "bysize" => more::split_by_size(&read(0), 4_000_000, "part"),
+        "bookmarks" => more::split_by_bookmarks(&read(0), "ch"),
+        "info" => more::info(&read(0)).map(|s| { println!("{s}"); s.into_bytes() }),
         _ => panic!("unknown op"),
     };
     match result {
