@@ -94,6 +94,8 @@ The canonical domain is set in `site/tools.mjs` (`SITE.origin`).
 
 ## License
 
-[MIT](LICENSE).
+The code is released under the [MIT License](LICENSE).
+
+**Trademarks:** the license covers the code, not the brand. The names "Scissor" and "Scissor PDF", the scissors logo and the app icon belong to Samal Studios and may not be used to name or promote a copy or fork. If you publish your own version, please give it a different name and icon.
 
 PDF.js is bundled under the Apache License 2.0; its license is copied into `dist/vendor/` at build time.
