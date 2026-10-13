@@ -183,7 +183,7 @@ function nav(L) {
   const p = prefix(L);
   return `<header class="nav"><div class="wrap">
 <a class="brand" href="${p}/" aria-label="${SITE.name}">${MARK}${SITE.name}</a>
-<nav class="nav-links" aria-label="Main"><a href="${p}/app/"><b>${esc(S.studio?.nav ?? STUDIO_TEXT.nav)}</b></a><a href="${p}/#tools">${esc(S.nav.allTools)}</a><a class="opt" href="${p}/compress-pdf/">${esc(S.nav.compress)}</a><a class="opt" href="${p}/merge-pdf/">${esc(S.nav.merge)}</a><a class="opt" href="${p}/how-it-works/">${esc(S.nav.how)}</a><a class="lang-link" href="#languages" aria-label="${esc(S.nav.language)}">${GLOBE}<span>${esc(S.meta.name)}</span></a></nav>
+<nav class="nav-links" aria-label="Main"><a href="${p}/app/"><b>${esc(S.studio?.nav ?? STUDIO_TEXT.nav)}</b></a><a href="${p}/#tools">${esc(S.nav.allTools)}</a><a class="opt" href="${p}/compress-pdf/">${esc(S.nav.compress)}</a><a class="opt" href="${p}/merge-pdf/">${esc(S.nav.merge)}</a><a class="opt" href="${p}/how-it-works/">${esc(S.nav.how)}</a><a class="lang-link" href="#languages" aria-label="${esc(S.nav.language)}">${GLOBE}<span>${esc(S.meta.name)}</span></a><a class="gh-nav" href="${SITE.repo}" rel="noopener" aria-label="GitHub" title="GitHub">${GITHUB}</a></nav>
 </div></header>`;
 }
 
@@ -497,7 +497,7 @@ ${section(`<h2 class="headline">${esc(S.common.moreTools)}</h2>${chiclets(L, t.r
 <div class="hero-art"><div class="art-wide">${heroArt(L)}</div><div class="art-phone">${heroArt(L, true)}</div></div>
 </section>
 ${section(`<h2 class="headline">${esc(S.site.allTools)}</h2>${toolGroups(L)}`, 'alt', 'tools')}
-<section class="section dark"><div class="wrap statement">${icon('padlock', 44)}<h2 class="headline">${esc(S.site.privateH2)}</h2><p>${S.site.privateP1}</p><p>${fill(S.site.privateP2, { how: `${p}/how-it-works/` })}</p></div></section>
+<section class="section dark"><div class="wrap statement">${icon('padlock', 44)}<h2 class="headline">${esc(S.site.privateH2)}</h2><p>${S.site.privateP1}</p><p>${fill(S.site.privateP2, { how: `${p}/how-it-works/` })}</p><p><a class="gh-cta" href="${SITE.repo}" rel="noopener">${GITHUB.replace('width="15" height="15"', 'width="20" height="20"')}<span>${esc(S.ui.studioSource)}</span></a></p></div></section>
 ${section(`<h2 class="headline">${esc(S.site.whySwitch)}</h2>${points(L)}`)}
 ${section(`<h2 class="headline">${esc(S.site.faqTitle)}</h2>${faqHtml(S.homeFaqs)}`, 'alt', 'faq')}`,
       }),
