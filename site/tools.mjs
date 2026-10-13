@@ -5,6 +5,7 @@ export const SITE = {
   name: 'Scissor PDF',
   origin: 'https://pdf.scissor.studio',
   org: { name: 'Scissor', url: 'https://scissor.studio' },
+  repo: 'https://github.com/samalstudios/scissor-pdf',
 };
 
 export { icon } from './icons.mjs';

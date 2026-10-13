@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "Hemûyan daxe",
   "studioClose": "{name} bigire",
   "studioNoPdfs": "Li wir tu pelê PDF nehat dîtin.",
-  "studioHome": "Rûpela sereke ya Scissor PDF"
+  "studioHome": "Rûpela sereke ya Scissor PDF",
+  "studioSource": "Çavkaniya vekirî li GitHub"
  },
  "studio": {
   "title": "Scissor PDF: Hemû amûrên PDF di sepanek taybet de",

@@ -2627,7 +2627,8 @@
   "studioDownloadAll": "Scarica tutto",
   "studioClose": "Chiudi {name}",
   "studioNoPdfs": "Nessun file PDF trovato lì.",
-  "studioHome": "Home di Scissor PDF"
+  "studioHome": "Home di Scissor PDF",
+  "studioSource": "Open source su GitHub"
  },
  "studio": {
   "title": "Scissor PDF: tutti gli strumenti PDF in un'app privata",

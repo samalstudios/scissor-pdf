@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "सभी डाउनलोड करें",
   "studioClose": "{name} बंद करें",
   "studioNoPdfs": "वहाँ कोई PDF फ़ाइल नहीं मिली।",
-  "studioHome": "Scissor PDF होम"
+  "studioHome": "Scissor PDF होम",
+  "studioSource": "GitHub पर ओपन सोर्स"
  },
  "studio": {
   "title": "Scissor PDF: सभी PDF टूल्स एक प्राइवेट ऐप में",

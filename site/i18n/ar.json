@@ -2639,7 +2639,8 @@
   "studioDownloadAll": "تنزيل الكل",
   "studioClose": "إغلاق «{name}»",
   "studioNoPdfs": "لم يُعثر على ملفات PDF هناك.",
-  "studioHome": "الصفحة الرئيسية لـ Scissor PDF"
+  "studioHome": "الصفحة الرئيسية لـ Scissor PDF",
+  "studioSource": "مفتوح المصدر على GitHub"
  },
  "studio": {
   "title": "Scissor PDF: كل أدوات PDF في تطبيق خاص واحد",

@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "داگرتنی هەمووی",
   "studioClose": "داخستنی «{name}»",
   "studioNoPdfs": "هیچ فایلێکی PDF لەوێ نەدۆزرایەوە.",
-  "studioHome": "سەرەتای Scissor PDF"
+  "studioHome": "سەرەتای Scissor PDF",
+  "studioSource": "سەرچاوەکراوە لە GitHub"
  },
  "studio": {
   "title": "Scissor PDF: هەموو ئامرازەکانی PDF لە یەک ئەپی تایبەتدا",

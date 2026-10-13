@@ -2631,7 +2631,8 @@
   "studioDownloadAll": "Скачать все",
   "studioClose": "Закрыть «{name}»",
   "studioNoPdfs": "PDF-файлы там не найдены.",
-  "studioHome": "Scissor PDF — главная"
+  "studioHome": "Scissor PDF — главная",
+  "studioSource": "Открытый код на GitHub"
  },
  "studio": {
   "title": "Scissor PDF: все PDF-инструменты в одном приватном приложении",

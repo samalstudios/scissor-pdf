@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "دانلود همه",
   "studioClose": "بستن «{name}»",
   "studioNoPdfs": "هیچ فایل PDF‌ای آنجا پیدا نشد.",
-  "studioHome": "صفحهٔ اصلی Scissor PDF"
+  "studioHome": "صفحهٔ اصلی Scissor PDF",
+  "studioSource": "متن‌باز در GitHub"
  },
  "studio": {
   "title": "Scissor PDF: همه ابزارهای PDF در یک برنامه خصوصی",

@@ -2481,9 +2481,10 @@ function startStudio(el) {
       : `<div class="studio-canvas"><div class="studio-welcome">
           <img src="/icon-192.png" width="88" height="88" alt="">
           <h2>Scissor PDF</h2>
-          <p>${esc(ts('studioWelcome', 'Open PDFs to get started.'))}</p>
+          <p>${S.pending ? `<b>${esc(tools.find((x) => x.slug === S.pending).name)}</b> · ` : ''}${esc(ts('studioWelcome', 'Open PDFs to get started.'))}</p>
           <div class="studio-open-buttons"><button class="btn primary" type="button" data-open="files">${esc(ts('studioOpenFiles', 'Open files'))}…</button><button class="btn" type="button" data-open="folder">${esc(ts('studioOpenFolder', 'Open folder'))}…</button></div>
           <p class="hint">${esc(ts('studioDrop', 'or drop PDFs or a folder anywhere. Nothing is uploaded.'))}</p>
+          ${el.dataset.repo ? `<a class="welcome-source" href="${el.dataset.repo}" rel="noopener">${esc(ts('studioSource', 'Open source on GitHub'))}</a>` : ''}
         </div></div>`;
     body.innerHTML = `${canvas}<aside class="inspector" aria-label="${esc(ts('studioTools', 'Tools'))}">${toolsList()}</aside>`;
     bindTools($('.inspector', body));
@@ -2632,5 +2633,8 @@ function startStudio(el) {
     toastTimer = setTimeout(() => (box.hidden = true), url ? 12000 : 3200);
   }
 
+  // Shortcuts from the installed app (and links) can ask for a tool: /app/?tool=merge-pdf
+  const wanted = new URLSearchParams(location.search).get('tool');
+  if (wanted && tools.some((x) => x.slug === wanted)) S.pending = wanted;
   showHome();
 }

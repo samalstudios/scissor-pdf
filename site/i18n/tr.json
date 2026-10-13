@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "Tümünü indir",
   "studioClose": "{name} kapat",
   "studioNoPdfs": "Orada PDF dosyası bulunamadı.",
-  "studioHome": "Scissor PDF ana sayfa"
+  "studioHome": "Scissor PDF ana sayfa",
+  "studioSource": "GitHub'da açık kaynak"
  },
  "studio": {
   "title": "Scissor PDF: Tüm PDF araçları tek bir gizli uygulamada",

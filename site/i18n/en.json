@@ -2623,7 +2623,8 @@
   "studioDownloadAll": "Download all",
   "studioClose": "Close {name}",
   "studioNoPdfs": "No PDF files found there.",
-  "studioHome": "Scissor PDF home"
+  "studioHome": "Scissor PDF home",
+  "studioSource": "Open source on GitHub"
  },
  "studio": {
   "title": "Scissor PDF: Every PDF Tool in One Private App",

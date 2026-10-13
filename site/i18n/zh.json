@@ -2619,7 +2619,8 @@
     "studioDownloadAll": "全部下载",
     "studioClose": "关闭 {name}",
     "studioNoPdfs": "那里没有找到 PDF 文件。",
-    "studioHome": "Scissor PDF 首页"
+    "studioHome": "Scissor PDF 首页",
+    "studioSource": "在 GitHub 上开源"
   },
   "studio": {
     "title": "Scissor PDF：所有 PDF 工具尽在一个私密应用",

@@ -105,10 +105,11 @@ const CSP = [
 
 const LOCK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
 const CHECK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>';
+const GITHUB = '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>';
 const MARK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1 20 20M8.1 15.9 20 4"/></svg>';
 const GLOBE = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>';
 
-const organization = { '@type': 'Organization', '@id': ORG_ID, name: SITE.org.name, url: SITE.org.url, logo: url('/icon-512.png') };
+const organization = { '@type': 'Organization', '@id': ORG_ID, name: SITE.org.name, url: SITE.org.url, logo: url('/icon-512.png'), sameAs: ['https://github.com/samalstudios'] };
 
 /* ---------- Page rendering, per language ---------- */
 
@@ -121,7 +122,7 @@ function render(L, slugPath, html) {
   if (L === 'en') pages.push(slugPath);
 }
 
-function layout(L, { slugPath, title, description, ogImage, jsonld, body, bare = false }) {
+function layout(L, { slugPath, title, description, ogImage, jsonld, body, bare = false, manifest = null }) {
   const S = STRINGS[L];
   const path = `${prefix(L)}${slugPath}`;
   const alternates = LANGS.map((c) => `<link rel="alternate" hreflang="${hreflang(c)}" href="${url(prefix(c) + slugPath)}">`).join('\n');
@@ -147,7 +148,11 @@ ${alternates}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
+${manifest ? `<link rel="manifest" href="${manifest}">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scissor PDF">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">` : ''}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${SITE.name}">
 <meta property="og:locale" content="${S.meta.ogLocale}">
@@ -189,7 +194,7 @@ function footer(L, slugPath) {
   return `<footer class="footer"><div class="wrap">
 <div class="footer-cols">
 ${GROUPS.map(([k, slugs]) => `<div><h2>${esc(S.footer[k])}</h2><ul>${slugs.map(link).join('')}</ul></div>`).join('\n')}
-<div><h2>${esc(S.footer.about)}</h2><ul><li><a href="${p}/how-it-works/">${esc(S.nav.how)}</a></li><li><a href="${p}/privacy/">${esc(S.footer.privacy)}</a></li><li><a href="/ilovepdf-smallpdf-alternative/" hreflang="en">vs iLovePDF &amp; Smallpdf</a></li><li><a href="${SITE.org.url}">Scissor</a></li></ul></div>
+<div><h2>${esc(S.footer.about)}</h2><ul><li><a href="${p}/how-it-works/">${esc(S.nav.how)}</a></li><li><a href="${p}/privacy/">${esc(S.footer.privacy)}</a></li><li><a href="/ilovepdf-smallpdf-alternative/" hreflang="en">vs iLovePDF &amp; Smallpdf</a></li><li><a href="${SITE.repo}" rel="noopener" class="gh-link">${GITHUB} GitHub</a></li><li><a href="${SITE.org.url}">Scissor</a></li></ul></div>
 </div>
 <div id="languages" class="langs"><h2>${GLOBE} ${esc(S.footer.languages)}</h2><ul>${LANGS.map((c) => `<li><a href="${prefix(c)}${slugPath}" hreflang="${hreflang(c)}" lang="${hreflang(c)}"${c === L ? ' aria-current="page"' : ''}>${esc(STRINGS[c].meta.name)}</a></li>`).join('')}</ul></div>
 <p>${esc(S.footer.note)} © ${new Date().getFullYear()} <a href="${SITE.org.url}">Scissor</a>. ${esc(S.footer.updated)} <time datetime="${TODAY}">${TODAY}</time>.</p>
@@ -522,8 +527,9 @@ ${section(`<h2 class="headline">${esc(S.site.faqTitle)}</h2>${faqHtml(S.homeFaqs
         ogImage: '/og/home.png',
         jsonld,
         bare: true,
+        manifest: `${p}/app/manifest.webmanifest`,
         body: `<h1 class="visually-hidden">${esc(st.h1)}</h1>
-<div id="studio" class="studio" data-home="${p}/" data-tools="${esc(JSON.stringify(tools))}" data-groups="${esc(JSON.stringify(groups))}"></div>
+<div id="studio" class="studio" data-home="${p}/" data-repo="${SITE.repo}" data-tools="${esc(JSON.stringify(tools))}" data-groups="${esc(JSON.stringify(groups))}"></div>
 <noscript><p class="alert">${esc(S.common.noscript)}</p></noscript>
 <p class="visually-hidden">${esc(st.lead)}</p>`,
       }),
@@ -555,7 +561,7 @@ ${section(`<h2 class="headline">${esc(S.site.faqTitle)}</h2>${faqHtml(S.homeFaqs
         ogImage: '/og/home.png',
         jsonld,
         body: `<section class="hero tool-hero wrap">${crumbs(a.h1)}<h1>${esc(a.h1)}</h1><p class="lead">${esc(a.lead)}</p></section>
-${section(`<article class="prose">${a.body.replace(/<(\/?)h3>/g, '<$1h2>')}</article>`, 'alt')}
+${section(`<article class="prose">${a.body.replace(/<(\/?)h3>/g, '<$1h2>')}${key === 'how' ? `<p class="source-link"><a href="${SITE.repo}" rel="noopener">${GITHUB} github.com/samalstudios/scissor-pdf</a></p>` : ''}</article>`, 'alt')}
 ${section(`<h2 class="headline">${esc(S.common.tryTool)}</h2>${chiclets(L, ['merge-pdf', 'compress-pdf', 'split-pdf', 'jpg-to-pdf', 'organize-pdf', 'protect-pdf'])}`)}`,
       }),
     );
@@ -640,36 +646,43 @@ writeFileSync(join(DIST, 'robots.txt'), `# Search and AI crawlers are welcome.\n
   const S = STRINGS.en;
   writeFileSync(
     join(DIST, 'llms.txt'),
-    `# ${SITE.name}\n\n> ${S.site.description}\n\nAll processing happens locally in the browser (Rust compiled to WebAssembly, plus PDF.js for rendering). Files are never uploaded. Free, no account, no watermark, works offline after the first visit. Available in ${LANGS.length} languages: ${LANGS.map((c) => STRINGS[c].meta.name).join(', ')}.\n\n## Tools\n\n${TOOLS.map((t) => `- [${S.tools[t.slug].name}](${url(`/${t.slug}/`)}): ${S.tools[t.slug].short}`).join('\n')}\n\n## About\n\n- [How it works](${url('/how-it-works/')}): how local processing works and how to verify no upload happens\n- [Privacy](${url('/privacy/')})\n- [Scissor PDF vs iLovePDF vs Smallpdf](${url('/ilovepdf-smallpdf-alternative/')}): honest comparison of privacy, limits and features\n`,
+    `# ${SITE.name}\n\n> ${S.site.description}\n\nAll processing happens locally in the browser (Rust compiled to WebAssembly, plus PDF.js for rendering). Files are never uploaded. Free, no account, no watermark, works offline after the first visit. Available in ${LANGS.length} languages: ${LANGS.map((c) => STRINGS[c].meta.name).join(', ')}.\n\n## Tools\n\n${TOOLS.map((t) => `- [${S.tools[t.slug].name}](${url(`/${t.slug}/`)}): ${S.tools[t.slug].short}`).join('\n')}\n\n## About\n\n- [How it works](${url('/how-it-works/')}): how local processing works and how to verify no upload happens\n- [Privacy](${url('/privacy/')})\n- [Scissor PDF vs iLovePDF vs Smallpdf](${url('/ilovepdf-smallpdf-alternative/')}): honest comparison of privacy, limits and features\n- [Source code on GitHub](${SITE.repo}) (MIT licence)\n`,
   );
 }
-writeFileSync(
-  join(DIST, 'manifest.webmanifest'),
-  JSON.stringify(
-    {
-      name: SITE.name,
-      short_name: 'Scissor PDF',
-      description: STRINGS.en.site.description,
-      id: '/app/',
-      start_url: '/app/',
-      scope: '/',
-      display: 'standalone',
-      background_color: '#fbfbfd',
-      theme_color: '#fbfbfd',
-      icons: [
-        { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-        { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
-        { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-      ],
-      shortcuts: ['merge-pdf', 'compress-pdf', 'split-pdf', 'jpg-to-pdf'].map((s) => ({ name: STRINGS.en.tools[s].name, url: `/${s}/` })),
-      categories: ['productivity', 'utilities'],
-      file_handlers: [{ action: '/app/', accept: { 'application/pdf': ['.pdf'] }, launch_type: 'single-client' }],
-      launch_handler: { client_mode: 'focus-existing' },
-    },
-    null,
-    2,
-  ),
-);
+// Only the app is installable: one manifest per language, scoped to that language's /app/.
+for (const L of LANGS) {
+  const S = STRINGS[L];
+  const base = `${prefix(L)}/app/`;
+  writeFileSync(
+    join(DIST, prefix(L), 'app', 'manifest.webmanifest'),
+    JSON.stringify(
+      {
+        id: base,
+        name: SITE.name,
+        short_name: 'Scissor PDF',
+        description: S.studio?.description ?? S.site.description,
+        lang: hreflang(L),
+        dir: S.meta.dir,
+        start_url: base,
+        scope: base,
+        display: 'standalone',
+        background_color: '#f5f5f7',
+        theme_color: '#ffffff',
+        icons: [
+          { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: '/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        ],
+        shortcuts: ['merge-pdf', 'compress-pdf', 'sign-pdf', 'split-pdf'].map((slug) => ({ name: S.tools[slug].name, url: `${base}?tool=${slug}` })),
+        categories: ['productivity', 'utilities'],
+        file_handlers: [{ action: base, accept: { 'application/pdf': ['.pdf'] }, launch_type: 'single-client' }],
+        launch_handler: { client_mode: 'focus-existing' },
+      },
+      null,
+      2,
+    ),
+  );
+}
 
 // Service worker: precache the app shell so every tool works offline after one visit.
 // Pages in other languages are cached the first time they are opened.
@@ -683,7 +696,8 @@ const precache = [
   `${PDFJS_PATH}/pdf.min.js`,
   `${PDFJS_PATH}/pdf.worker.min.js`,
   '/favicon.svg',
-  '/manifest.webmanifest',
+  '/app/manifest.webmanifest',
+  '/icon-192.png',
 ];
 writeFileSync(
   join(DIST, 'sw.js'),

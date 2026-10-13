@@ -2619,7 +2619,8 @@
     "studioDownloadAll": "すべてダウンロード",
     "studioClose": "「{name}」を閉じる",
     "studioNoPdfs": "PDF ファイルが見つかりませんでした。",
-    "studioHome": "Scissor PDF ホーム"
+    "studioHome": "Scissor PDF ホーム",
+    "studioSource": "GitHub でオープンソース公開中"
   },
   "studio": {
     "title": "Scissor PDF：すべての PDF ツールをひとつのアプリで",

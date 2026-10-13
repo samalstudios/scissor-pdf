@@ -2619,7 +2619,8 @@
   "studioDownloadAll": "Unduh semua",
   "studioClose": "Tutup {name}",
   "studioNoPdfs": "Tidak ada file PDF di sana.",
-  "studioHome": "Beranda Scissor PDF"
+  "studioHome": "Beranda Scissor PDF",
+  "studioSource": "Sumber terbuka di GitHub"
  },
  "studio": {
   "title": "Scissor PDF: Semua alat PDF dalam satu aplikasi privat",

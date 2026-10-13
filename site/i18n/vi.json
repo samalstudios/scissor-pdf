@@ -2619,7 +2619,8 @@
   "studioDownloadAll": "Tải xuống tất cả",
   "studioClose": "Đóng {name}",
   "studioNoPdfs": "Không tìm thấy tệp PDF nào ở đó.",
-  "studioHome": "Trang chủ Scissor PDF"
+  "studioHome": "Trang chủ Scissor PDF",
+  "studioSource": "Mã nguồn mở trên GitHub"
  },
  "studio": {
   "title": "Scissor PDF: Mọi công cụ PDF trong một ứng dụng riêng tư",
