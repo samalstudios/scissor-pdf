@@ -1,0 +1,32 @@
+{
+  "name": "scissor-pdf",
+  "version": "1.0.0",
+  "description": "Free PDF tools that run entirely in the browser: a Rust PDF engine compiled to WebAssembly. Files are never uploaded.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:site": "node scripts/build.mjs --skip-wasm",
+    "check:i18n": "node scripts/i18n-check.mjs",
+    "assets": "node scripts/assets.mjs",
+    "serve": "python3 -m http.server 4173 -d dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "pdfjs-dist": "^6.4.299"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samalstudios/scissor-pdf"
+  },
+  "homepage": "https://pdf.scissor.studio",
+  "keywords": [
+    "pdf",
+    "webassembly",
+    "rust",
+    "privacy",
+    "merge-pdf",
+    "compress-pdf",
+    "split-pdf",
+    "offline"
+  ]
+}

@@ -1,0 +1,1129 @@
+{
+ "meta": {
+  "code": "vi",
+  "name": "Tiếng Việt",
+  "dir": "ltr",
+  "ogLocale": "vi_VN"
+ },
+ "site": {
+  "description": "Công cụ PDF miễn phí chạy hoàn toàn trong trình duyệt: ghép, tách, nén, xoay, chuyển đổi và bảo vệ PDF. Tệp của bạn không bao giờ rời khỏi thiết bị. Không cần đăng ký, không watermark.",
+  "homeTitle": "Công cụ PDF miễn phí, không bao giờ tải tệp của bạn lên",
+  "homeH1a": "Đủ mọi công cụ PDF.",
+  "homeH1b": "Không tải lên gì cả.",
+  "homeLead": "Ghép, tách, nén, chuyển đổi và bảo vệ PDF ngay trong trình duyệt. Scissor PDF miễn phí, không cần tài khoản, và tệp của bạn không bao giờ rời khỏi thiết bị.",
+  "allTools": "Tất cả công cụ PDF",
+  "privateH2": "Riêng tư từ thiết kế, không chỉ là lời hứa",
+  "privateP1": "Phần lớn dịch vụ PDF trực tuyến tải tài liệu của bạn lên máy chủ của họ, xử lý ở đó, rồi mong bạn tin rằng tệp sẽ bị xóa sau đó. <strong>Scissor PDF hoạt động khác hẳn: chính công cụ xử lý PDF được tải về trình duyệt của bạn</strong>, viết bằng Rust và biên dịch sang WebAssembly, nên mọi thao tác ghép, tách hay nén đều diễn ra ngay trên thiết bị của bạn.",
+  "privateP2": "Vì vậy, Scissor PDF phù hợp cho hợp đồng, hồ sơ bệnh án, tờ khai thuế và bất kỳ giấy tờ nào bạn không muốn giao cho người lạ. <a href=\"{how}\">Xem cách hoạt động và cách tự kiểm chứng</a>.",
+  "whySwitch": "Vì sao mọi người chuyển sang Scissor PDF",
+  "faqTitle": "Câu hỏi thường gặp"
+ },
+ "nav": {
+  "home": "Trang chủ",
+  "allTools": "Tất cả công cụ",
+  "compress": "Nén",
+  "merge": "Ghép",
+  "how": "Cách hoạt động",
+  "language": "Ngôn ngữ"
+ },
+ "footer": {
+  "organize": "Sắp xếp",
+  "optimize": "Tối ưu & chuyển đổi",
+  "edit": "Chỉnh sửa & bảo mật",
+  "about": "Scissor PDF",
+  "privacy": "Quyền riêng tư",
+  "note": "Scissor PDF xử lý mọi tệp ngay trong trình duyệt của bạn bằng công cụ Rust biên dịch sang WebAssembly. Không tải lên, không tài khoản, không theo dõi.",
+  "updated": "Cập nhật",
+  "languages": "Ngôn ngữ"
+ },
+ "common": {
+  "assureLocal": "Tệp không bao giờ rời khỏi thiết bị của bạn",
+  "assureFree": "Miễn phí, không cần đăng ký",
+  "assureNoMark": "Không watermark",
+  "homeAssureLocal": "100% trên thiết bị của bạn",
+  "homeAssureOffline": "Dùng được khi offline",
+  "choosePdf": "Chọn tệp PDF",
+  "choosePdfs": "Chọn các tệp PDF",
+  "chooseImage": "Chọn ảnh",
+  "chooseImages": "Chọn ảnh",
+  "dropIt": "hoặc kéo thả vào đây",
+  "dropThem": "hoặc kéo thả vào đây",
+  "noscript": "Công cụ này chạy trong trình duyệt của bạn và cần bật JavaScript cùng WebAssembly.",
+  "why": "Vì sao nên dùng Scissor PDF",
+  "questionsAbout": "Câu hỏi về {name}",
+  "moreTools": "Công cụ PDF khác",
+  "tryTool": "Dùng thử công cụ",
+  "f1t": "Riêng tư từ thiết kế",
+  "f1p": "Tệp được xử lý ngay trong tab trình duyệt và không bao giờ được tải lên. Không có máy chủ nào có thể xem, lưu giữ hay làm lộ tệp của bạn.",
+  "f2t": "Nhanh, kể cả khi offline",
+  "f2p": "Công cụ PDF viết bằng Rust chạy dưới dạng WebAssembly với tốc độ gần như ứng dụng gốc. Sau lần truy cập đầu tiên, công cụ vẫn hoạt động mà không cần kết nối mạng.",
+  "f3t": "Miễn phí, không ràng buộc",
+  "f3p": "Không đăng ký, không giới hạn mỗi ngày, không watermark, không quảng cáo. Mở trang, thả tệp vào, tải kết quả về.",
+  "suggestLang": "Trang này có phiên bản {lang}.",
+  "switch": "Chuyển",
+  "dismiss": "Bỏ qua"
+ },
+ "tools": {
+  "merge-pdf": {
+   "name": "Ghép PDF",
+   "short": "Gộp nhiều tệp PDF thành một, theo thứ tự bạn chọn.",
+   "action": "Ghép PDF",
+   "title": "Ghép PDF miễn phí, không cần tải lên",
+   "description": "Ghép nhiều tệp PDF thành một ngay trong trình duyệt. Kéo để sắp xếp, rồi ghép. Tệp không bao giờ bị tải lên. Miễn phí, không đăng ký, không watermark.",
+   "h1": "Ghép tệp PDF",
+   "lead": "Gộp nhiều PDF thành một tài liệu duy nhất, theo đúng thứ tự bạn muốn. Mọi thứ diễn ra trên thiết bị của bạn, nên cả tệp mật cũng được giữ kín.",
+   "steps": [
+    "Chọn hoặc kéo thả các tệp PDF bạn muốn ghép. Bạn có thể thêm tệp bất cứ lúc nào.",
+    "Kéo các tệp theo đúng thứ tự chúng sẽ xuất hiện trong tài liệu cuối cùng.",
+    "Chọn Ghép PDF, rồi tải tệp đã ghép về."
+   ],
+   "sections": [
+    {
+     "h": "Những gì được giữ nguyên khi ghép",
+     "p": "Mỗi trang giữ nguyên kích thước, hướng, văn bản, hình ảnh, liên kết và các trường biểu mẫu điền được. Dấu trang (bookmark) của tài liệu đầu tiên được giữ lại. Tệp sau khi ghép là PDF chuẩn, mở được bằng mọi trình đọc, kể cả Preview, Adobe Acrobat và mọi trình duyệt web."
+    },
+    {
+     "h": "Ghép tệp lớn hoặc nhiều tệp",
+     "p": "Không giới hạn số tệp hay số trang. Tài liệu rất lớn chỉ bị giới hạn bởi bộ nhớ thiết bị của bạn. Một chiếc laptop hiện đại xử lý vài trăm megabyte khá thoải mái. Nếu tệp sau khi ghép lớn hơn mức bạn cần, hãy nén PDF bằng công cụ Nén PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi ghép PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Làm sao để thay đổi thứ tự các tệp?",
+     "a": "Kéo thẻ tệp bất kỳ sang vị trí mới trước khi ghép. Tài liệu cuối cùng theo thứ tự các thẻ từ trái sang phải, từ trên xuống dưới."
+    },
+    {
+     "q": "Tôi có thể chỉ ghép một số trang của PDF không?",
+     "a": "Ghép PDF gộp nguyên cả tài liệu. Để chỉ dùng một số trang, hãy mở tệp bằng Trích xuất trang trước, rồi ghép kết quả. Hoặc ghép tất cả rồi bỏ trang thừa bằng Xóa trang."
+    },
+    {
+     "q": "Tôi có thể ghép PDF có mật khẩu không?",
+     "a": "Hãy gỡ mật khẩu bằng Mở khóa PDF trước (bạn cần biết mật khẩu), rồi ghép."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách ghép tệp PDF"
+  },
+  "split-pdf": {
+   "name": "Tách PDF",
+   "short": "Cắt PDF thành nhiều tệp theo khoảng trang hoặc cứ mỗi vài trang.",
+   "action": "Tách PDF",
+   "title": "Tách PDF miễn phí, không cần tải lên",
+   "description": "Tách PDF thành nhiều tệp theo khoảng trang, mỗi N trang hoặc mỗi trang một tệp. Chạy trong trình duyệt, tệp không bao giờ bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Tách PDF",
+   "lead": "Cắt một PDF thành nhiều tệp nhỏ hơn: theo khoảng trang tùy chọn, thành các phần bằng nhau, hoặc mỗi trang một tệp. Tài liệu của bạn không bao giờ rời khỏi thiết bị.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF bạn muốn tách.",
+    "Chọn cách tách: khoảng trang tùy chọn như 1-3, 4-10, số trang cố định cho mỗi tệp, hoặc mỗi trang thành một tệp riêng.",
+    "Chọn Tách PDF. Bạn nhận được một PDF, hoặc một tệp ZIP nếu kết quả gồm nhiều tệp."
+   ],
+   "sections": [
+    {
+     "h": "Ba cách tách",
+     "p": "Khoảng trang tùy chọn cho bạn toàn quyền kiểm soát: nhập 1-5, 6-12, 13 để được ba tệp. Kích thước cố định cắt tài liệu thành các phần dài bằng nhau, rất tiện cho các lô tài liệu scan. Mỗi trang tạo ra một PDF cho từng trang."
+    },
+    {
+     "h": "Tách hay trích xuất?",
+     "p": "Tách chia toàn bộ tài liệu thành nhiều tệp. Nếu chỉ muốn lấy vài trang ra một tệp mới, Trích xuất trang sẽ nhanh hơn."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi tách PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Nhập khoảng trang như thế nào?",
+     "a": "Phân cách các khoảng bằng dấu phẩy. Dùng dấu gạch nối cho một khoảng và một số đơn cho một trang, ví dụ 1-3, 5, 8-12. Mỗi khoảng trở thành một PDF riêng."
+    },
+    {
+     "q": "Vì sao tôi nhận được tệp ZIP?",
+     "a": "Khi tách ra nhiều hơn một PDF, các tệp được gói vào một ZIP duy nhất để bạn chỉ cần tải một lần. Mọi hệ điều hành đều mở được tệp ZIP bằng cách nhấp đúp."
+    },
+    {
+     "q": "Tách PDF có làm giảm chất lượng không?",
+     "a": "Không. Các trang được sao chép nguyên trạng, không kết xuất lại, nên văn bản vẫn sắc nét và tìm kiếm được, còn hình ảnh giữ nguyên."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách tách PDF"
+  },
+  "compress-pdf": {
+   "name": "Nén PDF",
+   "short": "Giảm dung lượng PDF để gửi email và tải lên, với chất lượng do bạn chọn.",
+   "action": "Nén PDF",
+   "title": "Nén PDF miễn phí, không cần tải lên",
+   "description": "Nén PDF, giảm dung lượng ngay trong trình duyệt. Chọn mức nén lossless, khuyên dùng hoặc mạnh. Tệp không bao giờ bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Nén PDF",
+   "lead": "Thu nhỏ PDF để vừa giới hạn email và biểu mẫu tải lên. Chọn mức nén và xem chính xác tệp đã nhỏ đi bao nhiêu. Không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF bạn muốn làm nhỏ.",
+    "Chọn mức nén: Lossless giữ nguyên từng điểm ảnh, Khuyên dùng cân bằng giữa dung lượng và chất lượng, Mạnh cho tệp nhỏ nhất.",
+    "Chọn Nén PDF, kiểm tra dung lượng mới rồi tải về."
+   ],
+   "sections": [
+    {
+     "h": "Cách nén hoạt động",
+     "p": "Mọi mức nén đều loại bỏ các đối tượng không dùng đến, đóng gói cấu trúc tệp vào các object stream đã nén và nén mọi dữ liệu chưa nén. Mức Khuyên dùng và Mạnh còn mã hóa lại ảnh lớn dưới dạng JPEG và thu nhỏ những ảnh lớn hơn mức cần thiết cho màn hình và in văn phòng: tối đa 2200 pixel ở cạnh dài với Khuyên dùng, 1400 với Mạnh. Văn bản và đồ họa vector không bao giờ bị chuyển thành ảnh, nên vẫn sắc nét và tìm kiếm được."
+    },
+    {
+     "h": "Kết quả bạn có thể mong đợi",
+     "p": "Tài liệu scan và PDF nhiều ảnh thường giảm nhiều nhất, thường từ 70 đến 95 phần trăm. PDF chủ yếu là chữ vốn đã gọn nên có thể chỉ giảm chút ít. Nếu kết quả không nhỏ hơn, nghĩa là tệp gốc đã được tối ưu tốt."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi nén PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi nên chọn mức nén nào?",
+     "a": "Hãy bắt đầu với Khuyên dùng. Mức này thường giảm PDF nhiều ảnh hơn một nửa mà vẫn sắc nét trên màn hình và khi in. Dùng Mạnh khi bạn buộc phải xuống dưới một giới hạn dung lượng nghiêm ngặt, và Lossless khi hình ảnh tuyệt đối không được thay đổi."
+    },
+    {
+     "q": "Chữ trong PDF của tôi có bị mờ không?",
+     "a": "Không. Chỉ ảnh nhúng mới được mã hóa lại. Văn bản, phông chữ và hình vẽ vector được giữ nguyên như cũ."
+    },
+    {
+     "q": "Làm sao để PDF dưới 1 MB hoặc 2 MB cho biểu mẫu tải lên?",
+     "a": "Hãy thử mức nén Mạnh. Nếu vẫn quá lớn, tách tài liệu bằng Tách PDF, hoặc bỏ những trang không cần bằng Xóa trang, rồi nén lại."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách nén PDF"
+  },
+  "organize-pdf": {
+   "name": "Sắp xếp PDF",
+   "short": "Sắp xếp lại, xoay và xóa trang trong một trình chỉnh sửa trực quan.",
+   "action": "Lưu PDF",
+   "title": "Sắp xếp, xoay và xóa trang PDF",
+   "description": "Kéo để sắp xếp lại trang PDF, xoay hoặc xóa từng trang rồi lưu. Chạy hoàn toàn trong trình duyệt, tệp không bao giờ bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Sắp xếp trang PDF",
+   "lead": "Xem mọi trang dưới dạng hình thu nhỏ, rồi kéo để đổi thứ tự, xoay những trang bị nghiêng và bỏ những trang không cần. Tệp của bạn vẫn ở trên thiết bị.",
+   "steps": [
+    "Chọn hoặc kéo thả một PDF. Mỗi trang hiện ra dưới dạng hình thu nhỏ.",
+    "Kéo các trang theo thứ tự mới. Dùng các nút trên mỗi trang để xoay hoặc xóa trang đó.",
+    "Chọn Lưu PDF để tải tài liệu đã sắp xếp lại."
+   ],
+   "sections": [
+    {
+     "h": "Một trình chỉnh sửa cho mọi việc dọn trang",
+     "p": "Sắp xếp PDF gộp việc đổi thứ tự, xoay và xóa trang, nên bạn có thể chỉnh xong một tài liệu scan trong một lần. Thay đổi chỉ được áp dụng khi bạn lưu, và tệp gốc trên ổ đĩa của bạn không bao giờ bị sửa."
+    },
+    {
+     "h": "Thân thiện với bàn phím và cảm ứng",
+     "p": "Có thể kéo trang bằng chuột, bàn di chuột hoặc ngón tay. Mỗi trang còn có nút để chuyển lên trước hoặc ra sau, rất chính xác với tài liệu dài."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi sắp xếp PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể hoàn tác thay đổi không?",
+     "a": "Có. Chọn lại trang đã xóa để khôi phục, xoay trang trở lại, hoặc dùng Đặt lại để quay về thứ tự ban đầu trước khi lưu."
+    },
+    {
+     "q": "Đổi thứ tự có ảnh hưởng đến liên kết và dấu trang không?",
+     "a": "Liên kết giữa các trang vẫn còn trong tài liệu sẽ tiếp tục hoạt động. Dấu trang và liên kết trỏ tới trang đã xóa sẽ bị loại bỏ để tệp không có tham chiếu hỏng."
+    },
+    {
+     "q": "Tôi có thể thêm trang từ PDF khác không?",
+     "a": "Hãy dùng Ghép PDF để gộp các tệp trước, rồi mở tệp đã ghép ở đây để sắp xếp trang."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách sắp xếp trang PDF"
+  },
+  "rotate-pdf": {
+   "name": "Xoay PDF",
+   "short": "Xoay các trang bị nằm ngang hoặc lộn ngược về đúng chiều.",
+   "action": "Lưu PDF",
+   "title": "Xoay trang PDF miễn phí, không cần tải lên",
+   "description": "Xoay toàn bộ hoặc từng trang PDF 90 hay 180 độ và lưu kết quả vĩnh viễn. Chạy trong trình duyệt, không có gì bị tải lên. Miễn phí.",
+   "h1": "Xoay trang PDF",
+   "lead": "Sửa những trang bị nằm ngang hoặc lộn ngược. Xoay cả tài liệu hoặc từng trang, rồi lưu. Hướng xoay được lưu trong tệp, nên luôn đúng chiều ở mọi trình đọc.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF cần xoay.",
+    "Xoay tất cả các trang cùng lúc bằng các nút phía trên, hoặc chọn nút xoay trên từng trang.",
+    "Chọn Lưu PDF và tải tệp đã chỉnh về."
+   ],
+   "sections": [
+    {
+     "h": "Xoay không mất chất lượng",
+     "p": "Thao tác xoay thay đổi thiết lập hướng của trang chứ không vẽ lại nội dung, nên văn bản và hình ảnh giữ nguyên chất lượng và dung lượng tệp không đổi."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi xoay PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Hướng xoay có được lưu vĩnh viễn không?",
+     "a": "Có. Hướng mới được ghi vào PDF, nên tệp mở đúng chiều trong Preview, Acrobat, trình duyệt và trên điện thoại."
+    },
+    {
+     "q": "Tôi có thể chỉ xoay một trang không?",
+     "a": "Có. Mỗi hình thu nhỏ có nút xoay riêng. Những trang bạn không chạm vào vẫn giữ hướng hiện tại."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách xoay trang PDF"
+  },
+  "delete-pdf-pages": {
+   "name": "Xóa trang",
+   "short": "Bỏ các trang trắng, trùng lặp hoặc không mong muốn khỏi PDF.",
+   "action": "Xóa trang",
+   "title": "Xóa trang PDF miễn phí, không cần tải lên",
+   "description": "Xóa trang khỏi PDF bằng cách nhấp vào trang hoặc nhập số trang. Chạy hoàn toàn trong trình duyệt, tệp không bao giờ bị tải lên. Miễn phí, không watermark.",
+   "h1": "Xóa trang khỏi PDF",
+   "lead": "Nhấp vào những trang muốn bỏ, hoặc nhập số trang, rồi lưu một PDF mới không còn các trang đó. Tệp gốc của bạn không bị thay đổi và không bao giờ rời khỏi thiết bị.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Nhấp vào từng trang muốn bỏ, hoặc nhập số trang như 2, 5-7.",
+    "Chọn Xóa trang và tải PDF mới về."
+   ],
+   "sections": [
+    {
+     "h": "Tệp nhỏ hơn thật sự, không chỉ ẩn trang",
+     "p": "Trang bị xóa được loại bỏ cùng với hình ảnh và phông chữ chỉ trang đó dùng, nên tệp mới thực sự nhỏ hơn. Liên kết và dấu trang trỏ tới trang đã xóa cũng được dọn sạch."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi xóa trang không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể xóa nhiều trang cùng lúc không?",
+     "a": "Có. Nhấp vào bao nhiêu trang tùy thích, hoặc nhập danh sách như 1, 4-6, 10."
+    },
+    {
+     "q": "Tôi có lấy lại được trang đã xóa không?",
+     "a": "Trước khi lưu, nhấp lại vào trang đó để giữ nó. Sau khi lưu, tệp gốc vẫn còn nguyên trên thiết bị của bạn."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách xóa trang khỏi PDF"
+  },
+  "extract-pdf-pages": {
+   "name": "Trích xuất trang",
+   "short": "Lấy các trang đã chọn từ PDF ra một tài liệu mới.",
+   "action": "Trích xuất trang",
+   "title": "Trích xuất trang PDF miễn phí, không tải lên",
+   "description": "Chọn trang từ PDF và lưu thành tệp mới, hoặc thành các tệp riêng cho từng trang. Chạy trong trình duyệt, không có gì bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Trích xuất trang từ PDF",
+   "lead": "Chọn những trang bạn cần và lưu thành một PDF mới, hoặc mỗi trang một tệp. Tài liệu gốc vẫn nguyên vẹn và vẫn ở trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Nhấp vào các trang cần trích xuất, hoặc nhập số trang, ví dụ 3, 7-9.",
+    "Chọn một PDF gộp hoặc mỗi trang một tệp, rồi chọn Trích xuất trang."
+   ],
+   "sections": [
+    {
+     "h": "Bản sao y hệt các trang",
+     "p": "Trang được trích xuất bằng cách sao chép chứ không in lại, nên văn bản vẫn chọn và tìm kiếm được, còn hình ảnh giữ nguyên độ phân giải gốc."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi trích xuất trang không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể lưu mỗi trang thành một PDF riêng không?",
+     "a": "Có. Chọn \"Mỗi trang một tệp\" trước khi trích xuất. Bạn sẽ nhận được một tệp ZIP chứa PDF cho từng trang đã chọn."
+    },
+    {
+     "q": "Khác gì so với Tách PDF?",
+     "a": "Trích xuất tạo một tệp từ những trang bạn chọn. Tách chia toàn bộ tài liệu thành nhiều phần."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách trích xuất trang từ PDF"
+  },
+  "jpg-to-pdf": {
+   "name": "JPG sang PDF",
+   "short": "Chuyển ảnh chụp và bản scan (JPG, PNG, HEIC, WebP) thành PDF.",
+   "action": "Tạo PDF",
+   "title": "Chuyển JPG sang PDF miễn phí, không tải lên",
+   "description": "Chuyển ảnh JPG, PNG, WebP và HEIC thành một PDF trong trình duyệt. Sắp xếp, chọn khổ giấy và lề. Ảnh không bao giờ bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Chuyển JPG sang PDF",
+   "lead": "Biến ảnh chụp, ảnh màn hình và trang scan thành một PDF duy nhất. Ảnh JPEG được nhúng với chất lượng gốc, và không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả ảnh: JPG, PNG, WebP, GIF, hoặc HEIC trên Safari.",
+    "Kéo để sắp xếp và chọn khổ trang: vừa với ảnh, A4 hoặc US Letter, có hoặc không có lề.",
+    "Chọn Tạo PDF rồi tải về."
+   ],
+   "sections": [
+    {
+     "h": "Chất lượng gốc, đúng chiều",
+     "p": "Ảnh JPEG được đặt vào PDF nguyên từng byte, không nén lại, nên không hề giảm chất lượng. Ảnh chụp từ điện thoại được xoay đứng dựa trên dữ liệu hướng của ảnh. PNG và các định dạng khác được lưu không mất dữ liệu, giữ cả độ trong suốt."
+    },
+    {
+     "h": "Tùy chọn khổ trang",
+     "p": "Vừa với ảnh làm mỗi trang có cùng tỉ lệ với ảnh, phù hợp nhất cho ảnh chụp và ảnh màn hình. A4 và Letter đặt mỗi ảnh vào giữa khổ giấy chuẩn, tự xoay trang ngang với ảnh rộng, phù hợp nhất cho tài liệu cần in."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi chuyển ảnh sang PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể chuyển ảnh HEIC từ iPhone không?",
+     "a": "Có trên Safari, vốn đọc được HEIC trực tiếp. Trên trình duyệt khác, hãy chia sẻ ảnh dưới dạng JPEG từ ứng dụng Ảnh trước, hoặc mở trang này bằng Safari."
+    },
+    {
+     "q": "Tôi có thể thêm bao nhiêu ảnh?",
+     "a": "Bao nhiêu tùy bộ nhớ thiết bị của bạn cho phép. Hàng trăm ảnh vẫn ổn trên một chiếc laptop thông thường."
+    },
+    {
+     "q": "PDF tạo ra có nặng không?",
+     "a": "Xấp xỉ tổng dung lượng các ảnh của bạn. Để nhỏ hơn, hãy nén kết quả bằng Nén PDF."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách chuyển JPG sang PDF"
+  },
+  "pdf-to-jpg": {
+   "name": "PDF sang JPG",
+   "short": "Lưu các trang PDF thành ảnh JPG hoặc PNG chất lượng cao.",
+   "action": "Chuyển thành ảnh",
+   "title": "Chuyển PDF sang JPG miễn phí, không tải lên",
+   "description": "Chuyển mọi trang hoặc các trang đã chọn của PDF thành ảnh JPG hay PNG với độ phân giải tùy chọn. Chạy trong trình duyệt, không tải lên. Miễn phí.",
+   "h1": "Chuyển PDF sang JPG",
+   "lead": "Lưu các trang PDF thành ảnh JPG hoặc PNG sắc nét, sẵn sàng cho slide, bài đăng mạng xã hội hay tin nhắn. Chọn trang và độ phân giải. Việc kết xuất diễn ra trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Chọn các trang cần chuyển (mặc định là tất cả), định dạng và độ phân giải.",
+    "Chọn Chuyển thành ảnh. Một trang sẽ tải về dưới dạng ảnh, nhiều trang sẽ gộp trong một ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Hướng dẫn chọn độ phân giải",
+     "p": "Tiêu chuẩn (108 DPI) phù hợp cho màn hình và nhắn tin. Cao (144 DPI) sắc nét trên màn hình độ phân giải cao và trong bài thuyết trình. In (216 DPI) dành cho in ấn và phóng to xem chi tiết."
+    },
+    {
+     "h": "JPG hay PNG?",
+     "p": "JPG cho tệp nhỏ hơn và hợp với trang có ảnh chụp. PNG không mất dữ liệu, giữ chữ và nét vẽ sắc sảo, nhưng dung lượng lớn hơn."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi chuyển PDF thành ảnh không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể chỉ chuyển một trang không?",
+     "a": "Có. Bỏ chọn tất cả, nhấp vào trang bạn muốn rồi chuyển. Một trang duy nhất sẽ tải về trực tiếp dưới dạng ảnh, không cần ZIP."
+    },
+    {
+     "q": "Dùng trình kết xuất nào?",
+     "a": "Các trang được vẽ bằng PDF.js, trình kết xuất PDF mã nguồn mở tích hợp trong Firefox, chạy cục bộ trong trình duyệt của bạn."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách chuyển PDF sang JPG"
+  },
+  "add-page-numbers": {
+   "name": "Đánh số trang",
+   "short": "Đánh số các trang PDF, với vị trí và kiểu bạn chọn.",
+   "action": "Đánh số trang",
+   "title": "Đánh số trang PDF miễn phí, không tải lên",
+   "description": "Đánh số trang PDF: chọn vị trí, định dạng như \"Trang 1 / 10\", số bắt đầu và trang đầu tiên. Chạy trong trình duyệt, không tải lên. Miễn phí.",
+   "h1": "Đánh số trang PDF",
+   "lead": "Đánh số trang chỉ trong vài giây. Chọn vị trí đặt số, cách hiển thị và trang bắt đầu đếm. Mọi thứ chạy trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Chọn vị trí, định dạng như \"1\" hoặc \"Trang 1 / 12\", trang đầu tiên được đánh số và số bắt đầu.",
+    "Chọn Đánh số trang rồi tải về."
+   ],
+   "sections": [
+    {
+     "h": "Hoạt động với trang đã xoay và khổ giấy lẫn lộn",
+     "p": "Số trang được đặt ở cạnh mà bạn thực sự nhìn thấy, nên trang ngang và trang đã xoay đều được đánh số đúng chiều, và các khổ giấy khác nhau đều có số ở vị trí chính xác."
+    },
+    {
+     "h": "Bỏ qua trang bìa",
+     "p": "Đặt \"Bắt đầu từ trang\" là 2 để trang bìa không có số, và đặt số bắt đầu là 1 để việc đánh số bắt đầu từ trang nội dung đầu tiên."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi đánh số trang không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể dùng kiểu \"Trang X / Y\" không?",
+     "a": "Có. Chọn định dạng \"Trang 1 / 12\". Tổng số chỉ tính những trang được đánh số."
+    },
+    {
+     "q": "Dùng phông chữ nào?",
+     "a": "Helvetica, phông chữ PDF chuẩn mà mọi trình đọc đều hiển thị được, màu xám đậm với cỡ chữ bạn chọn."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách đánh số trang PDF"
+  },
+  "watermark-pdf": {
+   "name": "Chèn watermark PDF",
+   "short": "Đóng dấu chữ như MẬT hoặc BẢN NHÁP lên mọi trang.",
+   "action": "Chèn watermark",
+   "title": "Chèn watermark PDF miễn phí, không tải lên",
+   "description": "Chèn watermark chữ như MẬT hoặc BẢN NHÁP vào mọi trang PDF. Chỉnh cỡ, góc, độ mờ và màu, một dấu hoặc lặp lại. Không tải lên. Miễn phí.",
+   "h1": "Chèn watermark vào PDF",
+   "lead": "Đánh dấu tài liệu là Mật, Bản nháp hoặc ghi tên bạn. Chọn chữ, màu, cỡ, góc và độ trong suốt, một lần mỗi trang hoặc lặp lại. PDF của bạn vẫn ở trên thiết bị.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Nhập chữ watermark rồi chỉnh màu, cỡ, góc và độ mờ. Bản xem trước cập nhật ngay khi bạn chỉnh.",
+    "Chọn Chèn watermark rồi tải về."
+   ],
+   "sections": [
+    {
+     "h": "Mọi ngôn ngữ, mọi hệ chữ",
+     "p": "Watermark được vẽ bằng phông chữ của hệ thống, nên dùng được với mọi ngôn ngữ, kể cả tiếng Ả Rập, tiếng Kurd, tiếng Trung và emoji, và hiển thị giống hệt nhau ở mọi trình đọc PDF."
+    },
+    {
+     "h": "Một dấu hoặc lặp lại",
+     "p": "Watermark đơn nằm giữa mỗi trang. Chế độ lặp lại phủ khắp trang, khiến việc cắt bỏ khỏi ảnh chụp màn hình khó hơn nhiều."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi chèn watermark vào PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Watermark có xóa được không?",
+     "a": "Watermark được vẽ vào mỗi trang dưới dạng một lớp ảnh. Người có phần mềm chỉnh sửa PDF vẫn có thể gỡ nó, vì vậy với tài liệu không được phép chỉnh sửa, hãy dùng thêm Bảo vệ PDF."
+    },
+    {
+     "q": "Watermark có che mất chữ của tôi không?",
+     "a": "Không, nếu bạn để độ mờ thấp. Từ 15 đến 30 phần trăm giúp tài liệu vẫn dễ đọc trong khi dấu vẫn hiện rõ."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách chèn watermark vào PDF"
+  },
+  "protect-pdf": {
+   "name": "Bảo vệ PDF",
+   "short": "Đặt mật khẩu với mã hóa AES-256.",
+   "action": "Bảo vệ PDF",
+   "title": "Đặt mật khẩu PDF (AES-256), không tải lên",
+   "description": "Đặt mật khẩu cho PDF với mã hóa AES-256, có thể chặn in hoặc sao chép. Chạy trong trình duyệt, tệp và mật khẩu không bao giờ rời khỏi thiết bị.",
+   "h1": "Đặt mật khẩu cho PDF",
+   "lead": "Mã hóa PDF để chỉ mở được bằng mật khẩu của bạn. Việc mã hóa diễn ra trên thiết bị của bạn, nên cả tài liệu lẫn mật khẩu đều không bao giờ được gửi đi đâu.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Nhập mật khẩu và xác nhận. Có thể chặn in hoặc sao chép văn bản nếu muốn.",
+    "Chọn Bảo vệ PDF và tải tệp đã mã hóa về."
+   ],
+   "sections": [
+    {
+     "h": "Mã hóa mạnh, theo chuẩn",
+     "p": "Tệp được mã hóa bằng AES-256, chuẩn mã hóa mạnh nhất trong tiêu chuẩn PDF (PDF 2.0, security handler phiên bản 6). Acrobat, Preview, Chrome, Edge và Firefox đều mở được bằng mật khẩu."
+    },
+    {
+     "h": "Chọn mật khẩu bạn sẽ nhớ",
+     "p": "Không có cách nào khôi phục mật khẩu đã quên, kể cả chúng tôi, vì chúng tôi không bao giờ nhìn thấy nó. Hãy dùng một cụm mật khẩu dài và lưu trong trình quản lý mật khẩu."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi bảo vệ PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tùy chọn in và sao chép có tác dụng gì?",
+     "a": "Chúng đặt các cờ quyền hạn mà những trình đọc PDF tuân thủ chuẩn sẽ tôn trọng sau khi tài liệu được mở. Đây là các hạn chế, không phải một lớp mã hóa riêng, nên hãy coi mật khẩu mở tệp mới là lớp bảo vệ thực sự."
+    },
+    {
+     "q": "Sau này tôi có gỡ mật khẩu được không?",
+     "a": "Có, bằng Mở khóa PDF, miễn là bạn biết mật khẩu."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách đặt mật khẩu cho PDF"
+  },
+  "unlock-pdf": {
+   "name": "Mở khóa PDF",
+   "short": "Gỡ mật khẩu mà bạn biết khỏi PDF.",
+   "action": "Mở khóa PDF",
+   "title": "Gỡ mật khẩu PDF miễn phí, không tải lên",
+   "description": "Gỡ mật khẩu và các hạn chế khỏi PDF mà bạn biết mật khẩu. Chạy trong trình duyệt, tệp và mật khẩu không bao giờ rời khỏi thiết bị của bạn.",
+   "h1": "Gỡ mật khẩu khỏi PDF",
+   "lead": "Mệt vì phải gõ mật khẩu mỗi lần mở? Nhập một lần rồi lưu bản sao đã mở khóa. Việc giải mã diễn ra trên thiết bị của bạn. Công cụ này không thể đoán hay bẻ khóa mật khẩu bạn không biết.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF có mật khẩu.",
+    "Nhập mật khẩu của tệp.",
+    "Chọn Mở khóa PDF và tải về bản sao mở được mà không cần mật khẩu."
+   ],
+   "sections": [
+    {
+     "h": "Các hạn chế cũng được gỡ bỏ",
+     "p": "Những tệp mở tự do nhưng chặn in, sao chép hoặc chỉnh sửa sẽ được mở khóa mà không cần mật khẩu: các hạn chế đơn giản là được bỏ khỏi bản sao đã lưu. Chỉ gỡ hạn chế khỏi những tài liệu bạn có quyền sử dụng theo cách đó."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi mở khóa PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi quên mật khẩu. Bạn có khôi phục được không?",
+     "a": "Không. Mở khóa PDF chỉ gỡ mật khẩu mà bạn đã biết. Công cụ không cố bẻ khóa mật khẩu."
+    },
+    {
+     "q": "Hỗ trợ những kiểu mã hóa nào?",
+     "a": "Các security handler PDF tiêu chuẩn: RC4 40-bit và 128-bit, AES-128 và AES-256. Mã hóa dựa trên chứng chỉ không được hỗ trợ."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ],
+   "howTo": "Cách gỡ mật khẩu khỏi PDF"
+  },
+  "sign-pdf": {
+   "name": "Ký PDF",
+   "short": "Vẽ, gõ hoặc tải lên ảnh chữ ký rồi đặt vào bất kỳ trang nào.",
+   "action": "Ký PDF",
+   "title": "Ký PDF miễn phí, không cần tải lên",
+   "description": "Ký PDF ngay trong trình duyệt: vẽ, gõ hoặc tải lên ảnh chữ ký, đặt vào bất kỳ trang nào rồi tải về. Tài liệu không bao giờ rời khỏi thiết bị của bạn.",
+   "h1": "Ký PDF",
+   "howTo": "Cách ký PDF",
+   "lead": "Vẽ chữ ký bằng ngón tay hoặc chuột, gõ chữ ký, hoặc dùng ảnh chụp chữ ký. Đặt ở bất kỳ đâu, đổi kích thước rồi tải về PDF đã ký. Không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF bạn cần ký.",
+    "Tạo chữ ký: vẽ, gõ tên theo kiểu chữ viết tay, hoặc tải lên ảnh chụp chữ ký.",
+    "Kéo chữ ký vào vị trí, đổi kích thước bằng tay nắm màu xanh, thêm ngày nếu cần, rồi chọn Ký PDF."
+   ],
+   "sections": [
+    {
+     "h": "Ba cách tạo chữ ký",
+     "p": "Vẽ trực tiếp trên màn hình, đặc biệt thuận tiện với ngón tay hoặc Apple Pencil. Gõ tên và chọn một kiểu chữ viết tay. Hoặc tải lên ảnh chụp chữ ký trên giấy trắng: phần giấy được làm trong suốt để chỉ có nét mực hiện trên tài liệu."
+    },
+    {
+     "h": "Đây là loại chữ ký nào",
+     "p": "Scissor PDF thêm chữ ký dạng hình ảnh, giống như ký lên bản in rồi scan lại. Công cụ không thêm chữ ký số dựa trên chứng thư. Cách này được chấp nhận với hầu hết giấy tờ thường ngày như biểu mẫu, hợp đồng thuê nhà và giấy đồng ý; hãy kiểm tra yêu cầu khi tài liệu đòi hỏi chữ ký điện tử đủ điều kiện hoặc được chứng thực."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi ký PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể ký trên điện thoại không?",
+     "a": "Có. Vẽ chữ ký bằng ngón tay, rồi kéo vào vị trí trên trang. Mọi thứ đều hoạt động trên Safari và Chrome di động."
+    },
+    {
+     "q": "Chữ ký của tôi có được lưu ở đâu không?",
+     "a": "Không. Chữ ký chỉ tồn tại trong trang đang mở khi bạn làm việc và không bao giờ được lưu hay gửi đi. Đóng tab là nó biến mất."
+    },
+    {
+     "q": "Tôi có thể thêm ngày hoặc tên bên cạnh chữ ký không?",
+     "a": "Có. Dùng Thêm ngày để chèn ngày hôm nay, hoặc Thêm chữ cho bất kỳ nội dung nào khác, rồi kéo chúng tới chỗ bạn cần."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "add-text-to-pdf": {
+   "name": "Thêm chữ vào PDF",
+   "short": "Gõ chữ ở bất kỳ đâu trên PDF: điền biểu mẫu, thêm ghi chú hoặc ngày.",
+   "action": "Lưu PDF",
+   "title": "Thêm chữ vào PDF miễn phí, không cần tải lên",
+   "description": "Gõ chữ ở bất kỳ đâu trên PDF ngay trong trình duyệt để điền biểu mẫu, thêm ghi chú hoặc ngày. Chọn cỡ và màu chữ. Tệp không bao giờ rời khỏi thiết bị.",
+   "h1": "Thêm chữ vào PDF",
+   "howTo": "Cách thêm chữ vào PDF",
+   "lead": "Điền biểu mẫu không có ô nhập, thêm ghi chú hoặc ghi ngày lên tài liệu. Gõ chữ, kéo vào vị trí rồi tải về. Không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Chọn Thêm chữ, gõ nội dung rồi kéo chữ tới đúng chỗ. Chọn cỡ và màu.",
+    "Thêm bao nhiêu đoạn chữ tùy ý, rồi chọn Lưu PDF."
+   ],
+   "sections": [
+    {
+     "h": "Mọi ngôn ngữ",
+     "p": "Chữ được vẽ bằng chính phông chữ của thiết bị, nên mọi ngôn ngữ và hệ chữ viết đều dùng được, kể cả tiếng Ả Rập, tiếng Kurd, tiếng Trung và emoji. Chữ hiển thị giống nhau trong mọi trình đọc PDF."
+    },
+    {
+     "h": "Cần biết",
+     "p": "Chữ thêm vào trở thành một phần của trang, như mực trên giấy. Đó không phải là ô biểu mẫu có thể chỉnh sửa, và không thay đổi phần chữ vốn có trong PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi thêm chữ vào PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể sửa chữ có sẵn trong PDF không?",
+     "a": "Không. Công cụ này thêm chữ mới lên trên trang. Để sửa câu chữ có sẵn, hãy thêm chữ đè lên, hoặc sửa tài liệu gốc rồi xuất PDF mới."
+    },
+    {
+     "q": "Tôi có thể thêm chữ trên nhiều trang không?",
+     "a": "Có. Cuộn tới trang bất kỳ và thêm chữ ở đó. Mỗi đoạn chữ nằm trên đúng trang nơi bạn đặt nó."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "crop-pdf": {
+   "name": "Cắt PDF",
+   "short": "Cắt bỏ lề và khoảng trắng khỏi các trang PDF.",
+   "action": "Cắt PDF",
+   "title": "Cắt trang PDF miễn phí, không cần tải lên",
+   "description": "Cắt bỏ lề và khoảng trắng khỏi trang PDF ngay trong trình duyệt. Kéo các cạnh hoặc nhập lề chính xác, cho mọi trang hoặc một số trang. Không có gì bị tải lên.",
+   "h1": "Cắt PDF",
+   "howTo": "Cách cắt PDF",
+   "lead": "Cắt bỏ lề rộng, viền do máy scan hoặc khoảng trắng. Kéo các cạnh trên bản xem trước hoặc nhập lề chính xác. Tệp của bạn vẫn ở trên thiết bị.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Kéo các cạnh của khung trên bản xem trước, hoặc nhập từng lề theo phần trăm của trang.",
+    "Chọn tất cả các trang hoặc một số trang, rồi chọn Cắt PDF."
+   ],
+   "sections": [
+    {
+     "h": "Cắt không giảm chất lượng",
+     "p": "Thao tác cắt đặt lại vùng hiển thị của mỗi trang thay vì cắt bỏ nội dung, nên văn bản vẫn sắc nét, tìm kiếm được và kích thước tệp gần như không đổi. Trang đã xoay được cắt theo các cạnh mà bạn nhìn thấy."
+    },
+    {
+     "h": "Cần biết",
+     "p": "Nội dung nằm ngoài vùng cắt chỉ bị ẩn đi chứ không bị xóa. Đừng dựa vào việc cắt để loại bỏ thông tin nhạy cảm; người có phần mềm chỉnh sửa vẫn có thể làm nó hiện lại."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi cắt PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể chỉ cắt một số trang không?",
+     "a": "Có. Chọn Một số trang rồi nhập số trang, ví dụ 1, 3-5. Các trang khác giữ nguyên kích thước gốc."
+    },
+    {
+     "q": "Cắt có làm tệp nhỏ hơn không?",
+     "a": "Hầu như không, vì nội dung chỉ bị ẩn chứ không bị xóa. Để giảm dung lượng tệp, hãy dùng Nén PDF."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "pages-per-sheet": {
+   "name": "Nhiều trang trên một tờ",
+   "short": "Đặt 2 hoặc 4 trang PDF trên mỗi tờ để tiết kiệm giấy.",
+   "action": "Gộp trang",
+   "title": "In 2 hoặc 4 trang PDF trên một tờ, miễn phí",
+   "description": "Đặt 2 hoặc 4 trang lên mỗi tờ của PDF để tiết kiệm giấy khi in tài liệu phát tay và ghi chú. Chạy trong trình duyệt, không có gì bị tải lên.",
+   "h1": "Đặt nhiều trang trên một tờ",
+   "howTo": "Cách đặt 2 hoặc 4 trang trên một tờ",
+   "lead": "Biến tài liệu dài thành bản phát tay gọn gàng: 2 trang cạnh nhau hoặc 4 trang dạng lưới trên mỗi tờ. Tiết kiệm giấy và mực. Không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF.",
+    "Chọn 2 hoặc 4 trang mỗi tờ và khổ giấy.",
+    "Chọn Gộp trang, rồi in hoặc chia sẻ PDF mới."
+   ],
+   "sections": [
+    {
+     "h": "Bố cục",
+     "p": "Hai trang nằm cạnh nhau trên tờ khổ ngang. Bốn trang lấp đầy tờ khổ dọc theo lưới 2 x 2, theo thứ tự đọc. Mỗi trang được co giãn cho vừa ô của nó mà không bị méo, và trang đã xoay vẫn giữ đúng chiều."
+    },
+    {
+     "h": "Chất lượng",
+     "p": "Các trang được đặt nguyên trạng, không kết xuất thành ảnh, nên văn bản vẫn sắc nét và tìm kiếm được ở mọi mức thu phóng."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi gộp trang không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Dùng khổ giấy nào?",
+     "a": "Tùy chọn Giống PDF dùng kích thước của trang đầu tiên. Bạn cũng có thể chọn A4 hoặc US Letter."
+    },
+    {
+     "q": "Liên kết và ô biểu mẫu có còn hoạt động không?",
+     "a": "Nội dung trang được giữ nguyên, nhưng liên kết, bình luận và ô biểu mẫu không được chuyển sang các tờ đã gộp."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "edit-pdf-metadata": {
+   "name": "Siêu dữ liệu PDF",
+   "short": "Xem, sửa hoặc xóa tiêu đề, tác giả và các thông tin ẩn khác.",
+   "action": "Lưu siêu dữ liệu",
+   "title": "Sửa hoặc xóa siêu dữ liệu PDF, không tải lên",
+   "description": "Xem và sửa tiêu đề, tác giả, chủ đề và từ khóa ẩn của PDF, hoặc xóa toàn bộ siêu dữ liệu trước khi chia sẻ. Chạy trong trình duyệt, không tải lên.",
+   "h1": "Sửa hoặc xóa siêu dữ liệu PDF",
+   "howTo": "Cách sửa siêu dữ liệu PDF",
+   "lead": "PDF âm thầm lưu các thông tin như tên tác giả, phần mềm đã dùng và ngày tháng. Xem có gì trong đó, thay đổi, hoặc xóa hết trước khi chia sẻ. Không có gì bị tải lên.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF. Tiêu đề, tác giả, chủ đề và từ khóa hiện tại sẽ hiện ra.",
+    "Sửa các trường, hoặc chọn Xóa toàn bộ siêu dữ liệu.",
+    "Tải về PDF đã cập nhật."
+   ],
+   "sections": [
+    {
+     "h": "Vì sao nên xóa siêu dữ liệu",
+     "p": "Siêu dữ liệu có thể tiết lộ ai đã soạn tài liệu, tài liệu đến từ công ty hay máy tính nào, và được tạo hoặc sửa khi nào. Xóa nó trước khi gửi tệp cho người ngoài tổ chức là một thói quen đơn giản để bảo vệ quyền riêng tư."
+    },
+    {
+     "h": "Những gì bị xóa",
+     "p": "Xóa toàn bộ siêu dữ liệu sẽ xóa từ điển thông tin tài liệu (tiêu đề, tác giả, chủ đề, từ khóa, creator, producer và ngày tháng) cùng siêu dữ liệu XMP được nhúng. Nội dung hiển thị của các trang không thay đổi."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi sửa siêu dữ liệu PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Vì sao trình đọc PDF của tôi hiện tiêu đề khác?",
+     "a": "Một số trình đọc hiện tên tệp thay vì tiêu đề. Lưu ở đây sẽ đặt tiêu đề được lưu bên trong PDF, thứ mà công cụ tìm kiếm và nhiều trình đọc sử dụng."
+    },
+    {
+     "q": "Văn bản hay hình ảnh có bị xóa không?",
+     "a": "Không. Chỉ các trường thông tin ẩn thay đổi. Các trang trông y hệt như cũ."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "repair-pdf": {
+   "name": "Sửa PDF",
+   "short": "Thử khôi phục PDF bị hỏng không mở được.",
+   "action": "Sửa PDF",
+   "title": "Sửa PDF bị hỏng miễn phí, không cần tải lên",
+   "description": "Thử khôi phục PDF bị hỏng hoặc lỗi không mở được. Tệp được dựng lại trong trình duyệt và không bao giờ bị tải lên. Miễn phí, không đăng ký.",
+   "h1": "Sửa PDF bị hỏng",
+   "howTo": "Cách sửa PDF",
+   "lead": "Khi PDF không mở được hoặc báo lỗi, Scissor PDF dựng lại cấu trúc bên trong và lưu một bản sao sạch. Mọi thứ diễn ra trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả PDF bị hỏng.",
+    "Chọn Sửa PDF.",
+    "Tải về tệp đã dựng lại và mở nó."
+   ],
+   "sections": [
+    {
+     "h": "Những gì có thể sửa",
+     "p": "Phần lớn PDF không mở được là do chỉ mục bị hỏng, thường vì một lượt tải về hoặc tệp đính kèm email bị ngắt giữa chừng, hoặc tệp đã bị phần mềm lỗi chỉnh sửa. Scissor PDF quét toàn bộ tệp để tìm các trang và nội dung, dựng lại chỉ mục và danh sách trang, rồi ghi ra một PDF chuẩn, sạch."
+    },
+    {
+     "h": "Những gì không thể sửa",
+     "p": "Nếu một phần tệp bị mất, ví dụ nửa sau của một lượt tải về bị gián đoạn, các trang bị mất không thể khôi phục. Tệp được mã hóa cần mật khẩu trước: hãy dùng Mở khóa PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi sửa PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Làm sao biết đã sửa thành công?",
+     "a": "Màn hình kết quả hiện ra kèm nút tải về nếu khôi phục được trang. Mở tệp mới để kiểm tra. Nếu không tìm thấy trang nào, bạn sẽ thấy một thông báo thay vào đó."
+    },
+    {
+     "q": "Sửa có an toàn cho tệp gốc không?",
+     "a": "Có. Tệp gốc trên thiết bị của bạn không bao giờ bị thay đổi; bạn tải về một bản sao mới đã được sửa."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  }
+ },
+ "homeFaqs": [
+  {
+   "q": "Scissor PDF có thực sự riêng tư không?",
+   "a": "Có. Mọi công cụ đều chạy trong trình duyệt của bạn bằng một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly. Tệp được đọc từ ổ đĩa, xử lý trong bộ nhớ của tab rồi lưu lại về thiết bị của bạn. Tệp không bao giờ bị tải lên: trang web là trang tĩnh, không có điểm nhận tải lên, và Content Security Policy ngăn trang gửi dữ liệu tới máy chủ khác. Bạn có thể tự kiểm tra trong bảng Network của trình duyệt."
+  },
+  {
+   "q": "Có dùng được khi offline không?",
+   "a": "Có. Sau lần truy cập đầu tiên, các công cụ được trình duyệt lưu lại, nên vẫn hoạt động khi không có internet. Bạn cũng có thể cài trang web như một ứng dụng từ menu của trình duyệt."
+  },
+  {
+   "q": "Có miễn phí không? Có cần tài khoản không?",
+   "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+  },
+  {
+   "q": "Có giới hạn dung lượng tệp không?",
+   "a": "Chúng tôi không đặt giới hạn nào. Giới hạn thực tế là bộ nhớ thiết bị của bạn: tệp vài trăm megabyte chạy tốt trên laptop thông thường, còn tệp nhỏ hơn chạy được trên điện thoại."
+  },
+  {
+   "q": "Hỗ trợ những trình duyệt nào?",
+   "a": "Phiên bản hiện tại của Safari, Chrome, Edge và Firefox trên Mac, Windows, Linux, iPhone, iPad và Android. Cần bật JavaScript và WebAssembly."
+  }
+ ],
+ "pages": {
+  "how": {
+   "title": "Cách Scissor PDF chỉnh sửa PDF mà không tải lên",
+   "description": "Scissor PDF chạy công cụ PDF viết bằng Rust, biên dịch sang WebAssembly ngay trong trình duyệt. Tìm hiểu cách xử lý cục bộ và cách kiểm chứng không tệp nào bị tải lên.",
+   "h1": "Cách hoạt động",
+   "lead": "Trình duyệt của bạn tải công cụ PDF về, chứ không phải ngược lại. Đây là những gì diễn ra khi bạn dùng một công cụ, và cách bạn tự kiểm chứng.",
+   "body": "<h3>Tóm tắt nhanh</h3>\n<p><strong>Scissor PDF không bao giờ nhận tệp của bạn.</strong> Khi bạn mở một công cụ, trình duyệt sẽ tải trang web và một công cụ xử lý PDF. Khi bạn chọn tệp, tệp được đọc vào bộ nhớ của tab trình duyệt, được công cụ đó xử lý bằng chính bộ vi xử lý của bạn, rồi kết quả được trả lại cho bạn dưới dạng tệp tải về. Đóng tab là mọi thứ bị xóa sạch.</p>\n<h3>Cái gì chạy ở đâu</h3>\n<p><strong>Công cụ PDF</strong> đảm nhận ghép, tách, sắp xếp, xoay, nén, đánh số trang, chèn watermark, mã hóa và giải mã PDF được viết bằng Rust, dùng thư viện mã nguồn mở lopdf, và biên dịch sang WebAssembly. WebAssembly là định dạng chạy trong sandbox mà mọi trình duyệt hiện đại đều thực thi với tốc độ gần như ứng dụng gốc. Công cụ chạy trong một background worker để trang luôn phản hồi mượt mà.</p>\n<p><strong>Xem trước trang và PDF sang JPG</strong> dùng PDF.js, trình kết xuất mã nguồn mở tích hợp trong Firefox, cũng chạy cục bộ.</p>\n<p><strong>Máy chủ</strong> chỉ là một nơi lưu trữ tệp tĩnh đơn thuần. Nó không có điểm nhận tải lên, không có cơ sở dữ liệu và không có mã ứng dụng, nên không có gì có thể tiếp nhận tài liệu.</p>\n<h3>Tự kiểm chứng</h3>\n<p>Mở công cụ dành cho nhà phát triển (developer tools) của trình duyệt, chuyển sang tab Network rồi dùng bất kỳ công cụ nào. Bạn sẽ thấy các tệp của chính trang được tải, và không có yêu cầu nào mang theo tài liệu của bạn. Bạn cũng có thể ngắt internet sau khi trang đã tải xong: mọi công cụ vẫn hoạt động.</p>\n<p>Trang web còn gửi một Content Security Policy nghiêm ngặt, yêu cầu trình duyệt chặn trang liên lạc với bất kỳ máy chủ nào khác, nên ngay cả khi mã của chúng tôi có lỗi cũng không thể gửi tệp của bạn đi nơi khác.</p>\n<h3>Dùng được offline, cài như ứng dụng</h3>\n<p>Sau lần truy cập đầu tiên, một service worker lưu trang web và công cụ vào bộ nhớ đệm của trình duyệt, nên các công cụ vẫn mở và hoạt động khi không có kết nối. Trên Chrome hoặc Edge, chọn Cài đặt từ thanh địa chỉ. Trên Safari, chọn Thêm vào Dock (Mac) hoặc Thêm vào Màn hình chính (iPhone và iPad).</p>\n<h3>Giới hạn của xử lý cục bộ</h3>\n<p>Vì mọi xử lý diễn ra trên thiết bị của bạn, tệp rất lớn sẽ bị giới hạn bởi bộ nhớ của thiết bị. Vài trăm megabyte vẫn ổn trên một chiếc laptop thông thường, còn điện thoại xử lý tốt tài liệu hằng ngày. Tốc độ phụ thuộc vào bộ vi xử lý của bạn chứ không phải hàng đợi máy chủ, và trên thực tế thường nhanh hơn việc tải lên rồi tải xuống.</p>"
+  },
+  "privacy": {
+   "title": "Chính sách quyền riêng tư",
+   "description": "Scissor PDF không tải lên, lưu trữ hay xem tệp của bạn. Không tài khoản, không cookie phân tích, không theo dõi. Đọc toàn bộ chính sách quyền riêng tư.",
+   "h1": "Quyền riêng tư",
+   "lead": "Ngắn gọn thôi, vì cũng chẳng có nhiều điều để nói: chúng tôi không bao giờ nhận tài liệu của bạn.",
+   "body": "<h3>Tệp của bạn</h3>\n<p>Tệp bạn mở trong Scissor PDF được xử lý hoàn toàn trong trình duyệt và không bao giờ được gửi tới chúng tôi hay bất kỳ ai khác. Chúng tôi không thể xem, lưu trữ, chia sẻ hay khôi phục chúng.</p>\n<h3>Mật khẩu</h3>\n<p>Mật khẩu bạn nhập vào Bảo vệ PDF hoặc Mở khóa PDF chỉ được dùng trong trình duyệt để mã hóa hoặc giải mã tệp, và không bao giờ được gửi đi hay lưu lại.</p>\n<h3>Máy chủ của chúng tôi thấy gì</h3>\n<p>Như mọi trang web, máy chủ và mạng phân phối nội dung (CDN) của chúng tôi nhận thông tin yêu cầu tiêu chuẩn khi trình duyệt của bạn tải các trang và tệp của trang web: địa chỉ IP, địa chỉ được yêu cầu, thời gian và user agent của trình duyệt. Thông tin này chỉ dùng để vận hành và bảo mật dịch vụ cũng như thống kê lưu lượng tổng hợp, không được kết hợp với dữ liệu khác và không được bán.</p>\n<h3>Cookie và theo dõi</h3>\n<p>Scissor PDF không đặt cookie riêng và không dùng trình theo dõi quảng cáo. Trình duyệt của bạn lưu các tệp của trang web để dùng offline, và có thể giữ tạm một tệp trong bộ nhớ cục bộ khi bạn chọn \"Tiếp tục với\" để chuyển kết quả sang công cụ khác; tệp đó bị xóa ngay khi công cụ tiếp theo mở nó.</p>\n<h3>Liên hệ</h3>\n<p>Câu hỏi về quyền riêng tư: xem <a href=\"https://scissor.studio\">scissor.studio</a>.</p>"
+  },
+  "notFound": {
+   "title": "Không tìm thấy trang",
+   "h1": "Không tìm thấy trang",
+   "lead": "Trang bạn đang tìm không tồn tại. Hãy chọn một công cụ:"
+  }
+ },
+ "ui": {
+  "dropToAdd": "Thả để thêm",
+  "errChooseImages": "Hãy chọn tệp ảnh (JPG, PNG, WebP, HEIC).",
+  "errChoosePdf": "Hãy chọn một tệp PDF.",
+  "errProtected": "\"{name}\" được bảo vệ bằng mật khẩu.",
+  "errDamaged": "Không mở được \"{name}\". Tệp có thể bị hỏng hoặc không phải PDF thật.",
+  "errEncrypted": "PDF này được bảo vệ bằng mật khẩu.",
+  "errUnlockFirst": "<a href=\"{url}\">Hãy mở khóa trước</a>, rồi quay lại đây.",
+  "errPassword": "Mật khẩu không đúng.",
+  "errInvalid": "Không thể xử lý tệp này.",
+  "errEngine": "Không khởi động được công cụ PDF. Vui lòng tải lại trang.",
+  "files": {
+   "other": "{n} tệp"
+  },
+  "images": {
+   "other": "{n} ảnh"
+  },
+  "pages": {
+   "other": "{n} trang"
+  },
+  "pdfs": {
+   "other": "{n} PDF"
+  },
+  "dragToReorder": "Kéo để sắp xếp",
+  "remove": "Xóa {name}",
+  "noPreview": "Trình duyệt này không hỗ trợ xem trước",
+  "addImages": "Thêm ảnh",
+  "addPdfs": "Thêm PDF",
+  "chooseAnother": "Chọn tệp khác",
+  "moveEarlier": "Chuyển trang {n} lên trước",
+  "moveLater": "Chuyển trang {n} ra sau",
+  "rotatePage": "Xoay trang {n}",
+  "deletePage": "Xóa trang {n}",
+  "stateDelete": "Xóa",
+  "stateDeleted": "Đã xóa",
+  "passwordProtected": "Có mật khẩu",
+  "options": "Tùy chọn",
+  "mergeSub": "Các tệp được ghép theo thứ tự hiển thị.",
+  "mergeNeedMore": "Thêm ít nhất một PDF nữa để ghép.",
+  "imagesSub": "Mỗi trang một ảnh, theo thứ tự hiển thị.",
+  "pageSize": "Khổ trang",
+  "fitImage": "Vừa với ảnh",
+  "a4": "A4",
+  "letter": "Letter",
+  "margin": "Lề",
+  "none": "Không",
+  "small": "Nhỏ",
+  "large": "Lớn",
+  "organizeSub": "Kéo để sắp xếp. Dùng các nút trên mỗi trang để xoay hoặc xóa.",
+  "rotateSub": "Xoay tất cả các trang, hoặc dùng nút trên từng trang.",
+  "left": "Trái",
+  "right": "Phải",
+  "rotateAll": "Xoay tất cả các trang",
+  "resetChanges": "Đặt lại thay đổi",
+  "deleteSub": "Nhấp vào trang để xóa, hoặc nhập số trang.",
+  "extractSub": "Nhấp vào trang để trích xuất, hoặc nhập số trang.",
+  "toImagesSub": "Nhấp vào trang để chuyển đổi, hoặc nhập số trang.",
+  "pagesToDelete": "Trang cần xóa",
+  "pagesToExtract": "Trang cần trích xuất",
+  "pagesToConvert": "Trang cần chuyển đổi",
+  "rangePlaceholder": "vd. 1, 3-5",
+  "selectAll": "Chọn tất cả",
+  "clear": "Bỏ chọn",
+  "saveAs": "Lưu dưới dạng",
+  "onePdf": "Một PDF",
+  "filePerPage": "Mỗi trang một tệp",
+  "format": "Định dạng",
+  "resolution": "Độ phân giải",
+  "standard": "Tiêu chuẩn",
+  "high": "Cao",
+  "print": "In",
+  "dpiHint": "108, 144 hoặc 216 DPI",
+  "inThisPdf": "PDF này có {pages}.",
+  "pageRanges": "Khoảng trang",
+  "rangesHint": "Mỗi khoảng thành một PDF, vd. 1-3, 4-8, 9",
+  "pagesPerFile": "Số trang mỗi tệp",
+  "creates": "Tạo ra {pdfs}.",
+  "createsZip": "Tạo ra {pdfs} trong một ZIP.",
+  "fileN": "Tệp {n}",
+  "splitBy": "Tách theo",
+  "ranges": "Khoảng trang",
+  "fixedSize": "Kích thước cố định",
+  "everyPage": "Mỗi trang",
+  "needRange": "Nhập ít nhất một khoảng trang",
+  "notARange": "\"{part}\" không phải là trang hoặc khoảng trang hợp lệ",
+  "pdfHas": "PDF này có {pages}",
+  "compressSub": "Chọn mức độ thu nhỏ tệp.",
+  "lossless": "Lossless",
+  "losslessDesc": "Cấu trúc gọn hơn, ảnh giữ nguyên",
+  "recommended": "Khuyên dùng",
+  "recommendedDesc": "Chất lượng tốt, nhỏ hơn nhiều",
+  "strong": "Mạnh",
+  "strongDesc": "Tệp nhỏ nhất, chất lượng ảnh thấp hơn",
+  "numbersSub": "Số trang được thêm bằng phông Helvetica, màu xám đậm.",
+  "position": "Vị trí",
+  "posTopLeft": "Trên cùng bên trái",
+  "posTopCenter": "Trên cùng ở giữa",
+  "posTopRight": "Trên cùng bên phải",
+  "posBottomLeft": "Dưới cùng bên trái",
+  "posBottomCenter": "Dưới cùng ở giữa",
+  "posBottomRight": "Dưới cùng bên phải",
+  "pageWord": "Trang {n}",
+  "pageOfWord": "Trang {n} / {total}",
+  "startOnPage": "Bắt đầu từ trang",
+  "firstNumber": "Số bắt đầu",
+  "size": "Cỡ",
+  "watermarkSub": "Được vẽ lên mọi trang.",
+  "text": "Chữ",
+  "defaultWatermark": "MẬT",
+  "colour": "Màu",
+  "red": "Đỏ",
+  "grey": "Xám",
+  "blue": "Xanh dương",
+  "black": "Đen",
+  "angle": "Góc",
+  "opacity": "Độ mờ",
+  "layout": "Bố cục",
+  "single": "Một dấu",
+  "tiled": "Lặp lại",
+  "protectSub": "Mã hóa AES-256, thực hiện ngay trên thiết bị này.",
+  "password": "Mật khẩu",
+  "repeatPassword": "Nhập lại mật khẩu",
+  "mismatch": "Mật khẩu không khớp",
+  "longerTip": "Mẹo: mật khẩu càng dài càng mạnh",
+  "showPassword": "Hiện mật khẩu",
+  "permissions": "Quyền",
+  "allowPrint": "Cho phép in",
+  "allowCopy": "Cho phép sao chép văn bản",
+  "unlockLockedSub": "Nhập mật khẩu để lưu bản sao đã mở khóa.",
+  "unlockOpenSub": "PDF này mở được mà không cần mật khẩu. Mọi hạn chế về in, sao chép hoặc chỉnh sửa sẽ được gỡ bỏ.",
+  "processedHere": "Xử lý trên thiết bị này. Không có gì bị tải lên.",
+  "busyMerge": "Đang ghép…",
+  "busyImages": "Đang tạo PDF…",
+  "busySplit": "Đang tách…",
+  "busyCompress": "Đang nén…",
+  "busyNumbers": "Đang đánh số trang…",
+  "busyWatermark": "Đang chèn watermark…",
+  "busyProtect": "Đang mã hóa…",
+  "busyUnlock": "Đang mở khóa…",
+  "busyRender": "Đang kết xuất trang…",
+  "busySave": "Đang lưu…",
+  "busyNote": "Đang xử lý trên thiết bị của bạn. Không có gì bị tải lên.",
+  "busyPage": "Trang {i} / {n}, trên thiết bị của bạn",
+  "readyPdf": "PDF của bạn đã sẵn sàng",
+  "readyFiles": "Các tệp của bạn đã sẵn sàng",
+  "readyImage": "Ảnh của bạn đã sẵn sàng",
+  "smaller": "Nhỏ hơn {pct}%",
+  "optimised": "PDF này vốn đã được tối ưu tốt",
+  "download": "Tải về",
+  "startOver": "Làm lại từ đầu",
+  "continueWith": "Tiếp tục với tệp này",
+  "cannotPreview": "Không có bản xem trước",
+  "cropSub": "Kéo các cạnh trên bản xem trước, hoặc nhập lề.",
+  "top": "Trên",
+  "bottom": "Dưới",
+  "applyTo": "Áp dụng cho",
+  "allPages": "Tất cả các trang",
+  "somePages": "Một số trang",
+  "nupSub": "Các trang được co giãn cho vừa, theo thứ tự đọc.",
+  "perSheet": "Số trang mỗi tờ",
+  "sameAsPdf": "Giống PDF",
+  "metaSub": "Thay đổi bất kỳ trường nào, hoặc để trống để xóa.",
+  "metaTitle": "Tiêu đề",
+  "metaAuthor": "Tác giả",
+  "metaSubject": "Chủ đề",
+  "metaKeywords": "Từ khóa",
+  "alsoStored": "Cũng được lưu trong tệp này",
+  "metaApp": "Tạo bằng",
+  "metaCreated": "Ngày tạo",
+  "metaModified": "Ngày sửa",
+  "wipeAll": "Xóa toàn bộ siêu dữ liệu",
+  "repairSub": "Tệp được quét và dựng lại trên thiết bị này.",
+  "busyRepair": "Đang sửa…",
+  "placeSub": "Thêm chữ ký hoặc chữ, rồi kéo vào vị trí.",
+  "signature": "Chữ ký",
+  "createSignature": "Tạo chữ ký",
+  "newSignature": "Chữ ký mới",
+  "addToPage": "Thêm vào trang",
+  "addText": "Thêm chữ",
+  "addDate": "Thêm ngày",
+  "typeText": "Nhập tại đây",
+  "deleteItem": "Xóa",
+  "draw": "Vẽ",
+  "typeIt": "Gõ",
+  "upload": "Ảnh",
+  "yourName": "Tên của bạn",
+  "removeWhite": "Xóa nền trắng",
+  "cancel": "Hủy",
+  "useSignature": "Dùng chữ ký này",
+  "clearPad": "Xóa hết",
+  "signHere": "Ký tại đây",
+  "chooseImage": "Chọn ảnh"
+ }
+}

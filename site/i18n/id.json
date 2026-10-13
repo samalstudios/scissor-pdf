@@ -1,0 +1,1129 @@
+{
+ "meta": {
+  "code": "id",
+  "name": "Bahasa Indonesia",
+  "dir": "ltr",
+  "ogLocale": "id_ID"
+ },
+ "site": {
+  "description": "Alat PDF gratis yang berjalan sepenuhnya di browser: gabung, pisah, kompres, putar, konversi, dan lindungi PDF. File Anda tidak pernah keluar dari perangkat. Tanpa daftar, tanpa watermark.",
+  "homeTitle": "Alat PDF Gratis yang Tidak Pernah Mengunggah File Anda",
+  "homeH1a": "Semua alat PDF.",
+  "homeH1b": "Tanpa unggah apa pun.",
+  "homeLead": "Gabung, pisah, kompres, konversi, dan lindungi PDF langsung di browser Anda. Scissor PDF gratis, tidak perlu akun, dan file Anda tidak pernah keluar dari perangkat.",
+  "allTools": "Semua alat PDF",
+  "privateH2": "Privat sejak dirancang, bukan sekadar janji",
+  "privateP1": "Kebanyakan layanan PDF online mengunggah dokumen Anda ke server mereka, memprosesnya di sana, lalu meminta Anda percaya bahwa file itu dihapus setelahnya. <strong>Scissor PDF bekerja dengan cara berbeda: mesin PDF-nya sendiri yang diunduh ke browser Anda</strong>, ditulis dengan Rust dan dikompilasi ke WebAssembly, sehingga setiap proses gabung, pisah, atau kompres terjadi di perangkat Anda sendiri.",
+  "privateP2": "Karena itu, Scissor PDF cocok untuk kontrak, rekam medis, formulir pajak, dan dokumen apa pun yang tidak ingin Anda serahkan ke orang asing. <a href=\"{how}\">Lihat cara kerjanya dan cara memverifikasinya sendiri</a>.",
+  "whySwitch": "Alasan orang beralih ke Scissor PDF",
+  "faqTitle": "Pertanyaan yang sering diajukan"
+ },
+ "nav": {
+  "home": "Beranda",
+  "allTools": "Semua alat",
+  "compress": "Kompres",
+  "merge": "Gabung",
+  "how": "Cara kerja",
+  "language": "Bahasa"
+ },
+ "footer": {
+  "organize": "Atur",
+  "optimize": "Optimalkan & konversi",
+  "edit": "Edit & amankan",
+  "about": "Scissor PDF",
+  "privacy": "Privasi",
+  "note": "Scissor PDF memproses setiap file di browser Anda dengan mesin Rust yang dikompilasi ke WebAssembly. Tanpa unggah, tanpa akun, tanpa pelacakan.",
+  "updated": "Diperbarui",
+  "languages": "Bahasa"
+ },
+ "common": {
+  "assureLocal": "File tidak pernah keluar dari perangkat Anda",
+  "assureFree": "Gratis, tanpa daftar",
+  "assureNoMark": "Tanpa watermark",
+  "homeAssureLocal": "100% di perangkat Anda",
+  "homeAssureOffline": "Bisa dipakai offline",
+  "choosePdf": "Pilih file PDF",
+  "choosePdfs": "Pilih file PDF",
+  "chooseImage": "Pilih gambar",
+  "chooseImages": "Pilih gambar",
+  "dropIt": "atau seret ke sini",
+  "dropThem": "atau seret ke sini",
+  "noscript": "Alat ini berjalan di browser Anda dan memerlukan JavaScript serta WebAssembly dalam keadaan aktif.",
+  "why": "Kenapa pakai Scissor PDF",
+  "questionsAbout": "Pertanyaan seputar {name}",
+  "moreTools": "Alat PDF lainnya",
+  "tryTool": "Coba alatnya",
+  "f1t": "Privat sejak dirancang",
+  "f1p": "File diproses di tab browser Anda dan tidak pernah diunggah. Tidak ada server yang bisa melihat, menyimpan, atau membocorkannya.",
+  "f2t": "Cepat, bahkan saat offline",
+  "f2p": "Mesin PDF yang ditulis dengan Rust berjalan sebagai WebAssembly dengan kecepatan mendekati aplikasi native. Setelah kunjungan pertama, alat ini tetap jalan tanpa koneksi.",
+  "f3t": "Gratis, tanpa syarat",
+  "f3p": "Tanpa daftar, tanpa batas harian, tanpa watermark, tanpa iklan. Buka halamannya, seret file Anda, lalu unduh hasilnya.",
+  "suggestLang": "Halaman ini tersedia dalam {lang}.",
+  "switch": "Ganti",
+  "dismiss": "Tutup"
+ },
+ "tools": {
+  "merge-pdf": {
+   "name": "Gabung PDF",
+   "short": "Satukan beberapa PDF menjadi satu file, sesuai urutan pilihan Anda.",
+   "action": "Gabung PDF",
+   "title": "Gabung PDF Gratis, Tanpa Upload File",
+   "description": "Gabung file PDF jadi satu dokumen di browser. Seret untuk atur urutan, lalu gabungkan. File tidak pernah diunggah. Gratis, tanpa daftar, tanpa watermark.",
+   "h1": "Gabung file PDF",
+   "lead": "Satukan beberapa PDF menjadi satu dokumen, dengan urutan sesuai keinginan Anda. Semua proses terjadi di perangkat Anda, jadi file rahasia pun tetap aman.",
+   "steps": [
+    "Pilih atau seret file PDF yang ingin digabung. Anda bisa menambah file kapan saja.",
+    "Seret file-file itu sesuai urutan yang Anda inginkan di dokumen akhir.",
+    "Pilih Gabung PDF, lalu unduh file gabungannya."
+   ],
+   "sections": [
+    {
+     "h": "Apa saja yang tetap utuh saat digabung",
+     "p": "Setiap halaman tetap mempertahankan ukuran, orientasi, teks, gambar, tautan, dan kolom formulir isian aslinya. Bookmark dari dokumen pertama tetap dipertahankan. File hasil gabungan adalah PDF standar yang bisa dibuka di pembaca mana pun, termasuk Preview, Adobe Acrobat, dan semua browser web."
+    },
+    {
+     "h": "Menggabungkan file besar atau banyak file",
+     "p": "Tidak ada batas jumlah file maupun halaman. Dokumen yang sangat besar hanya dibatasi oleh memori perangkat Anda. Laptop modern sanggup menangani beberapa ratus megabyte dengan lancar. Kalau file gabungannya ternyata lebih besar dari yang Anda perlukan, kompres PDF-nya setelah itu dengan Kompres PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menggabungkan PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bagaimana cara mengubah urutan file?",
+     "a": "Seret kartu file mana pun ke posisi baru sebelum menggabungkan. Dokumen akhir mengikuti urutan kartu dari kiri ke kanan, atas ke bawah."
+    },
+    {
+     "q": "Bisakah saya menggabungkan hanya beberapa halaman dari sebuah PDF?",
+     "a": "Gabung PDF menyatukan dokumen secara utuh. Untuk memakai sebagian halaman saja, buka file di Ekstrak halaman terlebih dahulu, lalu gabungkan hasilnya. Atau gabungkan semuanya, lalu hapus halaman dengan Hapus halaman."
+    },
+    {
+     "q": "Bisakah saya menggabungkan PDF yang diproteksi password?",
+     "a": "Hapus dulu password-nya dengan Buka Kunci PDF (Anda perlu mengetahui password-nya), lalu gabungkan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara menggabungkan file PDF"
+  },
+  "split-pdf": {
+   "name": "Pisah PDF",
+   "short": "Potong PDF menjadi beberapa file berdasarkan rentang halaman atau tiap beberapa halaman.",
+   "action": "Pisah PDF",
+   "title": "Pisah PDF Gratis, Tanpa Upload File",
+   "description": "Pisah PDF per rentang halaman, tiap N halaman, atau satu file per halaman. Berjalan di browser, file tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Pisah PDF",
+   "lead": "Potong satu PDF menjadi beberapa file yang lebih kecil: berdasarkan rentang halaman pilihan, menjadi bagian yang sama panjang, atau satu file per halaman. Dokumen Anda tidak pernah keluar dari perangkat.",
+   "steps": [
+    "Pilih atau seret PDF yang ingin dipisah.",
+    "Tentukan cara memisahnya: rentang khusus seperti 1-3, 4-10, jumlah halaman tetap per file, atau setiap halaman menjadi file sendiri.",
+    "Pilih Pisah PDF. Anda akan mendapat satu PDF, atau arsip ZIP jika hasil pemisahan berupa beberapa file."
+   ],
+   "sections": [
+    {
+     "h": "Tiga cara memisah",
+     "p": "Rentang khusus memberi Anda kendali penuh: ketik 1-5, 6-12, 13 untuk mendapatkan tiga file. Ukuran tetap memotong dokumen menjadi bagian-bagian yang sama panjang, praktis untuk hasil pindaian dalam jumlah banyak. Setiap halaman menghasilkan satu PDF untuk tiap halaman."
+    },
+    {
+     "h": "Pisah atau ekstrak?",
+     "p": "Pisah membagi seluruh dokumen menjadi beberapa file. Kalau Anda hanya ingin mengambil beberapa halaman ke satu file baru, Ekstrak halaman lebih cepat."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memisah PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bagaimana cara menulis rentang halaman?",
+     "a": "Pisahkan setiap rentang dengan koma. Gunakan tanda hubung untuk rentang dan satu angka untuk satu halaman, misalnya 1-3, 5, 8-12. Setiap rentang menjadi PDF tersendiri."
+    },
+    {
+     "q": "Kenapa saya mendapat file ZIP?",
+     "a": "Jika pemisahan menghasilkan lebih dari satu PDF, semuanya dikemas dalam satu ZIP agar Anda cukup mengunduh sekali. Semua sistem operasi bisa membuka file ZIP dengan klik dua kali."
+    },
+    {
+     "q": "Apakah memisah PDF menurunkan kualitas?",
+     "a": "Tidak. Halaman disalin apa adanya, tanpa dirender ulang, sehingga teks tetap tajam dan bisa dicari, dan gambar tidak diubah sama sekali."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara memisah PDF"
+  },
+  "compress-pdf": {
+   "name": "Kompres PDF",
+   "short": "Perkecil ukuran PDF untuk email dan unggahan, dengan kualitas pilihan Anda.",
+   "action": "Kompres PDF",
+   "title": "Kompres PDF Gratis, Tanpa Upload File",
+   "description": "Kompres PDF dan perkecil ukurannya di browser. Pilih kompresi lossless, rekomendasi, atau kuat. File tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Kompres PDF",
+   "lead": "Perkecil PDF agar muat di batas lampiran email dan formulir unggahan. Pilih tingkat kompresi, lalu lihat persis seberapa kecil file Anda sekarang. Tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret PDF yang ingin diperkecil.",
+    "Pilih tingkat: Lossless menjaga setiap piksel, Rekomendasi menyeimbangkan ukuran dan kualitas, Kuat menghasilkan file terkecil.",
+    "Pilih Kompres PDF, cek ukuran barunya, lalu unduh."
+   ],
+   "sections": [
+    {
+     "h": "Cara kerja kompresi",
+     "p": "Setiap tingkat menghapus objek yang tidak terpakai, mengemas struktur file ke dalam object stream terkompresi, dan mengompresi data yang belum terkompresi. Tingkat Rekomendasi dan Kuat juga mengodekan ulang foto besar sebagai JPEG dan mengecilkan gambar yang lebih besar dari yang diperlukan untuk layar dan cetak kantor: maksimal 2200 piksel di sisi terpanjang untuk Rekomendasi, 1400 untuk Kuat. Teks dan grafik vektor tidak pernah diubah menjadi gambar, jadi tetap tajam dan bisa dicari."
+    },
+    {
+     "h": "Hasil yang bisa diharapkan",
+     "p": "Dokumen hasil pindaian dan PDF yang penuh foto biasanya menyusut paling banyak, sering kali 70 sampai 95 persen. PDF yang sebagian besar berisi teks sudah ringkas dan mungkin hanya sedikit mengecil. Jika hasilnya tidak lebih kecil, berarti file aslinya sudah teroptimasi dengan baik."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengompres PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Tingkat kompresi mana yang sebaiknya saya pilih?",
+     "a": "Mulailah dengan Rekomendasi. Biasanya tingkat ini memangkas PDF yang banyak fotonya hingga lebih dari separuh, tetapi tetap tajam di layar maupun saat dicetak. Gunakan Kuat jika Anda harus berada di bawah batas ukuran yang ketat, dan Lossless jika gambar sama sekali tidak boleh berubah."
+    },
+    {
+     "q": "Apakah teks di PDF saya akan menjadi buram?",
+     "a": "Tidak. Hanya foto yang tertanam yang dikodekan ulang. Teks, font, dan gambar vektor tetap persis seperti semula."
+    },
+    {
+     "q": "Bagaimana cara membuat PDF di bawah 1 MB atau 2 MB untuk formulir unggahan?",
+     "a": "Coba kompresi Kuat. Jika masih terlalu besar, pisah dokumen dengan Pisah PDF, atau hapus halaman yang tidak diperlukan dengan Hapus halaman, lalu kompres lagi."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara mengompres PDF"
+  },
+  "organize-pdf": {
+   "name": "Atur PDF",
+   "short": "Ubah urutan, putar, dan hapus halaman dalam satu editor visual.",
+   "action": "Simpan PDF",
+   "title": "Atur Urutan, Putar & Hapus Halaman PDF",
+   "description": "Atur ulang halaman PDF dengan menyeret, putar atau hapus halaman satu per satu, lalu simpan. Berjalan sepenuhnya di browser, file tidak pernah diunggah. Gratis.",
+   "h1": "Atur halaman PDF",
+   "lead": "Lihat setiap halaman sebagai thumbnail, lalu seret untuk mengubah urutan, putar halaman yang miring, dan buang halaman yang tidak diperlukan. File Anda tetap di perangkat.",
+   "steps": [
+    "Pilih atau seret PDF. Setiap halaman muncul sebagai thumbnail.",
+    "Seret halaman ke urutan baru. Gunakan tombol di setiap halaman untuk memutar atau menghapusnya.",
+    "Pilih Simpan PDF untuk mengunduh dokumen yang sudah ditata ulang."
+   ],
+   "sections": [
+    {
+     "h": "Satu editor untuk merapikan halaman",
+     "p": "Atur PDF menggabungkan fungsi mengubah urutan, memutar, dan menghapus, sehingga Anda bisa merapikan dokumen hasil pindaian dalam sekali jalan. Perubahan baru diterapkan saat Anda menyimpan, dan file asli di disk Anda tidak pernah diubah."
+    },
+    {
+     "h": "Nyaman dengan keyboard dan layar sentuh",
+     "p": "Halaman bisa diseret dengan mouse, trackpad, atau jari. Setiap halaman juga punya tombol untuk memindahkannya lebih awal atau lebih akhir, cara yang presisi untuk dokumen panjang."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengatur PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya membatalkan perubahan?",
+     "a": "Bisa. Pilih lagi halaman yang dihapus untuk memulihkannya, putar halaman kembali, atau gunakan Reset untuk kembali ke urutan semula sebelum menyimpan."
+    },
+    {
+     "q": "Apakah mengubah urutan memengaruhi tautan dan bookmark?",
+     "a": "Tautan antarhalaman yang tetap ada di dokumen tetap berfungsi. Bookmark dan tautan yang mengarah ke halaman yang dihapus akan dibuang agar file tidak memiliki referensi yang rusak."
+    },
+    {
+     "q": "Bisakah saya menambahkan halaman dari PDF lain?",
+     "a": "Gunakan Gabung PDF untuk menyatukan file terlebih dahulu, lalu buka file gabungannya di sini untuk menata urutan halaman."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara mengatur halaman PDF"
+  },
+  "rotate-pdf": {
+   "name": "Putar PDF",
+   "short": "Kembalikan halaman yang miring atau terbalik ke posisi yang benar.",
+   "action": "Simpan PDF",
+   "title": "Putar Halaman PDF Gratis, Tanpa Upload",
+   "description": "Putar semua atau sebagian halaman PDF 90 atau 180 derajat dan simpan hasilnya secara permanen. Berjalan di browser, tidak ada yang diunggah. Gratis.",
+   "h1": "Putar halaman PDF",
+   "lead": "Perbaiki halaman yang miring atau terbalik. Putar seluruh dokumen atau halaman tertentu, lalu simpan. Rotasi tersimpan di dalam file, jadi tetap benar di pembaca PDF mana pun.",
+   "steps": [
+    "Pilih atau seret PDF yang ingin diputar.",
+    "Putar semua halaman sekaligus dengan tombol di atas halaman, atau pilih tombol putar di satu halaman.",
+    "Pilih Simpan PDF dan unduh file yang sudah diperbaiki."
+   ],
+   "sections": [
+    {
+     "h": "Rotasi tanpa kehilangan kualitas",
+     "p": "Rotasi mengubah pengaturan orientasi halaman, bukan menggambar ulang isinya, sehingga teks dan gambar tetap berkualitas penuh dan ukuran file tidak berubah."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memutar PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Apakah rotasinya tersimpan permanen?",
+     "a": "Ya. Orientasi baru ditulis ke dalam PDF, sehingga file terbuka dengan posisi yang benar di Preview, Acrobat, browser, dan ponsel."
+    },
+    {
+     "q": "Bisakah saya memutar satu halaman saja?",
+     "a": "Bisa. Setiap thumbnail punya tombol putar sendiri. Halaman yang tidak Anda sentuh tetap dengan orientasinya saat ini."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara memutar halaman PDF"
+  },
+  "delete-pdf-pages": {
+   "name": "Hapus halaman",
+   "short": "Buang halaman kosong, ganda, atau yang tidak diinginkan dari PDF.",
+   "action": "Hapus halaman",
+   "title": "Hapus Halaman PDF Gratis, Tanpa Upload",
+   "description": "Hapus halaman PDF dengan mengekliknya atau mengetik nomornya. Berjalan sepenuhnya di browser, file tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Hapus halaman dari PDF",
+   "lead": "Klik halaman yang ingin dibuang, atau ketik nomornya, lalu simpan PDF baru tanpa halaman itu. File asli Anda tidak diubah dan tidak pernah keluar dari perangkat.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Klik setiap halaman yang ingin dibuang, atau ketik nomor halaman seperti 2, 5-7.",
+    "Pilih Hapus halaman dan unduh PDF barunya."
+   ],
+   "sections": [
+    {
+     "h": "File lebih kecil, bukan sekadar halaman yang disembunyikan",
+     "p": "Halaman yang dihapus dibuang bersama gambar dan font yang hanya dipakai olehnya, sehingga file baru benar-benar lebih kecil. Tautan dan bookmark yang mengarah ke halaman yang dihapus juga dibersihkan."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menghapus halaman?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya menghapus beberapa halaman sekaligus?",
+     "a": "Bisa. Klik halaman sebanyak yang Anda mau, atau ketik daftar seperti 1, 4-6, 10."
+    },
+    {
+     "q": "Bisakah halaman yang dihapus dikembalikan?",
+     "a": "Sebelum menyimpan, klik lagi halaman itu untuk mempertahankannya. Setelah menyimpan, file asli Anda masih ada di perangkat tanpa perubahan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara menghapus halaman dari PDF"
+  },
+  "extract-pdf-pages": {
+   "name": "Ekstrak halaman",
+   "short": "Ambil halaman tertentu dari PDF ke dokumen baru.",
+   "action": "Ekstrak halaman",
+   "title": "Ekstrak Halaman PDF Gratis, Tanpa Upload",
+   "description": "Pilih halaman dari PDF dan simpan sebagai file baru, atau sebagai file terpisah per halaman. Berjalan di browser, tidak ada yang diunggah. Gratis, tanpa daftar.",
+   "h1": "Ekstrak halaman dari PDF",
+   "lead": "Pilih halaman yang Anda perlukan dan simpan sebagai PDF baru, atau satu file per halaman. Dokumen sumber tetap utuh dan tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Klik halaman yang ingin diekstrak, atau ketik nomornya, misalnya 3, 7-9.",
+    "Pilih satu PDF gabungan atau satu file per halaman, lalu pilih Ekstrak halaman."
+   ],
+   "sections": [
+    {
+     "h": "Salinan halaman yang persis sama",
+     "p": "Halaman yang diekstrak disalin, bukan dicetak ulang, sehingga teks tetap bisa dipilih dan dicari, dan gambar mempertahankan resolusi aslinya."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengekstrak halaman?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah setiap halaman disimpan sebagai PDF sendiri?",
+     "a": "Bisa. Pilih \"Satu file per halaman\" sebelum mengekstrak. Anda akan menerima arsip ZIP berisi PDF untuk setiap halaman yang dipilih."
+    },
+    {
+     "q": "Apa bedanya dengan Pisah PDF?",
+     "a": "Ekstrak membuat file dari halaman yang Anda pilih. Pisah membagi seluruh dokumen menjadi beberapa bagian."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara mengekstrak halaman dari PDF"
+  },
+  "jpg-to-pdf": {
+   "name": "JPG ke PDF",
+   "short": "Ubah foto dan hasil pindaian (JPG, PNG, HEIC, WebP) menjadi PDF.",
+   "action": "Buat PDF",
+   "title": "JPG ke PDF: Ubah Gambar Gratis, Tanpa Upload",
+   "description": "Ubah gambar JPG, PNG, WebP, dan HEIC menjadi satu PDF di browser. Atur urutan, ukuran halaman, dan margin. Foto tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Ubah JPG ke PDF",
+   "lead": "Jadikan foto, tangkapan layar, dan halaman hasil pindaian satu PDF. JPEG disematkan dengan kualitas aslinya, dan tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret gambar Anda: JPG, PNG, WebP, GIF, atau HEIC di Safari.",
+    "Seret untuk mengatur urutan dan pilih ukuran halaman: sesuai gambar, A4, atau US Letter, dengan atau tanpa margin.",
+    "Pilih Buat PDF lalu unduh."
+   ],
+   "sections": [
+    {
+     "h": "Kualitas asli, posisi tegak",
+     "p": "Foto JPEG ditempatkan di PDF byte demi byte, tanpa kompresi ulang, sehingga kualitasnya tidak berkurang. Foto dari ponsel ditegakkan otomatis berdasarkan data orientasinya. PNG dan format lain disimpan tanpa kehilangan kualitas, termasuk transparansinya."
+    },
+    {
+     "h": "Pilihan ukuran halaman",
+     "p": "Sesuai gambar membuat setiap halaman berbentuk sama dengan gambarnya, paling cocok untuk foto dan tangkapan layar. A4 dan Letter menempatkan setiap gambar di tengah kertas standar, dan memutar halaman ke lanskap untuk gambar yang lebar, paling cocok untuk dokumen yang akan dicetak."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengubah gambar ke PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya mengonversi foto HEIC dari iPhone?",
+     "a": "Bisa di Safari, yang mampu membaca HEIC secara native. Di browser lain, bagikan foto sebagai JPEG dari aplikasi Foto terlebih dahulu, atau buka halaman ini di Safari."
+    },
+    {
+     "q": "Berapa banyak gambar yang bisa saya tambahkan?",
+     "a": "Sebanyak yang dimungkinkan oleh memori perangkat Anda. Ratusan foto tidak masalah di laptop biasa."
+    },
+    {
+     "q": "Apakah PDF-nya akan berukuran besar?",
+     "a": "Kira-kira sebesar total ukuran gambar Anda. Untuk memperkecilnya, kompres hasilnya dengan Kompres PDF."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara mengubah JPG ke PDF"
+  },
+  "pdf-to-jpg": {
+   "name": "PDF ke JPG",
+   "short": "Simpan halaman PDF sebagai gambar JPG atau PNG berkualitas tinggi.",
+   "action": "Ubah ke gambar",
+   "title": "PDF ke JPG: Ubah Halaman Gratis, Tanpa Upload",
+   "description": "Ubah semua halaman PDF, atau halaman pilihan, menjadi gambar JPG atau PNG dengan resolusi pilihan Anda. Berjalan di browser, tidak ada yang diunggah. Gratis.",
+   "h1": "Ubah PDF ke JPG",
+   "lead": "Simpan halaman PDF sebagai gambar JPG atau PNG yang tajam, siap untuk slide, unggahan media sosial, atau chat. Pilih halaman dan resolusinya. Rendering berlangsung di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih halaman yang akan diubah (semua secara default), format, dan resolusinya.",
+    "Pilih Ubah ke gambar. Satu halaman diunduh sebagai gambar, beberapa halaman dalam bentuk ZIP."
+   ],
+   "sections": [
+    {
+     "h": "Panduan resolusi",
+     "p": "Standar (108 DPI) cocok untuk layar dan aplikasi pesan. Tinggi (144 DPI) tampak tajam di layar resolusi tinggi dan dalam presentasi. Cetak (216 DPI) untuk dicetak dan untuk memperbesar detail."
+    },
+    {
+     "h": "JPG atau PNG?",
+     "p": "JPG menghasilkan file lebih kecil dan cocok untuk halaman berisi foto. PNG tanpa kehilangan kualitas dan menjaga teks serta gambar garis tetap tajam, dengan ukuran lebih besar."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengubah PDF ke gambar?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya mengubah satu halaman saja?",
+     "a": "Bisa. Batalkan semua pilihan, klik halaman yang Anda inginkan, lalu ubah. Satu halaman langsung diunduh sebagai gambar, tanpa ZIP."
+    },
+    {
+     "q": "Renderer apa yang digunakan?",
+     "a": "Halaman digambar oleh PDF.js, renderer PDF open source yang terpasang di Firefox, dan berjalan secara lokal di browser Anda."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara mengubah PDF ke JPG"
+  },
+  "add-page-numbers": {
+   "name": "Nomor halaman",
+   "short": "Beri nomor pada halaman PDF, dengan posisi dan gaya pilihan Anda.",
+   "action": "Tambah nomor halaman",
+   "title": "Tambah Nomor Halaman PDF Gratis, Tanpa Upload",
+   "description": "Tambah nomor halaman ke PDF: pilih posisi, format seperti \"Halaman 1 dari 10\", nomor awal, dan halaman pertama. Berjalan di browser, tanpa unggah. Gratis.",
+   "h1": "Tambah nomor halaman ke PDF",
+   "lead": "Beri nomor halaman dalam hitungan detik. Pilih letak nomor, format tampilannya, dan dari mana penghitungan dimulai. Semua berjalan di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih posisi, format seperti \"1\" atau \"Halaman 1 dari 12\", halaman pertama yang diberi nomor, dan nomor awalnya.",
+    "Pilih Tambah nomor halaman lalu unduh."
+   ],
+   "sections": [
+    {
+     "h": "Mendukung halaman yang diputar dan ukuran campuran",
+     "p": "Nomor ditempatkan di tepi yang benar-benar Anda lihat, sehingga halaman lanskap dan halaman yang diputar diberi nomor dengan posisi tegak, dan setiap ukuran kertas yang berbeda mendapat nomor di posisi yang tepat."
+    },
+    {
+     "h": "Lewati halaman sampul",
+     "p": "Atur \"Mulai di halaman\" ke 2 agar sampul tidak diberi nomor, dan atur nomor awal ke 1 agar penomoran dimulai dari halaman isi pertama."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menambahkan nomor halaman?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya memakai format \"Halaman X dari Y\"?",
+     "a": "Bisa. Pilih format \"Halaman 1 dari 12\". Totalnya hanya menghitung halaman yang diberi nomor."
+    },
+    {
+     "q": "Font apa yang digunakan?",
+     "a": "Helvetica, font PDF standar yang bisa ditampilkan semua pembaca, berwarna abu-abu tua dengan ukuran yang Anda pilih."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara menambahkan nomor halaman ke PDF"
+  },
+  "watermark-pdf": {
+   "name": "Watermark PDF",
+   "short": "Bubuhkan teks seperti RAHASIA atau DRAF di setiap halaman.",
+   "action": "Tambah watermark",
+   "title": "Beri Watermark PDF Gratis, Tanpa Upload",
+   "description": "Tambahkan watermark teks seperti RAHASIA atau DRAF ke setiap halaman PDF. Atur ukuran, sudut, opasitas, dan warna, tunggal atau berulang. Tanpa unggah. Gratis.",
+   "h1": "Tambah watermark ke PDF",
+   "lead": "Tandai dokumen sebagai Rahasia, Draf, atau dengan nama Anda. Pilih teks, warna, ukuran, sudut, dan transparansinya, sekali per halaman atau berulang. PDF Anda tetap di perangkat.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Ketik teks watermark lalu atur warna, ukuran, sudut, dan opasitas. Pratinjau langsung diperbarui.",
+    "Pilih Tambah watermark lalu unduh."
+   ],
+   "sections": [
+    {
+     "h": "Bahasa apa pun, aksara apa pun",
+     "p": "Watermark digambar dengan font sistem Anda, sehingga bisa dipakai dalam semua bahasa, termasuk Arab, Kurdi, Mandarin, dan emoji, dan tampak sama di semua pembaca PDF."
+    },
+    {
+     "h": "Tunggal atau berulang",
+     "p": "Watermark tunggal berada di tengah setiap halaman. Mode berulang mengulanginya di seluruh halaman, sehingga jauh lebih sulit dipotong dari tangkapan layar."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memberi watermark pada PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah watermark dihapus?",
+     "a": "Watermark digambar di setiap halaman sebagai lapisan gambar. Orang yang memiliki software pengedit PDF tetap bisa menghapusnya, jadi untuk dokumen yang tidak boleh diubah, gunakan juga Lindungi PDF."
+    },
+    {
+     "q": "Apakah watermark akan menutupi teks saya?",
+     "a": "Tidak, asalkan opasitasnya rendah. 15 sampai 30 persen membuat dokumen tetap mudah dibaca sementara tandanya tetap terlihat jelas."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara menambahkan watermark ke PDF"
+  },
+  "protect-pdf": {
+   "name": "Lindungi PDF",
+   "short": "Tambahkan password dengan enkripsi AES-256.",
+   "action": "Lindungi PDF",
+   "title": "Kunci PDF dengan Sandi (AES-256), Tanpa Upload",
+   "description": "Kunci PDF dengan password AES-256, dan blokir cetak atau salin bila perlu. Berjalan di browser, file dan password tidak pernah keluar dari perangkat.",
+   "h1": "Lindungi PDF dengan password",
+   "lead": "Enkripsi PDF agar hanya bisa dibuka dengan password Anda. Enkripsi berjalan di perangkat Anda, jadi dokumen maupun password-nya tidak pernah dikirim ke mana pun.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Ketik password lalu konfirmasi. Jika perlu, cegah pencetakan atau penyalinan teks.",
+    "Pilih Lindungi PDF dan unduh file yang sudah terenkripsi."
+   ],
+   "sections": [
+    {
+     "h": "Enkripsi standar yang kuat",
+     "p": "File dienkripsi dengan AES-256, enkripsi terkuat dalam standar PDF (PDF 2.0, security handler revisi 6). Acrobat, Preview, Chrome, Edge, dan Firefox semuanya bisa membukanya dengan password tersebut."
+    },
+    {
+     "h": "Pilih password yang mudah Anda ingat",
+     "p": "Password yang terlupa tidak bisa dipulihkan, bahkan oleh kami, karena kami tidak pernah melihatnya. Gunakan frasa sandi yang panjang dan simpan di pengelola password."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat melindungi PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Apa fungsi opsi cetak dan salin?",
+     "a": "Opsi ini menetapkan izin yang dipatuhi pembaca PDF yang berperilaku baik setelah dokumen dibuka. Ini adalah pembatasan, bukan enkripsi tersendiri, jadi anggaplah password pembuka sebagai perlindungan yang sebenarnya."
+    },
+    {
+     "q": "Bisakah password dihapus nanti?",
+     "a": "Bisa, dengan Buka Kunci PDF, selama Anda mengetahui password-nya."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara melindungi PDF dengan password"
+  },
+  "unlock-pdf": {
+   "name": "Buka Kunci PDF",
+   "short": "Hapus password PDF yang Anda ketahui.",
+   "action": "Buka Kunci PDF",
+   "title": "Hapus Password PDF Gratis, Tanpa Upload",
+   "description": "Hapus password dan pembatasan dari PDF yang password-nya Anda ketahui. Berjalan di browser, file dan password tidak pernah keluar dari perangkat Anda.",
+   "h1": "Hapus password dari PDF",
+   "lead": "Bosan mengetik password setiap kali? Masukkan sekali, lalu simpan salinan yang tidak terkunci. Dekripsi berlangsung di perangkat Anda. Alat ini tidak bisa menebak atau membobol password yang tidak diketahui.",
+   "steps": [
+    "Pilih atau seret PDF yang diproteksi.",
+    "Ketik password-nya.",
+    "Pilih Buka Kunci PDF dan unduh salinan yang bisa dibuka tanpa password."
+   ],
+   "sections": [
+    {
+     "h": "Pembatasan juga dihapus",
+     "p": "File yang bisa dibuka bebas tetapi memblokir pencetakan, penyalinan, atau pengeditan dibuka tanpa password apa pun: pembatasannya cukup dibuang dari salinan yang disimpan. Hapus pembatasan hanya dari dokumen yang memang berhak Anda gunakan dengan cara itu."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat membuka kunci PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Saya lupa password-nya. Bisakah dipulihkan?",
+     "a": "Tidak. Buka Kunci PDF hanya menghapus password yang sudah Anda ketahui. Alat ini tidak mencoba membobol password."
+    },
+    {
+     "q": "Jenis enkripsi apa saja yang didukung?",
+     "a": "Security handler PDF standar: RC4 40-bit dan 128-bit, AES-128, dan AES-256. Enkripsi berbasis sertifikat tidak didukung."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ],
+   "howTo": "Cara menghapus password dari PDF"
+  },
+  "sign-pdf": {
+   "name": "Tanda tangan PDF",
+   "short": "Gambar, ketik, atau unggah tanda tangan Anda, lalu tempatkan di halaman mana pun.",
+   "action": "Tanda tangani PDF",
+   "title": "Tanda Tangan PDF Gratis, Tanpa Upload File",
+   "description": "Tanda tangani PDF di browser: gambar, ketik, atau unggah tanda tangan, tempatkan di halaman mana pun, lalu unduh. Dokumen tidak pernah keluar dari perangkat.",
+   "h1": "Tanda tangani PDF",
+   "howTo": "Cara menandatangani PDF",
+   "lead": "Gambar tanda tangan dengan jari atau mouse, ketik, atau gunakan fotonya. Tempatkan di mana saja, ubah ukurannya, lalu unduh PDF yang sudah ditandatangani. Tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret PDF yang perlu ditandatangani.",
+    "Buat tanda tangan Anda: gambar, ketik nama dengan gaya tulisan tangan, atau unggah fotonya.",
+    "Seret ke posisinya, ubah ukurannya dengan pegangan biru, tambahkan tanggal jika perlu, lalu pilih Tanda tangani PDF."
+   ],
+   "sections": [
+    {
+     "h": "Tiga cara membuat tanda tangan",
+     "p": "Gambar langsung di layar, yang paling nyaman dengan jari atau Apple Pencil. Ketik nama Anda dan pilih gaya tulisan tangan. Atau unggah foto tanda tangan Anda di atas kertas putih: kertasnya dibuat transparan sehingga hanya tintanya yang tampil di dokumen."
+    },
+    {
+     "h": "Jenis tanda tangan ini",
+     "p": "Scissor PDF menambahkan tanda tangan visual, sama seperti menandatangani hasil cetak lalu memindainya. Alat ini tidak menambahkan tanda tangan digital berbasis sertifikat. Tanda tangan seperti ini diterima untuk sebagian besar dokumen sehari-hari seperti formulir, perjanjian sewa, dan surat izin; periksa persyaratannya bila dokumen meminta tanda tangan elektronik yang berkualifikasi atau tersertifikasi."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menandatangani PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya tanda tangan di HP?",
+     "a": "Bisa. Gambar tanda tangan dengan jari, lalu seret ke posisinya di halaman. Semuanya berfungsi di Safari dan Chrome versi seluler."
+    },
+    {
+     "q": "Apakah tanda tangan saya disimpan di suatu tempat?",
+     "a": "Tidak. Tanda tangan hanya ada di halaman yang sedang terbuka selama Anda bekerja, dan tidak pernah disimpan atau dikirim. Tutup tab, maka tanda tangan itu hilang."
+    },
+    {
+     "q": "Bisakah saya menambahkan tanggal atau nama di samping tanda tangan?",
+     "a": "Bisa. Gunakan Tambah tanggal untuk menyisipkan tanggal hari ini, atau Tambah teks untuk kata-kata lain, lalu seret ke tempat yang Anda perlukan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "add-text-to-pdf": {
+   "name": "Tambah teks ke PDF",
+   "short": "Ketik teks di mana saja pada PDF: isi formulir, tambahkan catatan atau tanggal.",
+   "action": "Simpan PDF",
+   "title": "Tambah Teks ke PDF Gratis, Tanpa Upload File",
+   "description": "Ketik teks di mana saja pada PDF di browser untuk mengisi formulir, menambah catatan atau tanggal. Pilih ukuran dan warna. File tidak pernah diunggah.",
+   "h1": "Tambahkan teks ke PDF",
+   "howTo": "Cara menambahkan teks ke PDF",
+   "lead": "Isi formulir yang tidak punya kolom isian, tambahkan catatan, atau beri tanggal pada dokumen. Ketik, seret teks ke posisinya, lalu unduh. Tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih Tambah teks, ketik, lalu seret teks ke tempatnya. Pilih ukuran dan warnanya.",
+    "Tambahkan teks sebanyak yang Anda perlukan, lalu pilih Simpan PDF."
+   ],
+   "sections": [
+    {
+     "h": "Semua bahasa",
+     "p": "Teks digambar dengan font bawaan perangkat Anda, sehingga semua bahasa dan aksara bisa dipakai, termasuk Arab, Kurdi, Mandarin, dan emoji. Tampilannya sama di semua pembaca PDF."
+    },
+    {
+     "h": "Perlu diketahui",
+     "p": "Teks yang ditambahkan menjadi bagian dari halaman, seperti tinta di atas kertas. Teks ini bukan kolom formulir yang bisa diedit, dan tidak mengubah teks yang sudah ada di PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menambahkan teks ke PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya mengedit teks yang sudah ada di PDF?",
+     "a": "Tidak. Alat ini menambahkan teks baru di atas halaman. Untuk memperbaiki tulisan yang sudah ada, tambahkan teks di atasnya, atau edit dokumen aslinya lalu ekspor PDF baru."
+    },
+    {
+     "q": "Bisakah saya menambahkan teks di beberapa halaman?",
+     "a": "Bisa. Gulir ke halaman mana pun dan tambahkan teks di sana. Setiap teks tetap berada di halaman tempat Anda menaruhnya."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "crop-pdf": {
+   "name": "Potong PDF",
+   "short": "Pangkas margin dan ruang kosong dari halaman PDF.",
+   "action": "Potong PDF",
+   "title": "Potong Halaman PDF Gratis, Tanpa Upload File",
+   "description": "Pangkas margin dan ruang kosong dari halaman PDF di browser. Seret tepinya atau ketik margin yang tepat, untuk semua atau sebagian halaman. Tanpa unggahan.",
+   "h1": "Potong PDF",
+   "howTo": "Cara memotong PDF",
+   "lead": "Buang margin yang lebar, bingkai hasil pindaian, atau ruang kosong. Seret tepinya di pratinjau atau ketik margin yang tepat. File Anda tetap di perangkat.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Seret tepi bingkai di pratinjau, atau ketik setiap margin sebagai persentase halaman.",
+    "Pilih semua halaman atau sebagian, lalu pilih Potong PDF."
+   ],
+   "sections": [
+    {
+     "h": "Pemotongan tanpa kehilangan kualitas",
+     "p": "Pemotongan mengatur area halaman yang terlihat alih-alih memotong isinya, sehingga teks tetap tajam dan bisa dicari, dan ukuran file hampir tidak berubah. Halaman yang diputar dipotong pada tepi yang Anda lihat."
+    },
+    {
+     "h": "Perlu diketahui",
+     "p": "Isi di luar area potongan disembunyikan, bukan dihapus. Jangan mengandalkan pemotongan untuk menghilangkan informasi sensitif; orang dengan perangkat lunak pengedit bisa menampilkannya kembali."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memotong PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya memotong sebagian halaman saja?",
+     "a": "Bisa. Pilih Sebagian halaman lalu ketik nomornya, misalnya 1, 3-5. Halaman lainnya tetap berukuran asli."
+    },
+    {
+     "q": "Apakah memotong membuat file saya lebih kecil?",
+     "a": "Hampir tidak, karena isinya disembunyikan, bukan dihapus. Untuk memperkecil file, gunakan Kompres PDF."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "pages-per-sheet": {
+   "name": "Halaman per lembar",
+   "short": "Taruh 2 atau 4 halaman PDF di setiap lembar untuk menghemat kertas.",
+   "action": "Gabungkan halaman",
+   "title": "Cetak 2 atau 4 Halaman PDF per Lembar, Gratis",
+   "description": "Taruh 2 atau 4 halaman di setiap lembar PDF untuk menghemat kertas saat mencetak handout dan catatan. Berjalan di browser, tidak ada yang diunggah.",
+   "h1": "Taruh beberapa halaman dalam satu lembar",
+   "howTo": "Cara menaruh 2 atau 4 halaman dalam satu lembar",
+   "lead": "Ubah dokumen panjang menjadi handout yang ringkas: 2 halaman berdampingan atau 4 dalam kisi di setiap lembar. Hemat kertas dan tinta. Tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih 2 atau 4 halaman per lembar dan ukuran kertasnya.",
+    "Pilih Gabungkan halaman, lalu cetak atau bagikan PDF barunya."
+   ],
+   "sections": [
+    {
+     "h": "Tata letak",
+     "p": "Dua halaman diletakkan berdampingan di lembar lanskap. Empat halaman mengisi lembar potret dalam kisi 2 kali 2, sesuai urutan baca. Setiap halaman diskalakan agar pas dengan ruangnya tanpa distorsi, dan halaman yang diputar tetap tegak."
+    },
+    {
+     "h": "Kualitas",
+     "p": "Halaman ditempatkan apa adanya, tidak dirender sebagai gambar, sehingga teks tetap tajam dan bisa dicari di tingkat zoom berapa pun."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menggabungkan halaman?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Ukuran kertas apa yang dipakai?",
+     "a": "Opsi Sama seperti PDF memakai ukuran halaman pertama. Anda juga bisa memilih A4 atau US Letter."
+    },
+    {
+     "q": "Apakah tautan dan kolom formulir tetap berfungsi?",
+     "a": "Isi halaman tetap dipertahankan, tetapi tautan, komentar, dan kolom formulir tidak ikut dibawa ke lembar gabungan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "edit-pdf-metadata": {
+   "name": "Metadata PDF",
+   "short": "Lihat, edit, atau hapus judul, penulis, dan detail tersembunyi lainnya.",
+   "action": "Simpan metadata",
+   "title": "Edit atau Hapus Metadata PDF, Tanpa Upload",
+   "description": "Lihat dan edit judul, penulis, subjek, dan kata kunci tersembunyi dari PDF, atau hapus semua metadata sebelum dibagikan. Berjalan di browser, tanpa unggahan.",
+   "h1": "Edit atau hapus metadata PDF",
+   "howTo": "Cara mengedit metadata PDF",
+   "lead": "PDF diam-diam menyimpan detail seperti nama penulis, perangkat lunak yang dipakai, dan tanggal. Lihat isinya, ubah, atau hapus semuanya sebelum Anda membagikannya. Tidak ada yang diunggah.",
+   "steps": [
+    "Pilih atau seret PDF. Judul, penulis, subjek, dan kata kuncinya saat ini akan muncul.",
+    "Edit kolomnya, atau pilih Hapus semua metadata.",
+    "Unduh PDF yang sudah diperbarui."
+   ],
+   "sections": [
+    {
+     "h": "Kenapa metadata perlu dihapus",
+     "p": "Metadata bisa mengungkap siapa yang menulis dokumen, dari perusahaan atau komputer mana dokumen itu berasal, serta kapan dibuat atau diubah. Menghapusnya sebelum mengirim file ke pihak di luar organisasi Anda adalah kebiasaan privasi yang sederhana."
+    },
+    {
+     "h": "Apa yang dihapus",
+     "p": "Hapus semua metadata menghapus kamus informasi dokumen (judul, penulis, subjek, kata kunci, creator, producer, dan tanggal) serta metadata XMP yang tertanam. Isi halaman yang terlihat tidak berubah."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengedit metadata PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Kenapa pembaca PDF saya menampilkan judul yang berbeda?",
+     "a": "Beberapa pembaca menampilkan nama file, bukan judul. Menyimpan di sini akan mengatur judul yang tersimpan di dalam PDF, yang dipakai oleh mesin pencari dan banyak pembaca PDF."
+    },
+    {
+     "q": "Apakah teks atau gambar ikut terhapus?",
+     "a": "Tidak. Hanya kolom informasi tersembunyi yang berubah. Halaman tetap terlihat persis sama."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "repair-pdf": {
+   "name": "Perbaiki PDF",
+   "short": "Coba pulihkan PDF rusak yang tidak bisa dibuka.",
+   "action": "Perbaiki PDF",
+   "title": "Perbaiki PDF Rusak Gratis, Tanpa Upload File",
+   "description": "Coba pulihkan PDF yang rusak atau korup dan tidak bisa dibuka. File dibangun ulang di browser Anda dan tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Perbaiki PDF yang rusak",
+   "howTo": "Cara memperbaiki PDF",
+   "lead": "Saat PDF tidak bisa dibuka atau menampilkan error, Scissor PDF membangun ulang struktur internalnya dan menyimpan salinan yang bersih. Semuanya berlangsung di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF yang rusak.",
+    "Pilih Perbaiki PDF.",
+    "Unduh file hasil perbaikan, lalu buka."
+   ],
+   "sections": [
+    {
+     "h": "Apa yang bisa diperbaiki",
+     "p": "Sebagian besar PDF yang gagal dibuka memiliki indeks yang rusak, sering kali karena unduhan atau lampiran email terputus, atau file diedit dengan perangkat lunak yang bermasalah. Scissor PDF memindai seluruh file untuk mencari halaman dan isinya, membangun ulang indeks dan daftar halaman, lalu menulis PDF standar yang bersih."
+    },
+    {
+     "h": "Apa yang tidak bisa diperbaiki",
+     "p": "Jika sebagian file hilang, misalnya separuh akhir dari unduhan yang terputus, halaman yang hilang tidak bisa dipulihkan. File terenkripsi perlu dibuka dengan password-nya terlebih dahulu: gunakan Buka Kunci PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memperbaiki PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bagaimana saya tahu perbaikannya berhasil?",
+     "a": "Layar hasil muncul dengan tombol unduh jika ada halaman yang berhasil dipulihkan. Buka file barunya untuk memeriksa. Jika tidak ada halaman yang ditemukan, Anda akan melihat pesan sebagai gantinya."
+    },
+    {
+     "q": "Apakah perbaikan aman untuk file aslinya?",
+     "a": "Ya. File asli di perangkat Anda tidak pernah diubah; Anda mengunduh salinan baru yang sudah diperbaiki."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  }
+ },
+ "homeFaqs": [
+  {
+   "q": "Apakah Scissor PDF benar-benar privat?",
+   "a": "Ya. Setiap alat berjalan di dalam browser Anda menggunakan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly. File dibaca dari disk, diproses di memori tab, lalu disimpan kembali ke perangkat Anda. File tidak pernah diunggah: situs ini statis, tidak punya endpoint unggahan, dan Content Security Policy-nya mencegah halaman mengirim data ke server lain. Anda bisa memeriksanya sendiri di panel jaringan (Network) browser Anda."
+  },
+  {
+   "q": "Apakah bisa dipakai offline?",
+   "a": "Bisa. Setelah kunjungan pertama, alat-alatnya disimpan oleh browser Anda, sehingga tetap berfungsi tanpa koneksi internet. Anda juga bisa memasang situs ini sebagai aplikasi dari menu browser."
+  },
+  {
+   "q": "Apakah gratis? Perlu akun?",
+   "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+  },
+  {
+   "q": "Apakah ada batas ukuran file?",
+   "a": "Kami tidak menetapkan batas. Batas praktisnya adalah memori perangkat Anda: file beberapa ratus megabyte bisa diproses di laptop biasa, dan file yang lebih kecil bisa diproses di ponsel."
+  },
+  {
+   "q": "Browser apa saja yang didukung?",
+   "a": "Versi terbaru Safari, Chrome, Edge, dan Firefox di Mac, Windows, Linux, iPhone, iPad, dan Android. JavaScript dan WebAssembly harus dalam keadaan aktif."
+  }
+ ],
+ "pages": {
+  "how": {
+   "title": "Cara Scissor PDF Mengedit PDF Tanpa Mengunggahnya",
+   "description": "Scissor PDF menjalankan mesin PDF berbasis Rust yang dikompilasi ke WebAssembly di browser Anda. Pelajari cara kerja pemrosesan lokal dan cara memastikan tidak ada file yang diunggah.",
+   "h1": "Cara kerja",
+   "lead": "Browser Anda yang mengunduh mesin PDF, bukan sebaliknya. Inilah yang terjadi saat Anda memakai sebuah alat, dan cara Anda memeriksanya sendiri.",
+   "body": "<h3>Versi singkatnya</h3>\n<p><strong>Scissor PDF tidak pernah menerima file Anda.</strong> Saat Anda membuka sebuah alat, browser Anda mengunduh situs web dan mesin PDF. Saat Anda memilih file, file itu dibaca ke memori tab browser Anda, diproses oleh mesin tersebut di prosesor Anda sendiri, lalu hasilnya diserahkan kembali kepada Anda sebagai unduhan. Menutup tab akan menghapus semuanya.</p>\n<h3>Apa berjalan di mana</h3>\n<p><strong>Mesin PDF</strong> yang menggabung, memisah, mengubah urutan, memutar, mengompres, memberi nomor, memberi watermark, mengenkripsi, dan mendekripsi PDF ditulis dengan Rust, menggunakan pustaka open source lopdf, lalu dikompilasi ke WebAssembly. WebAssembly adalah format dalam sandbox yang dijalankan semua browser modern dengan kecepatan mendekati native. Mesin ini berjalan di background worker sehingga halaman tetap responsif.</p>\n<p><strong>Pratinjau halaman dan PDF ke JPG</strong> menggunakan PDF.js, renderer open source yang terpasang di Firefox, yang juga berjalan secara lokal.</p>\n<p><strong>Server</strong> kami hanyalah host file statis biasa. Server ini tidak punya endpoint unggahan, tidak punya database, dan tidak punya kode aplikasi, jadi tidak ada apa pun yang bisa menerima dokumen.</p>\n<h3>Verifikasi sendiri</h3>\n<p>Buka developer tools di browser Anda, pindah ke tab Network, lalu gunakan alat apa saja. Anda akan melihat file milik halaman itu sendiri dimuat, dan tidak ada satu pun permintaan yang membawa dokumen Anda. Anda juga bisa memutus koneksi internet setelah halaman dimuat: setiap alat tetap berfungsi.</p>\n<p>Situs ini juga mengirim Content Security Policy yang ketat, yang memerintahkan browser Anda memblokir halaman agar tidak menghubungi server lain mana pun, sehingga bahkan kesalahan dalam kode kami pun tidak bisa mengirim file Anda ke tempat lain.</p>\n<h3>Bisa offline, terpasang seperti aplikasi</h3>\n<p>Setelah kunjungan pertama, service worker menyimpan situs dan mesinnya di cache browser Anda, sehingga alat-alatnya bisa dibuka dan dipakai tanpa koneksi. Di Chrome atau Edge, pilih Instal dari bilah alamat. Di Safari, pilih Tambahkan ke Dock (Mac) atau Tambahkan ke Layar Utama (iPhone dan iPad).</p>\n<h3>Batasan pemrosesan lokal</h3>\n<p>Karena pekerjaan berlangsung di perangkat Anda, file yang sangat besar dibatasi oleh memorinya. Beberapa ratus megabyte tidak masalah di laptop biasa, dan ponsel sanggup menangani dokumen sehari-hari. Kecepatannya bergantung pada prosesor Anda, bukan antrean server, yang dalam praktiknya biasanya lebih cepat daripada mengunggah lalu mengunduh.</p>"
+  },
+  "privacy": {
+   "title": "Kebijakan Privasi",
+   "description": "Scissor PDF tidak mengunggah, menyimpan, atau melihat file Anda. Tanpa akun, tanpa cookie analitik, tanpa pelacakan. Baca kebijakan privasi lengkapnya.",
+   "h1": "Privasi",
+   "lead": "Singkat saja, karena memang tidak banyak yang perlu dikatakan: kami tidak pernah menerima dokumen Anda.",
+   "body": "<h3>File Anda</h3>\n<p>File yang Anda buka di Scissor PDF diproses sepenuhnya di browser Anda dan tidak pernah dikirim ke kami atau ke siapa pun. Kami tidak bisa melihat, menyimpan, membagikan, atau memulihkannya.</p>\n<h3>Password</h3>\n<p>Password yang Anda ketik di Lindungi PDF atau Buka Kunci PDF hanya digunakan di browser Anda untuk mengenkripsi atau mendekripsi file, dan tidak pernah dikirim atau disimpan.</p>\n<h3>Apa yang dilihat server kami</h3>\n<p>Seperti situs web lainnya, server dan jaringan pengiriman konten (CDN) kami menerima informasi permintaan standar saat browser Anda mengunduh halaman dan file situs: alamat IP, alamat yang diminta, waktu, dan user agent browser. Informasi ini hanya digunakan untuk mengoperasikan dan mengamankan layanan serta menghitung lalu lintas secara agregat, dan tidak digabungkan dengan data lain maupun dijual.</p>\n<h3>Cookie dan pelacakan</h3>\n<p>Scissor PDF tidak memasang cookie sendiri dan tidak menggunakan pelacak iklan. Browser Anda menyimpan file situs untuk penggunaan offline, dan mungkin menyimpan sebuah file sebentar di penyimpanan lokal saat Anda memilih \"Lanjutkan dengan\" untuk meneruskan hasil ke alat lain; file itu dihapus begitu alat berikutnya membukanya.</p>\n<h3>Kontak</h3>\n<p>Pertanyaan seputar privasi: lihat <a href=\"https://scissor.studio\">scissor.studio</a>.</p>"
+  },
+  "notFound": {
+   "title": "Halaman tidak ditemukan",
+   "h1": "Halaman tidak ditemukan",
+   "lead": "Halaman yang Anda cari tidak ada. Silakan pilih salah satu alat berikut:"
+  }
+ },
+ "ui": {
+  "dropToAdd": "Lepaskan untuk menambahkan",
+  "errChooseImages": "Pilih file gambar (JPG, PNG, WebP, HEIC).",
+  "errChoosePdf": "Pilih file PDF.",
+  "errProtected": "\"{name}\" diproteksi password.",
+  "errDamaged": "\"{name}\" tidak bisa dibuka. File mungkin rusak atau bukan PDF asli.",
+  "errEncrypted": "PDF ini diproteksi password.",
+  "errUnlockFirst": "<a href=\"{url}\">Buka kuncinya dulu</a>, lalu kembali ke sini.",
+  "errPassword": "Password-nya salah.",
+  "errInvalid": "File ini tidak bisa diproses.",
+  "errEngine": "Mesin PDF gagal dijalankan. Silakan muat ulang halaman.",
+  "files": {
+   "other": "{n} file"
+  },
+  "images": {
+   "other": "{n} gambar"
+  },
+  "pages": {
+   "other": "{n} halaman"
+  },
+  "pdfs": {
+   "other": "{n} PDF"
+  },
+  "dragToReorder": "Seret untuk mengubah urutan",
+  "remove": "Hapus {name}",
+  "noPreview": "Pratinjau tidak didukung di browser ini",
+  "addImages": "Tambah gambar",
+  "addPdfs": "Tambah PDF",
+  "chooseAnother": "Pilih file lain",
+  "moveEarlier": "Pindahkan halaman {n} ke depan",
+  "moveLater": "Pindahkan halaman {n} ke belakang",
+  "rotatePage": "Putar halaman {n}",
+  "deletePage": "Hapus halaman {n}",
+  "stateDelete": "Hapus",
+  "stateDeleted": "Dihapus",
+  "passwordProtected": "Diproteksi password",
+  "options": "Opsi",
+  "mergeSub": "File digabung sesuai urutan yang ditampilkan.",
+  "mergeNeedMore": "Tambahkan minimal satu PDF lagi untuk digabung.",
+  "imagesSub": "Satu gambar per halaman, sesuai urutan yang ditampilkan.",
+  "pageSize": "Ukuran halaman",
+  "fitImage": "Sesuai gambar",
+  "a4": "A4",
+  "letter": "Letter",
+  "margin": "Margin",
+  "none": "Tanpa",
+  "small": "Kecil",
+  "large": "Besar",
+  "organizeSub": "Seret untuk mengubah urutan. Gunakan tombol di setiap halaman untuk memutar atau menghapus.",
+  "rotateSub": "Putar semua halaman, atau gunakan tombol di satu halaman.",
+  "left": "Kiri",
+  "right": "Kanan",
+  "rotateAll": "Putar semua halaman",
+  "resetChanges": "Reset perubahan",
+  "deleteSub": "Klik halaman untuk menghapusnya, atau ketik nomor halaman.",
+  "extractSub": "Klik halaman untuk mengekstraknya, atau ketik nomor halaman.",
+  "toImagesSub": "Klik halaman untuk mengubahnya, atau ketik nomor halaman.",
+  "pagesToDelete": "Halaman yang dihapus",
+  "pagesToExtract": "Halaman yang diekstrak",
+  "pagesToConvert": "Halaman yang diubah",
+  "rangePlaceholder": "mis. 1, 3-5",
+  "selectAll": "Pilih semua",
+  "clear": "Bersihkan",
+  "saveAs": "Simpan sebagai",
+  "onePdf": "Satu PDF",
+  "filePerPage": "Satu file per halaman",
+  "format": "Format",
+  "resolution": "Resolusi",
+  "standard": "Standar",
+  "high": "Tinggi",
+  "print": "Cetak",
+  "dpiHint": "108, 144, atau 216 DPI",
+  "inThisPdf": "{pages} dalam PDF ini.",
+  "pageRanges": "Rentang halaman",
+  "rangesHint": "Setiap rentang menjadi satu PDF, mis. 1-3, 4-8, 9",
+  "pagesPerFile": "Halaman per file",
+  "creates": "Menghasilkan {pdfs}.",
+  "createsZip": "Menghasilkan {pdfs} dalam ZIP.",
+  "fileN": "File {n}",
+  "splitBy": "Pisah berdasarkan",
+  "ranges": "Rentang",
+  "fixedSize": "Ukuran tetap",
+  "everyPage": "Setiap halaman",
+  "needRange": "Ketik minimal satu rentang",
+  "notARange": "\"{part}\" bukan halaman atau rentang yang valid",
+  "pdfHas": "PDF ini memiliki {pages}",
+  "compressSub": "Pilih seberapa kecil file yang Anda inginkan.",
+  "lossless": "Lossless",
+  "losslessDesc": "Struktur lebih ringkas, gambar tidak diubah",
+  "recommended": "Rekomendasi",
+  "recommendedDesc": "Kualitas bagus, ukuran jauh lebih kecil",
+  "strong": "Kuat",
+  "strongDesc": "File terkecil, kualitas gambar lebih rendah",
+  "numbersSub": "Nomor ditambahkan dengan font Helvetica, abu-abu tua.",
+  "position": "Posisi",
+  "posTopLeft": "Kiri atas",
+  "posTopCenter": "Tengah atas",
+  "posTopRight": "Kanan atas",
+  "posBottomLeft": "Kiri bawah",
+  "posBottomCenter": "Tengah bawah",
+  "posBottomRight": "Kanan bawah",
+  "pageWord": "Halaman {n}",
+  "pageOfWord": "Halaman {n} dari {total}",
+  "startOnPage": "Mulai di halaman",
+  "firstNumber": "Nomor awal",
+  "size": "Ukuran",
+  "watermarkSub": "Digambar di setiap halaman.",
+  "text": "Teks",
+  "defaultWatermark": "RAHASIA",
+  "colour": "Warna",
+  "red": "Merah",
+  "grey": "Abu-abu",
+  "blue": "Biru",
+  "black": "Hitam",
+  "angle": "Sudut",
+  "opacity": "Opasitas",
+  "layout": "Tata letak",
+  "single": "Tunggal",
+  "tiled": "Berulang",
+  "protectSub": "Enkripsi AES-256, dilakukan di perangkat ini.",
+  "password": "Password",
+  "repeatPassword": "Ulangi password",
+  "mismatch": "Password tidak cocok",
+  "longerTip": "Tips: password yang lebih panjang jauh lebih kuat",
+  "showPassword": "Tampilkan password",
+  "permissions": "Izin",
+  "allowPrint": "Izinkan pencetakan",
+  "allowCopy": "Izinkan penyalinan teks",
+  "unlockLockedSub": "Masukkan password untuk menyimpan salinan yang tidak terkunci.",
+  "unlockOpenSub": "PDF ini bisa dibuka tanpa password. Semua pembatasan cetak, salin, atau edit akan dihapus.",
+  "processedHere": "Diproses di perangkat ini. Tidak ada yang diunggah.",
+  "busyMerge": "Menggabungkan…",
+  "busyImages": "Membuat PDF…",
+  "busySplit": "Memisahkan…",
+  "busyCompress": "Mengompres…",
+  "busyNumbers": "Menambahkan nomor halaman…",
+  "busyWatermark": "Menambahkan watermark…",
+  "busyProtect": "Mengenkripsi…",
+  "busyUnlock": "Membuka kunci…",
+  "busyRender": "Merender halaman…",
+  "busySave": "Menyimpan…",
+  "busyNote": "Diproses di perangkat Anda. Tidak ada yang diunggah.",
+  "busyPage": "Halaman {i} dari {n}, di perangkat Anda",
+  "readyPdf": "PDF Anda sudah siap",
+  "readyFiles": "File Anda sudah siap",
+  "readyImage": "Gambar Anda sudah siap",
+  "smaller": "{pct}% lebih kecil",
+  "optimised": "PDF ini sudah teroptimasi dengan baik",
+  "download": "Unduh",
+  "startOver": "Mulai lagi",
+  "continueWith": "Lanjutkan dengan file ini",
+  "cannotPreview": "Pratinjau tidak tersedia",
+  "cropSub": "Seret tepinya di pratinjau, atau ketik marginnya.",
+  "top": "Atas",
+  "bottom": "Bawah",
+  "applyTo": "Terapkan ke",
+  "allPages": "Semua halaman",
+  "somePages": "Sebagian halaman",
+  "nupSub": "Halaman diskalakan agar pas, sesuai urutan baca.",
+  "perSheet": "Halaman per lembar",
+  "sameAsPdf": "Sama seperti PDF",
+  "metaSub": "Ubah kolom mana pun, atau kosongkan untuk menghapusnya.",
+  "metaTitle": "Judul",
+  "metaAuthor": "Penulis",
+  "metaSubject": "Subjek",
+  "metaKeywords": "Kata kunci",
+  "alsoStored": "Juga tersimpan di file ini",
+  "metaApp": "Dibuat dengan",
+  "metaCreated": "Dibuat",
+  "metaModified": "Diubah",
+  "wipeAll": "Hapus semua metadata",
+  "repairSub": "File dipindai dan dibangun ulang di perangkat ini.",
+  "busyRepair": "Memperbaiki…",
+  "placeSub": "Tambahkan tanda tangan atau teks, lalu seret ke posisinya.",
+  "signature": "Tanda tangan",
+  "createSignature": "Buat tanda tangan",
+  "newSignature": "Tanda tangan baru",
+  "addToPage": "Tambahkan ke halaman",
+  "addText": "Tambah teks",
+  "addDate": "Tambah tanggal",
+  "typeText": "Ketik di sini",
+  "deleteItem": "Hapus",
+  "draw": "Gambar",
+  "typeIt": "Ketik",
+  "upload": "Foto",
+  "yourName": "Nama Anda",
+  "removeWhite": "Hapus latar belakang putih",
+  "cancel": "Batal",
+  "useSignature": "Gunakan tanda tangan",
+  "clearPad": "Bersihkan",
+  "signHere": "Tanda tangan di sini",
+  "chooseImage": "Pilih gambar"
+ }
+}

@@ -1,0 +1,142 @@
+{
+  "slug": "/ilovepdf-smallpdf-alternative/",
+  "title": "Scissor PDF vs iLovePDF vs Smallpdf",
+  "description": "An honest comparison of Scissor PDF, iLovePDF and Smallpdf: where your files are processed, how long they are kept, limits, and which tools each one offers.",
+  "h1": "Scissor PDF vs iLovePDF vs Smallpdf",
+  "lead": "All three let you merge, split and compress PDFs in a browser. The big difference is where the work happens: on their servers, or on your own device.",
+  "checked": "2026-10-13",
+  "rows": [
+    [
+      "Where files are processed",
+      "In your browser, on your device",
+      "On iLovePDF's servers",
+      "On Smallpdf's servers"
+    ],
+    [
+      "Files uploaded to a server",
+      "Never",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "How long files are kept",
+      "Not applicable, nothing is received",
+      "Up to 2 hours, then deleted",
+      "1 hour, then deleted (14 days for shared or e-sign files)"
+    ],
+    [
+      "Works offline",
+      "Yes, after the first visit",
+      "Desktop app for Mac and Windows",
+      "Desktop app (Windows)"
+    ],
+    [
+      "Price",
+      "Free",
+      "Free with limits, Premium plan",
+      "Free with limits, Pro plan"
+    ],
+    [
+      "Account needed",
+      "No",
+      "No for basic tasks",
+      "No for basic tasks"
+    ],
+    [
+      "Merge, split, compress, rotate, organize",
+      "Yes",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "JPG to PDF, PDF to JPG",
+      "Yes",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "Page numbers, watermark",
+      "Yes",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "Password protect and unlock",
+      "Yes (AES-256)",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "PDF to Word, Excel, PowerPoint",
+      "No",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "OCR (scanned text recognition)",
+      "No",
+      "Yes",
+      "Yes"
+    ],
+    [
+      "E-signatures",
+      "No",
+      "Yes",
+      "Yes"
+    ]
+  ],
+  "sections": [
+    {
+      "h": "The short answer",
+      "p": "Choose <strong>Scissor PDF</strong> when privacy matters or you need unlimited, free everyday tools: merging, splitting, compressing, reordering, converting images and adding passwords, with nothing ever uploaded. Choose <strong>iLovePDF</strong> or <strong>Smallpdf</strong> when you need features that require heavy server-side processing, such as converting PDFs to editable Word files, OCR, or collecting e-signatures."
+    },
+    {
+      "h": "Why local processing matters",
+      "p": "iLovePDF says it keeps files on its servers for a maximum of two hours, and Smallpdf says it removes files after one hour, keeping shared and e-sign files for 14 days. Both describe security measures such as encrypted transfers. With Scissor PDF there is nothing to delete: the Rust PDF engine runs as WebAssembly inside your browser tab, so the document never travels over the network at all. You can confirm this by opening your browser's network panel, or by disconnecting from the internet after the page loads."
+    },
+    {
+      "h": "Limits",
+      "p": "iLovePDF's and Smallpdf's free plans limit how much you can process before asking you to upgrade; iLovePDF's pricing page lists, for example, 25 files and 100 MB per merge on the free plan. Scissor PDF sets no limits of its own. The practical limit is your device's memory, which on a typical laptop means files of several hundred megabytes."
+    },
+    {
+      "h": "What Scissor PDF does not do (yet)",
+      "p": "Scissor PDF does not convert PDFs to Word, Excel or PowerPoint, does not run OCR on scans, and does not offer e-signatures. These either need large models or a server to coordinate signers. If you need them, iLovePDF and Smallpdf are good choices for documents that are not sensitive."
+    }
+  ],
+  "sources": [
+    [
+      "iLovePDF FAQ: file storage",
+      "https://www.ilovepdf.com/help/faq"
+    ],
+    [
+      "iLovePDF pricing",
+      "https://www.ilovepdf.com/pricing"
+    ],
+    [
+      "Smallpdf: Is Smallpdf safe?",
+      "https://smallpdf.com/blog/is-smallpdf-safe"
+    ],
+    [
+      "Smallpdf: what happens if my signed document expires",
+      "https://smallpdf.com/blog/what-happens-if-my-signed-document-expires"
+    ],
+    [
+      "Smallpdf desktop app",
+      "https://smallpdf.com/download/windows"
+    ]
+  ],
+  "faqs": [
+    {
+      "q": "Is there a free alternative to iLovePDF that does not upload files?",
+      "a": "Yes. Scissor PDF offers merge, split, compress, organize, rotate, page numbers, watermark, image conversion, password protection and unlocking for free, and runs all of them in your browser, so files are never uploaded."
+    },
+    {
+      "q": "Is Scissor PDF safer than Smallpdf?",
+      "a": "For privacy, yes, by design: Smallpdf processes files on its servers and deletes them after an hour, while Scissor PDF never receives your files at all. Smallpdf offers more features, such as PDF to Word and e-signatures."
+    },
+    {
+      "q": "Can I use Scissor PDF offline?",
+      "a": "Yes. After the first visit, the site and its engine are cached by your browser, so every tool works without an internet connection."
+    }
+  ]
+}

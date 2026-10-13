@@ -1,0 +1,25 @@
+[package]
+name = "engine"
+version = "0.1.0"
+edition = "2024"
+description = "PDF engine for Scissor PDF, compiled to WebAssembly"
+license = "MIT"
+repository = "https://github.com/samalstudios/scissor-pdf"
+publish = false
+
+[dependencies]
+crc32fast = "1.5.2"
+getrandom = { version = "0.4.3", features = ["wasm_js"] }
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+js-sys = "0.3"
+lopdf = { version = "0.45.0", default-features = false, features = ["wasm_js"] }
+wasm-bindgen = "0.2"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"

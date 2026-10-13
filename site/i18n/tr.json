@@ -1,0 +1,1133 @@
+{
+ "meta": {
+  "code": "tr",
+  "name": "Türkçe",
+  "dir": "ltr",
+  "ogLocale": "tr_TR"
+ },
+ "site": {
+  "description": "Tamamen tarayıcınızda çalışan ücretsiz PDF araçları: PDF birleştirme, bölme, sıkıştırma, döndürme, dönüştürme ve şifreleme. Dosyalarınız cihazınızdan çıkmaz. Kayıt yok, filigran yok.",
+  "homeTitle": "Dosyalarınızı Asla Yüklemeyen Ücretsiz PDF Araçları",
+  "homeH1a": "Tüm PDF araçları.",
+  "homeH1b": "Hiçbir şey yüklenmez.",
+  "homeLead": "PDF'leri doğrudan tarayıcınızda birleştirin, bölün, sıkıştırın, dönüştürün ve şifreleyin. Scissor PDF ücretsizdir, hesap gerektirmez ve dosyalarınız cihazınızdan asla çıkmaz.",
+  "allTools": "Tüm PDF araçları",
+  "privateH2": "Söz vererek değil, tasarımıyla gizli",
+  "privateP1": "Çoğu çevrimiçi PDF hizmeti belgenizi kendi sunucularına yükler, orada işler ve sonrasında silindiğine güvenmenizi ister. <strong>Scissor PDF farklı çalışır: PDF motorunun kendisi tarayıcınıza indirilir</strong>. Rust ile yazılıp WebAssembly'ye derlenen bu motor sayesinde her birleştirme, bölme ya da sıkıştırma kendi cihazınızda gerçekleşir.",
+  "privateP2": "Bu yüzden sözleşmeler, sağlık kayıtları, vergi formları ve bir yabancıya teslim etmek istemeyeceğiniz her şey için uygundur. <a href=\"{how}\">Nasıl çalıştığını ve bunu kendiniz nasıl doğrulayabileceğinizi görün</a>.",
+  "whySwitch": "Kullanıcılar neden Scissor PDF'e geçiyor",
+  "faqTitle": "Sıkça sorulan sorular"
+ },
+ "nav": {
+  "home": "Ana sayfa",
+  "allTools": "Tüm araçlar",
+  "compress": "Sıkıştır",
+  "merge": "Birleştir",
+  "how": "Nasıl çalışır",
+  "language": "Dil"
+ },
+ "footer": {
+  "organize": "Düzenle",
+  "optimize": "Optimize et ve dönüştür",
+  "edit": "Düzenle ve koru",
+  "about": "Scissor PDF",
+  "privacy": "Gizlilik",
+  "note": "Scissor PDF her dosyayı tarayıcınızda, WebAssembly'ye derlenmiş bir Rust motoruyla işler. Yükleme yok, hesap yok, takip yok.",
+  "updated": "Güncellendi",
+  "languages": "Diller"
+ },
+ "common": {
+  "assureLocal": "Dosyalar cihazınızdan asla çıkmaz",
+  "assureFree": "Ücretsiz, kayıt gerekmez",
+  "assureNoMark": "Filigran yok",
+  "homeAssureLocal": "%100 cihazınızda",
+  "homeAssureOffline": "Çevrimdışı çalışır",
+  "choosePdf": "PDF dosyası seçin",
+  "choosePdfs": "PDF dosyaları seçin",
+  "chooseImage": "Görsel seçin",
+  "chooseImages": "Görseller seçin",
+  "dropIt": "veya buraya bırakın",
+  "dropThem": "veya buraya bırakın",
+  "noscript": "Bu araç tarayıcınızda çalışır ve JavaScript ile WebAssembly'nin etkin olmasını gerektirir.",
+  "why": "Neden Scissor PDF",
+  "questionsAbout": "{name} hakkında sorular",
+  "moreTools": "Diğer PDF araçları",
+  "tryTool": "Bir aracı deneyin",
+  "f1t": "Tasarımıyla gizli",
+  "f1p": "Dosyalar tarayıcı sekmenizde işlenir ve asla yüklenmez. Onları görebilecek, saklayabilecek ya da sızdırabilecek bir sunucu yoktur.",
+  "f2t": "Hızlı, çevrimdışı bile",
+  "f2p": "Rust ile yazılmış bir PDF motoru, WebAssembly olarak yerel uygulamalara yakın hızda çalışır. İlk ziyaretten sonra internet bağlantısı olmadan da çalışır.",
+  "f3t": "Ücretsiz, şartsız",
+  "f3p": "Kayıt yok, günlük sınır yok, filigran yok, reklam yok. Sayfayı açın, dosyanızı bırakın, sonucu indirin.",
+  "suggestLang": "Bu sayfa {lang} dilinde de mevcut.",
+  "switch": "Geç",
+  "dismiss": "Kapat"
+ },
+ "tools": {
+  "merge-pdf": {
+   "name": "PDF Birleştir",
+   "short": "Birden fazla PDF'i seçtiğiniz sırayla tek dosyada birleştirin.",
+   "action": "PDF'leri birleştir",
+   "title": "PDF Birleştirme: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF dosyalarını tarayıcınızda tek belgede birleştirin. Sürükleyerek sıralayın, sonra birleştirin. Dosyalar asla yüklenmez. Ücretsiz, kayıtsız, filigransız.",
+   "h1": "PDF dosyalarını birleştirin",
+   "lead": "Birden fazla PDF'i istediğiniz sırayla tek bir belgede birleştirin. Her şey cihazınızda gerçekleşir, böylece gizli dosyalar bile gizli kalır.",
+   "steps": [
+    "Birleştirmek istediğiniz PDF dosyalarını seçin veya buraya bırakın. İstediğiniz zaman daha fazlasını ekleyebilirsiniz.",
+    "Dosyaları son belgede görünmeleri gereken sıraya sürükleyin.",
+    "PDF'leri birleştir'e tıklayın ve birleştirilmiş dosyayı indirin."
+   ],
+   "sections": [
+    {
+     "h": "Birleştirirken neler korunur",
+     "p": "Her sayfa orijinal boyutunu, yönünü, metnini, görsellerini, bağlantılarını ve doldurulabilir form alanlarını korur. İlk belgenin yer işaretleri korunur. Birleştirilmiş dosya; Preview, Adobe Acrobat ve tüm web tarayıcıları dahil her okuyucuda açılan standart bir PDF'tir."
+    },
+    {
+     "h": "Büyük veya çok sayıda dosyayı birleştirme",
+     "p": "Dosya veya sayfa sayısında sınır yoktur. Çok büyük belgeler yalnızca cihazınızın belleğiyle sınırlıdır. Modern bir dizüstü bilgisayar birkaç yüz megabaytı rahatça işler. Birleştirilmiş dosya ihtiyacınızdan büyük çıkarsa, ardından PDF Sıkıştır'dan geçirin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF birleştirirken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Dosyaların sırasını nasıl değiştiririm?",
+     "a": "Birleştirmeden önce herhangi bir dosya kartını yeni konumuna sürükleyin. Son belge, kartların soldan sağa ve yukarıdan aşağıya sırasını izler."
+    },
+    {
+     "q": "Bir PDF'in yalnızca bazı sayfalarını birleştirebilir miyim?",
+     "a": "Birleştirme, belgeleri bütün olarak birleştirir. Yalnızca bazı sayfaları kullanmak için önce dosyayı Sayfa Çıkar'da açın, ardından sonucu birleştirin. Ya da hepsini birleştirip gereksiz sayfaları Sayfa Sil ile kaldırın."
+    },
+    {
+     "q": "Şifre korumalı PDF'leri birleştirebilir miyim?",
+     "a": "Önce şifreyi PDF Kilidi Aç ile kaldırın (şifreyi bilmeniz gerekir), sonra birleştirin."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF dosyaları nasıl birleştirilir"
+  },
+  "split-pdf": {
+   "name": "PDF Böl",
+   "short": "Bir PDF'i sayfa aralıklarına veya belirli sayfa sayısına göre birden fazla dosyaya bölün.",
+   "action": "PDF'i böl",
+   "title": "PDF Bölme: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF'i sayfa aralıklarına, her N sayfaya veya sayfa başına bir dosyaya bölün. Tarayıcınızda çalışır, dosyalar asla yüklenmez. Ücretsiz, kayıt gerekmez.",
+   "h1": "PDF bölün",
+   "lead": "Bir PDF'i daha küçük dosyalara ayırın: özel sayfa aralıklarına, eşit parçalara veya sayfa başına bir dosyaya. Belgeniz cihazınızdan asla çıkmaz.",
+   "steps": [
+    "Bölmek istediğiniz PDF'i seçin veya buraya bırakın.",
+    "Nasıl bölüneceğini seçin: 1-3, 4-10 gibi özel aralıklar, dosya başına sabit sayfa sayısı veya her sayfa ayrı.",
+    "PDF'i böl'e tıklayın. Tek bir PDF alırsınız; bölme birden fazla dosya üretirse bir ZIP arşivi."
+   ],
+   "sections": [
+    {
+     "h": "Üç bölme yöntemi",
+     "p": "Özel aralıklar tam kontrol sağlar: üç dosya için 1-5, 6-12, 13 yazın. Sabit boyut, belgeyi eşit uzunlukta parçalara ayırır; taranmış toplu belgeler için kullanışlıdır. Her sayfa seçeneği her sayfa için bir PDF üretir."
+    },
+    {
+     "h": "Bölme mi, çıkarma mı?",
+     "p": "Bölme, belgenin tamamını birkaç dosyaya ayırır. Yalnızca birkaç sayfayı yeni bir dosyaya almak için Sayfa Çıkar daha hızlıdır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF bölerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Sayfa aralıklarını nasıl yazarım?",
+     "a": "Aralıkları virgülle ayırın. Aralık için kısa çizgi, tek sayfa için tek bir sayı kullanın; örneğin 1-3, 5, 8-12. Her aralık ayrı bir PDF olur."
+    },
+    {
+     "q": "Neden ZIP dosyası alıyorum?",
+     "a": "Bölme birden fazla PDF ürettiğinde, tek seferde indirebilmeniz için hepsi tek bir ZIP'e paketlenir. Tüm işletim sistemleri ZIP dosyalarını çift tıklamayla açar."
+    },
+    {
+     "q": "Bölmek kaliteyi düşürür mü?",
+     "a": "Hayır. Sayfalar yeniden oluşturulmadan olduğu gibi kopyalanır; metin net ve aranabilir kalır, görsellere dokunulmaz."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF nasıl bölünür"
+  },
+  "compress-pdf": {
+   "name": "PDF Sıkıştır",
+   "short": "E-posta ve yüklemeler için PDF boyutunu, seçtiğiniz kalitede küçültün.",
+   "action": "PDF'i sıkıştır",
+   "title": "PDF Sıkıştırma: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF dosya boyutunu tarayıcınızda küçültün. Kayıpsız, önerilen veya güçlü sıkıştırmayı seçin. Dosyalar asla yüklenmez. Ücretsiz, kayıtsız, filigransız.",
+   "h1": "PDF sıkıştırın",
+   "lead": "PDF'i e-posta sınırlarına ve yükleme formlarına sığacak kadar küçültün. Ne kadar sıkıştırılacağını seçin ve dosyanın tam olarak ne kadar küçüldüğünü görün. Hiçbir şey yüklenmez.",
+   "steps": [
+    "Küçültmek istediğiniz PDF'i seçin veya buraya bırakın.",
+    "Bir seviye seçin: Kayıpsız her pikseli korur, Önerilen boyut ile kaliteyi dengeler, Güçlü en küçük dosyayı üretir.",
+    "PDF'i sıkıştır'a tıklayın, yeni boyutu kontrol edin ve indirin."
+   ],
+   "sections": [
+    {
+     "h": "Sıkıştırma nasıl çalışır",
+     "p": "Her seviye kullanılmayan nesneleri kaldırır, dosya yapısını sıkıştırılmış nesne akışlarına paketler ve sıkıştırılmamış tüm verileri sıkıştırır. Önerilen ve Güçlü ayrıca büyük fotoğrafları JPEG olarak yeniden kodlar ve ekran ile ofis baskısı için gerekenden büyük görselleri küçültür: uzun kenarda Önerilen için en fazla 2200, Güçlü için 1400 piksel. Metin ve vektör grafikler asla rasterleştirilmez; net ve aranabilir kalır."
+    },
+    {
+     "h": "Ne beklemelisiniz",
+     "p": "Taranmış belgeler ve fotoğraf dolu PDF'ler genellikle en çok küçülür, çoğu zaman yüzde 70 ile 95 arasında. Çoğunlukla metinden oluşan PDF'ler zaten derli topludur ve yalnızca biraz küçülebilir. Sonuç küçülmezse, orijinal dosya zaten iyi optimize edilmiş demektir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF sıkıştırırken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Hangi sıkıştırma seviyesini seçmeliyim?",
+     "a": "Önerilen ile başlayın. Fotoğraf ağırlıklı PDF'leri genellikle yarıdan fazla küçültür ve ekranda da baskıda da net kalır. Katı bir boyut sınırının altına inmeniz gerektiğinde Güçlü'yü, görsellerin hiç değişmemesi gerektiğinde Kayıpsız'ı kullanın."
+    },
+    {
+     "q": "PDF'imdeki metin bulanıklaşır mı?",
+     "a": "Hayır. Yalnızca gömülü fotoğraflar yeniden kodlanır. Metin, yazı tipleri ve vektör çizimler aynen korunur."
+    },
+    {
+     "q": "Bir yükleme formu için PDF'i 1 MB veya 2 MB'ın altına nasıl indiririm?",
+     "a": "Güçlü sıkıştırmayı deneyin. Hâlâ büyükse belgeyi PDF Böl ile bölün veya gereksiz sayfaları Sayfa Sil ile kaldırın, ardından yeniden sıkıştırın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF nasıl sıkıştırılır"
+  },
+  "organize-pdf": {
+   "name": "PDF Düzenle",
+   "short": "Sayfaları tek bir görsel düzenleyicide sıralayın, döndürün ve silin.",
+   "action": "PDF'i kaydet",
+   "title": "PDF Sayfalarını Sırala, Döndür ve Sil",
+   "description": "PDF sayfalarını sürükleyerek yeniden sıralayın, tek tek döndürün veya silin, sonra kaydedin. Tamamen tarayıcınızda çalışır, yükleme yok. Ücretsiz, kayıtsız.",
+   "h1": "PDF sayfalarını düzenleyin",
+   "lead": "Her sayfayı küçük resim olarak görün; sürükleyerek sıralayın, yan duranları döndürün, gerekmeyenleri kaldırın. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "Bir PDF seçin veya buraya bırakın. Her sayfa küçük resim olarak görünür.",
+    "Sayfaları yeni bir sıraya sürükleyin. Döndürmek veya silmek için her sayfadaki düğmeleri kullanın.",
+    "Yeniden düzenlenmiş belgeyi indirmek için PDF'i kaydet'e tıklayın."
+   ],
+   "sections": [
+    {
+     "h": "Sayfa düzeni için tek düzenleyici",
+     "p": "Düzenle; sıralama, döndürme ve silmeyi bir araya getirir, böylece taranmış bir belgeyi tek seferde düzeltebilirsiniz. Değişiklikler yalnızca kaydettiğinizde uygulanır ve diskinizdeki orijinal dosya asla değiştirilmez."
+    },
+    {
+     "h": "Klavye ve dokunmatik dostu",
+     "p": "Sayfalar fare, izleme dörtgeni veya parmakla sürüklenebilir. Her sayfada ayrıca onu öne veya arkaya taşıyan düğmeler bulunur; uzun belgelerde bu daha hassastır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF düzenlerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Bir değişikliği geri alabilir miyim?",
+     "a": "Evet. Silinen bir sayfayı geri getirmek için yeniden seçin, bir sayfayı geri döndürün ya da kaydetmeden önce Sıfırla ile orijinal sıraya dönün."
+    },
+    {
+     "q": "Sıralamayı değiştirmek bağlantıları ve yer işaretlerini etkiler mi?",
+     "a": "Belgede kalan sayfalar arasındaki bağlantılar çalışmaya devam eder. Silinen sayfalara işaret eden yer işaretleri ve bağlantılar kaldırılır, böylece dosyada bozuk başvuru kalmaz."
+    },
+    {
+     "q": "Başka bir PDF'ten sayfa ekleyebilir miyim?",
+     "a": "Önce dosyaları PDF Birleştir ile birleştirin, ardından birleştirilmiş dosyayı burada açıp sayfaları sıraya koyun."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF sayfaları nasıl düzenlenir"
+  },
+  "rotate-pdf": {
+   "name": "PDF Döndür",
+   "short": "Yan duran veya ters dönmüş sayfaları düzeltin.",
+   "action": "PDF'i kaydet",
+   "title": "PDF Döndürme: Ücretsiz, Dosya Yüklemeden",
+   "description": "Bir PDF'in tüm sayfalarını veya tek sayfaları 90 ya da 180 derece döndürün ve sonucu kalıcı olarak kaydedin. Tarayıcınızda çalışır, yükleme yok. Ücretsiz.",
+   "h1": "PDF sayfalarını döndürün",
+   "lead": "Yan duran veya ters dönmüş sayfaları düzeltin. Belgenin tamamını ya da tek tek sayfaları döndürüp kaydedin. Döndürme dosyaya kaydedilir, böylece her okuyucuda doğru kalır.",
+   "steps": [
+    "Döndürülecek PDF'i seçin veya buraya bırakın.",
+    "Sayfaların üstündeki düğmelerle tüm sayfaları bir kerede döndürün veya tek bir sayfadaki döndürme düğmesine tıklayın.",
+    "PDF'i kaydet'e tıklayın ve düzeltilmiş dosyayı indirin."
+   ],
+   "sections": [
+    {
+     "h": "Kayıpsız döndürme",
+     "p": "Döndürme, sayfanın içeriğini yeniden çizmek yerine yön ayarını değiştirir; böylece metin ve görseller tam kalitesini korur ve dosya boyutu aynı kalır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF döndürürken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Döndürme kalıcı olarak kaydediliyor mu?",
+     "a": "Evet. Yeni yön PDF'in içine yazılır; böylece Preview, Acrobat, tarayıcılar ve telefonlarda doğru şekilde açılır."
+    },
+    {
+     "q": "Yalnızca bir sayfayı döndürebilir miyim?",
+     "a": "Evet. Her küçük resmin kendi döndürme düğmesi vardır. Dokunmadığınız sayfalar mevcut yönlerini korur."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF sayfaları nasıl döndürülür"
+  },
+  "delete-pdf-pages": {
+   "name": "Sayfa Sil",
+   "short": "PDF'ten boş, yinelenen veya istenmeyen sayfaları kaldırın.",
+   "action": "Sayfaları sil",
+   "title": "PDF Sayfa Silme: Ücretsiz, Yüklemeden",
+   "description": "PDF'ten sayfaları tıklayarak veya sayfa numaralarını yazarak silin. Tamamen tarayıcınızda çalışır, dosyalar asla yüklenmez. Ücretsiz, kayıtsız, filigransız.",
+   "h1": "PDF'ten sayfa silin",
+   "lead": "Kaldırmak istediğiniz sayfalara tıklayın veya numaralarını yazın, ardından onlar olmadan yeni bir PDF kaydedin. Orijinal dosyanız değişmez ve cihazınızdan asla çıkmaz.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Kaldırmak istediğiniz her sayfaya tıklayın veya 2, 5-7 gibi sayfa numaraları yazın.",
+    "Sayfaları sil'e tıklayın ve yeni PDF'i indirin."
+   ],
+   "sections": [
+    {
+     "h": "Sadece gizlenmiş sayfalar değil, gerçekten daha küçük bir dosya",
+     "p": "Silinen sayfalar, yalnızca onların kullandığı görseller ve yazı tipleriyle birlikte kaldırılır; böylece yeni dosya gerçekten daha küçüktür. Kaldırılan sayfalara işaret eden bağlantılar ve yer işaretleri temizlenir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Sayfa silerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Birden fazla sayfayı aynı anda silebilir miyim?",
+     "a": "Evet. İstediğiniz kadar sayfaya tıklayın veya 1, 4-6, 10 gibi bir liste yazın."
+    },
+    {
+     "q": "Silinen bir sayfayı geri alabilir miyim?",
+     "a": "Kaydetmeden önce, tutmak için yeniden tıklayın. Kaydettikten sonra da orijinal dosyanız cihazınızda değişmeden durur."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF'ten sayfa nasıl silinir"
+  },
+  "extract-pdf-pages": {
+   "name": "Sayfa Çıkar",
+   "short": "Seçilen sayfaları bir PDF'ten yeni bir belgeye alın.",
+   "action": "Sayfaları çıkar",
+   "title": "PDF Sayfa Çıkarma: Ücretsiz, Yüklemeden",
+   "description": "Bir PDF'ten sayfa seçip yeni bir dosya ya da sayfa başına ayrı dosyalar olarak kaydedin. Tarayıcınızda çalışır, hiçbir şey yüklenmez. Ücretsiz, kayıt gerekmez.",
+   "h1": "PDF'ten sayfa çıkarın",
+   "lead": "İhtiyacınız olan sayfaları seçin ve yeni bir PDF ya da sayfa başına bir dosya olarak kaydedin. Kaynak belge dokunulmadan cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Çıkarılacak sayfalara tıklayın veya yazın; örneğin 3, 7-9.",
+    "Tek birleşik PDF'i veya sayfa başına bir dosyayı seçin, ardından Sayfaları çıkar'a tıklayın."
+   ],
+   "sections": [
+    {
+     "h": "Sayfaların birebir kopyası",
+     "p": "Çıkarılan sayfalar yeniden basılmaz, kopyalanır; böylece metin seçilebilir ve aranabilir kalır, görseller orijinal çözünürlüklerini korur."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Sayfa çıkarırken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Her sayfayı ayrı bir PDF olarak kaydedebilir miyim?",
+     "a": "Evet. Çıkarmadan önce \"Sayfa başına bir dosya\"yı seçin. Seçilen her sayfa için bir PDF içeren bir ZIP arşivi alırsınız."
+    },
+    {
+     "q": "PDF Böl'den farkı nedir?",
+     "a": "Çıkarma, seçtiğiniz sayfalardan bir dosya oluşturur. Bölme ise belgenin tamamını birkaç parçaya ayırır."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF'ten sayfa nasıl çıkarılır"
+  },
+  "jpg-to-pdf": {
+   "name": "JPG'den PDF'e",
+   "short": "Fotoğrafları ve taramaları (JPG, PNG, HEIC, WebP) PDF'e dönüştürün.",
+   "action": "PDF oluştur",
+   "title": "JPG'den PDF'e: Ücretsiz, Yüklemeden",
+   "description": "JPG, PNG, WebP ve HEIC görsellerini tarayıcınızda tek PDF'e dönüştürün. Sıralayın, sayfa boyutu ve kenar boşluğu seçin. Fotoğraflar yüklenmez. Ücretsiz.",
+   "h1": "JPG'yi PDF'e dönüştürün",
+   "lead": "Fotoğrafları, ekran görüntülerini ve taranmış sayfaları tek bir PDF'e dönüştürün. JPEG'ler orijinal kalitesiyle eklenir ve hiçbir şey yüklenmez.",
+   "steps": [
+    "Görsellerinizi seçin veya buraya bırakın: JPG, PNG, WebP, GIF veya Safari'de HEIC.",
+    "Sıraya sürükleyin ve bir sayfa boyutu seçin: görsele sığdır, A4 veya ABD Letter; kenar boşluklu ya da boşluksuz.",
+    "PDF oluştur'a tıklayın ve indirin."
+   ],
+   "sections": [
+    {
+     "h": "Orijinal kalite, doğru yön",
+     "p": "JPEG fotoğraflar PDF'e yeniden sıkıştırılmadan bayt bayt yerleştirilir, bu yüzden kalite kaybı olmaz. Telefon fotoğrafları yön bilgilerine göre düz çevrilir. PNG ve diğer biçimler saydamlık dahil kayıpsız saklanır."
+    },
+    {
+     "h": "Sayfa boyutu seçenekleri",
+     "p": "Sığdır, her sayfayı görseliyle aynı şekle getirir; fotoğraflar ve ekran görüntüleri için en iyisidir. A4 ve Letter, her görseli standart kâğıdın ortasına yerleştirir ve geniş görseller için sayfayı yataya çevirir; yazdıracağınız belgeler için en iyisidir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Görselleri PDF'e dönüştürürken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "iPhone HEIC fotoğraflarını dönüştürebilir miyim?",
+     "a": "Evet, HEIC'i doğrudan okuyabilen Safari'de. Diğer tarayıcılarda önce fotoğrafı Fotoğraflar uygulamasından JPEG olarak paylaşın veya bu sayfayı Safari'de açın."
+    },
+    {
+     "q": "Kaç görsel ekleyebilirim?",
+     "a": "Cihazınızın belleğinin izin verdiği kadar. Sıradan bir dizüstü bilgisayarda yüzlerce fotoğraf sorun olmaz."
+    },
+    {
+     "q": "PDF büyük olur mu?",
+     "a": "Yaklaşık olarak görsellerinizin toplam boyutunda. Küçültmek için sonucu PDF Sıkıştır'dan geçirin."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "JPG PDF'e nasıl dönüştürülür"
+  },
+  "pdf-to-jpg": {
+   "name": "PDF'ten JPG'ye",
+   "short": "PDF sayfalarını yüksek kaliteli JPG veya PNG görseller olarak kaydedin.",
+   "action": "Görsele dönüştür",
+   "title": "PDF'ten JPG'ye: Ücretsiz, Yüklemeden",
+   "description": "Bir PDF'in tüm sayfalarını veya seçtiklerinizi istediğiniz çözünürlükte JPG ya da PNG görsellere dönüştürün. Tarayıcınızda çalışır, yükleme yok. Ücretsiz.",
+   "h1": "PDF'i JPG'ye dönüştürün",
+   "lead": "PDF sayfalarını slaytlar, sosyal medya gönderileri veya sohbet için net JPG ya da PNG görseller olarak kaydedin. Sayfaları ve çözünürlüğü seçin. İşleme cihazınızda yapılır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Dönüştürülecek sayfaları (varsayılan olarak hepsi), biçimi ve çözünürlüğü seçin.",
+    "Görsele dönüştür'e tıklayın. Tek sayfa görsel olarak, birden fazla sayfa ZIP olarak iner."
+   ],
+   "sections": [
+    {
+     "h": "Çözünürlük rehberi",
+     "p": "Standart (108 DPI) ekranlar ve mesajlaşma için uygundur. Yüksek (144 DPI) yüksek çözünürlüklü ekranlarda ve sunumlarda nettir. Baskı (216 DPI) yazdırmak ve ayrıntıları yakınlaştırmak içindir."
+    },
+    {
+     "h": "JPG mi, PNG mi?",
+     "p": "JPG daha küçük dosyalar üretir ve fotoğraflı sayfalara uygundur. PNG kayıpsızdır, metni ve çizgileri keskin tutar ama dosya boyutu daha büyüktür."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'i görsele dönüştürürken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Yalnızca bir sayfayı dönüştürebilir miyim?",
+     "a": "Evet. Tüm seçimleri kaldırın, istediğiniz sayfaya tıklayın ve dönüştürün. Tek sayfa ZIP olmadan doğrudan görsel olarak iner."
+    },
+    {
+     "q": "Hangi işleyici kullanılıyor?",
+     "a": "Sayfalar, Firefox'ta yerleşik olan açık kaynaklı PDF işleyicisi PDF.js ile tarayıcınızda yerel olarak çizilir."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF JPG'ye nasıl dönüştürülür"
+  },
+  "add-page-numbers": {
+   "name": "Sayfa Numarası",
+   "short": "PDF sayfalarını seçtiğiniz konum ve stilde numaralandırın.",
+   "action": "Sayfa numarası ekle",
+   "title": "PDF'e Sayfa Numarası Ekleme: Ücretsiz",
+   "description": "PDF'e sayfa numarası ekleyin: konumu, \"Sayfa 1 / 10\" gibi biçimi, başlangıç numarasını ve ilk sayfayı seçin. Tarayıcınızda çalışır, yükleme yok. Ücretsiz.",
+   "h1": "PDF'e sayfa numarası ekleyin",
+   "lead": "Sayfalarınızı saniyeler içinde numaralandırın. Numaraların nereye geleceğini, nasıl görüneceğini ve saymanın nereden başlayacağını seçin. Her şey cihazınızda çalışır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Bir konum, \"1\" veya \"Sayfa 1 / 12\" gibi bir biçim, numaralandırılacak ilk sayfayı ve başlangıç numarasını seçin.",
+    "Sayfa numarası ekle'ye tıklayın ve indirin."
+   ],
+   "sections": [
+    {
+     "h": "Döndürülmüş ve farklı boyutlu sayfalarla çalışır",
+     "p": "Numaralar gerçekten gördüğünüz kenara yerleştirilir; böylece yatay ve döndürülmüş sayfalar doğru yönde numaralanır, farklı kâğıt boyutlarındaki sayfaların her biri doğru konumlanmış numaralar alır."
+    },
+    {
+     "h": "Kapak sayfasını atlayın",
+     "p": "Kapağı numarasız bırakmak için \"Başlangıç sayfası\"nı 2 yapın ve numaralandırmanın içeriğin ilk sayfasından başlaması için başlangıç numarasını 1 olarak ayarlayın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Sayfa numarası eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "\"Sayfa X / Y\" biçimini kullanabilir miyim?",
+     "a": "Evet. \"Sayfa 1 / 12\" biçimini seçin. Toplam yalnızca numara alan sayfaları sayar."
+    },
+    {
+     "q": "Hangi yazı tipi kullanılıyor?",
+     "a": "Her okuyucunun gösterebildiği standart bir PDF yazı tipi olan Helvetica; koyu gri renkte ve seçtiğiniz boyutta."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF'e sayfa numarası nasıl eklenir"
+  },
+  "watermark-pdf": {
+   "name": "Filigran Ekle",
+   "short": "Her sayfaya GİZLİ veya TASLAK gibi bir metin basın.",
+   "action": "Filigran ekle",
+   "title": "PDF'e Filigran Ekleme: Ücretsiz, Yüklemeden",
+   "description": "Her PDF sayfasına GİZLİ veya TASLAK gibi metin filigranı ekleyin. Boyut, açı, saydamlık ve renk; tek veya döşeli. Hiçbir şey yüklenmez. Ücretsiz.",
+   "h1": "PDF'e filigran ekleyin",
+   "lead": "Belgeleri Gizli, Taslak veya adınızla işaretleyin. Metni, rengi, boyutu, açıyı ve saydamlığı seçin; sayfa başına bir kez ya da döşeli. PDF'iniz cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Filigran metnini yazın; rengi, boyutu, açıyı ve opaklığı ayarlayın. Önizleme siz ayarladıkça güncellenir.",
+    "Filigran ekle'ye tıklayın ve indirin."
+   ],
+   "sections": [
+    {
+     "h": "Her dil, her yazı sistemi",
+     "p": "Filigran sisteminizin yazı tipleriyle çizilir; bu sayede Arapça, Kürtçe, Çince ve emoji dahil her dilde çalışır ve her PDF okuyucuda aynı görünür."
+    },
+    {
+     "h": "Tek veya döşeli",
+     "p": "Tek filigran her sayfanın ortasında durur. Döşeli seçenek onu sayfa boyunca tekrarlar; bu da ekran görüntülerinden kırpılmasını çok daha zorlaştırır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'e filigran eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Filigran kaldırılabilir mi?",
+     "a": "Filigran her sayfaya bir görsel katmanı olarak çizilir. PDF düzenleme yazılımına sahip biri onu yine de kaldırabilir; bu yüzden değiştirilmemesi gereken belgeler için PDF Şifrele'yi de kullanın."
+    },
+    {
+     "q": "Filigran metnimi gizler mi?",
+     "a": "Opaklığı düşük tutarsanız hayır. Yüzde 15 ile 30 arası, işaret açıkça görünürken belgeyi okunabilir tutar."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF'e filigran nasıl eklenir"
+  },
+  "protect-pdf": {
+   "name": "PDF Şifrele",
+   "short": "AES-256 şifrelemeyle parola ekleyin.",
+   "action": "PDF'i şifrele",
+   "title": "PDF Şifreleme (AES-256), Yüklemeden",
+   "description": "PDF'i AES-256 ile parolayla şifreleyin, isterseniz yazdırmayı veya kopyalamayı engelleyin. Tarayıcınızda çalışır; dosya ve parola cihazınızdan asla çıkmaz.",
+   "h1": "PDF'i parolayla koruyun",
+   "lead": "Bir PDF'i yalnızca parolanızla açılabilecek şekilde şifreleyin. Şifreleme cihazınızda yapılır; ne belge ne de parola hiçbir yere gönderilir.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Bir parola yazın ve onaylayın. İsterseniz yazdırmayı veya metin kopyalamayı engelleyin.",
+    "PDF'i şifrele'ye tıklayın ve şifrelenmiş dosyayı indirin."
+   ],
+   "sections": [
+    {
+     "h": "Güçlü, standart şifreleme",
+     "p": "Dosyalar, PDF standardındaki en güçlü şifreleme olan AES-256 ile şifrelenir (PDF 2.0, güvenlik işleyicisi revizyon 6). Acrobat, Preview, Chrome, Edge ve Firefox bunları parolayla açabilir."
+    },
+    {
+     "h": "Hatırlayacağınız bir parola seçin",
+     "p": "Unutulan bir parolayı kurtarmanın hiçbir yolu yoktur; bizim için bile, çünkü onu hiç görmeyiz. Uzun bir parola cümlesi kullanın ve bir parola yöneticisinde saklayın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF şifrelerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Yazdırma ve kopyalama seçenekleri ne işe yarar?",
+     "a": "Belge açıldıktan sonra kurallara uyan PDF okuyucuların dikkate aldığı izin işaretlerini ayarlarlar. Bunlar kendi başına şifreleme değil, kısıtlamadır; asıl korumanın açılış parolası olduğunu unutmayın."
+    },
+    {
+     "q": "Parolayı daha sonra kaldırabilir miyim?",
+     "a": "Evet, parolayı bildiğiniz sürece PDF Kilidi Aç ile."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF parolayla nasıl korunur"
+  },
+  "unlock-pdf": {
+   "name": "PDF Kilidi Aç",
+   "short": "Bildiğiniz bir parolayı PDF'ten kaldırın.",
+   "action": "Kilidi aç",
+   "title": "PDF Şifresi Kaldırma: Ücretsiz, Yüklemeden",
+   "description": "Parolasını bildiğiniz bir PDF'ten parolayı ve kısıtlamaları kaldırın. Tarayıcınızda çalışır; dosya ve parola cihazınızdan asla çıkmaz.",
+   "h1": "PDF'ten parolayı kaldırın",
+   "lead": "Her seferinde parola yazmaktan yoruldunuz mu? Bir kez girin ve kilidi açılmış bir kopya kaydedin. Şifre çözme cihazınızda yapılır. Bu araç bilinmeyen parolaları tahmin edemez veya kıramaz.",
+   "steps": [
+    "Korumalı PDF'i seçin veya buraya bırakın.",
+    "Parolasını yazın.",
+    "Kilidi aç'a tıklayın ve parolasız açılan bir kopyayı indirin."
+   ],
+   "sections": [
+    {
+     "h": "Kısıtlamalar da kaldırılır",
+     "p": "Serbestçe açılan ama yazdırmayı, kopyalamayı veya düzenlemeyi engelleyen dosyaların kilidi parola gerekmeden açılır: kısıtlamalar kaydedilen kopyadan basitçe çıkarılır. Kısıtlamaları yalnızca bu şekilde kullanma hakkınız olan belgelerden kaldırın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF kilidini açarken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Parolayı unuttum. Kurtarabilir misiniz?",
+     "a": "Hayır. PDF Kilidi Aç yalnızca zaten bildiğiniz bir parolayı kaldırır. Parola kırmaya çalışmaz."
+    },
+    {
+     "q": "Hangi şifreleme türleri destekleniyor?",
+     "a": "Standart PDF güvenlik işleyicileri: RC4 40 bit ve 128 bit, AES-128 ve AES-256. Sertifika tabanlı şifreleme desteklenmez."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ],
+   "howTo": "PDF'ten parola nasıl kaldırılır"
+  },
+  "sign-pdf": {
+   "name": "PDF İmzala",
+   "short": "İmzanızı çizin, yazın veya yükleyin ve istediğiniz sayfaya yerleştirin.",
+   "action": "PDF'i imzala",
+   "title": "PDF İmzalama: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF'i tarayıcınızda imzalayın: imzanızı çizin, yazın veya yükleyin, istediğiniz sayfaya yerleştirin ve indirin. Belge cihazınızdan asla çıkmaz.",
+   "h1": "PDF imzalayın",
+   "howTo": "PDF nasıl imzalanır",
+   "lead": "İmzanızı parmağınızla veya fareyle çizin, yazın ya da fotoğrafını kullanın. İstediğiniz yere yerleştirin, boyutunu değiştirin ve imzalı PDF'i indirin. Hiçbir şey yüklenmez.",
+   "steps": [
+    "İmzalamanız gereken PDF'i seçin veya buraya bırakın.",
+    "İmzanızı oluşturun: çizin, adınızı el yazısı stilinde yazın veya fotoğrafını yükleyin.",
+    "İmzayı yerine sürükleyin, mavi tutamaçla boyutlandırın, gerekirse tarihi ekleyin ve PDF'i imzala'ya tıklayın."
+   ],
+   "sections": [
+    {
+     "h": "İmza oluşturmanın üç yolu",
+     "p": "Ekranda çizin; bu yöntem özellikle parmakla veya Apple Pencil ile çok iyi çalışır. Adınızı yazıp bir el yazısı stili seçin. Ya da beyaz kâğıt üzerindeki imzanızın fotoğrafını yükleyin: kâğıt şeffaf hâle getirilir, böylece belgede yalnızca mürekkep görünür."
+    },
+    {
+     "h": "Bu ne tür bir imza",
+     "p": "Scissor PDF, bir çıktıyı imzalayıp taramakla aynı şekilde görsel bir imza ekler. Sertifika tabanlı dijital imza eklemez. Bu, formlar, kira sözleşmeleri ve izin belgeleri gibi gündelik belgelerin çoğu için kabul görür; bir belge nitelikli veya onaylı elektronik imza istiyorsa gereklilikleri kontrol edin."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF imzalarken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Telefonumda imzalayabilir miyim?",
+     "a": "Evet. İmzanızı parmağınızla çizin, ardından sayfada yerine sürükleyin. Her şey mobil Safari ve Chrome'da çalışır."
+    },
+    {
+     "q": "İmzam herhangi bir yerde saklanıyor mu?",
+     "a": "Hayır. İmza yalnızca siz çalışırken açık sayfada bulunur; asla saklanmaz veya gönderilmez. Sekmeyi kapattığınızda yok olur."
+    },
+    {
+     "q": "İmzanın yanına tarih veya adımı ekleyebilir miyim?",
+     "a": "Evet. Bugünün tarihini eklemek için Tarih ekle'yi, başka herhangi bir yazı için Metin ekle'yi kullanın ve bunları gereken yere sürükleyin."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "add-text-to-pdf": {
+   "name": "PDF'e Metin Ekle",
+   "short": "PDF'in herhangi bir yerine metin yazın: form doldurun, not veya tarih ekleyin.",
+   "action": "PDF'i kaydet",
+   "title": "PDF'e Metin Ekleme: Ücretsiz, Yüklemeden",
+   "description": "Tarayıcınızda PDF'in herhangi bir yerine metin yazarak form doldurun, not veya tarih ekleyin. Boyutu ve rengi seçin. Dosyanız cihazınızdan asla çıkmaz.",
+   "h1": "PDF'e metin ekleyin",
+   "howTo": "PDF'e nasıl metin eklenir",
+   "lead": "Alanı olmayan bir formu doldurun, not ekleyin veya bir belgeye tarih koyun. Yazın, metni yerine sürükleyin ve indirin. Hiçbir şey yüklenmez.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Metin ekle'ye tıklayın, yazın ve metni ait olduğu yere sürükleyin. Boyutu ve rengi seçin.",
+    "İhtiyacınız kadar metin ekleyin, ardından PDF'i kaydet'e tıklayın."
+   ],
+   "sections": [
+    {
+     "h": "Her dil",
+     "p": "Metin cihazınızın kendi yazı tipleriyle çizilir; bu nedenle Arapça, Kürtçe, Çince ve emoji dahil her dil ve yazı sistemi çalışır. Her PDF okuyucuda aynı görünür."
+    },
+    {
+     "h": "Bilmekte fayda var",
+     "p": "Eklenen metin, kâğıt üzerindeki mürekkep gibi sayfanın bir parçası olur. Düzenlenebilir bir form alanı değildir ve PDF'te zaten bulunan metni değiştirmez."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'e metin eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "PDF'teki mevcut metni düzenleyebilir miyim?",
+     "a": "Hayır. Bu araç sayfanın üzerine yeni metin ekler. Mevcut ifadeyi düzeltmek için üzerine metin ekleyin veya özgün belgeyi düzenleyip yeni bir PDF olarak dışa aktarın."
+    },
+    {
+     "q": "Birden fazla sayfaya metin ekleyebilir miyim?",
+     "a": "Evet. Herhangi bir sayfaya kaydırın ve oraya metin ekleyin. Her metin, yerleştirdiğiniz sayfada kalır."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "crop-pdf": {
+   "name": "PDF Kırp",
+   "short": "PDF sayfalarındaki kenar boşluklarını ve beyaz alanları kırpın.",
+   "action": "PDF'i kırp",
+   "title": "PDF Kırpma: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF kenar boşluklarını ve beyaz alanları tarayıcıda kırpın. Kenarları sürükleyin veya tam değer girin, tüm sayfalara ya da bazılarına. Hiçbir şey yüklenmez.",
+   "h1": "PDF kırpın",
+   "howTo": "PDF nasıl kırpılır",
+   "lead": "Geniş kenar boşluklarını, tarama kenarlıklarını veya beyaz alanları kesip atın. Önizlemede kenarları sürükleyin veya tam kenar boşluklarını yazın. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Önizlemedeki çerçevenin kenarlarını sürükleyin veya her kenar boşluğunu sayfanın yüzdesi olarak yazın.",
+    "Tüm sayfaları veya bazılarını seçin, ardından PDF'i kırp'a tıklayın."
+   ],
+   "sections": [
+    {
+     "h": "Kayıpsız kırpma",
+     "p": "Kırpma, içeriği kesmek yerine her sayfanın görünür alanını belirler; böylece metin net ve aranabilir kalır, dosya boyutu da neredeyse değişmez. Döndürülmüş sayfalar, gördüğünüz kenarlardan kırpılır."
+    },
+    {
+     "h": "Bilmekte fayda var",
+     "p": "Kırpma alanının dışındaki içerik silinmez, gizlenir. Hassas bilgileri kaldırmak için kırpmaya güvenmeyin; düzenleme yazılımı olan biri bunları yeniden görünür hâle getirebilir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF kırparken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Yalnızca bazı sayfaları kırpabilir miyim?",
+     "a": "Evet. Bazı sayfalar'ı seçin ve sayfaları yazın, örneğin 1, 3-5. Diğer sayfalar özgün boyutlarını korur."
+    },
+    {
+     "q": "Kırpma dosyamı küçültür mü?",
+     "a": "Pek değil, çünkü içerik kaldırılmaz, gizlenir. Dosyayı küçültmek için PDF Sıkıştır'ı kullanın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "pages-per-sheet": {
+   "name": "Yaprak Başına Sayfa",
+   "short": "Kâğıttan tasarruf etmek için her yaprağa 2 veya 4 PDF sayfası yerleştirin.",
+   "action": "Sayfaları birleştir",
+   "title": "Tek Yaprağa 2 veya 4 PDF Sayfası, Ücretsiz",
+   "description": "Ders notu ve dağıtım materyali yazdırırken kâğıt tasarrufu için PDF'in her yaprağına 2 veya 4 sayfa yerleştirin. Tarayıcıda çalışır, hiçbir şey yüklenmez.",
+   "h1": "Tek yaprağa birden fazla sayfa yerleştirin",
+   "howTo": "Tek yaprağa 2 veya 4 sayfa nasıl yerleştirilir",
+   "lead": "Uzun bir belgeyi derli toplu dağıtım notlarına dönüştürün: her yaprakta yan yana 2 sayfa veya ızgara düzeninde 4 sayfa. Kâğıttan ve mürekkepten tasarruf edin. Hiçbir şey yüklenmez.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Yaprak başına 2 veya 4 sayfayı ve kâğıt boyutunu seçin.",
+    "Sayfaları birleştir'e tıklayın, ardından yeni PDF'i yazdırın veya paylaşın."
+   ],
+   "sections": [
+    {
+     "h": "Düzenler",
+     "p": "İki sayfa yatay bir yaprakta yan yana durur. Dört sayfa, dikey bir yaprağı okuma sırasına göre 2'ye 2 ızgara düzeninde doldurur. Her sayfa bozulmadan kendi alanına sığacak şekilde ölçeklenir ve döndürülmüş sayfalar doğru yönde kalır."
+    },
+    {
+     "h": "Kalite",
+     "p": "Sayfalar resme dönüştürülmez, oldukları gibi yerleştirilir; böylece metin her yakınlaştırma düzeyinde net ve aranabilir kalır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Sayfaları birleştirirken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Hangi kâğıt boyutu kullanılır?",
+     "a": "PDF ile aynı seçeneği ilk sayfanın boyutunu kullanır. A4 veya US Letter da seçebilirsiniz."
+    },
+    {
+     "q": "Bağlantılar ve form alanları çalışmaya devam eder mi?",
+     "a": "Sayfa içeriği korunur, ancak bağlantılar, yorumlar ve form alanları birleştirilmiş yapraklara aktarılmaz."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "edit-pdf-metadata": {
+   "name": "PDF Meta Verileri",
+   "short": "Gizli başlık, yazar ve diğer ayrıntıları görün, düzenleyin veya kaldırın.",
+   "action": "Meta verileri kaydet",
+   "title": "PDF Meta Veri Düzenleme ve Silme, Yüklemeden",
+   "description": "PDF'in gizli başlık, yazar, konu ve anahtar kelimelerini görün ve düzenleyin ya da paylaşmadan önce tüm meta verileri kaldırın. Tarayıcıda çalışır, yükleme yok.",
+   "h1": "PDF meta verilerini düzenleyin veya kaldırın",
+   "howTo": "PDF meta verileri nasıl düzenlenir",
+   "lead": "PDF'ler yazarın adı, kullanılan yazılım ve tarihler gibi ayrıntıları sessizce saklar. Neler olduğunu görün, değiştirin veya paylaşmadan önce hepsini kaldırın. Hiçbir şey yüklenmez.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın. Mevcut başlığı, yazarı, konusu ve anahtar kelimeleri görünür.",
+    "Alanları düzenleyin veya Tüm meta verileri kaldır'a tıklayın.",
+    "Güncellenen PDF'i indirin."
+   ],
+   "sections": [
+    {
+     "h": "Meta veriler neden kaldırılmalı",
+     "p": "Meta veriler, bir belgeyi kimin yazdığını, hangi şirketten veya bilgisayardan geldiğini ve ne zaman oluşturulup değiştirildiğini ortaya çıkarabilir. Kuruluşunuzun dışındaki birine dosya göndermeden önce bunları kaldırmak basit bir gizlilik alışkanlığıdır."
+    },
+    {
+     "h": "Neler kaldırılır",
+     "p": "Tüm meta verileri kaldır seçeneği, belge bilgi sözlüğünü (başlık, yazar, konu, anahtar kelimeler, oluşturan uygulama, üretici ve tarihler) ve gömülü XMP meta verilerini siler. Sayfaların görünür içeriğini değiştirmez."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF meta verilerini düzenlerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "PDF okuyucum neden farklı bir başlık gösteriyor?",
+     "a": "Bazı okuyucular başlık yerine dosya adını gösterir. Burada kaydetmek, PDF'in içinde saklanan ve arama motorlarıyla birçok okuyucunun kullandığı başlığı ayarlar."
+    },
+    {
+     "q": "Metni veya görselleri kaldırır mı?",
+     "a": "Hayır. Yalnızca gizli bilgi alanları değişir. Sayfalar tamamen aynı görünür."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "repair-pdf": {
+   "name": "PDF Onar",
+   "short": "Açılmayan hasarlı bir PDF'i kurtarmayı deneyin.",
+   "action": "PDF'i onar",
+   "title": "Hasarlı PDF Onarma: Ücretsiz, Yüklemeden",
+   "description": "Açılmayan hasarlı veya bozuk bir PDF'i kurtarmayı deneyin. Dosya tarayıcınızda yeniden oluşturulur ve asla yüklenmez. Ücretsiz, kayıt gerekmez.",
+   "h1": "Hasarlı bir PDF'i onarın",
+   "howTo": "PDF nasıl onarılır",
+   "lead": "Bir PDF açılmadığında veya hata verdiğinde Scissor PDF iç yapısını yeniden oluşturur ve temiz bir kopya kaydeder. Her şey cihazınızda gerçekleşir.",
+   "steps": [
+    "Hasarlı PDF'i seçin veya buraya bırakın.",
+    "PDF'i onar'a tıklayın.",
+    "Yeniden oluşturulan dosyayı indirin ve açın."
+   ],
+   "sections": [
+    {
+     "h": "Neler düzeltilebilir",
+     "p": "Açılmayan PDF'lerin çoğunun dizini bozuktur; bunun nedeni genellikle bir indirmenin veya e-posta ekinin yarıda kesilmesi ya da dosyanın hatalı bir yazılımla düzenlenmesidir. Scissor PDF sayfaları ve içeriği bulmak için tüm dosyayı tarar, dizini ve sayfa listesini yeniden oluşturur ve temiz, standart bir PDF yazar."
+    },
+    {
+     "h": "Neler düzeltilemez",
+     "p": "Dosyanın bazı kısımları eksikse, örneğin yarıda kesilmiş bir indirmenin ikinci yarısı, eksik sayfalar kurtarılamaz. Şifrelenmiş dosyalar için önce parola gerekir: PDF Kilidi Aç'ı kullanın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF onarırken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "İşe yarayıp yaramadığını nasıl anlarım?",
+     "a": "Sayfalar kurtarılabildiyse sonuç ekranı bir indirme bağlantısıyla görünür. Kontrol etmek için yeni dosyayı açın. Hiç sayfa bulunamazsa bunun yerine bir mesaj görürsünüz."
+    },
+    {
+     "q": "Onarım özgün dosya için güvenli mi?",
+     "a": "Evet. Cihazınızdaki özgün dosya asla değiştirilmez; onarılmış yeni bir kopya indirirsiniz."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  }
+ },
+ "homeFaqs": [
+  {
+   "q": "Scissor PDF gerçekten gizli mi?",
+   "a": "Evet. Her araç, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motoruyla tarayıcınızın içinde çalışır. Dosyalar diskinizden okunur, sekmenin belleğinde işlenir ve tekrar cihazınıza kaydedilir. Asla yüklenmezler: site statiktir, bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası sayfanın başka sunuculara veri göndermesini engeller. Bunu tarayıcınızın ağ panelinden kendiniz kontrol edebilirsiniz."
+  },
+  {
+   "q": "Çevrimdışı çalışır mı?",
+   "a": "Evet. İlk ziyaretinizden sonra araçlar tarayıcınız tarafından saklanır ve internet bağlantısı olmadan da çalışmaya devam eder. Siteyi tarayıcınızın menüsünden bir uygulama olarak da yükleyebilirsiniz."
+  },
+  {
+   "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+   "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+  },
+  {
+   "q": "Dosya boyutu sınırı var mı?",
+   "a": "Bizim koyduğumuz bir sınır yok. Pratik sınır cihazınızın belleğidir: birkaç yüz megabaytlık dosyalar sıradan bir dizüstü bilgisayarda, daha küçük dosyalar telefonlarda çalışır."
+  },
+  {
+   "q": "Hangi tarayıcılar destekleniyor?",
+   "a": "Mac, Windows, Linux, iPhone, iPad ve Android'de Safari, Chrome, Edge ve Firefox'un güncel sürümleri. JavaScript ve WebAssembly etkin olmalıdır."
+  }
+ ],
+ "pages": {
+  "how": {
+   "title": "Scissor PDF, PDF'leri Yüklemeden Nasıl Düzenler",
+   "description": "Scissor PDF, WebAssembly'ye derlenmiş bir Rust PDF motorunu tarayıcınızda çalıştırır. Yerel işlemenin nasıl çalıştığını ve hiçbir dosyanın yüklenmediğini nasıl doğrulayacağınızı öğrenin.",
+   "h1": "Nasıl çalışır",
+   "lead": "PDF motorunu tarayıcınız indirir, tersi değil. Bir aracı kullandığınızda neler olduğunu ve bunu kendiniz nasıl kontrol edebileceğinizi burada bulabilirsiniz.",
+   "body": "<h3>Kısaca</h3>\n<p><strong>Scissor PDF dosyalarınızı asla almaz.</strong> Bir aracı açtığınızda tarayıcınız web sitesini ve bir PDF motorunu indirir. Bir dosya seçtiğinizde dosya tarayıcı sekmenizin belleğine okunur, o motor tarafından kendi işlemcinizde işlenir ve sonuç size indirme olarak teslim edilir. Sekmeyi kapatmak her şeyi siler.</p>\n<h3>Ne nerede çalışır</h3>\n<p>PDF'leri birleştiren, bölen, sıralayan, döndüren, sıkıştıran, numaralandıran, filigranlayan, şifreleyen ve şifresini çözen <strong>PDF motoru</strong>, açık kaynaklı lopdf kütüphanesi kullanılarak Rust ile yazılmış ve WebAssembly'ye derlenmiştir. WebAssembly, tüm modern tarayıcıların yerel hıza yakın çalıştırdığı, korumalı alanda (sandbox) çalışan bir biçimdir. Sayfa akıcı kalsın diye arka planda bir worker içinde çalışır.</p>\n<p><strong>Sayfa önizlemeleri ve PDF'ten JPG'ye</strong>, Firefox'ta yerleşik açık kaynaklı işleyici PDF.js'i kullanır; o da yerel olarak çalışır.</p>\n<p><strong>Sunucu</strong>, sıradan bir statik dosya barındırıcısıdır. Yükleme uç noktası, veritabanı veya uygulama kodu yoktur; dolayısıyla bir belgeyi kabul edebilecek hiçbir şey yoktur.</p>\n<h3>Kendiniz doğrulayın</h3>\n<p>Tarayıcınızın geliştirici araçlarını açın, Network sekmesine geçin ve herhangi bir aracı kullanın. Sayfanın kendi dosyalarının yüklendiğini göreceksiniz; belgenizi taşıyan hiçbir istek yoktur. Sayfa yüklendikten sonra internet bağlantınızı da kesebilirsiniz: tüm araçlar çalışmaya devam eder.</p>\n<p>Site ayrıca tarayıcınıza sayfanın başka herhangi bir sunucuyla iletişim kurmasını engellemesini söyleyen katı bir İçerik Güvenliği Politikası (Content Security Policy) gönderir; böylece kodumuzdaki bir hata bile dosyalarınızı başka bir yere gönderemez.</p>\n<h3>Çevrimdışı çalışır, uygulama gibi yüklenir</h3>\n<p>İlk ziyaretinizden sonra bir service worker siteyi ve motoru tarayıcınızın önbelleğine kaydeder; böylece araçlar bağlantı olmadan açılır ve çalışır. Chrome veya Edge'de adres çubuğundan Yükle'yi seçin. Safari'de Dock'a Ekle'yi (Mac) veya Ana Ekrana Ekle'yi (iPhone ve iPad) seçin.</p>\n<h3>Yerel işlemenin sınırları</h3>\n<p>İşlem cihazınızda yapıldığından, çok büyük dosyalar cihazın belleğiyle sınırlıdır. Sıradan bir dizüstü bilgisayarda birkaç yüz megabayt sorun olmaz, telefonlar da günlük belgelerin üstesinden gelir. Hız bir sunucu kuyruğuna değil işlemcinize bağlıdır; bu da pratikte genellikle yükleyip indirmekten daha hızlıdır.</p>"
+  },
+  "privacy": {
+   "title": "Gizlilik Politikası",
+   "description": "Scissor PDF dosyalarınızı yüklemez, saklamaz veya görmez. Hesap yok, analiz çerezi yok, takip yok. Gizlilik politikasının tamamını okuyun.",
+   "h1": "Gizlilik",
+   "lead": "Kısa, çünkü söylenecek pek bir şey yok: belgelerinizi asla almayız.",
+   "body": "<h3>Dosyalarınız</h3>\n<p>Scissor PDF'te açtığınız dosyalar tamamen tarayıcınızda işlenir ve asla bize ya da başka birine iletilmez. Onları göremez, saklayamaz, paylaşamaz veya kurtaramayız.</p>\n<h3>Parolalar</h3>\n<p>PDF Şifrele veya PDF Kilidi Aç'a yazdığınız parolalar yalnızca tarayıcınızda dosyayı şifrelemek veya şifresini çözmek için kullanılır; asla iletilmez veya saklanmaz.</p>\n<h3>Sunucumuz neyi görür</h3>\n<p>Her web sitesinde olduğu gibi, tarayıcınız sitenin sayfalarını ve dosyalarını indirdiğinde sunucumuz ve içerik dağıtım ağımız standart istek bilgilerini alır: IP adresi, istenen adres, zaman ve tarayıcı kullanıcı aracısı. Bu bilgiler yalnızca hizmeti işletmek ve güvenliğini sağlamak ile toplam trafiği saymak için kullanılır; başka verilerle birleştirilmez veya satılmaz.</p>\n<h3>Çerezler ve takip</h3>\n<p>Scissor PDF kendine ait hiçbir çerez ayarlamaz ve reklam izleyicisi kullanmaz. Tarayıcınız sitenin dosyalarını çevrimdışı kullanım için saklar; bir sonucu başka bir araca aktarmak için \"Bu dosyayla devam et\"i seçtiğinizde bir dosyayı kısa süreliğine yerel depolamada tutabilir. Dosya, sonraki araç onu açar açmaz kaldırılır.</p>\n<h3>İletişim</h3>\n<p>Gizlilikle ilgili sorular için: <a href=\"https://scissor.studio\">scissor.studio</a> adresine bakın.</p>"
+  },
+  "notFound": {
+   "title": "Sayfa bulunamadı",
+   "h1": "Sayfa bulunamadı",
+   "lead": "Aradığınız sayfa mevcut değil. Bunun yerine bir araç seçin:"
+  }
+ },
+ "ui": {
+  "dropToAdd": "Eklemek için bırakın",
+  "errChooseImages": "Görsel dosyaları seçin (JPG, PNG, WebP, HEIC).",
+  "errChoosePdf": "Bir PDF dosyası seçin.",
+  "errProtected": "\"{name}\" parola korumalı.",
+  "errDamaged": "\"{name}\" açılamadı. Hasarlı olabilir veya gerçek bir PDF olmayabilir.",
+  "errEncrypted": "Bu PDF parola korumalı.",
+  "errUnlockFirst": "<a href=\"{url}\">Önce kilidini açın</a>, sonra geri gelin.",
+  "errPassword": "Parola yanlış.",
+  "errInvalid": "Bu dosya işlenemedi.",
+  "errEngine": "PDF motoru başlatılamadı. Lütfen sayfayı yeniden yükleyin.",
+  "files": {
+   "one": "{n} dosya",
+   "other": "{n} dosya"
+  },
+  "images": {
+   "one": "{n} görsel",
+   "other": "{n} görsel"
+  },
+  "pages": {
+   "one": "{n} sayfa",
+   "other": "{n} sayfa"
+  },
+  "pdfs": {
+   "one": "{n} PDF",
+   "other": "{n} PDF"
+  },
+  "dragToReorder": "Sıralamak için sürükleyin",
+  "remove": "{name} öğesini kaldır",
+  "noPreview": "Bu tarayıcıda önizleme desteklenmiyor",
+  "addImages": "Görsel ekle",
+  "addPdfs": "PDF ekle",
+  "chooseAnother": "Başka bir dosya seç",
+  "moveEarlier": "{n}. sayfayı öne taşı",
+  "moveLater": "{n}. sayfayı arkaya taşı",
+  "rotatePage": "{n}. sayfayı döndür",
+  "deletePage": "{n}. sayfayı sil",
+  "stateDelete": "Sil",
+  "stateDeleted": "Silindi",
+  "passwordProtected": "Parola korumalı",
+  "options": "Seçenekler",
+  "mergeSub": "Dosyalar gösterilen sırayla birleştirilir.",
+  "mergeNeedMore": "Birleştirmek için en az bir PDF daha ekleyin.",
+  "imagesSub": "Gösterilen sırayla, sayfa başına bir görsel.",
+  "pageSize": "Sayfa boyutu",
+  "fitImage": "Görsele sığdır",
+  "a4": "A4",
+  "letter": "Letter",
+  "margin": "Kenar boşluğu",
+  "none": "Yok",
+  "small": "Küçük",
+  "large": "Büyük",
+  "organizeSub": "Sıralamak için sürükleyin. Döndürmek veya silmek için her sayfadaki düğmeleri kullanın.",
+  "rotateSub": "Tüm sayfaları döndürün veya tek bir sayfadaki düğmeyi kullanın.",
+  "left": "Sola",
+  "right": "Sağa",
+  "rotateAll": "Tüm sayfaları döndür",
+  "resetChanges": "Değişiklikleri sıfırla",
+  "deleteSub": "Silmek için sayfalara tıklayın veya sayfa numaralarını yazın.",
+  "extractSub": "Çıkarmak için sayfalara tıklayın veya sayfa numaralarını yazın.",
+  "toImagesSub": "Dönüştürmek için sayfalara tıklayın veya sayfa numaralarını yazın.",
+  "pagesToDelete": "Silinecek sayfalar",
+  "pagesToExtract": "Çıkarılacak sayfalar",
+  "pagesToConvert": "Dönüştürülecek sayfalar",
+  "rangePlaceholder": "örn. 1, 3-5",
+  "selectAll": "Tümünü seç",
+  "clear": "Temizle",
+  "saveAs": "Farklı kaydet",
+  "onePdf": "Tek PDF",
+  "filePerPage": "Sayfa başına bir dosya",
+  "format": "Biçim",
+  "resolution": "Çözünürlük",
+  "standard": "Standart",
+  "high": "Yüksek",
+  "print": "Baskı",
+  "dpiHint": "108, 144 veya 216 DPI",
+  "inThisPdf": "Bu PDF'te {pages} var.",
+  "pageRanges": "Sayfa aralıkları",
+  "rangesHint": "Her aralık bir PDF olur, örn. 1-3, 4-8, 9",
+  "pagesPerFile": "Dosya başına sayfa",
+  "creates": "{pdfs} oluşturur.",
+  "createsZip": "Bir ZIP içinde {pdfs} oluşturur.",
+  "fileN": "Dosya {n}",
+  "splitBy": "Bölme ölçütü",
+  "ranges": "Aralıklar",
+  "fixedSize": "Sabit boyut",
+  "everyPage": "Her sayfa",
+  "needRange": "En az bir aralık yazın",
+  "notARange": "\"{part}\" bir sayfa veya aralık değil",
+  "pdfHas": "Bu PDF'te {pages} var",
+  "compressSub": "Dosyanın ne kadar küçültüleceğini seçin.",
+  "lossless": "Kayıpsız",
+  "losslessDesc": "Daha küçük yapı, görseller olduğu gibi",
+  "recommended": "Önerilen",
+  "recommendedDesc": "Harika kalite, çok daha küçük",
+  "strong": "Güçlü",
+  "strongDesc": "En küçük dosya, daha düşük görsel kalitesi",
+  "numbersSub": "Numaralar Helvetica yazı tipiyle, koyu gri renkte eklenir.",
+  "position": "Konum",
+  "posTopLeft": "Sol üst",
+  "posTopCenter": "Üst orta",
+  "posTopRight": "Sağ üst",
+  "posBottomLeft": "Sol alt",
+  "posBottomCenter": "Alt orta",
+  "posBottomRight": "Sağ alt",
+  "pageWord": "Sayfa {n}",
+  "pageOfWord": "Sayfa {n} / {total}",
+  "startOnPage": "Başlangıç sayfası",
+  "firstNumber": "İlk numara",
+  "size": "Boyut",
+  "watermarkSub": "Her sayfaya çizilir.",
+  "text": "Metin",
+  "defaultWatermark": "GİZLİ",
+  "colour": "Renk",
+  "red": "Kırmızı",
+  "grey": "Gri",
+  "blue": "Mavi",
+  "black": "Siyah",
+  "angle": "Açı",
+  "opacity": "Opaklık",
+  "layout": "Yerleşim",
+  "single": "Tek",
+  "tiled": "Döşeli",
+  "protectSub": "AES-256 şifreleme, bu cihazda yapılır.",
+  "password": "Parola",
+  "repeatPassword": "Parolayı tekrarla",
+  "mismatch": "Parolalar eşleşmiyor",
+  "longerTip": "İpucu: daha uzun parolalar çok daha güçlüdür",
+  "showPassword": "Parolayı göster",
+  "permissions": "İzinler",
+  "allowPrint": "Yazdırmaya izin ver",
+  "allowCopy": "Metin kopyalamaya izin ver",
+  "unlockLockedSub": "Kilidi açılmış bir kopya kaydetmek için parolayı girin.",
+  "unlockOpenSub": "Bu PDF parolasız açılıyor. Yazdırma, kopyalama veya düzenleme kısıtlamaları kaldırılacak.",
+  "processedHere": "Bu cihazda işlendi. Hiçbir şey yüklenmez.",
+  "busyMerge": "Birleştiriliyor…",
+  "busyImages": "PDF oluşturuluyor…",
+  "busySplit": "Bölünüyor…",
+  "busyCompress": "Sıkıştırılıyor…",
+  "busyNumbers": "Sayfa numaraları ekleniyor…",
+  "busyWatermark": "Filigran ekleniyor…",
+  "busyProtect": "Şifreleniyor…",
+  "busyUnlock": "Kilit açılıyor…",
+  "busyRender": "Sayfalar işleniyor…",
+  "busySave": "Kaydediliyor…",
+  "busyNote": "Cihazınızda çalışıyor. Hiçbir şey yüklenmez.",
+  "busyPage": "Sayfa {i} / {n}, cihazınızda",
+  "readyPdf": "PDF'iniz hazır",
+  "readyFiles": "Dosyalarınız hazır",
+  "readyImage": "Görseliniz hazır",
+  "smaller": "%{pct} daha küçük",
+  "optimised": "Bu PDF zaten iyi optimize edilmiş",
+  "download": "İndir",
+  "startOver": "Baştan başla",
+  "continueWith": "Bu dosyayla devam et",
+  "cannotPreview": "Önizleme kullanılamıyor",
+  "cropSub": "Önizlemede kenarları sürükleyin veya kenar boşluklarını yazın.",
+  "top": "Üst",
+  "bottom": "Alt",
+  "applyTo": "Uygulanacak sayfalar",
+  "allPages": "Tüm sayfalar",
+  "somePages": "Bazı sayfalar",
+  "nupSub": "Sayfalar okuma sırasına göre, sığacak şekilde ölçeklenir.",
+  "perSheet": "Yaprak başına sayfa",
+  "sameAsPdf": "PDF ile aynı",
+  "metaSub": "İstediğiniz alanı değiştirin veya kaldırmak için boş bırakın.",
+  "metaTitle": "Başlık",
+  "metaAuthor": "Yazar",
+  "metaSubject": "Konu",
+  "metaKeywords": "Anahtar kelimeler",
+  "alsoStored": "Bu dosyada ayrıca saklananlar",
+  "metaApp": "Oluşturan uygulama",
+  "metaCreated": "Oluşturulma",
+  "metaModified": "Değiştirilme",
+  "wipeAll": "Tüm meta verileri kaldır",
+  "repairSub": "Dosya bu cihazda taranır ve yeniden oluşturulur.",
+  "busyRepair": "Onarılıyor…",
+  "placeSub": "İmzanızı veya metninizi ekleyin, ardından yerine sürükleyin.",
+  "signature": "İmza",
+  "createSignature": "İmza oluştur",
+  "newSignature": "Yeni imza",
+  "addToPage": "Sayfaya ekle",
+  "addText": "Metin ekle",
+  "addDate": "Tarih ekle",
+  "typeText": "Buraya yazın",
+  "deleteItem": "Kaldır",
+  "draw": "Çiz",
+  "typeIt": "Yaz",
+  "upload": "Görsel",
+  "yourName": "Adınız",
+  "removeWhite": "Beyaz arka planı kaldır",
+  "cancel": "İptal",
+  "useSignature": "İmzayı kullan",
+  "clearPad": "Temizle",
+  "signHere": "Buraya imzalayın",
+  "chooseImage": "Görsel seç"
+ }
+}
