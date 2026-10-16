@@ -76,6 +76,16 @@ cpSync(join(pdfjs, 'web/pdf_viewer.css'), join(vendor, 'pdf_viewer.css'));
 cpSync(join(pdfjs, 'web/images'), join(vendor, 'images'), { recursive: true });
 cpSync(join(pdfjs, 'LICENSE'), join(vendor, 'LICENSE'));
 
+// Minify the app's own JavaScript and CSS (the sources stay readable in site/assets).
+{
+  const { transform } = await import('esbuild');
+  for (const [file, loader] of [['assets/app.js', 'js'], ['assets/worker.js', 'js'], ['assets/app.css', 'css']]) {
+    const path = join(DIST, file);
+    const { code } = await transform(readFileSync(path, 'utf8'), { loader, minify: true, target: loader === 'css' ? ['safari16', 'chrome111', 'firefox113'] : 'es2022', legalComments: 'none' });
+    writeFileSync(path, code);
+  }
+}
+
 // Version every app file by content so browsers and the service worker never mix builds.
 const hashOf = (...files) => createHash('sha256').update(files.map((f) => readFileSync(f)).join('')).digest('hex').slice(0, 10);
 const V = hashOf(...['assets/app.js', 'assets/app.css', 'assets/worker.js', 'engine/engine.js', 'engine/engine_bg.wasm'].map((f) => join(DIST, f)));
@@ -204,9 +214,9 @@ ${GROUPS.map(([k, slugs]) => `<div><h2>${esc(S.footer[k])}</h2><ul>${slugs.map(l
 const chiclet = (L, t) => `<a class="chiclet" href="${prefix(L)}/${t.slug}/">${icon(t.icon, 40)}<span>${esc(STRINGS[L].tools[t.slug].name)}</span></a>`;
 const chiclets = (L, slugs) => `<div class="chiclets">${slugs.map((s) => chiclet(L, toolBySlug[s])).join('')}</div>`;
 const GROUPS = [
-  ['organize', ['merge-pdf', 'split-pdf', 'organize-pdf', 'rotate-pdf', 'reverse-pdf', 'delete-pdf-pages', 'remove-blank-pages', 'extract-pdf-pages', 'insert-blank-pages', 'alternate-mix-pdf', 'split-pdf-by-size', 'split-pdf-by-bookmarks', 'split-pdf-pages-in-half', 'crop-pdf', 'resize-pdf', 'add-margins-to-pdf', 'pages-per-sheet', 'pdf-booklet']],
-  ['optimize', ['compress-pdf', 'jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-long-image', 'pdf-to-text', 'extract-images-from-pdf', 'grayscale-pdf', 'remove-images-from-pdf', 'repair-pdf']],
-  ['edit', ['sign-pdf', 'fill-pdf-form', 'add-text-to-pdf', 'add-image-to-pdf', 'highlight-pdf', 'redact-pdf', 'add-page-numbers', 'pdf-header-footer', 'bates-numbering', 'watermark-pdf', 'image-watermark-pdf', 'flatten-pdf', 'remove-pdf-annotations', 'protect-pdf', 'unlock-pdf', 'edit-pdf-metadata']],
+  ['organize', ['merge-pdf', 'split-pdf', 'organize-pdf', 'rotate-pdf', 'reverse-pdf', 'delete-pdf-pages', 'remove-blank-pages', 'extract-pdf-pages', 'insert-blank-pages', 'alternate-mix-pdf', 'split-pdf-by-size', 'split-pdf-by-bookmarks', 'split-pdf-at-blank-pages', 'split-pdf-pages-in-half', 'crop-pdf', 'resize-pdf', 'add-margins-to-pdf', 'pages-per-sheet', 'pdf-booklet']],
+  ['optimize', ['compress-pdf', 'jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-long-image', 'pdf-to-text', 'pdf-to-epub', 'epub-to-pdf', 'extract-images-from-pdf', 'grayscale-pdf', 'remove-images-from-pdf', 'repair-pdf']],
+  ['edit', ['sign-pdf', 'fill-pdf-form', 'add-text-to-pdf', 'add-image-to-pdf', 'stamp-pdf', 'draw-on-pdf', 'highlight-pdf', 'whiteout-pdf', 'redact-pdf', 'add-bookmarks-to-pdf', 'add-background-to-pdf', 'add-page-numbers', 'pdf-header-footer', 'bates-numbering', 'watermark-pdf', 'image-watermark-pdf', 'flatten-pdf', 'remove-pdf-annotations', 'protect-pdf', 'unlock-pdf', 'edit-pdf-metadata']],
   ['inspect', ['pdf-viewer', 'compare-pdf', 'pdf-info']],
 ];
 const toolGroups = (L) => GROUPS.map(([k, slugs]) => `<div class="tool-group"><h3>${esc(STRINGS[L].footer[k])}</h3>${chiclets(L, slugs)}</div>`).join('');
@@ -232,14 +242,22 @@ function toolConfig(L, t) {
     editor: t.editor,
     defaults: t.defaults,
     autoBlank: t.autoBlank,
+    splitAtBlank: t.splitAtBlank,
     watermarkImage: t.watermarkImage,
     next: t.related.map((r) => toolBySlug[r]).filter((r) => r.accept === 'pdf').map((r) => ({ href: `${p}/${r.slug}/`, name: S.tools[r.slug].name, color: r.color, icon: icon(r.icon, 16) })),
   };
 }
 
 // Tools offered inside PDF Studio: everything that works on one open PDF.
-const STUDIO_SKIP = new Set(['jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-viewer', 'repair-pdf', 'unlock-pdf']);
+const STUDIO_SKIP = new Set(['epub-to-pdf', 'jpg-to-pdf', 'png-to-pdf', 'webp-to-pdf', 'pdf-viewer', 'repair-pdf', 'unlock-pdf']);
 const STUDIO_FINAL = new Set(['protect-pdf']);
+// The app's inspector: four short tabs instead of one long list.
+const STUDIO_TABS = [
+  ['tabPages', 'Pages', ['merge-pdf', 'split-pdf', 'rotate-pdf', 'organize-pdf', 'delete-pdf-pages', 'extract-pdf-pages', 'insert-blank-pages', 'remove-blank-pages', 'reverse-pdf', 'alternate-mix-pdf', 'split-pdf-by-size', 'split-pdf-by-bookmarks', 'split-pdf-at-blank-pages', 'split-pdf-pages-in-half', 'crop-pdf', 'resize-pdf', 'add-margins-to-pdf', 'pages-per-sheet', 'pdf-booklet']],
+  ['tabEdit', 'Edit', ['sign-pdf', 'add-text-to-pdf', 'fill-pdf-form', 'add-image-to-pdf', 'highlight-pdf', 'draw-on-pdf', 'stamp-pdf', 'whiteout-pdf', 'add-page-numbers', 'pdf-header-footer', 'watermark-pdf', 'image-watermark-pdf', 'add-background-to-pdf', 'add-bookmarks-to-pdf', 'bates-numbering']],
+  ['tabConvert', 'Convert', ['compress-pdf', 'pdf-to-jpg', 'pdf-to-png', 'pdf-to-long-image', 'pdf-to-text', 'pdf-to-epub', 'epub-to-pdf', 'extract-images-from-pdf', 'grayscale-pdf', 'remove-images-from-pdf', 'flatten-pdf', 'remove-pdf-annotations']],
+  ['tabSecure', 'Secure', ['protect-pdf', 'redact-pdf', 'edit-pdf-metadata', 'pdf-info', 'compare-pdf']],
+];
 const STUDIO_TEXT = {
   title: 'PDF Studio: Every PDF Tool in One Private App',
   description: 'Open a PDF once and edit it with every tool: merge, compress, sign, redact, rotate, convert. Undo any step. Runs in your browser, nothing is uploaded.',
@@ -423,7 +441,7 @@ for (const L of LANGS) {
     const slugPath = `/${t.slug}/`;
     const path = `${p}${slugPath}`;
     const multi = t.multiple;
-    const choose = t.accept === 'images' ? (multi ? S.common.chooseImages : S.common.chooseImage) : multi ? S.common.choosePdfs : S.common.choosePdf;
+    const choose = t.accept === 'epub' ? S.common.chooseEpub : t.accept === 'images' ? (multi ? S.common.chooseImages : S.common.chooseImage) : multi ? S.common.choosePdfs : S.common.choosePdf;
     const config = toolConfig(L, t);
     const jsonld = {
       '@context': 'https://schema.org',
@@ -512,7 +530,7 @@ ${section(`<h2 class="headline">${esc(S.site.faqTitle)}</h2>${faqHtml(S.homeFaqs
     const tools = GROUPS.flatMap(([, slugs]) => slugs)
       .filter((slug) => !STUDIO_SKIP.has(slug))
       .map((slug) => ({ ...toolConfig(L, toolBySlug[slug]), iconSvg: icon(toolBySlug[slug].icon, 28), final: STUDIO_FINAL.has(slug) }));
-    const groups = GROUPS.map(([k, slugs]) => [S.footer[k], slugs.filter((x) => !STUDIO_SKIP.has(x))]);
+    const groups = STUDIO_TABS.map(([k, en, slugs]) => [k, S.ui[k] || en, slugs.filter((x) => !STUDIO_SKIP.has(x) && toolBySlug[x])]);
     const jsonld = {
       '@context': 'https://schema.org',
       '@graph': [organization, website, webPage(L, path, st.title, st.description, { mainEntity: { '@id': url(`${path}#app`) } }), appLd(L, url(`${path}#app`), `${st.h1} · ${SITE.name}`, st.description, tools.map((x) => x.name), path), crumbsLd(path, [[S.nav.home, `${p}/`], [st.h1, path]])],
@@ -675,7 +693,7 @@ for (const L of LANGS) {
         ],
         shortcuts: ['merge-pdf', 'compress-pdf', 'sign-pdf', 'split-pdf'].map((slug) => ({ name: S.tools[slug].name, url: `${base}?tool=${slug}` })),
         categories: ['productivity', 'utilities'],
-        file_handlers: [{ action: base, accept: { 'application/pdf': ['.pdf'] }, launch_type: 'single-client' }],
+        file_handlers: [{ action: base, accept: { 'application/pdf': ['.pdf'], 'application/epub+zip': ['.epub'] }, launch_type: 'single-client' }],
         launch_handler: { client_mode: 'focus-existing' },
       },
       null,

@@ -7,6 +7,7 @@ const sheet = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}
 const lines = (x, y, widths, step = 3.2) => widths.map((w, i) => `<path d="M${x} ${y + i * step}h${w}"/>`).join('');
 const label = (text, y = 24.5) => `<text x="16" y="${y}" text-anchor="middle" font-size="6.2" font-weight="700" font-family="-apple-system, system-ui, sans-serif" fill="currentColor" stroke="none" letter-spacing="0.2">${text}</text>`;
 const photo = (x, y, w, h) => `${sheet(x, y, w, h)}<path d="M${x + 1.5} ${y + h - 1.5}l${w * 0.3} ${-h * 0.42}l${w * 0.22} ${h * 0.24}l${w * 0.16} ${-h * 0.14}l${w * 0.22} ${h * 0.32}"/><circle cx="${x + w * 0.72}" cy="${y + h * 0.3}" r="1.2"/>`;
+const book = (x, y) => `<path fill="var(--icon-bg, #fff)" d="M${x} ${y + 1.5}q4-2 8 0v11q-4-2-8 0z"/><path fill="var(--icon-bg, #fff)" d="M${x + 8} ${y + 1.5}q4-2 8 0v11q-4-2-8 0z"/>`;
 const arrowRight = (x, y, len = 6) => `<path d="M${x} ${y}h${len}M${x + len - 2.5} ${y - 2.5}l2.5 2.5-2.5 2.5"/>`;
 
 const ICONS = {
@@ -33,6 +34,8 @@ const ICONS = {
   png: `${photo(3, 5, 16, 13)}${page(14, 9, 15, 20, 4).replace('<path', '<path fill="var(--icon-bg, #fff)"')}${label('PDF', 24.5).replace('x="16"', 'x="21.5"')}${label('PNG', 30.5).replace('x="16"', 'x="9"').replace('font-size="6.2"', 'font-size="5.4"')}`,
   webp: `${photo(3, 5, 16, 13)}${page(14, 9, 15, 20, 4).replace('<path', '<path fill="var(--icon-bg, #fff)"')}${label('PDF', 24.5).replace('x="16"', 'x="21.5"')}${label('WEBP', 30.5).replace('x="16"', 'x="9"').replace('font-size="6.2"', 'font-size="5.4"')}`,
   toPng: `${page(3, 3, 15, 20, 4)}${label('PDF', 15.5).replace('x="16"', 'x="10.5"')}${photo(13, 15, 16, 13).replace('<rect', '<rect fill="var(--icon-bg, #fff)"')}${label('PNG', 6).replace('x="16"', 'x="25"').replace('font-size="6.2"', 'font-size="5.4"')}`,
+  toEpub: `${page(3, 3, 15, 20, 4)}${label('PDF', 15.5).replace('x="16"', 'x="10.5"')}${book(13, 15)}`,
+  epub: `${book(3, 4)}${page(14, 9, 15, 20, 4).replace('<path', '<path fill="var(--icon-bg, #fff)"')}${label('PDF', 24.5).replace('x="16"', 'x="21.5"')}`,
   toText: `${page()}<path d="M11.5 12.5h4.5M13.75 12.5v6"/>${lines(11.5, 21.5, [9, 6.5])}<path d="M18.5 14h2.5M18.5 17h2.5"/>`,
   extractImages: `${page(4, 6, 16, 23, 4)}${photo(13, 4, 15, 12).replace('<rect', '<rect fill="var(--icon-bg, #fff)"')}<path d="M8 21h6M8 24.5h8"/>`,
   grayscale: `${page()}<circle cx="16" cy="18" r="5.5"/><path d="M16 12.5v11a5.5 5.5 0 0 0 0-11z" fill="currentColor"/>`,
@@ -59,6 +62,12 @@ const ICONS = {
   highlight: `${page()}${lines(11, 11.5, [10])}<path d="M10.5 16.5h11" stroke-width="3.6" stroke-opacity="0.35"/>${lines(11, 21.5, [10, 7])}`,
   imageWatermark: `${page()}${photo(10.5, 13, 11, 9).replace('<rect', '<rect stroke-dasharray="2 1.6"')}`,
   longImage: `<rect x="10" y="2" width="12" height="28" rx="1.6"/><path d="M10 11h12M10 20h12"/>${lines(12.5, 5.5, [7, 5])}${lines(12.5, 14.5, [7, 5])}${lines(12.5, 23.5, [7, 5])}`,
+  addBookmark: `${page()}<path d="M12 3v9l2.5-1.8L17 12V3"/><path d="M16 20h6M19 17v6"/>`,
+  letterhead: `${page()}<path d="M10.5 9.5h11" stroke-width="2.6"/>${lines(11, 15, [10, 8, 10, 6])}<path d="M10.5 25h5" stroke-width="2.2" stroke-opacity="0.5"/>`,
+  stamp: `${page()}<rect x="10" y="14" width="12" height="7" rx="1.6"/><path d="M12.5 17.5h7"/><path d="M11 24.5h10"/>`,
+  draw: `${page()}<path d="M10.5 22c2-4 3.2-6 4.2-5.8 1.2.3-1 4.8.3 5 1.4.2 2.4-5.4 3.9-5.2 1.1.1.3 3.4 1.4 3.6.6.1 1.2-.6 1.7-1.2"/>`,
+  whiteout: `${page()}${lines(11, 11, [10])}<rect x="10.5" y="14" width="11" height="6" rx="0.8" stroke-dasharray="2 1.6"/>${lines(11, 23, [10, 7])}`,
+  splitBlank: `${sheet(3, 6, 8, 11)}${sheet(21, 6, 8, 11)}<rect x="12" y="15" width="8" height="11" rx="1.6" stroke-dasharray="2 1.6"/><path d="M14 20.5l4 0"/>`,
   // Small symbols used elsewhere on the site (24-unit artwork, scaled up).
   bolt: `<g transform="scale(1.3333)"><path d="M13 2.5 4.5 13.5h6.5l-1 8 8.5-11h-6.5z"/></g>`,
   tag: `<g transform="scale(1.3333)"><path d="M3 11.5V4a1 1 0 0 1 1-1h7.5l9.5 9.5-8.5 8.5z"/><circle cx="7.5" cy="7.5" r="1.5"/></g>`,

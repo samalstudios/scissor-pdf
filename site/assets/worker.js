@@ -32,6 +32,8 @@ const ops = {
   resize: (a) => E.resize(a.pdf, a.paper),
   booklet: (a) => E.booklet(a.pdf, a.paper),
   splitBySize: (a) => E.splitBySize(a.pdf, a.maxBytes, a.base),
+  setBookmarks: (a) => E.setBookmarks(a.pdf, a.titles, Uint32Array.from(a.pages)),
+  addBackground: (a) => E.addBackground(a.pdf, a.background, a.onTop, a.firstOnly),
   info: (a) => new TextEncoder().encode(E.info(a.pdf)),
   place: (a) =>
     E.placeImages(

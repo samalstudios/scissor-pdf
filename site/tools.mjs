@@ -11,7 +11,7 @@ export const SITE = {
 export { icon } from './icons.mjs';
 
 export const TOOLS = [
-  { slug: 'merge-pdf', icon: 'merge', color: '#0A84FF', mode: 'merge', accept: 'pdf', multiple: true, related: ['split-pdf', 'organize-pdf', 'compress-pdf', 'jpg-to-pdf'] },
+  { slug: 'merge-pdf', icon: 'merge', color: '#0A84FF', mode: 'merge', accept: 'pdf', mime: 'application/pdf,.pdf,image/*', multiple: true, related: ['split-pdf', 'organize-pdf', 'compress-pdf', 'jpg-to-pdf'] },
   { slug: 'split-pdf', icon: 'split', color: '#FF375F', mode: 'split', accept: 'pdf', related: ['extract-pdf-pages', 'merge-pdf', 'delete-pdf-pages', 'organize-pdf'] },
   { slug: 'compress-pdf', icon: 'compress', color: '#30D158', mode: 'compress', accept: 'pdf', related: ['merge-pdf', 'split-pdf', 'jpg-to-pdf', 'protect-pdf'] },
   { slug: 'organize-pdf', icon: 'organize', color: '#BF5AF2', mode: 'organize', accept: 'pdf', related: ['rotate-pdf', 'delete-pdf-pages', 'merge-pdf', 'extract-pdf-pages'] },
@@ -34,6 +34,8 @@ export const TOOLS = [
   { slug: 'webp-to-pdf', icon: 'webp', mode: 'images', accept: 'images', mime: 'image/webp,.webp', multiple: true, related: ['jpg-to-pdf', 'png-to-pdf', 'compress-pdf', 'merge-pdf'] },
   { slug: 'pdf-to-png', icon: 'toPng', mode: 'toImages', accept: 'pdf', defaults: { format: 'png' }, related: ['pdf-to-jpg', 'pdf-to-long-image', 'extract-images-from-pdf', 'png-to-pdf'] },
   { slug: 'pdf-to-long-image', icon: 'longImage', mode: 'longImage', accept: 'pdf', related: ['pdf-to-jpg', 'pdf-to-png', 'compress-pdf', 'extract-pdf-pages'] },
+  { slug: 'pdf-to-epub', icon: 'toEpub', mode: 'toEpub', accept: 'pdf', related: ['epub-to-pdf', 'pdf-to-text', 'pdf-to-jpg', 'compress-pdf'] },
+  { slug: 'epub-to-pdf', icon: 'epub', mode: 'fromEpub', accept: 'epub', mime: 'application/epub+zip,.epub', related: ['pdf-to-epub', 'compress-pdf', 'merge-pdf', 'add-page-numbers'] },
   { slug: 'pdf-to-text', icon: 'toText', mode: 'toText', accept: 'pdf', related: ['pdf-info', 'compare-pdf', 'pdf-to-jpg', 'extract-images-from-pdf'] },
   { slug: 'extract-images-from-pdf', icon: 'extractImages', mode: 'simple', op: 'extractImages', accept: 'pdf', related: ['pdf-to-jpg', 'remove-images-from-pdf', 'pdf-to-text', 'compress-pdf'] },
   { slug: 'grayscale-pdf', icon: 'grayscale', mode: 'simple', op: 'grayscale', accept: 'pdf', related: ['compress-pdf', 'remove-images-from-pdf', 'pages-per-sheet', 'resize-pdf'] },
@@ -60,6 +62,12 @@ export const TOOLS = [
   { slug: 'pdf-viewer', icon: 'view', mode: 'view', accept: 'pdf', related: ['pdf-info', 'pdf-to-text', 'compare-pdf', 'organize-pdf'] },
   { slug: 'compare-pdf', icon: 'compare', mode: 'compare', accept: 'pdf', multiple: true, related: ['pdf-to-text', 'pdf-info', 'pdf-viewer', 'merge-pdf'] },
   { slug: 'pdf-info', icon: 'info', mode: 'info', accept: 'pdf', related: ['edit-pdf-metadata', 'pdf-viewer', 'compress-pdf', 'repair-pdf'] },
+  { slug: 'add-bookmarks-to-pdf', icon: 'addBookmark', mode: 'bookmarks', accept: 'pdf', related: ['split-pdf-by-bookmarks', 'pdf-info', 'organize-pdf', 'add-page-numbers'] },
+  { slug: 'add-background-to-pdf', icon: 'letterhead', mode: 'background', accept: 'pdf', multiple: true, related: ['watermark-pdf', 'pdf-header-footer', 'add-image-to-pdf', 'merge-pdf'] },
+  { slug: 'stamp-pdf', icon: 'stamp', mode: 'place', editor: 'stamp', accept: 'pdf', related: ['sign-pdf', 'add-text-to-pdf', 'watermark-pdf', 'flatten-pdf'] },
+  { slug: 'draw-on-pdf', icon: 'draw', mode: 'place', editor: 'draw', accept: 'pdf', related: ['highlight-pdf', 'sign-pdf', 'add-text-to-pdf', 'stamp-pdf'] },
+  { slug: 'whiteout-pdf', icon: 'whiteout', mode: 'place', editor: 'whiteout', accept: 'pdf', related: ['redact-pdf', 'add-text-to-pdf', 'highlight-pdf', 'fill-pdf-form'] },
+  { slug: 'split-pdf-at-blank-pages', icon: 'splitBlank', mode: 'delete', autoBlank: true, splitAtBlank: true, accept: 'pdf', related: ['remove-blank-pages', 'split-pdf', 'split-pdf-by-size', 'alternate-mix-pdf'] },
 ];
 
 export const toolBySlug = Object.fromEntries(TOOLS.map((t) => [t.slug, t]));

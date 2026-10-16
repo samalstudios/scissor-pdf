@@ -833,3 +833,92 @@ pub fn info(bytes: &[u8]) -> Res<String> {
         meta.join(",")
     ))
 }
+
+/* ---------- Bookmarks and backgrounds ---------- */
+
+/// Replaces the document's bookmarks with a flat list of (title, 1-based page).
+pub fn set_bookmarks(bytes: &[u8], entries: &[(String, u32)]) -> Res<Vec<u8>> {
+    let mut doc = load(bytes)?;
+    let ids = page_ids(&doc);
+    if let Ok(c) = doc.catalog_mut() {
+        c.remove(b"Outlines");
+    }
+    doc.bookmarks.clear();
+    doc.bookmark_table.clear();
+    for (title, page) in entries {
+        let Some(id) = ids.get((*page as usize).wrapping_sub(1)) else { continue };
+        let title = if title.trim().is_empty() { format!("{page}") } else { title.trim().to_string() };
+        doc.add_bookmark(lopdf::Bookmark::new(title, [0.0, 0.0, 0.0], 0, *id), None);
+    }
+    if let Some(outline) = doc.build_outline() {
+        let catalog = doc.catalog_mut().map_err(e)?;
+        catalog.set("Outlines", outline);
+        catalog.set("PageMode", "UseOutlines");
+    } else if let Ok(c) = doc.catalog_mut() {
+        c.remove(b"PageMode");
+    }
+    finish(doc, false)
+}
+
+/// Draws the first page of `background` on every page (or only the first) of `bytes`,
+/// behind the content (letterhead, stationery) or on top of it (overlay).
+pub fn add_background(bytes: &[u8], background: &[u8], on_top: bool, first_only: bool) -> Res<Vec<u8>> {
+    let mut doc = load(bytes)?;
+    bake_inherited(&mut doc);
+    let mut bg = load(background)?;
+    bake_inherited(&mut bg);
+    bg.renumber_objects_with(doc.max_id + 1);
+    let bg_page = *page_ids(&bg).first().ok_or("INVALID: the background PDF has no pages")?;
+    let g = PageGeom::of(&bg, bg_page);
+    let content = bg.get_page_content(bg_page);
+    let resources = bg.get_dictionary(bg_page).ok().and_then(|p| p.get(b"Resources").ok().cloned()).unwrap_or_else(|| Dictionary::new().into());
+    doc.max_id = doc.max_id.max(bg.max_id);
+    doc.objects.extend(bg.objects);
+    let mut form = Stream::new(
+        dictionary! { "Type" => "XObject", "Subtype" => "Form", "BBox" => vec![real(g.x0), real(g.y0), real(g.x0 + g.w), real(g.y0 + g.h)], "Resources" => resources },
+        content,
+    );
+    let _ = form.compress();
+    let form_id = doc.add_object(form);
+    let (bw, bh) = g.visual();
+    let to_visual = {
+        let [a, b, c, d, e2, f] = g.place(0.0, 0.0);
+        let det = a * d - b * c;
+        let (ia, ib, ic, id) = (d / det, -b / det, -c / det, a / det);
+        [ia, ib, ic, id, -(e2 * ia + f * ic), -(e2 * ib + f * id)]
+    };
+    for (i, id) in page_ids(&doc).into_iter().enumerate() {
+        if first_only && i > 0 {
+            break;
+        }
+        let pg = PageGeom::of(&doc, id);
+        let (vw, vh) = pg.visual();
+        // Stretch the background page to cover the target page as the reader sees it.
+        let ops = vec![
+            Operation::new("q", vec![]),
+            Operation::new("cm", pg.place(0.0, 0.0).iter().map(|v| real(*v)).collect()),
+            Operation::new("cm", vec![real(vw / bw), real(0.0), real(0.0), real(vh / bh), real(0.0), real(0.0)]),
+            Operation::new("cm", to_visual.iter().map(|v| real(*v)).collect()),
+            Operation::new("Do", vec!["SPBg".into()]),
+            Operation::new("Q", vec![]),
+        ];
+        let encoded = Content { operations: ops }.encode().map_err(e)?;
+        crate::pages::add_resource(&mut doc, id, b"XObject", b"SPBg", form_id)?;
+        if on_top {
+            crate::pages::overlay_content(&mut doc, id, encoded)?;
+        } else {
+            let stream = doc.add_object(Stream::new(Dictionary::new(), encoded));
+            let mut contents = vec![Object::Reference(stream)];
+            match doc.get_dictionary(id).map_err(e)?.get(b"Contents") {
+                Ok(Object::Reference(r)) => match doc.get_object(*r) {
+                    Ok(Object::Array(a)) => contents.extend(a.clone()),
+                    _ => contents.push(Object::Reference(*r)),
+                },
+                Ok(Object::Array(a)) => contents.extend(a.clone()),
+                _ => {}
+            }
+            doc.get_dictionary_mut(id).map_err(e)?.set("Contents", contents);
+        }
+    }
+    finish(doc, false)
+}

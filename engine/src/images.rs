@@ -153,6 +153,7 @@ impl ImagesToPdf {
         let paper = match paper {
             "a4" => Some((595.28, 841.89)),
             "letter" => Some((612.0, 792.0)),
+            "a5" => Some((419.53, 595.28)),
             _ => None,
         };
         ImagesToPdf { doc, pages_id, kids: Vec::new(), paper, margin }

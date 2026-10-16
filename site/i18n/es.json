@@ -62,7 +62,8 @@
   "f3p": "Sin registro, sin límites diarios, sin marca de agua, sin anuncios. Abre la página, suelta tu archivo y descarga el resultado.",
   "suggestLang": "Esta página está disponible en {lang}.",
   "switch": "Cambiar",
-  "dismiss": "Cerrar"
+  "dismiss": "Cerrar",
+  "chooseEpub": "Elegir archivo ePub"
  },
  "tools": {
   "merge-pdf": {
@@ -1028,6 +1029,92 @@
     {
      "q": "¿Es gratis? ¿Necesito una cuenta?",
      "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "pdf-to-epub": {
+   "name": "PDF a ePub",
+   "short": "Convierte un PDF en un libro electrónico ePub para Apple Books, Kobo y otros lectores.",
+   "action": "Convertir a ePub",
+   "title": "Convertir PDF a ePub gratis, sin subir nada",
+   "description": "Convierte un PDF a ePub en tu navegador: texto adaptable a cualquier pantalla, o cada página tal como se ve. Los capítulos siguen los marcadores. No se sube nada.",
+   "h1": "Convertir PDF a ePub",
+   "howTo": "Cómo convertir PDF a ePub",
+   "lead": "Lee un PDF cómodamente en el móvil o en un lector electrónico. El texto se adapta a la pantalla y los capítulos siguen los marcadores del PDF.",
+   "steps": [
+    "Elige o suelta el PDF.",
+    "Elige Texto para que el texto se adapte, o Páginas para conservar cada página tal como se ve.",
+    "Pulsa Convertir a ePub y abre el archivo en tu app de libros electrónicos."
+   ],
+   "sections": [
+    {
+     "h": "Texto o Páginas",
+     "p": "Texto crea un libro electrónico de verdad: párrafos y títulos que se adaptan, con un índice tomado de los marcadores. Es ideal para libros, informes y artículos. Páginas guarda cada página como una imagen en un ePub de diseño fijo, ideal para revistas, cómics, diapositivas y escaneos."
+    },
+    {
+     "h": "Qué esperar",
+     "p": "Un PDF guarda posiciones, no párrafos, así que el texto se reconstruye a partir de dónde están las palabras en la página. Los diseños sencillos quedan limpios. Las tablas, notas al pie y páginas a varias columnas pueden perder su estructura; usa Páginas para ellas. Los PDF escaneados no tienen texto, así que usa Páginas también para ellos."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al convertir PDF a ePub?",
+     "a": "No. Scissor PDF convierte el archivo dentro de la pestaña de tu navegador. Se lee desde tu disco a la memoria de la página, se convierte allí y se guarda de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Qué lectores pueden abrir el ePub?",
+     "a": "Cualquier lector de ePub 3, como Apple Books, Google Play Libros, Kobo, Thorium y Calibre. Las apps recientes de Kindle aceptan ePub mediante Send to Kindle."
+    },
+    {
+     "q": "¿Se conservan las imágenes?",
+     "a": "Con Páginas, sí: cada página se conserva tal como se ve. Con Texto, solo se convierten las palabras."
+    },
+    {
+     "q": "¿Funciona con idiomas que se escriben de derecha a izquierda?",
+     "a": "Sí. El texto en árabe, persa, hebreo y kurdo se detecta y el libro se configura para leerse de derecha a izquierda."
+    }
+   ]
+  },
+  "epub-to-pdf": {
+   "name": "ePub a PDF",
+   "short": "Convierte un libro electrónico ePub en un PDF que puedes imprimir o compartir.",
+   "action": "Convertir a PDF",
+   "title": "Convertir ePub a PDF gratis, sin subir nada",
+   "description": "Convierte un libro ePub a PDF en tu navegador, con las fuentes, estilos e imágenes del propio libro. Elige A5, A4 o Carta. No se sube nada.",
+   "h1": "Convertir ePub a PDF",
+   "howTo": "Cómo convertir ePub a PDF",
+   "lead": "Imprime un libro electrónico o compártelo con alguien que no tiene app de lectura. Las páginas conservan las fuentes, estilos e imágenes del libro.",
+   "steps": [
+    "Elige o suelta el archivo ePub.",
+    "Elige el tamaño de página y el tamaño del texto.",
+    "Pulsa Convertir a PDF y guarda el archivo."
+   ],
+   "sections": [
+    {
+     "h": "Cómo se maqueta",
+     "p": "Cada capítulo empieza en una página nueva y ocupa tantas páginas como necesite, con las fuentes y estilos con los que se creó el libro. A5 se parece a un libro de bolsillo; A4 y Carta se imprimen en papel estándar."
+    },
+    {
+     "h": "Bueno saber",
+     "p": "Las páginas se guardan como imágenes de alta resolución, así que se imprimen nítidas y se ven igual en todas partes, pero el texto no se puede seleccionar ni buscar. Los libros con DRM (protección anticopia) no se pueden abrir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al convertir ePub a PDF?",
+     "a": "No. Scissor PDF convierte el archivo dentro de la pestaña de tu navegador. Se lee desde tu disco a la memoria de la página, se convierte allí y se guarda de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Puedo convertir un libro que compré?",
+     "a": "Solo si no tiene DRM. La mayoría de las tiendas protegen sus libros, y ningún conversor puede abrir archivos protegidos sin la app de la tienda."
+    },
+    {
+     "q": "¿Puedo seleccionar el texto del PDF?",
+     "a": "No. Cada página se guarda como una imagen, lo que mantiene el diseño exacto en cualquier visor."
+    },
+    {
+     "q": "¿Qué tamaño de página debo elegir?",
+     "a": "A5 para leer en pantalla o imprimir como folleto; A4 o Carta para impresoras normales."
     }
    ]
   },
@@ -2299,6 +2386,288 @@
      "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
     }
    ]
+  },
+  "add-bookmarks-to-pdf": {
+   "name": "Añadir marcadores a PDF",
+   "short": "Añade, renombra y reordena los marcadores que enlazan a las páginas.",
+   "action": "Guardar marcadores",
+   "title": "Añadir marcadores a PDF gratis, sin subir",
+   "description": "Añade marcadores a un PDF desde tu navegador. Haz clic en una página, escribe un título y guarda un índice con enlaces. Nada se sube. Gratis, sin registro.",
+   "h1": "Añadir marcadores a un PDF",
+   "howTo": "Cómo añadir marcadores a un PDF",
+   "lead": "Dale a un documento largo un índice con enlaces en la barra lateral, para que los lectores salten directamente a cada capítulo o sección. Tu archivo se queda en tu dispositivo.",
+   "steps": [
+    "Elige o suelta el PDF. Los marcadores que ya tenga aparecen en la lista.",
+    "Haz clic en una página o pulsa Añadir marcador, escribe un título y ajusta el número de página si hace falta. Quita las entradas que no quieras.",
+    "Pulsa Guardar marcadores y descarga el resultado."
+   ],
+   "sections": [
+    {
+     "h": "Cómo se guardan los marcadores",
+     "p": "Al guardar, los marcadores del PDF se sustituyen por la lista que ves, en un solo nivel. Además, el archivo se configura para abrirse con el panel de marcadores visible, en los lectores que lo admiten. Los títulos pueden escribirse en cualquier idioma."
+    },
+    {
+     "h": "Solo un nivel",
+     "p": "No se admiten marcadores anidados, como secciones dentro de capítulos. Al abrir un archivo solo se muestran los marcadores de primer nivel y, si tenía marcadores anidados, se sustituyen por tu lista plana al guardar. Conserva el original si los necesitas."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al añadir marcadores a un PDF?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Puedo editar los marcadores que ya tiene el PDF?",
+     "a": "Sí. Los marcadores de primer nivel que ya existen aparecen en la lista, donde puedes renombrarlos, cambiar su número de página o quitarlos."
+    },
+    {
+     "q": "¿Puedo crear marcadores anidados?",
+     "a": "No. Los marcadores se guardan como una sola lista plana. Los marcadores anidados del archivo original se sustituyen al guardar."
+    },
+    {
+     "q": "¿Por qué no se ven los marcadores al abrir el archivo?",
+     "a": "El archivo pide a los lectores que muestren el panel de marcadores, pero no todos lo hacen. Abre la barra lateral o la vista de marcadores de tu lector para verlos."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "add-background-to-pdf": {
+   "name": "Añadir fondo a PDF",
+   "short": "Pon un membrete o un PDF de fondo detrás de tus páginas.",
+   "action": "Añadir fondo",
+   "title": "Añadir membrete a PDF gratis, sin subir nada",
+   "description": "Pon un membrete o un PDF de fondo detrás de cada página de tu documento, desde tu navegador. El texto sigue nítido y se puede buscar. Nada se sube.",
+   "h1": "Añadir un membrete o un fondo a un PDF",
+   "howTo": "Cómo añadir un fondo a un PDF",
+   "lead": "Coloca el membrete o el papel corporativo de tu empresa detrás de una carta, una factura o un informe que hayas escrito en otro programa. Los dos archivos se quedan en tu dispositivo.",
+   "steps": [
+    "Elige o suelta tu documento y, después, el PDF de fondo, por ejemplo tu membrete.",
+    "Elige si el fondo va en todas las páginas o solo en la primera, y si queda detrás del contenido o encima.",
+    "Pulsa Añadir fondo y descarga el resultado."
+   ],
+   "sections": [
+    {
+     "h": "Cómo se coloca el fondo",
+     "p": "La primera página del PDF de fondo se dibuja en cada página de tu documento, estirada para ajustarse a esa página. Para obtener el mejor resultado, usa un fondo con el mismo tamaño de página que tu documento, como A4 o Carta."
+    },
+    {
+     "h": "Detrás o encima",
+     "p": "Por defecto, el fondo queda detrás de tu contenido, como si imprimieras en papel preimpreso. Elige Encima para dibujarlo sobre el contenido, lo que ayuda cuando tu documento tiene un fondo blanco sólido que lo taparía. En ambos casos, tu texto sigue nítido y se puede buscar."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al añadir un fondo a un PDF?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Qué puedo usar como fondo?",
+     "a": "Cualquier PDF. Solo se usa su primera página. Un membrete guardado como PDF desde Word, Pages o una aplicación de diseño funciona bien."
+    },
+    {
+     "q": "¿Por qué no veo el fondo?",
+     "a": "Algunos documentos tienen un relleno blanco sólido en cada página que tapa todo lo que hay detrás. Elige Encima para dibujar el fondo sobre el contenido."
+    },
+    {
+     "q": "¿Puedo usar una imagen como fondo?",
+     "a": "Convierte primero la imagen en PDF con JPG a PDF o PNG a PDF y luego usa ese archivo como fondo."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "stamp-pdf": {
+   "name": "Sellar PDF",
+   "short": "Añade sellos con fecha como Aprobado, Pagado o Borrador a las páginas.",
+   "action": "Guardar sellos",
+   "title": "Sellar PDF gratis, sin subir archivos",
+   "description": "Añade sellos de Aprobado, Rechazado, Pagado, Recibido, Borrador o Confidencial con la fecha de hoy a un PDF, desde tu navegador. Nada se sube. Gratis.",
+   "h1": "Sellar un PDF",
+   "howTo": "Cómo sellar un PDF",
+   "lead": "Marca una factura como pagada, un contrato como aprobado o un documento como borrador, con la fecha incluida. Tu archivo se queda en tu dispositivo.",
+   "steps": [
+    "Elige o suelta el PDF.",
+    "Elige un sello y colócalo en cualquier página. Arrástralo a su sitio y cambia su tamaño.",
+    "Pulsa Guardar sellos y descarga el resultado."
+   ],
+   "sections": [
+    {
+     "h": "Sellos listos para usar",
+     "p": "Elige entre Aprobado, Rechazado, Pagado, Recibido, Borrador, Confidencial, Final y Copia. Cada sello incluye la fecha de hoy, y puedes añadir tantos como necesites, en cualquier página."
+    },
+    {
+     "h": "Parte de la página",
+     "p": "Los sellos pasan a formar parte de la página, no son comentarios aparte. Se ven igual en cualquier lector y al imprimir, pero después no se pueden quitar con una herramienta de anotaciones. Conserva el original si puedes necesitar una copia sin sellar."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al sellar un PDF?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Qué sellos hay disponibles?",
+     "a": "Aprobado, Rechazado, Pagado, Recibido, Borrador, Confidencial, Final y Copia, cada uno con la fecha de hoy."
+    },
+    {
+     "q": "¿Puedo escribir el texto de mi propio sello?",
+     "a": "Con esta herramienta, no. Usa Añadir texto a PDF para escribir lo que quieras, o Marca de agua para poner texto en todas las páginas."
+    },
+    {
+     "q": "¿Puedo quitar un sello después?",
+     "a": "No del archivo guardado, porque forma parte de la página. Conserva el original si necesitas una copia limpia."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "draw-on-pdf": {
+   "name": "Dibujar en PDF",
+   "short": "Dibuja a mano alzada en cualquier página con el dedo, un lápiz o el ratón.",
+   "action": "Guardar dibujo",
+   "title": "Dibujar en PDF gratis, sin subir archivos",
+   "description": "Dibuja a mano alzada en un PDF desde tu navegador con el dedo, el Apple Pencil, el trackpad o el ratón. Elige color y grosor. Nada se sube. Gratis.",
+   "h1": "Dibujar en un PDF",
+   "howTo": "Cómo dibujar en un PDF",
+   "lead": "Rodea un detalle, traza una flecha, marca un plano o escribe una nota rápida a mano. Tu archivo se queda en tu dispositivo.",
+   "steps": [
+    "Elige o suelta el PDF.",
+    "Elige un color y un grosor de línea y dibuja en cualquier página. Deshaz el último trazo o borra una página si lo necesitas.",
+    "Pulsa Guardar dibujo y descarga el resultado."
+   ],
+   "sections": [
+    {
+     "h": "Lápices y colores",
+     "p": "Dibuja en negro, azul, rojo o amarillo, con el grosor de línea que elijas. Funciona con el dedo, un Apple Pencil, un trackpad o un ratón. En el móvil, cambia entre Dibujar y Desplazar para moverte por el documento sin dejar marcas."
+    },
+    {
+     "h": "Parte de la página",
+     "p": "Tu dibujo pasa a formar parte de la página, no es un comentario aparte. Se ve igual en cualquier lector y al imprimir, pero después no se puede quitar con una herramienta de anotaciones. Conserva el original si puedes querer una copia limpia."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al dibujar en un PDF?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Puedo dibujar en el móvil o en el iPad?",
+     "a": "Sí. Dibuja con el dedo o con un Apple Pencil. En el móvil, cambia a Desplazar para moverte por las páginas y vuelve a Dibujar para marcarlas."
+    },
+    {
+     "q": "¿Cómo corrijo un error?",
+     "a": "Deshacer quita el último trazo. Borrar quita todo lo que has dibujado en la página actual."
+    },
+    {
+     "q": "¿Puedo borrar el dibujo después de guardar?",
+     "a": "No. Una vez guardado, el dibujo forma parte de la página. Conserva el original si necesitas una copia sin marcas."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "whiteout-pdf": {
+   "name": "Tapar texto en PDF",
+   "short": "Cubre partes de una página con recuadros blancos.",
+   "action": "Guardar recuadros",
+   "title": "Tapar texto en PDF gratis, sin subir archivos",
+   "description": "Cubre partes de una página PDF con recuadros blancos desde tu navegador, por ejemplo para vaciar un campo antes de rellenarlo de nuevo. Nada se sube. Gratis.",
+   "h1": "Tapar texto en un PDF con blanco",
+   "howTo": "Cómo tapar texto en un PDF con blanco",
+   "lead": "Deja en blanco un campo ya rellenado para volver a rellenarlo, u oculta una nota, un sello o una fecha antigua impresos. Funciona como una cinta correctora, en tu propio dispositivo.",
+   "steps": [
+    "Elige o suelta el PDF.",
+    "Dibuja recuadros blancos sobre las partes que quieres tapar, en cualquier página. Arrástralos y cambia su tamaño para ajustarlos.",
+    "Pulsa Guardar recuadros y descarga el resultado."
+   ],
+   "sections": [
+    {
+     "h": "Como una cinta correctora",
+     "p": "Cada recuadro tapa lo que hay debajo con blanco liso, de modo que la página se ve en blanco en ese punto. Después puedes añadir texto nuevo ahí con Añadir texto a PDF, o imprimir la página y escribir en ella."
+    },
+    {
+     "h": "Tapar no es censurar",
+     "p": "Tapar con blanco solo oculta el contenido a la vista. El texto que hay debajo sigue en el archivo y se puede copiar, buscar o recuperar. Para eliminar de forma permanente nombres, números u otra información confidencial, usa Censurar PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al tapar texto en un PDF?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Se elimina del archivo el texto tapado?",
+     "a": "No. Queda oculto a la vista, pero sigue en el archivo, donde se puede copiar o encontrar con una búsqueda. Usa Censurar PDF para eliminar información confidencial para siempre."
+    },
+    {
+     "q": "¿Puedo escribir texto nuevo sobre el recuadro blanco?",
+     "a": "Sí. Guarda los recuadros y luego abre el resultado en Añadir texto a PDF y escribe en el espacio en blanco."
+    },
+    {
+     "q": "¿Funciona con documentos escaneados?",
+     "a": "Sí. Los recuadros blancos tapan lo que haya en esa zona, ya sea texto o parte de una imagen escaneada."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
+  },
+  "split-pdf-at-blank-pages": {
+   "name": "Dividir PDF por páginas en blanco",
+   "short": "Divide un escaneo por lotes en varios PDF en cada página en blanco.",
+   "action": "Dividir por páginas en blanco",
+   "title": "Dividir PDF por páginas en blanco gratis",
+   "description": "Divide un PDF escaneado por lotes en archivos separados en cada página en blanco separadora, desde tu navegador. Se omiten las páginas en blanco. Nada se sube.",
+   "h1": "Dividir un PDF por páginas en blanco",
+   "howTo": "Cómo dividir un PDF por páginas en blanco",
+   "lead": "Escanea una pila de documentos de una vez con una hoja en blanco entre cada uno y convierte el escaneo en un PDF por documento. Tu archivo se queda en tu dispositivo.",
+   "steps": [
+    "Elige o suelta el PDF escaneado. Se revisan todas las páginas y se muestran las que están en blanco.",
+    "Revisa la selección y añade o quita las páginas que deban contar como separadores.",
+    "Pulsa Dividir por páginas en blanco y descarga el ZIP con un PDF por documento."
+   ],
+   "sections": [
+    {
+     "h": "Para escaneos por lotes",
+     "p": "Pon una hoja en blanco entre los documentos en el alimentador del escáner y escanéalos todos en un solo PDF. El documento se divide en cada página en blanco, las propias páginas en blanco se omiten y los archivos separados se descargan juntos en un ZIP."
+    },
+    {
+     "h": "Revisa la selección",
+     "p": "Las páginas en blanco se detectan por su aspecto, así que una página muy clara puede tomarse por blanca, y una hoja separadora con marcas o ruido del escáner puede pasarse por alto. Revisa las páginas seleccionadas antes de dividir. Cada página se renderiza en tu navegador, así que un escaneo largo puede tardar un momento."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "¿Se suben mis archivos al dividir un PDF por páginas en blanco?",
+     "a": "No. Scissor PDF ejecuta dentro de la pestaña de tu navegador un motor PDF escrito en Rust y compilado a WebAssembly. Tus archivos se leen desde tu disco a la memoria de la página, se procesan allí y se guardan de nuevo en tu dispositivo. El sitio no tiene ningún punto de subida, y su política de seguridad de contenido (Content Security Policy) impide que la página envíe datos a cualquier otro servidor."
+    },
+    {
+     "q": "¿Cómo se detectan las páginas en blanco?",
+     "a": "Cada página se renderiza en tu navegador y se comprueba qué parte de ella está vacía. Las páginas que parecen en blanco quedan seleccionadas para que las revises."
+    },
+    {
+     "q": "¿Y si una página se detecta mal?",
+     "a": "Cambia la selección antes de dividir. Haz clic en una página para marcarla como separador o para desmarcarla."
+    },
+    {
+     "q": "¿Se conservan las páginas en blanco en el resultado?",
+     "a": "No. Solo se usan para decidir dónde dividir y se omiten en los archivos. Para quitar páginas en blanco sin dividir, usa Eliminar páginas en blanco."
+    },
+    {
+     "q": "¿Es gratis? ¿Necesito una cuenta?",
+     "a": "Es gratis, sin cuenta, sin límite diario de tareas y sin marcas de agua en tus documentos. Como el trabajo se hace en tu propio ordenador, no tenemos ningún coste de servidor por archivo que recuperar."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -2628,7 +2997,59 @@
   "studioClose": "Cerrar {name}",
   "studioNoPdfs": "No se encontraron archivos PDF ahí.",
   "studioHome": "Inicio de Scissor PDF",
-  "studioSource": "Código abierto en GitHub"
+  "studioSource": "Código abierto en GitHub",
+  "studioOpenShort": "Abrir",
+  "studioExtract": "Extraer",
+  "studioReorder": "Reordenar",
+  "studioSelected": "{pages} seleccionadas",
+  "studioRotateLeft": "Girar a la izquierda",
+  "studioRotateRight": "Girar a la derecha",
+  "bookmarksSub": "Haz clic en una página para añadirle un marcador y luego ponle nombre.",
+  "bookmarkTitle": "Título",
+  "bookmarkPage": "Página",
+  "noBookmarks": "Aún no hay marcadores.",
+  "addBookmark": "Añadir marcador",
+  "backgroundSub": "Primer archivo: tu documento. Segundo archivo: el fondo; se usa su primera página.",
+  "placement": "Colocación",
+  "behind": "Detrás del contenido",
+  "onTop": "Encima",
+  "firstPageOnly": "Primera página",
+  "stamps": "Sellos",
+  "stampApproved": "APROBADO",
+  "stampRejected": "RECHAZADO",
+  "stampPaid": "PAGADO",
+  "stampReceived": "RECIBIDO",
+  "stampDraft": "BORRADOR",
+  "stampConfidential": "CONFIDENCIAL",
+  "stampFinal": "FINAL",
+  "stampCopy": "COPIA",
+  "lineWidth": "Grosor de línea",
+  "touchMode": "Táctil",
+  "drawMode": "Dibujar",
+  "scrollMode": "Desplazar",
+  "undoStroke": "Deshacer trazo",
+  "clearAll": "Borrar todo",
+  "addWhiteout": "Añadir recuadro blanco",
+  "whiteoutHint": "Los recuadros blancos solo tapan el contenido. Para eliminarlo del archivo, usa Censurar PDF.",
+  "splitBlankSub": "Las páginas en blanco quedan seleccionadas como separadores. Revísalas y luego divide.",
+  "errUnexpected": "Algo ha salido mal. Tus archivos nunca han salido de este dispositivo. Inténtalo de nuevo.",
+  "tabPages": "Páginas",
+  "tabEdit": "Editar",
+  "tabConvert": "Convertir",
+  "tabSecure": "Proteger",
+  "studioNoTools": "No hay herramientas que coincidan",
+  "errChooseEpub": "Elige un archivo ePub (.epub).",
+  "toEpubSub": "Crea un libro electrónico que se abre en Apple Books, Kobo y otros lectores.",
+  "epubLayout": "Diseño",
+  "epubText": "Texto",
+  "epubPages": "Páginas",
+  "epubTextHint": "El texto se adapta a cualquier pantalla. Ideal para libros y artículos.",
+  "epubPagesHint": "Cada página se conserva tal como se ve. Ideal para revistas, diapositivas y escaneos.",
+  "fromEpubSub": "Cada capítulo empieza en una página nueva, con las fuentes e imágenes del propio libro.",
+  "textSize": "Tamaño del texto",
+  "sizeSmall": "Pequeño",
+  "sizeMedium": "Mediano",
+  "sizeLarge": "Grande"
  },
  "studio": {
   "title": "Scissor PDF: todas las herramientas PDF en una app privada",

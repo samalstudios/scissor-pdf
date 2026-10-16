@@ -62,7 +62,8 @@
   "f3p": "No sign-up, no daily limits, no watermark, no ads. Open the page, drop your file, download the result.",
   "suggestLang": "This page is available in {lang}.",
   "switch": "Switch",
-  "dismiss": "Dismiss"
+  "dismiss": "Dismiss",
+  "chooseEpub": "Choose ePub file"
  },
  "tools": {
   "merge-pdf": {
@@ -1028,6 +1029,92 @@
     {
      "q": "Is it free? Do I need an account?",
      "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "pdf-to-epub": {
+   "name": "PDF to ePub",
+   "short": "Turn a PDF into an ePub e-book for Apple Books, Kobo and other readers.",
+   "action": "Convert to ePub",
+   "title": "PDF to ePub Converter Free, Without Uploading",
+   "description": "Convert a PDF to ePub in your browser: reflowable text that fits any screen, or every page kept as it looks. Chapters follow the bookmarks. Nothing is uploaded.",
+   "h1": "Convert PDF to ePub",
+   "howTo": "How to convert PDF to ePub",
+   "lead": "Read a PDF comfortably on a phone or e-reader. The text reflows to fit the screen, and the chapters follow the PDF's bookmarks.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick Text to make the words reflow, or Pages to keep every page exactly as it looks.",
+    "Select Convert to ePub and open the file in your e-book app."
+   ],
+   "sections": [
+    {
+     "h": "Text or Pages",
+     "p": "Text builds a real e-book: paragraphs and headings that reflow, with a table of contents taken from the bookmarks. It suits books, reports and articles. Pages keeps each page as a picture in a fixed-layout ePub, which suits magazines, comics, slides and scans."
+    },
+    {
+     "h": "What to expect",
+     "p": "A PDF stores positions, not paragraphs, so the text is rebuilt from where the words sit on the page. Simple layouts come out clean. Tables, footnotes and multi-column pages may not keep their structure; use Pages for those. Scanned PDFs have no text, so use Pages for them as well."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert PDF to ePub?",
+     "a": "No. Scissor PDF converts the file inside your browser tab. It is read from your disk into the page's memory, converted there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Which readers can open the ePub?",
+     "a": "Any ePub 3 reader, including Apple Books, Google Play Books, Kobo, Thorium and Calibre. Recent Kindle apps accept ePub through Send to Kindle."
+    },
+    {
+     "q": "Are the images kept?",
+     "a": "With Pages, yes: every page is kept as it looks. With Text, only the words are converted."
+    },
+    {
+     "q": "Does it work for right-to-left languages?",
+     "a": "Yes. Arabic, Persian, Hebrew and Kurdish text is detected and the book is set to read from right to left."
+    }
+   ]
+  },
+  "epub-to-pdf": {
+   "name": "ePub to PDF",
+   "short": "Turn an ePub e-book into a PDF you can print or share.",
+   "action": "Convert to PDF",
+   "title": "ePub to PDF Converter Free, Without Uploading",
+   "description": "Convert an ePub e-book to PDF in your browser, with the book's own fonts, styles and pictures. Choose A5, A4 or Letter. Nothing is uploaded.",
+   "h1": "Convert ePub to PDF",
+   "howTo": "How to convert ePub to PDF",
+   "lead": "Print an e-book, or share it with someone who has no e-book app. The pages keep the book's fonts, styles and pictures.",
+   "steps": [
+    "Choose or drop the ePub file.",
+    "Choose the page size and the text size.",
+    "Select Convert to PDF and save the file."
+   ],
+   "sections": [
+    {
+     "h": "How it is laid out",
+     "p": "Each chapter starts on a new page and flows across as many pages as it needs, with the fonts and styles the book was made with. A5 is close to a paperback; A4 and Letter print on standard paper."
+    },
+    {
+     "h": "Good to know",
+     "p": "Pages are saved as high-resolution pictures, so they print sharply and look identical everywhere, but the text cannot be selected or searched. Books with DRM (copy protection) cannot be opened."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I convert ePub to PDF?",
+     "a": "No. Scissor PDF converts the file inside your browser tab. It is read from your disk into the page's memory, converted there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I convert a book I bought?",
+     "a": "Only if it has no DRM. Most stores protect their books, and protected files cannot be opened by any converter without the store's app."
+    },
+    {
+     "q": "Can I select the text in the PDF?",
+     "a": "No. Each page is saved as a picture, which keeps the layout exact in every viewer."
+    },
+    {
+     "q": "Which page size should I choose?",
+     "a": "A5 for reading on screen or printing as a booklet; A4 or Letter for normal printers."
     }
    ]
   },
@@ -2299,6 +2386,288 @@
      "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
     }
    ]
+  },
+  "add-bookmarks-to-pdf": {
+   "name": "Add Bookmarks to PDF",
+   "short": "Add, rename and reorder the bookmarks that link to pages.",
+   "action": "Save bookmarks",
+   "title": "Add Bookmarks to PDF Free, Without Uploading",
+   "description": "Add bookmarks to a PDF in your browser. Click a page, type a title, and save a clickable outline. Files are never uploaded. Free, no sign-up.",
+   "h1": "Add bookmarks to a PDF",
+   "howTo": "How to add bookmarks to a PDF",
+   "lead": "Give a long document a clickable table of contents in the sidebar, so readers can jump straight to each chapter or section. Your file stays on your device.",
+   "steps": [
+    "Choose or drop the PDF. Any bookmarks it already has appear in the list.",
+    "Click a page or select Add bookmark, type a title, and adjust the page number if needed. Remove any entries you do not want.",
+    "Select Save bookmarks and download the result."
+   ],
+   "sections": [
+    {
+     "h": "How the bookmarks are saved",
+     "p": "Saving replaces the PDF's bookmarks with the list you see, in a single level. The file is also set to open with the bookmarks panel showing, in readers that support it. Titles can be written in any language."
+    },
+    {
+     "h": "One level only",
+     "p": "Nested bookmarks, such as sections inside chapters, are not supported. Only top-level bookmarks are shown when you open a file, and if it had nested bookmarks, they are replaced by your flat list when you save. Keep the original if you need them."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add bookmarks to a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I edit bookmarks that are already in the PDF?",
+     "a": "Yes. Existing top-level bookmarks appear in the list, where you can rename them, change their page numbers or remove them."
+    },
+    {
+     "q": "Can I make nested bookmarks?",
+     "a": "No. Bookmarks are saved as a single flat list. Any nested bookmarks in the original file are replaced when you save."
+    },
+    {
+     "q": "Why do the bookmarks not show when I open the file?",
+     "a": "The file asks readers to show the bookmarks panel, but not every reader follows that. Open the sidebar or bookmarks view in your reader to see them."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "add-background-to-pdf": {
+   "name": "Add Background to PDF",
+   "short": "Put a letterhead or background PDF behind your pages.",
+   "action": "Add background",
+   "title": "Add Letterhead to PDF Free, Without Uploading",
+   "description": "Put a letterhead or background PDF behind every page of your document, in your browser. Text stays sharp and searchable. Nothing uploaded.",
+   "h1": "Add a letterhead or background to a PDF",
+   "howTo": "How to add a background to a PDF",
+   "lead": "Place your company letterhead or stationery behind a letter, invoice or report you wrote elsewhere. Both files stay on your device.",
+   "steps": [
+    "Choose or drop your document, then the background PDF, for example your letterhead.",
+    "Choose whether the background goes on every page or only the first, and whether it sits behind the content or on top.",
+    "Select Add background and download the result."
+   ],
+   "sections": [
+    {
+     "h": "How the background is placed",
+     "p": "The first page of the background PDF is drawn on each page of your document, stretched to fit that page. For the best result, use a background with the same page size as your document, such as A4 or Letter."
+    },
+    {
+     "h": "Behind or on top",
+     "p": "By default the background sits behind your content, like printing on pre-printed paper. Choose overlay to draw it on top instead, which helps when your document has a solid white background that would hide it. Either way, your text stays sharp and searchable."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I add a background to a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "What can I use as a background?",
+     "a": "Any PDF. Only its first page is used. A letterhead saved as a PDF from Word, Pages or a design app works well."
+    },
+    {
+     "q": "Why can't I see the background?",
+     "a": "Some documents have a solid white fill on every page that covers anything behind it. Choose overlay to draw the background on top instead."
+    },
+    {
+     "q": "Can I use an image as the background?",
+     "a": "Turn the image into a PDF with JPG to PDF or PNG to PDF first, then use that file as the background."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "stamp-pdf": {
+   "name": "Stamp PDF",
+   "short": "Add Approved, Paid, Draft and other dated stamps to pages.",
+   "action": "Save stamps",
+   "title": "Stamp PDF Free, Without Uploading",
+   "description": "Add Approved, Rejected, Paid, Received, Draft or Confidential stamps with today's date to a PDF, in your browser. Nothing uploaded. Free.",
+   "h1": "Stamp a PDF",
+   "howTo": "How to stamp a PDF",
+   "lead": "Mark an invoice as paid, a contract as approved or a document as a draft, with the date included. Your file stays on your device.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick a stamp and place it on any page. Drag it into position and resize it.",
+    "Select Save stamps and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Ready-made stamps",
+     "p": "Choose from Approved, Rejected, Paid, Received, Draft, Confidential, Final and Copy. Each stamp includes today's date, and you can add as many as you need, on any page."
+    },
+    {
+     "h": "Part of the page",
+     "p": "Stamps become part of the page, not separate comments. They look the same in every reader and when printed, but cannot be removed with an annotation tool later. Keep your original if you might need an unstamped copy."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I stamp a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Which stamps are available?",
+     "a": "Approved, Rejected, Paid, Received, Draft, Confidential, Final and Copy, each with today's date."
+    },
+    {
+     "q": "Can I write my own stamp text?",
+     "a": "Not with this tool. Use Add text to PDF for your own words, or Watermark PDF to put text across every page."
+    },
+    {
+     "q": "Can I remove a stamp later?",
+     "a": "Not from the saved file, because it is part of the page. Keep the original if you need a clean copy."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "draw-on-pdf": {
+   "name": "Draw on PDF",
+   "short": "Draw freehand on any page with a finger, pen or mouse.",
+   "action": "Save drawing",
+   "title": "Draw on PDF Free, Without Uploading",
+   "description": "Draw freehand on a PDF in your browser with a finger, Apple Pencil, trackpad or mouse. Pick a colour and line width. Nothing uploaded. Free.",
+   "h1": "Draw on a PDF",
+   "howTo": "How to draw on a PDF",
+   "lead": "Circle a detail, sketch an arrow, mark up a plan or write a quick note by hand. Your file stays on your device.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Pick a colour and line width, then draw on any page. Undo the last stroke or clear a page if you need to.",
+    "Select Save drawing and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Pens and colours",
+     "p": "Draw in black, blue, red or yellow, with the line width you choose. It works with a finger, an Apple Pencil, a trackpad or a mouse. On a phone, switch between Draw and Scroll so you can move through the document without leaving marks."
+    },
+    {
+     "h": "Part of the page",
+     "p": "Your drawing becomes part of the page, not a separate comment. It looks the same in every reader and when printed, but cannot be removed with an annotation tool later. Keep your original if you might want a clean copy."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I draw on a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Can I draw on my phone or iPad?",
+     "a": "Yes. Draw with your finger or an Apple Pencil. On a phone, switch to Scroll to move through the pages, and back to Draw to mark them."
+    },
+    {
+     "q": "How do I fix a mistake?",
+     "a": "Undo removes the last stroke. Clear removes everything you drew on the current page."
+    },
+    {
+     "q": "Can I erase the drawing after saving?",
+     "a": "No. Once saved, the drawing is part of the page. Keep the original if you need an unmarked copy."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "whiteout-pdf": {
+   "name": "Whiteout PDF",
+   "short": "Cover parts of a page with white boxes.",
+   "action": "Save whiteout",
+   "title": "Whiteout PDF Free, Without Uploading",
+   "description": "Cover parts of a PDF page with white boxes in your browser, for example to blank out a field before filling it again. Nothing uploaded. Free.",
+   "h1": "Whiteout a PDF",
+   "howTo": "How to white out a PDF",
+   "lead": "Blank out a filled-in field so you can fill it again, or hide a printed note, stamp or old date. It works like correction tape, on your own device.",
+   "steps": [
+    "Choose or drop the PDF.",
+    "Draw white boxes over the parts you want to cover, on any page. Drag and resize them to fit.",
+    "Select Save whiteout and download the result."
+   ],
+   "sections": [
+    {
+     "h": "Like correction tape",
+     "p": "Each box covers what is under it with plain white, so the page looks blank in that spot. You can then add new text there with Add text to PDF, or print the page and write on it."
+    },
+    {
+     "h": "Whiteout is not redaction",
+     "p": "Whiteout only covers content visually. The text underneath is still in the file and can be copied, searched or recovered. To permanently remove names, numbers or other sensitive information, use Redact PDF instead."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I white out a PDF?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "Is the covered text removed from the file?",
+     "a": "No. It is hidden from view but still in the file, where it can be copied or found by search. Use Redact PDF to remove sensitive information for good."
+    },
+    {
+     "q": "Can I type new text over the white box?",
+     "a": "Yes. Save the whiteout, then open the result in Add text to PDF and type in the blank space."
+    },
+    {
+     "q": "Does it work on scanned documents?",
+     "a": "Yes. The white boxes cover whatever is in that area, whether it is text or part of a scanned image."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
+  },
+  "split-pdf-at-blank-pages": {
+   "name": "Split PDF at Blank Pages",
+   "short": "Split a batch scan into separate PDFs at each blank page.",
+   "action": "Split at blank pages",
+   "title": "Split PDF at Blank Pages Free, No Upload",
+   "description": "Split a batch-scanned PDF into separate files wherever a blank separator page appears, in your browser. Blank pages are left out. Nothing uploaded.",
+   "h1": "Split a PDF at blank pages",
+   "howTo": "How to split a PDF at blank pages",
+   "lead": "Scan a pile of documents in one go with a blank sheet between each, then turn the scan into one PDF per document. Your file stays on your device.",
+   "steps": [
+    "Choose or drop the scanned PDF. Every page is checked, and the blank pages are shown.",
+    "Review the selection, and add or remove pages that should count as separators.",
+    "Select Split at blank pages and download the ZIP with one PDF per document."
+   ],
+   "sections": [
+    {
+     "h": "For batch scanning",
+     "p": "Put a blank sheet between the documents in your scanner's feeder and scan them all into one PDF. The document is split at each blank page, the blank pages themselves are left out, and the separate files are downloaded together as a ZIP."
+    },
+    {
+     "h": "Check the selection",
+     "p": "Blank pages are detected by how they look, so a very light page may be taken as blank, and a separator sheet with marks or scanner noise may be missed. Look through the selected pages before you split. Every page is rendered in your browser, so a long scan can take a moment."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Are my files uploaded when I split a PDF at blank pages?",
+     "a": "No. Scissor PDF runs a PDF engine written in Rust and compiled to WebAssembly inside your browser tab. Your files are read from your disk into the page's memory, processed there and saved back to your device. The site has no upload endpoint, and its Content Security Policy blocks the page from sending data to any other server."
+    },
+    {
+     "q": "How are blank pages detected?",
+     "a": "Each page is rendered in your browser and checked for how much of it is empty. Pages that look blank are selected for you to review."
+    },
+    {
+     "q": "What if a page is detected wrongly?",
+     "a": "Change the selection before you split. Click a page to mark it as a separator, or to unmark it."
+    },
+    {
+     "q": "Are the blank pages kept in the output?",
+     "a": "No. They are used only to decide where to split and are left out of the files. To remove blank pages without splitting, use Remove blank pages."
+    },
+    {
+     "q": "Is it free? Do I need an account?",
+     "a": "It is free, with no account, no daily task limit and no watermark added to your documents. Because the work happens on your own computer, there is no server cost per file for us to recover."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -2624,7 +2993,59 @@
   "studioClose": "Close {name}",
   "studioNoPdfs": "No PDF files found there.",
   "studioHome": "Scissor PDF home",
-  "studioSource": "Open source on GitHub"
+  "studioSource": "Open source on GitHub",
+  "studioOpenShort": "Open",
+  "studioExtract": "Extract",
+  "studioReorder": "Reorder",
+  "studioSelected": "{pages} selected",
+  "studioRotateLeft": "Rotate Left",
+  "studioRotateRight": "Rotate Right",
+  "bookmarksSub": "Click a page to add a bookmark for it, then name it.",
+  "bookmarkTitle": "Title",
+  "bookmarkPage": "Page",
+  "noBookmarks": "No bookmarks yet.",
+  "addBookmark": "Add bookmark",
+  "backgroundSub": "First file: your document. Second file: the background; its first page is used.",
+  "placement": "Placement",
+  "behind": "Behind content",
+  "onTop": "On top",
+  "firstPageOnly": "First page",
+  "stamps": "Stamps",
+  "stampApproved": "APPROVED",
+  "stampRejected": "REJECTED",
+  "stampPaid": "PAID",
+  "stampReceived": "RECEIVED",
+  "stampDraft": "DRAFT",
+  "stampConfidential": "CONFIDENTIAL",
+  "stampFinal": "FINAL",
+  "stampCopy": "COPY",
+  "lineWidth": "Line width",
+  "touchMode": "Touch",
+  "drawMode": "Draw",
+  "scrollMode": "Scroll",
+  "undoStroke": "Undo stroke",
+  "clearAll": "Clear all",
+  "addWhiteout": "Add white box",
+  "whiteoutHint": "White boxes only cover content. To remove it from the file, use Redact PDF.",
+  "splitBlankSub": "Blank pages are selected as separators. Check them, then split.",
+  "errUnexpected": "Something went wrong. Your files never left this device. Please try again.",
+  "tabPages": "Pages",
+  "tabEdit": "Edit",
+  "tabConvert": "Convert",
+  "tabSecure": "Secure",
+  "studioNoTools": "No matching tools",
+  "errChooseEpub": "Choose an ePub file (.epub).",
+  "toEpubSub": "Make an e-book that opens in Apple Books, Kobo and other readers.",
+  "epubLayout": "Layout",
+  "epubText": "Text",
+  "epubPages": "Pages",
+  "epubTextHint": "The words reflow to fit any screen. Best for books and articles.",
+  "epubPagesHint": "Every page is kept exactly as it looks. Best for magazines, slides and scans.",
+  "fromEpubSub": "Each chapter starts on a new page, with the book's own fonts and pictures.",
+  "textSize": "Text size",
+  "sizeSmall": "Small",
+  "sizeMedium": "Medium",
+  "sizeLarge": "Large"
  },
  "studio": {
   "title": "Scissor PDF: Every PDF Tool in One Private App",

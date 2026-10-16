@@ -63,6 +63,8 @@ fn main() {
         "bysize" => more::split_by_size(&read(0), 4_000_000, "part"),
         "bookmarks" => more::split_by_bookmarks(&read(0), "ch"),
         "info" => more::info(&read(0)).map(|s| { println!("{s}"); s.into_bytes() }),
+        "bm" => more::set_bookmarks(&read(0), &[("Intro".into(), 1), ("Pictures ✓ عربي".into(), 3), ("End".into(), 5)]),
+        "bg" => more::add_background(&read(0), &read(1), false, false),
         _ => panic!("unknown op"),
     };
     match result {

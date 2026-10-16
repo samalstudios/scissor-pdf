@@ -62,7 +62,8 @@
   "f3p": "Tanpa daftar, tanpa batas harian, tanpa watermark, tanpa iklan. Buka halamannya, seret file Anda, lalu unduh hasilnya.",
   "suggestLang": "Halaman ini tersedia dalam {lang}.",
   "switch": "Ganti",
-  "dismiss": "Tutup"
+  "dismiss": "Tutup",
+  "chooseEpub": "Pilih file ePub"
  },
  "tools": {
   "merge-pdf": {
@@ -1028,6 +1029,92 @@
     {
      "q": "Apakah gratis? Perlu akun?",
      "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "pdf-to-epub": {
+   "name": "PDF ke ePub",
+   "short": "Ubah PDF menjadi e-book ePub untuk Apple Books, Kobo, dan pembaca lainnya.",
+   "action": "Ubah ke ePub",
+   "title": "Konverter PDF ke ePub Gratis, Tanpa Upload",
+   "description": "Ubah PDF ke ePub di browser: teks yang menyesuaikan layar apa pun, atau setiap halaman tetap seperti aslinya. Bab mengikuti bookmark. Tidak ada yang diunggah.",
+   "h1": "Ubah PDF ke ePub",
+   "howTo": "Cara mengubah PDF ke ePub",
+   "lead": "Baca PDF dengan nyaman di ponsel atau e-reader. Teks menyesuaikan diri dengan layar, dan bab mengikuti bookmark PDF.",
+   "steps": [
+    "Pilih atau letakkan file PDF.",
+    "Pilih Teks agar kata-kata menyesuaikan layar, atau Halaman agar setiap halaman tetap persis seperti aslinya.",
+    "Pilih Ubah ke ePub lalu buka file di aplikasi e-book Anda."
+   ],
+   "sections": [
+    {
+     "h": "Teks atau Halaman",
+     "p": "Teks membuat e-book sungguhan: paragraf dan judul yang menyesuaikan layar, dengan daftar isi yang diambil dari bookmark. Cocok untuk buku, laporan, dan artikel. Halaman menyimpan setiap halaman sebagai gambar dalam ePub tata letak tetap, cocok untuk majalah, komik, slide, dan hasil pindaian."
+    },
+    {
+     "h": "Yang perlu diketahui",
+     "p": "PDF menyimpan posisi, bukan paragraf, jadi teks disusun ulang berdasarkan letak kata di halaman. Tata letak sederhana hasilnya rapi. Tabel, catatan kaki, dan halaman multi-kolom mungkin tidak mempertahankan strukturnya; gunakan Halaman untuk itu. PDF hasil pindaian tidak berisi teks, jadi gunakan Halaman juga."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengubah PDF ke ePub?",
+     "a": "Tidak. Scissor PDF mengubah file di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diubah di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Pembaca apa saja yang bisa membuka ePub ini?",
+     "a": "Pembaca ePub 3 apa pun, termasuk Apple Books, Google Play Books, Kobo, Thorium, dan Calibre. Aplikasi Kindle terbaru menerima ePub melalui Send to Kindle."
+    },
+    {
+     "q": "Apakah gambar tetap ada?",
+     "a": "Dengan Halaman, ya: setiap halaman tetap seperti aslinya. Dengan Teks, hanya kata-kata yang diubah."
+    },
+    {
+     "q": "Apakah bisa untuk bahasa yang ditulis dari kanan ke kiri?",
+     "a": "Ya. Teks Arab, Persia, Ibrani, dan Kurdi dikenali, dan buku diatur agar dibaca dari kanan ke kiri."
+    }
+   ]
+  },
+  "epub-to-pdf": {
+   "name": "ePub ke PDF",
+   "short": "Ubah e-book ePub menjadi PDF yang bisa dicetak atau dibagikan.",
+   "action": "Ubah ke PDF",
+   "title": "Konverter ePub ke PDF Gratis, Tanpa Upload",
+   "description": "Ubah e-book ePub ke PDF di browser, dengan font, gaya, dan gambar asli buku. Pilih A5, A4, atau Letter. Tidak ada yang diunggah.",
+   "h1": "Ubah ePub ke PDF",
+   "howTo": "Cara mengubah ePub ke PDF",
+   "lead": "Cetak e-book, atau bagikan kepada orang yang tidak punya aplikasi e-book. Halaman tetap memakai font, gaya, dan gambar asli buku.",
+   "steps": [
+    "Pilih atau letakkan file ePub.",
+    "Pilih ukuran halaman dan ukuran teks.",
+    "Pilih Ubah ke PDF lalu simpan file."
+   ],
+   "sections": [
+    {
+     "h": "Cara tata letaknya",
+     "p": "Setiap bab dimulai di halaman baru dan berlanjut sebanyak halaman yang dibutuhkan, dengan font dan gaya yang dipakai saat buku dibuat. A5 mendekati ukuran buku saku; A4 dan Letter dicetak di kertas standar."
+    },
+    {
+     "h": "Perlu diketahui",
+     "p": "Halaman disimpan sebagai gambar beresolusi tinggi, sehingga tercetak tajam dan terlihat sama di mana saja, tetapi teksnya tidak bisa dipilih atau dicari. Buku dengan DRM (perlindungan salinan) tidak bisa dibuka."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat mengubah ePub ke PDF?",
+     "a": "Tidak. Scissor PDF mengubah file di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diubah di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya mengubah buku yang saya beli?",
+     "a": "Hanya jika buku itu tidak memiliki DRM. Sebagian besar toko melindungi bukunya, dan file yang dilindungi tidak bisa dibuka oleh konverter apa pun tanpa aplikasi toko tersebut."
+    },
+    {
+     "q": "Bisakah saya memilih teks di PDF?",
+     "a": "Tidak. Setiap halaman disimpan sebagai gambar, sehingga tata letaknya tetap persis di semua penampil."
+    },
+    {
+     "q": "Ukuran halaman mana yang sebaiknya saya pilih?",
+     "a": "A5 untuk membaca di layar atau mencetak sebagai buklet; A4 atau Letter untuk printer biasa."
     }
    ]
   },
@@ -2299,6 +2386,288 @@
      "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
     }
    ]
+  },
+  "add-bookmarks-to-pdf": {
+   "name": "Tambah bookmark ke PDF",
+   "short": "Tambah, ganti nama, dan atur ulang bookmark yang menautkan ke halaman.",
+   "action": "Simpan bookmark",
+   "title": "Tambah Bookmark ke PDF Gratis, Tanpa Upload",
+   "description": "Tambahkan bookmark ke PDF di browser. Klik halaman, ketik judul, lalu simpan daftar isi yang bisa diklik. File tidak pernah diunggah. Gratis, tanpa daftar.",
+   "h1": "Tambah bookmark ke PDF",
+   "howTo": "Cara menambahkan bookmark ke PDF",
+   "lead": "Beri dokumen panjang daftar isi yang bisa diklik di panel samping, agar pembaca bisa langsung melompat ke setiap bab atau bagian. File Anda tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF. Bookmark yang sudah ada di dalamnya muncul di daftar.",
+    "Klik halaman atau pilih Tambah bookmark, ketik judul, dan sesuaikan nomor halaman bila perlu. Hapus entri yang tidak Anda inginkan.",
+    "Pilih Simpan bookmark dan unduh hasilnya."
+   ],
+   "sections": [
+    {
+     "h": "Cara bookmark disimpan",
+     "p": "Saat disimpan, bookmark PDF diganti dengan daftar yang Anda lihat, dalam satu tingkat. File juga diatur agar terbuka dengan panel bookmark ditampilkan, di pembaca yang mendukungnya. Judul bisa ditulis dalam bahasa apa pun."
+    },
+    {
+     "h": "Hanya satu tingkat",
+     "p": "Bookmark bertingkat, misalnya subbagian di dalam bab, tidak didukung. Saat file dibuka, hanya bookmark tingkat teratas yang ditampilkan, dan jika file punya bookmark bertingkat, semuanya diganti dengan daftar datar Anda saat disimpan. Simpan file asli jika Anda masih membutuhkannya."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menambahkan bookmark ke PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya mengedit bookmark yang sudah ada di PDF?",
+     "a": "Bisa. Bookmark tingkat teratas yang sudah ada muncul di daftar, dan Anda bisa mengganti namanya, mengubah nomor halamannya, atau menghapusnya."
+    },
+    {
+     "q": "Bisakah saya membuat bookmark bertingkat?",
+     "a": "Tidak. Bookmark disimpan sebagai satu daftar datar. Bookmark bertingkat di file asli akan diganti saat Anda menyimpan."
+    },
+    {
+     "q": "Kenapa bookmark tidak muncul saat file dibuka?",
+     "a": "File meminta pembaca menampilkan panel bookmark, tetapi tidak semua pembaca mengikutinya. Buka panel samping atau tampilan bookmark di pembaca Anda untuk melihatnya."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "add-background-to-pdf": {
+   "name": "Tambah latar belakang ke PDF",
+   "short": "Pasang kop surat atau PDF latar belakang di belakang halaman Anda.",
+   "action": "Tambah latar belakang",
+   "title": "Tambah Kop Surat ke PDF Gratis, Tanpa Upload",
+   "description": "Pasang kop surat atau PDF latar belakang di belakang setiap halaman dokumen, langsung di browser. Teks tetap tajam dan bisa dicari. Tanpa upload.",
+   "h1": "Tambah kop surat atau latar belakang ke PDF",
+   "howTo": "Cara menambahkan latar belakang ke PDF",
+   "lead": "Pasang kop surat atau alat tulis kantor perusahaan Anda di belakang surat, invoice, atau laporan yang Anda buat di tempat lain. Kedua file tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret dokumen Anda, lalu PDF latar belakangnya, misalnya kop surat Anda.",
+    "Pilih apakah latar belakang dipasang di setiap halaman atau hanya halaman pertama, dan apakah diletakkan di belakang konten atau di atasnya.",
+    "Pilih Tambah latar belakang dan unduh hasilnya."
+   ],
+   "sections": [
+    {
+     "h": "Cara latar belakang dipasang",
+     "p": "Halaman pertama PDF latar belakang digambar di setiap halaman dokumen Anda, direntangkan agar pas dengan halaman tersebut. Untuk hasil terbaik, gunakan latar belakang dengan ukuran halaman yang sama dengan dokumen Anda, misalnya A4 atau Letter."
+    },
+    {
+     "h": "Di belakang atau di atas",
+     "p": "Secara default, latar belakang diletakkan di belakang konten, seperti mencetak di kertas yang sudah berkop. Pilih overlay untuk menggambarnya di atas konten, yang berguna jika dokumen Anda punya latar putih solid yang akan menutupinya. Apa pun pilihannya, teks Anda tetap tajam dan bisa dicari."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menambahkan latar belakang ke PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Apa yang bisa saya pakai sebagai latar belakang?",
+     "a": "PDF apa saja. Hanya halaman pertamanya yang dipakai. Kop surat yang disimpan sebagai PDF dari Word, Pages, atau aplikasi desain cocok dipakai."
+    },
+    {
+     "q": "Kenapa latar belakangnya tidak terlihat?",
+     "a": "Beberapa dokumen punya isian putih solid di setiap halaman yang menutupi apa pun di belakangnya. Pilih overlay untuk menggambar latar belakang di atas konten."
+    },
+    {
+     "q": "Bisakah saya memakai gambar sebagai latar belakang?",
+     "a": "Ubah gambar menjadi PDF dulu dengan JPG ke PDF atau PNG ke PDF, lalu gunakan file itu sebagai latar belakang."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "stamp-pdf": {
+   "name": "Stempel PDF",
+   "short": "Beri stempel Disetujui, Lunas, Draf, dan lainnya, lengkap dengan tanggal.",
+   "action": "Simpan stempel",
+   "title": "Stempel PDF Gratis, Tanpa Upload File",
+   "description": "Tambahkan stempel Disetujui, Ditolak, Lunas, Diterima, Draf, atau Rahasia dengan tanggal hari ini ke PDF, di browser. Tanpa upload. Gratis.",
+   "h1": "Beri stempel pada PDF",
+   "howTo": "Cara memberi stempel pada PDF",
+   "lead": "Tandai invoice sebagai lunas, kontrak sebagai disetujui, atau dokumen sebagai draf, lengkap dengan tanggalnya. File Anda tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih stempel dan letakkan di halaman mana pun. Seret ke posisinya dan ubah ukurannya.",
+    "Pilih Simpan stempel dan unduh hasilnya."
+   ],
+   "sections": [
+    {
+     "h": "Stempel siap pakai",
+     "p": "Pilih dari Disetujui, Ditolak, Lunas, Diterima, Draf, Rahasia, Final, dan Salinan. Setiap stempel mencantumkan tanggal hari ini, dan Anda bisa menambahkan sebanyak yang diperlukan, di halaman mana pun."
+    },
+    {
+     "h": "Menjadi bagian halaman",
+     "p": "Stempel menjadi bagian dari halaman, bukan komentar terpisah. Tampilannya sama di semua pembaca dan saat dicetak, tetapi tidak bisa dihapus dengan alat anotasi nanti. Simpan file asli jika Anda mungkin butuh salinan tanpa stempel."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memberi stempel pada PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Stempel apa saja yang tersedia?",
+     "a": "Disetujui, Ditolak, Lunas, Diterima, Draf, Rahasia, Final, dan Salinan, masing-masing dengan tanggal hari ini."
+    },
+    {
+     "q": "Bisakah saya menulis teks stempel sendiri?",
+     "a": "Tidak dengan alat ini. Gunakan Tambah teks ke PDF untuk kata-kata Anda sendiri, atau Watermark PDF untuk menaruh teks di setiap halaman."
+    },
+    {
+     "q": "Bisakah stempel dihapus nanti?",
+     "a": "Tidak dari file yang sudah disimpan, karena stempel sudah menjadi bagian halaman. Simpan file asli jika Anda butuh salinan yang bersih."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "draw-on-pdf": {
+   "name": "Menggambar di PDF",
+   "short": "Gambar bebas di halaman mana pun dengan jari, pena, atau mouse.",
+   "action": "Simpan gambar",
+   "title": "Menggambar di PDF Gratis, Tanpa Upload File",
+   "description": "Gambar bebas di PDF langsung di browser dengan jari, Apple Pencil, trackpad, atau mouse. Pilih warna dan ketebalan garis. Tanpa upload. Gratis.",
+   "h1": "Menggambar di PDF",
+   "howTo": "Cara menggambar di PDF",
+   "lead": "Lingkari detail, buat panah, tandai denah, atau tulis catatan singkat dengan tangan. File Anda tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Pilih warna dan ketebalan garis, lalu gambar di halaman mana pun. Urungkan goresan terakhir atau bersihkan halaman jika perlu.",
+    "Pilih Simpan gambar dan unduh hasilnya."
+   ],
+   "sections": [
+    {
+     "h": "Pena dan warna",
+     "p": "Gambar dengan warna hitam, biru, merah, atau kuning, dengan ketebalan garis pilihan Anda. Bisa dengan jari, Apple Pencil, trackpad, atau mouse. Di ponsel, beralihlah antara Gambar dan Gulir agar Anda bisa menelusuri dokumen tanpa meninggalkan coretan."
+    },
+    {
+     "h": "Menjadi bagian halaman",
+     "p": "Gambar Anda menjadi bagian dari halaman, bukan komentar terpisah. Tampilannya sama di semua pembaca dan saat dicetak, tetapi tidak bisa dihapus dengan alat anotasi nanti. Simpan file asli jika Anda mungkin ingin salinan yang bersih."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menggambar di PDF?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bisakah saya menggambar di ponsel atau iPad?",
+     "a": "Bisa. Gambar dengan jari atau Apple Pencil. Di ponsel, beralih ke Gulir untuk menelusuri halaman, lalu kembali ke Gambar untuk menandainya."
+    },
+    {
+     "q": "Bagaimana cara memperbaiki kesalahan?",
+     "a": "Urungkan menghapus goresan terakhir. Bersihkan menghapus semua yang Anda gambar di halaman saat ini."
+    },
+    {
+     "q": "Bisakah gambar dihapus setelah disimpan?",
+     "a": "Tidak. Setelah disimpan, gambar menjadi bagian halaman. Simpan file asli jika Anda butuh salinan tanpa coretan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "whiteout-pdf": {
+   "name": "Whiteout PDF",
+   "short": "Tutupi bagian halaman dengan kotak putih.",
+   "action": "Simpan whiteout",
+   "title": "Whiteout PDF Gratis, Tanpa Upload File",
+   "description": "Tutupi bagian halaman PDF dengan kotak putih di browser, misalnya untuk mengosongkan kolom sebelum mengisinya lagi. Tanpa upload. Gratis.",
+   "h1": "Whiteout PDF",
+   "howTo": "Cara menutupi bagian PDF dengan whiteout",
+   "lead": "Kosongkan kolom yang sudah terisi agar bisa diisi lagi, atau sembunyikan catatan, stempel, atau tanggal lama yang tercetak. Cara kerjanya seperti tip-ex, langsung di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF.",
+    "Gambar kotak putih di atas bagian yang ingin ditutupi, di halaman mana pun. Seret dan ubah ukurannya agar pas.",
+    "Pilih Simpan whiteout dan unduh hasilnya."
+   ],
+   "sections": [
+    {
+     "h": "Seperti tip-ex",
+     "p": "Setiap kotak menutupi apa yang ada di bawahnya dengan warna putih polos, sehingga bagian halaman itu tampak kosong. Setelah itu Anda bisa menambahkan teks baru di sana dengan Tambah teks ke PDF, atau mencetak halamannya dan menulis di atasnya."
+    },
+    {
+     "h": "Whiteout bukan sensor",
+     "p": "Whiteout hanya menutupi konten secara visual. Teks di bawahnya masih ada di dalam file dan bisa disalin, dicari, atau dipulihkan. Untuk menghapus nama, nomor, atau informasi sensitif lain secara permanen, gunakan Sensor PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat menutupi PDF dengan whiteout?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Apakah teks yang ditutupi dihapus dari file?",
+     "a": "Tidak. Teks itu tersembunyi dari pandangan, tetapi masih ada di dalam file dan bisa disalin atau ditemukan lewat pencarian. Gunakan Sensor PDF untuk menghapus informasi sensitif secara permanen."
+    },
+    {
+     "q": "Bisakah saya mengetik teks baru di atas kotak putih?",
+     "a": "Bisa. Simpan whiteout-nya, lalu buka hasilnya di Tambah teks ke PDF dan ketik di ruang yang kosong."
+    },
+    {
+     "q": "Apakah bisa dipakai untuk dokumen hasil scan?",
+     "a": "Bisa. Kotak putih menutupi apa pun di area itu, baik teks maupun bagian dari gambar hasil scan."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
+  },
+  "split-pdf-at-blank-pages": {
+   "name": "Pisah PDF di halaman kosong",
+   "short": "Pisah hasil scan massal menjadi beberapa PDF di setiap halaman kosong.",
+   "action": "Pisah di halaman kosong",
+   "title": "Pisah PDF di Halaman Kosong, Tanpa Upload",
+   "description": "Pisah PDF hasil scan massal menjadi beberapa file di setiap halaman kosong pemisah, langsung di browser. Halaman kosong tidak disertakan. Tanpa upload.",
+   "h1": "Pisah PDF di halaman kosong",
+   "howTo": "Cara memisah PDF di halaman kosong",
+   "lead": "Scan setumpuk dokumen sekaligus dengan selembar kertas kosong di antara masing-masing, lalu ubah hasil scan itu menjadi satu PDF per dokumen. File Anda tetap di perangkat Anda.",
+   "steps": [
+    "Pilih atau seret PDF hasil scan. Setiap halaman diperiksa, dan halaman kosong ditampilkan.",
+    "Periksa pilihannya, lalu tambahkan atau hapus halaman yang seharusnya dihitung sebagai pemisah.",
+    "Pilih Pisah di halaman kosong dan unduh ZIP berisi satu PDF per dokumen."
+   ],
+   "sections": [
+    {
+     "h": "Untuk scan massal",
+     "p": "Selipkan selembar kertas kosong di antara dokumen di feeder scanner Anda, lalu scan semuanya menjadi satu PDF. Dokumen dipisah di setiap halaman kosong, halaman kosongnya sendiri tidak disertakan, dan file-file terpisah diunduh bersama dalam satu ZIP."
+    },
+    {
+     "h": "Periksa pilihannya",
+     "p": "Halaman kosong dideteksi dari tampilannya, jadi halaman yang sangat terang bisa dianggap kosong, dan kertas pemisah yang ada coretan atau noise scanner bisa terlewat. Periksa halaman yang terpilih sebelum memisah. Setiap halaman dirender di browser Anda, jadi hasil scan yang panjang bisa butuh waktu sebentar."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Apakah file saya diunggah saat memisah PDF di halaman kosong?",
+     "a": "Tidak. Scissor PDF menjalankan mesin PDF yang ditulis dengan Rust dan dikompilasi ke WebAssembly di dalam tab browser Anda. File dibaca dari disk ke memori halaman, diproses di sana, lalu disimpan kembali ke perangkat Anda. Situs ini tidak punya endpoint unggahan, dan Content Security Policy-nya memblokir halaman agar tidak mengirim data ke server lain."
+    },
+    {
+     "q": "Bagaimana halaman kosong dideteksi?",
+     "a": "Setiap halaman dirender di browser Anda dan diperiksa seberapa banyak bagiannya yang kosong. Halaman yang tampak kosong dipilih agar Anda periksa."
+    },
+    {
+     "q": "Bagaimana jika ada halaman yang salah terdeteksi?",
+     "a": "Ubah pilihannya sebelum memisah. Klik halaman untuk menandainya sebagai pemisah, atau untuk membatalkan tandanya."
+    },
+    {
+     "q": "Apakah halaman kosong ikut disimpan di hasilnya?",
+     "a": "Tidak. Halaman kosong hanya dipakai untuk menentukan titik pemisahan dan tidak disertakan di file hasil. Untuk menghapus halaman kosong tanpa memisah, gunakan Hapus halaman kosong."
+    },
+    {
+     "q": "Apakah gratis? Perlu akun?",
+     "a": "Gratis, tanpa akun, tanpa batas tugas harian, dan tanpa watermark yang ditambahkan ke dokumen Anda. Karena semua pekerjaan berlangsung di komputer Anda sendiri, kami tidak menanggung biaya server per file yang perlu ditutup."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -2620,7 +2989,59 @@
   "studioClose": "Tutup {name}",
   "studioNoPdfs": "Tidak ada file PDF di sana.",
   "studioHome": "Beranda Scissor PDF",
-  "studioSource": "Sumber terbuka di GitHub"
+  "studioSource": "Sumber terbuka di GitHub",
+  "studioOpenShort": "Buka",
+  "studioExtract": "Ekstrak",
+  "studioReorder": "Atur urutan",
+  "studioSelected": "{pages} dipilih",
+  "studioRotateLeft": "Putar ke Kiri",
+  "studioRotateRight": "Putar ke Kanan",
+  "bookmarksSub": "Klik halaman untuk menambahkan bookmark, lalu beri nama.",
+  "bookmarkTitle": "Judul",
+  "bookmarkPage": "Halaman",
+  "noBookmarks": "Belum ada bookmark.",
+  "addBookmark": "Tambah bookmark",
+  "backgroundSub": "File pertama: dokumen Anda. File kedua: latar belakang; halaman pertamanya yang dipakai.",
+  "placement": "Posisi",
+  "behind": "Di belakang konten",
+  "onTop": "Di atas",
+  "firstPageOnly": "Halaman pertama",
+  "stamps": "Stempel",
+  "stampApproved": "DISETUJUI",
+  "stampRejected": "DITOLAK",
+  "stampPaid": "LUNAS",
+  "stampReceived": "DITERIMA",
+  "stampDraft": "DRAF",
+  "stampConfidential": "RAHASIA",
+  "stampFinal": "FINAL",
+  "stampCopy": "SALINAN",
+  "lineWidth": "Ketebalan garis",
+  "touchMode": "Sentuh",
+  "drawMode": "Gambar",
+  "scrollMode": "Gulir",
+  "undoStroke": "Urungkan goresan",
+  "clearAll": "Bersihkan semua",
+  "addWhiteout": "Tambah kotak putih",
+  "whiteoutHint": "Kotak putih hanya menutupi konten. Untuk menghapusnya dari file, gunakan Sensor PDF.",
+  "splitBlankSub": "Halaman kosong dipilih sebagai pemisah. Periksa dulu, lalu pisahkan.",
+  "tabPages": "Halaman",
+  "tabEdit": "Edit",
+  "tabConvert": "Ubah",
+  "tabSecure": "Amankan",
+  "studioNoTools": "Tidak ada alat yang cocok",
+  "errChooseEpub": "Pilih file ePub (.epub).",
+  "toEpubSub": "Buat e-book yang bisa dibuka di Apple Books, Kobo, dan pembaca lainnya.",
+  "epubLayout": "Tata letak",
+  "epubText": "Teks",
+  "epubPages": "Halaman",
+  "epubTextHint": "Teks menyesuaikan diri dengan layar apa pun. Paling cocok untuk buku dan artikel.",
+  "epubPagesHint": "Setiap halaman dipertahankan persis seperti aslinya. Paling cocok untuk majalah, slide, dan hasil pindaian.",
+  "fromEpubSub": "Setiap bab dimulai di halaman baru, dengan font dan gambar asli buku.",
+  "textSize": "Ukuran teks",
+  "sizeSmall": "Kecil",
+  "sizeMedium": "Sedang",
+  "sizeLarge": "Besar",
+  "errUnexpected": "Terjadi kesalahan. File Anda tidak pernah keluar dari perangkat ini. Silakan coba lagi."
  },
  "studio": {
   "title": "Scissor PDF: Semua alat PDF dalam satu aplikasi privat",

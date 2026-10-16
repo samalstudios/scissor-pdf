@@ -62,7 +62,8 @@
   "f3p": "Kayıt yok, günlük sınır yok, filigran yok, reklam yok. Sayfayı açın, dosyanızı bırakın, sonucu indirin.",
   "suggestLang": "Bu sayfa {lang} dilinde de mevcut.",
   "switch": "Geç",
-  "dismiss": "Kapat"
+  "dismiss": "Kapat",
+  "chooseEpub": "ePub dosyası seçin"
  },
  "tools": {
   "merge-pdf": {
@@ -1028,6 +1029,92 @@
     {
      "q": "Ücretsiz mi? Hesap gerekiyor mu?",
      "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "pdf-to-epub": {
+   "name": "PDF'ten ePub'a",
+   "short": "PDF'i Apple Books, Kobo ve diğer okuyucular için ePub e-kitaba dönüştürün.",
+   "action": "ePub'a dönüştür",
+   "title": "PDF'ten ePub'a: Ücretsiz, Dosya Yüklemeden",
+   "description": "PDF'i tarayıcınızda ePub'a dönüştürün: her ekrana uyan akışkan metin ya da her sayfa olduğu gibi. Bölümler yer imlerini izler. Hiçbir şey yüklenmez.",
+   "h1": "PDF'i ePub'a dönüştürün",
+   "howTo": "PDF ePub'a nasıl dönüştürülür",
+   "lead": "Bir PDF'i telefonda veya e-okuyucuda rahatça okuyun. Metin ekrana uyacak şekilde akar ve bölümler PDF'in yer imlerini izler.",
+   "steps": [
+    "PDF'i seçin veya sürükleyip bırakın.",
+    "Sözcüklerin akması için Metin'i, her sayfayı tam olarak olduğu gibi korumak için Sayfalar'ı seçin.",
+    "ePub'a dönüştür'ü seçin ve dosyayı e-kitap uygulamanızda açın."
+   ],
+   "sections": [
+    {
+     "h": "Metin mi, Sayfalar mı",
+     "p": "Metin gerçek bir e-kitap oluşturur: akan paragraflar ve başlıklar, yer imlerinden alınan bir içindekiler tablosuyla. Kitaplar, raporlar ve makaleler için uygundur. Sayfalar her sayfayı sabit düzenli bir ePub içinde resim olarak korur; dergiler, çizgi romanlar, slaytlar ve taramalar için uygundur."
+    },
+    {
+     "h": "Ne beklemeli",
+     "p": "Bir PDF paragrafları değil konumları saklar, bu yüzden metin sözcüklerin sayfadaki yerlerinden yeniden oluşturulur. Basit düzenler temiz çıkar. Tablolar, dipnotlar ve çok sütunlu sayfalar yapılarını koruyamayabilir; bunlar için Sayfalar'ı kullanın. Taranmış PDF'lerde metin yoktur, onlar için de Sayfalar'ı kullanın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'i ePub'a dönüştürürken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF dosyayı tarayıcı sekmenizin içinde dönüştürür. Dosya diskinizden sayfanın belleğine okunur, orada dönüştürülür ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "ePub dosyasını hangi okuyucular açabilir?",
+     "a": "Apple Books, Google Play Kitaplar, Kobo, Thorium ve Calibre dahil her ePub 3 okuyucusu. Güncel Kindle uygulamaları ePub'ı Send to Kindle üzerinden kabul eder."
+    },
+    {
+     "q": "Görseller korunuyor mu?",
+     "a": "Sayfalar ile evet: her sayfa olduğu gibi korunur. Metin ile yalnızca sözcükler dönüştürülür."
+    },
+    {
+     "q": "Sağdan sola yazılan dillerde çalışıyor mu?",
+     "a": "Evet. Arapça, Farsça, İbranice ve Kürtçe metin algılanır ve kitap sağdan sola okunacak şekilde ayarlanır."
+    }
+   ]
+  },
+  "epub-to-pdf": {
+   "name": "ePub'tan PDF'e",
+   "short": "Bir ePub e-kitabı yazdırabileceğiniz veya paylaşabileceğiniz bir PDF'e dönüştürün.",
+   "action": "PDF'e dönüştür",
+   "title": "ePub'tan PDF'e: Ücretsiz, Dosya Yüklemeden",
+   "description": "ePub e-kitabı tarayıcınızda kitabın kendi yazı tipleri, stilleri ve resimleriyle PDF'e dönüştürün. A5, A4 veya Letter seçin. Hiçbir şey yüklenmez.",
+   "h1": "ePub'ı PDF'e dönüştürün",
+   "howTo": "ePub PDF'e nasıl dönüştürülür",
+   "lead": "Bir e-kitabı yazdırın ya da e-kitap uygulaması olmayan biriyle paylaşın. Sayfalar kitabın yazı tiplerini, stillerini ve resimlerini korur.",
+   "steps": [
+    "ePub dosyasını seçin veya sürükleyip bırakın.",
+    "Sayfa boyutunu ve metin boyutunu seçin.",
+    "PDF'e dönüştür'ü seçin ve dosyayı kaydedin."
+   ],
+   "sections": [
+    {
+     "h": "Nasıl yerleştirilir",
+     "p": "Her bölüm yeni bir sayfada başlar ve kitabın hazırlandığı yazı tipleri ve stillerle gerektiği kadar sayfaya yayılır. A5 bir cep kitabına yakındır; A4 ve Letter standart kağıda yazdırılır."
+    },
+    {
+     "h": "Bilmeniz gerekenler",
+     "p": "Sayfalar yüksek çözünürlüklü resimler olarak kaydedilir; böylece net yazdırılır ve her yerde aynı görünür, ancak metin seçilemez veya aranamaz. DRM'li (kopya korumalı) kitaplar açılamaz."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "ePub'ı PDF'e dönüştürürken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF dosyayı tarayıcı sekmenizin içinde dönüştürür. Dosya diskinizden sayfanın belleğine okunur, orada dönüştürülür ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Satın aldığım bir kitabı dönüştürebilir miyim?",
+     "a": "Yalnızca DRM'si yoksa. Çoğu mağaza kitaplarını korur ve korumalı dosyalar mağazanın uygulaması olmadan hiçbir dönüştürücüyle açılamaz."
+    },
+    {
+     "q": "PDF'teki metni seçebilir miyim?",
+     "a": "Hayır. Her sayfa bir resim olarak kaydedilir; bu, düzeni her görüntüleyicide birebir korur."
+    },
+    {
+     "q": "Hangi sayfa boyutunu seçmeliyim?",
+     "a": "Ekranda okumak veya kitapçık olarak yazdırmak için A5; normal yazıcılar için A4 veya Letter."
     }
    ]
   },
@@ -2299,6 +2386,288 @@
      "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
     }
    ]
+  },
+  "add-bookmarks-to-pdf": {
+   "name": "PDF'e Yer İmi Ekle",
+   "short": "Sayfalara bağlanan yer imlerini ekleyin, yeniden adlandırın ve sıralayın.",
+   "action": "Yer imlerini kaydet",
+   "title": "PDF'e Yer İmi Ekleme: Ücretsiz, Yüklemeden",
+   "description": "Tarayıcınızda PDF'e yer imi ekleyin. Bir sayfaya tıklayın, başlık yazın ve tıklanabilir bir içindekiler kaydedin. Dosyalar asla yüklenmez. Ücretsiz, kayıtsız.",
+   "h1": "PDF'e yer imi ekleyin",
+   "howTo": "PDF'e yer imi nasıl eklenir",
+   "lead": "Uzun bir belgeye kenar çubuğunda tıklanabilir bir içindekiler tablosu ekleyin; okuyucular her bölüme doğrudan atlayabilsin. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın. Belgede zaten bulunan yer imleri listede görünür.",
+    "Bir sayfaya tıklayın veya Yer imi ekle'yi seçin, bir başlık yazın ve gerekirse sayfa numarasını ayarlayın. İstemediğiniz girişleri kaldırın.",
+    "Yer imlerini kaydet'e tıklayın ve sonucu indirin."
+   ],
+   "sections": [
+    {
+     "h": "Yer imleri nasıl kaydedilir",
+     "p": "Kaydetme, PDF'in yer imlerini gördüğünüz listeyle tek bir düzeyde değiştirir. Dosya ayrıca, destekleyen okuyucularda yer imleri paneli açık olarak açılacak şekilde ayarlanır. Başlıklar herhangi bir dilde yazılabilir."
+    },
+    {
+     "h": "Yalnızca tek düzey",
+     "p": "Bölümlerin içindeki alt bölümler gibi iç içe yer imleri desteklenmez. Bir dosyayı açtığınızda yalnızca üst düzey yer imleri gösterilir ve dosyada iç içe yer imleri varsa, kaydettiğinizde bunların yerini düz listeniz alır. Onlara ihtiyacınız varsa orijinali saklayın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'e yer imi eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "PDF'te zaten bulunan yer imlerini düzenleyebilir miyim?",
+     "a": "Evet. Mevcut üst düzey yer imleri listede görünür; burada onları yeniden adlandırabilir, sayfa numaralarını değiştirebilir veya kaldırabilirsiniz."
+    },
+    {
+     "q": "İç içe yer imleri oluşturabilir miyim?",
+     "a": "Hayır. Yer imleri tek bir düz liste olarak kaydedilir. Orijinal dosyadaki iç içe yer imlerinin yerini, kaydettiğinizde yeni liste alır."
+    },
+    {
+     "q": "Dosyayı açtığımda yer imleri neden görünmüyor?",
+     "a": "Dosya, okuyuculardan yer imleri panelini göstermelerini ister, ancak her okuyucu buna uymaz. Görmek için okuyucunuzda kenar çubuğunu veya yer imleri görünümünü açın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "add-background-to-pdf": {
+   "name": "PDF'e Arka Plan Ekle",
+   "short": "Sayfalarınızın arkasına antetli kağıt veya arka plan PDF'i yerleştirin.",
+   "action": "Arka plan ekle",
+   "title": "PDF'e Antet Ekleme: Ücretsiz, Yüklemeden",
+   "description": "Tarayıcınızda belgenizin her sayfasının arkasına antetli kağıt veya arka plan PDF'i yerleştirin. Metin net ve aranabilir kalır. Hiçbir şey yüklenmez.",
+   "h1": "PDF'e antet veya arka plan ekleyin",
+   "howTo": "PDF'e arka plan nasıl eklenir",
+   "lead": "Başka bir yerde yazdığınız mektup, fatura veya raporun arkasına şirketinizin antetli kağıdını yerleştirin. İki dosya da cihazınızda kalır.",
+   "steps": [
+    "Belgenizi, ardından arka plan PDF'ini (örneğin antetli kağıdınızı) seçin veya buraya bırakın.",
+    "Arka planın her sayfaya mı yoksa yalnızca ilk sayfaya mı geleceğini ve içeriğin arkasında mı üstünde mi duracağını seçin.",
+    "Arka plan ekle'ye tıklayın ve sonucu indirin."
+   ],
+   "sections": [
+    {
+     "h": "Arka plan nasıl yerleştirilir",
+     "p": "Arka plan PDF'inin ilk sayfası, belgenizin her sayfasına o sayfaya sığacak şekilde gerilerek çizilir. En iyi sonuç için belgenizle aynı sayfa boyutunda, örneğin A4 veya Letter boyutunda bir arka plan kullanın."
+    },
+    {
+     "h": "Arkada veya üstte",
+     "p": "Varsayılan olarak arka plan, önceden basılmış kağıda yazdırır gibi içeriğinizin arkasında durur. Belgenizde arka planı gizleyecek düz beyaz bir zemin varsa, bunun yerine üste çizmek için Üstte seçeneğini seçin. Her iki durumda da metniniz net ve aranabilir kalır."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'e arka plan eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Arka plan olarak ne kullanabilirim?",
+     "a": "Herhangi bir PDF. Yalnızca ilk sayfası kullanılır. Word, Pages veya bir tasarım uygulamasından PDF olarak kaydedilmiş antetli kağıt iyi sonuç verir."
+    },
+    {
+     "q": "Arka planı neden göremiyorum?",
+     "a": "Bazı belgelerin her sayfasında, arkasındaki her şeyi örten düz beyaz bir dolgu bulunur. Arka planı bunun yerine üste çizmek için Üstte seçeneğini seçin."
+    },
+    {
+     "q": "Arka plan olarak bir görsel kullanabilir miyim?",
+     "a": "Önce görseli JPG'den PDF'e veya PNG'den PDF'e ile PDF'e dönüştürün, ardından o dosyayı arka plan olarak kullanın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "stamp-pdf": {
+   "name": "PDF'e Kaşe Ekle",
+   "short": "Sayfalara Onaylandı, Ödendi, Taslak ve diğer tarihli kaşeleri ekleyin.",
+   "action": "Kaşeleri kaydet",
+   "title": "PDF'e Kaşe Ekleme: Ücretsiz, Yüklemeden",
+   "description": "Tarayıcınızda PDF'e bugünün tarihiyle Onaylandı, Reddedildi, Ödendi, Alındı, Taslak veya Gizli kaşesi ekleyin. Hiçbir şey yüklenmez. Ücretsiz.",
+   "h1": "PDF'e kaşe ekleyin",
+   "howTo": "PDF'e kaşe nasıl eklenir",
+   "lead": "Bir faturayı ödendi, bir sözleşmeyi onaylandı veya bir belgeyi taslak olarak tarihiyle birlikte işaretleyin. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Bir kaşe seçin ve herhangi bir sayfaya yerleştirin. Sürükleyerek konumlandırın ve yeniden boyutlandırın.",
+    "Kaşeleri kaydet'e tıklayın ve sonucu indirin."
+   ],
+   "sections": [
+    {
+     "h": "Hazır kaşeler",
+     "p": "Onaylandı, Reddedildi, Ödendi, Alındı, Taslak, Gizli, Nihai ve Kopya arasından seçin. Her kaşe bugünün tarihini içerir ve istediğiniz kadarını herhangi bir sayfaya ekleyebilirsiniz."
+    },
+    {
+     "h": "Sayfanın bir parçası",
+     "p": "Kaşeler ayrı yorumlar değil, sayfanın bir parçası olur. Her okuyucuda ve yazdırıldığında aynı görünürler, ancak daha sonra bir ek açıklama aracıyla kaldırılamazlar. Kaşesiz bir kopyaya ihtiyacınız olabilirse orijinali saklayın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'e kaşe eklerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Hangi kaşeler var?",
+     "a": "Onaylandı, Reddedildi, Ödendi, Alındı, Taslak, Gizli, Nihai ve Kopya; her biri bugünün tarihiyle."
+    },
+    {
+     "q": "Kendi kaşe metnimi yazabilir miyim?",
+     "a": "Bu araçla olmaz. Kendi metniniz için PDF'e Metin Ekle'yi, her sayfaya metin yerleştirmek için Filigran Ekle'yi kullanın."
+    },
+    {
+     "q": "Bir kaşeyi sonradan kaldırabilir miyim?",
+     "a": "Kaydedilmiş dosyadan kaldıramazsınız, çünkü sayfanın bir parçasıdır. Temiz bir kopyaya ihtiyacınız varsa orijinali saklayın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "draw-on-pdf": {
+   "name": "PDF Üzerine Çiz",
+   "short": "Parmağınız, kaleminiz veya farenizle herhangi bir sayfaya serbestçe çizin.",
+   "action": "Çizimi kaydet",
+   "title": "PDF Üzerine Çizim: Ücretsiz, Yüklemeden",
+   "description": "Tarayıcınızda parmağınız, Apple Pencil, dokunmatik yüzey veya fareyle PDF üzerine serbestçe çizin. Renk ve kalınlık seçin. Hiçbir şey yüklenmez. Ücretsiz.",
+   "h1": "PDF üzerine çizin",
+   "howTo": "PDF üzerine nasıl çizilir",
+   "lead": "Bir ayrıntıyı daire içine alın, ok çizin, bir planı işaretleyin veya elle hızlı bir not yazın. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Bir renk ve çizgi kalınlığı seçin, ardından herhangi bir sayfaya çizin. Gerekirse son çizgiyi geri alın veya bir sayfayı temizleyin.",
+    "Çizimi kaydet'e tıklayın ve sonucu indirin."
+   ],
+   "sections": [
+    {
+     "h": "Kalemler ve renkler",
+     "p": "Seçtiğiniz çizgi kalınlığıyla siyah, mavi, kırmızı veya sarı renkte çizin. Parmak, Apple Pencil, dokunmatik yüzey veya fareyle çalışır. Telefonda, iz bırakmadan belgede gezinebilmek için Çiz ve Kaydır arasında geçiş yapın."
+    },
+    {
+     "h": "Sayfanın bir parçası",
+     "p": "Çiziminiz ayrı bir yorum değil, sayfanın bir parçası olur. Her okuyucuda ve yazdırıldığında aynı görünür, ancak daha sonra bir ek açıklama aracıyla kaldırılamaz. Temiz bir kopya isteyebilirseniz orijinali saklayın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF üzerine çizerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Telefonumda veya iPad'imde çizebilir miyim?",
+     "a": "Evet. Parmağınızla veya Apple Pencil ile çizin. Telefonda sayfalar arasında gezinmek için Kaydır'a, işaretlemek için tekrar Çiz'e geçin."
+    },
+    {
+     "q": "Bir hatayı nasıl düzeltirim?",
+     "a": "Geri al, son çizgiyi kaldırır. Temizle, geçerli sayfada çizdiğiniz her şeyi kaldırır."
+    },
+    {
+     "q": "Kaydettikten sonra çizimi silebilir miyim?",
+     "a": "Hayır. Kaydedildikten sonra çizim sayfanın bir parçasıdır. İşaretsiz bir kopyaya ihtiyacınız varsa orijinali saklayın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "whiteout-pdf": {
+   "name": "PDF Daksil",
+   "short": "Sayfanın bazı kısımlarını beyaz kutularla örtün.",
+   "action": "Daksili kaydet",
+   "title": "PDF Daksil: Ücretsiz, Yüklemeden Beyazla Ört",
+   "description": "Tarayıcınızda PDF sayfasının bazı kısımlarını beyaz kutularla örtün; örneğin bir alanı yeniden doldurmadan önce boşaltmak için. Hiçbir şey yüklenmez. Ücretsiz.",
+   "h1": "PDF'te daksil kullanın",
+   "howTo": "PDF'te bir alan nasıl beyazla örtülür",
+   "lead": "Doldurulmuş bir alanı yeniden doldurmak için boşaltın veya basılı bir notu, kaşeyi ya da eski bir tarihi gizleyin. Daksil bant gibi çalışır, kendi cihazınızda.",
+   "steps": [
+    "PDF'i seçin veya buraya bırakın.",
+    "Örtmek istediğiniz kısımların üzerine, herhangi bir sayfada beyaz kutular çizin. Sığdırmak için sürükleyip yeniden boyutlandırın.",
+    "Daksili kaydet'e tıklayın ve sonucu indirin."
+   ],
+   "sections": [
+    {
+     "h": "Daksil bant gibi",
+     "p": "Her kutu, altındakini düz beyazla örter; böylece sayfa o noktada boş görünür. Ardından PDF'e Metin Ekle ile oraya yeni metin ekleyebilir veya sayfayı yazdırıp üzerine yazabilirsiniz."
+    },
+    {
+     "h": "Daksil, karartma değildir",
+     "p": "Daksil içeriği yalnızca görsel olarak örter. Altındaki metin hâlâ dosyadadır ve kopyalanabilir, aranabilir veya kurtarılabilir. Adları, numaraları veya diğer hassas bilgileri kalıcı olarak kaldırmak için bunun yerine PDF Karart'ı kullanın."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'i beyazla örterken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Örtülen metin dosyadan kaldırılıyor mu?",
+     "a": "Hayır. Görünümden gizlenir ancak hâlâ dosyadadır; kopyalanabilir veya aramayla bulunabilir. Hassas bilgileri kalıcı olarak kaldırmak için PDF Karart'ı kullanın."
+    },
+    {
+     "q": "Beyaz kutunun üzerine yeni metin yazabilir miyim?",
+     "a": "Evet. Daksili kaydedin, ardından sonucu PDF'e Metin Ekle'de açın ve boş alana yazın."
+    },
+    {
+     "q": "Taranmış belgelerde çalışır mı?",
+     "a": "Evet. Beyaz kutular, ister metin ister taranmış bir görüntünün parçası olsun, o alanda ne varsa örter."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
+  },
+  "split-pdf-at-blank-pages": {
+   "name": "PDF'i Boş Sayfalardan Böl",
+   "short": "Toplu bir taramayı her boş sayfada ayrı PDF'lere bölün.",
+   "action": "Boş sayfalardan böl",
+   "title": "PDF'i Boş Sayfalardan Bölme: Ücretsiz",
+   "description": "Toplu taranmış bir PDF'i, boş bir ayırıcı sayfanın olduğu her yerden tarayıcınızda ayrı dosyalara bölün. Boş sayfalar çıkarılır. Hiçbir şey yüklenmez.",
+   "h1": "PDF'i boş sayfalardan bölün",
+   "howTo": "PDF boş sayfalardan nasıl bölünür",
+   "lead": "Bir yığın belgeyi aralarına birer boş sayfa koyarak tek seferde tarayın, ardından taramayı her belge için bir PDF'e dönüştürün. Dosyanız cihazınızda kalır.",
+   "steps": [
+    "Taranmış PDF'i seçin veya buraya bırakın. Her sayfa kontrol edilir ve boş sayfalar gösterilir.",
+    "Seçimi gözden geçirin; ayırıcı sayılması gereken sayfaları ekleyin veya kaldırın.",
+    "Boş sayfalardan böl'e tıklayın ve her belge için bir PDF içeren ZIP'i indirin."
+   ],
+   "sections": [
+    {
+     "h": "Toplu tarama için",
+     "p": "Tarayıcınızın besleyicisindeki belgelerin arasına birer boş sayfa koyun ve hepsini tek bir PDF'e tarayın. Belge her boş sayfada bölünür, boş sayfaların kendileri çıkarılır ve ayrı dosyalar bir ZIP olarak birlikte indirilir."
+    },
+    {
+     "h": "Seçimi kontrol edin",
+     "p": "Boş sayfalar görünümlerine göre algılanır; bu yüzden çok açık renkli bir sayfa boş sanılabilir, üzerinde işaret veya tarayıcı gürültüsü olan bir ayırıcı sayfa ise gözden kaçabilir. Bölmeden önce seçili sayfalara göz atın. Her sayfa tarayıcınızda işlendiğinden, uzun bir tarama biraz zaman alabilir."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "PDF'i boş sayfalardan bölerken dosyalarım yükleniyor mu?",
+     "a": "Hayır. Scissor PDF, Rust ile yazılıp WebAssembly'ye derlenmiş bir PDF motorunu tarayıcı sekmenizin içinde çalıştırır. Dosyalarınız diskinizden sayfanın belleğine okunur, orada işlenir ve tekrar cihazınıza kaydedilir. Sitenin bir yükleme uç noktası yoktur ve İçerik Güvenliği Politikası, sayfanın başka herhangi bir sunucuya veri göndermesini engeller."
+    },
+    {
+     "q": "Boş sayfalar nasıl algılanıyor?",
+     "a": "Her sayfa tarayıcınızda işlenir ve ne kadarının boş olduğu kontrol edilir. Boş görünen sayfalar, gözden geçirmeniz için seçilir."
+    },
+    {
+     "q": "Bir sayfa yanlış algılanırsa ne olur?",
+     "a": "Bölmeden önce seçimi değiştirin. Bir sayfayı ayırıcı olarak işaretlemek veya işaretini kaldırmak için üzerine tıklayın."
+    },
+    {
+     "q": "Boş sayfalar çıktıda kalıyor mu?",
+     "a": "Hayır. Yalnızca nereden bölüneceğine karar vermek için kullanılır ve dosyalara dahil edilmezler. Bölmeden boş sayfaları kaldırmak için Boş Sayfaları Kaldır'ı kullanın."
+    },
+    {
+     "q": "Ücretsiz mi? Hesap gerekiyor mu?",
+     "a": "Ücretsizdir; hesap yok, günlük işlem sınırı yok ve belgelerinize filigran eklenmez. İşlem kendi bilgisayarınızda yapıldığından, karşılamamız gereken dosya başına bir sunucu maliyeti yoktur."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -2624,7 +2993,59 @@
   "studioClose": "{name} kapat",
   "studioNoPdfs": "Orada PDF dosyası bulunamadı.",
   "studioHome": "Scissor PDF ana sayfa",
-  "studioSource": "GitHub'da açık kaynak"
+  "studioSource": "GitHub'da açık kaynak",
+  "studioOpenShort": "Aç",
+  "studioExtract": "Çıkar",
+  "studioReorder": "Yeniden sırala",
+  "studioSelected": "{pages} seçildi",
+  "studioRotateLeft": "Sola döndür",
+  "studioRotateRight": "Sağa döndür",
+  "bookmarksSub": "Yer imi eklemek için bir sayfaya tıklayın, ardından ona bir ad verin.",
+  "bookmarkTitle": "Başlık",
+  "bookmarkPage": "Sayfa",
+  "noBookmarks": "Henüz yer imi yok.",
+  "addBookmark": "Yer imi ekle",
+  "backgroundSub": "İlk dosya: belgeniz. İkinci dosya: arka plan; ilk sayfası kullanılır.",
+  "placement": "Konum",
+  "behind": "İçeriğin arkasında",
+  "onTop": "Üstte",
+  "firstPageOnly": "İlk sayfa",
+  "stamps": "Kaşeler",
+  "stampApproved": "ONAYLANDI",
+  "stampRejected": "REDDEDİLDİ",
+  "stampPaid": "ÖDENDİ",
+  "stampReceived": "ALINDI",
+  "stampDraft": "TASLAK",
+  "stampConfidential": "GİZLİ",
+  "stampFinal": "NİHAİ",
+  "stampCopy": "KOPYA",
+  "lineWidth": "Çizgi kalınlığı",
+  "touchMode": "Dokunma",
+  "drawMode": "Çiz",
+  "scrollMode": "Kaydır",
+  "undoStroke": "Çizgiyi geri al",
+  "clearAll": "Tümünü temizle",
+  "addWhiteout": "Beyaz kutu ekle",
+  "whiteoutHint": "Beyaz kutular içeriği yalnızca örter. Dosyadan kaldırmak için PDF Karart'ı kullanın.",
+  "splitBlankSub": "Boş sayfalar ayırıcı olarak seçildi. Kontrol edin, ardından bölün.",
+  "errUnexpected": "Bir şeyler ters gitti. Dosyalarınız bu cihazdan hiç çıkmadı. Lütfen tekrar deneyin.",
+  "tabPages": "Sayfalar",
+  "tabEdit": "Düzenle",
+  "tabConvert": "Dönüştür",
+  "tabSecure": "Güvenlik",
+  "studioNoTools": "Eşleşen araç yok",
+  "errChooseEpub": "Bir ePub dosyası seçin (.epub).",
+  "toEpubSub": "Apple Books, Kobo ve diğer okuyucularda açılan bir e-kitap oluşturun.",
+  "epubLayout": "Düzen",
+  "epubText": "Metin",
+  "epubPages": "Sayfalar",
+  "epubTextHint": "Sözcükler her ekrana uyacak şekilde akar. Kitaplar ve makaleler için en iyisi.",
+  "epubPagesHint": "Her sayfa tam olarak olduğu gibi korunur. Dergiler, slaytlar ve taramalar için en iyisi.",
+  "fromEpubSub": "Her bölüm, kitabın kendi yazı tipleri ve resimleriyle yeni bir sayfada başlar.",
+  "textSize": "Metin boyutu",
+  "sizeSmall": "Küçük",
+  "sizeMedium": "Orta",
+  "sizeLarge": "Büyük"
  },
  "studio": {
   "title": "Scissor PDF: Tüm PDF araçları tek bir gizli uygulamada",

@@ -228,7 +228,12 @@ fn text_string(s: &str) -> Object {
 /// Rebuilds a damaged file: the reader reconstructs a broken cross-reference table, and a
 /// missing or broken page tree is rebuilt from every page object found in the file.
 pub fn repair(bytes: &[u8]) -> Res<(Vec<u8>, u32)> {
-    let mut doc = load(bytes)?;
+    let mut doc = match load(bytes) {
+        Ok(doc) => doc,
+        Err(e) if e.starts_with("ENCRYPTED") => return Err(e),
+        // A cut-off file has lost its trailer, which the reader needs to start from.
+        Err(_) => load(&with_trailer(bytes)).map_err(|_| "INVALID: no pages could be recovered from this file".to_string())?,
+    };
     if doc.get_pages().is_empty() {
         let mut found: Vec<ObjectId> = doc
             .objects
@@ -255,4 +260,43 @@ pub fn repair(bytes: &[u8]) -> Res<(Vec<u8>, u32)> {
     }
     let count = doc.get_pages().len() as u32;
     Ok((finish(doc, false)?, count))
+}
+
+/// Appends a trailer pointing at the document catalog (or a new, empty one, whose page
+/// tree `repair` then rebuilds) so a file that was cut off can be read again.
+fn with_trailer(bytes: &[u8]) -> Vec<u8> {
+    let text = String::from_utf8_lossy(bytes);
+    let mut max = 0u32;
+    let mut catalog = None;
+    let mut last_obj = 0u32;
+    let mut i = 0;
+    while let Some(pos) = text[i..].find(" obj") {
+        let at = i + pos;
+        // Read "<num> <gen>" backwards from " obj".
+        let head = &text[at.saturating_sub(24)..at];
+        let mut parts = head.split_whitespace().rev();
+        if let (Some(_gen), Some(num)) = (parts.next(), parts.next())
+            && let Ok(n) = num.trim_start_matches(|c: char| !c.is_ascii_digit()).parse::<u32>()
+        {
+            max = max.max(n);
+            last_obj = n;
+        }
+        i = at + 4;
+        let window = &text[i..(i + 300).min(text.len())];
+        if catalog.is_none() && (window.contains("/Type /Catalog") || window.contains("/Type/Catalog")) {
+            catalog = Some(last_obj);
+        }
+    }
+    let mut out = bytes.to_vec();
+    let root = match catalog {
+        Some(n) => n,
+        None => {
+            let (c, p) = (max + 1, max + 2);
+            out.extend(format!("\n{c} 0 obj\n<< /Type /Catalog /Pages {p} 0 R >>\nendobj\n{p} 0 obj\n<< /Type /Pages /Kids [] /Count 0 >>\nendobj\n").as_bytes());
+            max = p;
+            c
+        }
+    };
+    out.extend(format!("\ntrailer\n<< /Root {root} 0 R /Size {} >>\n%%EOF\n", max + 1).as_bytes());
+    out
 }

@@ -263,3 +263,15 @@ pub fn split_by_bookmarks(pdf: &[u8], base_name: &str) -> Result<Vec<u8>, JsErro
 pub fn info(pdf: &[u8]) -> Result<String, JsError> {
     js(more::info(pdf))
 }
+
+/// Bookmarks as parallel lists: `titles[i]` points at page `pages[i]`.
+#[wasm_bindgen(js_name = setBookmarks)]
+pub fn set_bookmarks(pdf: &[u8], titles: js_sys::Array, pages: &[u32]) -> Result<Vec<u8>, JsError> {
+    let entries: Vec<(String, u32)> = titles.iter().zip(pages).map(|(t, p)| (t.as_string().unwrap_or_default(), *p)).collect();
+    js(more::set_bookmarks(pdf, &entries))
+}
+
+#[wasm_bindgen(js_name = addBackground)]
+pub fn add_background(pdf: &[u8], background: &[u8], on_top: bool, first_only: bool) -> Result<Vec<u8>, JsError> {
+    js(more::add_background(pdf, background, on_top, first_only))
+}

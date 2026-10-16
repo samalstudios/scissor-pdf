@@ -7,10 +7,12 @@
     "build:site": "node scripts/build.mjs --skip-wasm",
     "check:i18n": "node scripts/i18n-check.mjs",
     "assets": "node scripts/assets.mjs",
-    "serve": "python3 -m http.server 4173 -d dist"
+    "serve": "python3 -m http.server 4173 -d dist",
+    "test": "cargo test --release --manifest-path engine/Cargo.toml && node scripts/i18n-check.mjs"
   },
   "license": "MIT",
   "devDependencies": {
+    "esbuild": "0.25.10",
     "pdfjs-dist": "^6.4.299"
   },
   "private": true,

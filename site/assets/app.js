@@ -36,6 +36,26 @@ const ICON = {
 
 if ('ontouchstart' in window) document.documentElement.classList.add('touch');
 
+// Safety net: anything unexpected gets a calm message instead of a silently broken page.
+let lastProblem = 0;
+function reportProblem(err) {
+  console.error(err);
+  if (Date.now() - lastProblem < 4000) return;
+  lastProblem = Date.now();
+  let box = document.querySelector('.problem-toast');
+  if (!box) {
+    box = document.createElement('div');
+    box.className = 'problem-toast';
+    box.setAttribute('role', 'alert');
+    document.body.append(box);
+  }
+  box.textContent = ts('errUnexpected', 'Something went wrong. Your files never left this device. Please try again.');
+  box.hidden = false;
+  setTimeout(() => (box.hidden = true), 6000);
+}
+addEventListener('error', (e) => e.error && reportProblem(e.error));
+addEventListener('unhandledrejection', (e) => reportProblem(e.reason));
+
 // Offline support: the service worker caches the app after the first visit.
 if ('serviceWorker' in navigator && location.protocol === 'https:') {
   addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
@@ -208,6 +228,7 @@ function sortable(container, onChange) {
   const end = () => {
     if (!drag) return;
     if (drag.started) {
+      container._dragEnded = Date.now();
       drag.ghost.remove();
       drag.card.classList.remove('dragging');
       onChange([...container.querySelectorAll('.card.sortable')].map((c) => c.dataset.key));
@@ -267,6 +288,9 @@ function formatRanges(nums) {
 
 /* ---------- App ---------- */
 
+// Tools whose screen is only a set of options (no page picking or placing).
+const PANEL_ONLY = new Set(['simple', 'compress', 'protect', 'metadata', 'resize', 'margins', 'booklet', 'nup', 'half', 'blank', 'splitSize', 'headerFooter', 'bates', 'toText', 'toEpub']);
+
 const appRoot = $('#app');
 if (appRoot) start(JSON.parse(appRoot.dataset.tool));
 
@@ -276,14 +300,16 @@ function start(tool, opts = {}) {
   const embedded = !!opts.root;
   const root = opts.root || appRoot;
   const isImages = tool.accept === 'images';
+  const isEpub = tool.accept === 'epub';
   const state = { files: [], options: {}, pages: [], result: null };
-  const input = embedded ? h(`<input type="file" hidden accept="application/pdf,.pdf" ${tool.multiple ? 'multiple' : ''}>`) : $('input[type=file]', root);
+  const input = embedded ? h(`<input type="file" hidden accept="${isEpub ? 'application/epub+zip,.epub' : `application/pdf,.pdf${tool.mode === 'merge' ? ',image/*' : ''}`}" ${tool.multiple ? 'multiple' : ''}>`) : $('input[type=file]', root);
   if (embedded) document.body.append(input);
   const dropZone = $('.drop', root);
   const veil = h(`<div class="drop-veil" aria-hidden="true">${esc(t('dropToAdd'))}</div>`);
   if (!embedded) document.body.append(veil);
 
-  const accepts = (f) => (isImages ? f.type.startsWith('image/') || /\.(heic|heif|jpe?g|png|webp|gif|avif|bmp)$/i.test(f.name) : f.type === 'application/pdf' || /\.pdf$/i.test(f.name));
+  const isImageFile = (f) => f.type.startsWith('image/') || /\.(heic|heif|jpe?g|png|webp|gif|avif|bmp)$/i.test(f.name);
+  const accepts = (f) => (isEpub ? /\.epub$/i.test(f.name) || f.type === 'application/epub+zip' : null) ?? ((tool.mode === 'merge' && isImageFile(f)) || (isImages ? f.type.startsWith('image/') || /\.(heic|heif|jpe?g|png|webp|gif|avif|bmp)$/i.test(f.name) : f.type === 'application/pdf' || /\.pdf$/i.test(f.name)));
 
   input.addEventListener('change', () => {
     addFiles([...input.files]);
@@ -337,7 +363,7 @@ function start(tool, opts = {}) {
   async function addFiles(list) {
     $('.alert', root)?.remove();
     const ok = list.filter(accepts);
-    if (!ok.length) return showError(isImages ? t('errChooseImages') : t('errChoosePdf'));
+    if (!ok.length) return showError(isEpub ? t('errChooseEpub') : isImages ? t('errChooseImages') : t('errChoosePdf'));
     if (!tool.multiple) {
       state.files = [];
       ok.splice(1);
@@ -345,7 +371,13 @@ function start(tool, opts = {}) {
     for (const file of ok) {
       const entry = { key: crypto.randomUUID(), file, name: file.name, size: file.size };
       entry.bytes = new Uint8Array(await file.arrayBuffer());
-      if (!isImages) {
+      // Merge also takes images: each becomes a one-page PDF first.
+      if (tool.mode === 'merge' && isImageFile(file)) {
+        const img = /jpe?g$/i.test(file.type) || /\.jpe?g$/i.test(file.name) ? { jpeg: true, data: entry.bytes.slice() } : { jpeg: false, ...(await decodeImage(file)) };
+        entry.bytes = await engine('images', { images: [img], paper: 'fit', margin: 0 }, [img.data.buffer]);
+      }
+      if (isEpub) entry.epub = true;
+      else if (!isImages) {
         try {
           entry.doc = await openPdf(entry.bytes);
           entry.pageCount = entry.doc.numPages;
@@ -370,7 +402,8 @@ function start(tool, opts = {}) {
     }
     if (!state.files.length) return;
     if (tool.mode === 'compare' || tool.mode === 'mix') state.files = state.files.slice(-2);
-    if (['organize', 'rotate', 'delete', 'extract', 'split', 'toImages', 'longImage'].includes(tool.mode)) {
+    if (tool.mode === 'background') state.files = state.files.slice(-2);
+    if (['organize', 'rotate', 'delete', 'extract', 'split', 'toImages', 'longImage', 'bookmarks'].includes(tool.mode)) {
       const n = state.files[0].pageCount;
       state.pages = Array.from({ length: n }, (_, i) => ({ n: i + 1, rot: 0, on: tool.mode === 'toImages' || tool.mode === 'longImage' }));
     }
@@ -397,12 +430,19 @@ function start(tool, opts = {}) {
   /* ----- Work view ----- */
 
   function render() {
+    // Inside the app, options-only tools show just their panel; the pages stay on the canvas.
+    if (opts.panelHost && PANEL_ONLY.has(tool.mode)) {
+      const panel = h(`<div class="panel inspector-panel" aria-label="${esc(t('options'))}"></div>`);
+      panel.append(...buildPanel());
+      opts.panelHost.replaceChildren(panel);
+      return;
+    }
     $('.assure')?.setAttribute('hidden', '');
     const work = h(`<div class="work"><div class="stage"></div><aside class="panel" aria-label="${esc(t('options'))}"></aside></div>`);
     root.replaceChildren(work);
     const stage = $('.stage', work);
     const panel = $('.panel', work);
-    const views = { merge: viewFiles, images: viewFiles, organize: viewPages, rotate: viewPages, delete: viewPages, extract: viewPages, split: viewPages, toImages: viewPages, longImage: viewPages, place: viewPlace, view: viewPlace, form: viewForm, compare: viewFiles, mix: viewFiles };
+    const views = { merge: viewFiles, images: viewFiles, organize: viewPages, rotate: viewPages, delete: viewPages, extract: viewPages, split: viewPages, toImages: viewPages, longImage: viewPages, bookmarks: viewPages, background: viewFiles, place: viewPlace, view: viewPlace, form: viewForm, compare: viewFiles, mix: viewFiles };
     (views[tool.mode] || viewSingle)(stage);
     panel.append(...buildPanel());
     root.scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -483,6 +523,10 @@ function start(tool, opts = {}) {
         card.onclick = toggle;
         card.onkeydown = (e) => (e.key === ' ' || e.key === 'Enter') && (e.preventDefault(), toggle());
       }
+      if (tool.mode === 'bookmarks') {
+        card.classList.add('selectable');
+        card.onclick = () => state.addBookmark?.(p.n);
+      }
       if (['organize', 'rotate'].includes(tool.mode)) {
         const actions = h('<div class="card-actions"></div>');
         if (sortableMode) {
@@ -556,12 +600,13 @@ function start(tool, opts = {}) {
     const f = state.files[0];
     const box = h(`<div class="single">
       <div class="preview-wrap"><div class="thumb"><div class="skeleton"></div></div></div>
-      <div><h3>${esc(f.name)}</h3><p>${f.locked ? esc(t('passwordProtected')) : f.broken ? esc(t('cannotPreview')) : tp('pages', f.pageCount)} · ${fmtBytes(f.size)}</p>
+      <div><h3>${esc(f.name)}</h3><p>${f.epub ? 'ePub' : f.locked ? esc(t('passwordProtected')) : f.broken ? esc(t('cannotPreview')) : tp('pages', f.pageCount)} · ${fmtBytes(f.size)}</p>
       <p style="margin-top:12px"><button class="btn-plain" type="button">${esc(t('chooseAnother'))}</button></p></div>
     </div>`);
     $('.btn-plain', box).onclick = () => input.click();
     const thumb = $('.thumb', box);
-    if (f.locked) thumb.innerHTML = `<div style="color:var(--text-3)">${ICON.lock.replace(/12/g, '48')}</div>`;
+    if (f.epub) thumb.innerHTML = `<div class="epub-cover"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3M9 7h6M9 10h4"/></svg></div>`;
+    else if (f.locked) thumb.innerHTML = `<div style="color:var(--text-3)">${ICON.lock.replace(/12/g, '48')}</div>`;
     else if (f.broken) thumb.innerHTML = `<div class="hint" style="text-align:center">${esc(t('cannotPreview'))}</div>`;
     else renderThumb(f.doc, 1, thumb, tool.mode === 'crop' ? 720 : 360).then(() => state.updatePreview?.());
     if (tool.mode === 'crop') box.classList.add('single-large');
@@ -644,7 +689,7 @@ function start(tool, opts = {}) {
       case 'longImage':
       case 'toImages': {
         const label = t({ delete: 'pagesToDelete', extract: 'pagesToExtract', toImages: 'pagesToConvert', longImage: 'pagesToConvert' }[tool.mode]);
-        sub.textContent = t(tool.autoBlank ? 'blankSub' : tool.mode === 'longImage' ? 'toImagesSub' : `${tool.mode}Sub`);
+        sub.textContent = t(tool.splitAtBlank ? 'splitBlankSub' : tool.autoBlank ? 'blankSub' : tool.mode === 'longImage' ? 'toImagesSub' : `${tool.mode}Sub`);
         const inp = h(`<input class="input" type="text" inputmode="numeric" placeholder="${esc(t('rangePlaceholder'))}" aria-label="${esc(label)}">`);
         const hint = h('<div class="hint"></div>');
         inp.oninput = () => {
@@ -921,6 +966,22 @@ function start(tool, opts = {}) {
           nodes.push(c);
         }
         break;
+      case 'toEpub': {
+        o.layout = o.layout || 'text';
+        sub.textContent = t('toEpubSub');
+        const hint = h(`<p class="hint"></p>`);
+        const sync = () => (hint.textContent = o.layout === 'text' ? t('epubTextHint') : t('epubPagesHint'));
+        nodes.push(field(t('epubLayout'), seg(t('epubLayout'), [['text', t('epubText')], ['pages', t('epubPages')]], o.layout, (v) => ((o.layout = v), sync()))), hint);
+        sync();
+        break;
+      }
+      case 'fromEpub': {
+        Object.assign(o, { paper: o.paper || 'a5', font: o.font || 12 });
+        sub.textContent = t('fromEpubSub');
+        nodes.push(field(t('pageSize'), seg(t('pageSize'), [['a5', 'A5'], ['a4', 'A4'], ['letter', 'Letter']], o.paper, (v) => (o.paper = v))));
+        nodes.push(field(t('textSize'), seg(t('textSize'), [[10, t('sizeSmall')], [12, t('sizeMedium')], [14, t('sizeLarge')]], o.font, (v) => (o.font = v))));
+        break;
+      }
       case 'toText': {
         o.marks = o.marks ?? true;
         sub.textContent = t('toTextSub');
@@ -1043,6 +1104,56 @@ function start(tool, opts = {}) {
       case 'form':
         sub.textContent = t('formSub');
         break;
+      case 'bookmarks': {
+        sub.textContent = ts('bookmarksSub', 'Click a page to add a bookmark for it, then name it.');
+        o.marks = o.marks || [];
+        const list = h('<div class="bookmark-list"></div>');
+        const draw = () => {
+          list.replaceChildren();
+          o.marks.forEach((m, i) => {
+            const row = h(`<div class="bookmark-row"><input class="input" type="text" value="${esc(m.title)}" aria-label="${esc(ts('bookmarkTitle', 'Title'))}"><input class="input page-no" type="number" min="1" max="${n}" value="${m.page}" aria-label="${esc(ts('bookmarkPage', 'Page'))}"><button class="icon-btn" type="button" aria-label="${esc(t('deleteItem'))}">${ICON.close}</button></div>`);
+            const [title, page] = row.querySelectorAll('input');
+            title.oninput = () => (m.title = title.value);
+            page.oninput = () => (m.page = Math.max(1, Math.min(n, +page.value || 1)));
+            $('button', row).onclick = () => (o.marks.splice(i, 1), draw());
+            list.append(row);
+          });
+          if (!o.marks.length) list.append(h(`<p class="hint">${esc(ts('noBookmarks', 'No bookmarks yet.'))}</p>`));
+        };
+        state.addBookmark = (page) => {
+          o.marks.push({ title: fill(t('pageWord'), { n: page }), page });
+          o.marks.sort((a, b) => a.page - b.page);
+          draw();
+          list.querySelectorAll('input')[o.marks.findIndex((m) => m.page === page) * 2]?.select();
+        };
+        const add = h(`<button class="btn small" type="button">${esc(ts('addBookmark', 'Add bookmark'))}</button>`);
+        add.onclick = () => state.addBookmark(1);
+        nodes.push(list, add);
+        // Start from the bookmarks the PDF already has.
+        if (!o.loaded) {
+          o.loaded = true;
+          f.doc.getOutline().then(async (outline) => {
+            for (const item of outline || []) {
+              try {
+                const dest = typeof item.dest === 'string' ? await f.doc.getDestination(item.dest) : item.dest;
+                const index = dest?.[0] ? await f.doc.getPageIndex(dest[0]) : null;
+                if (index !== null) o.marks.push({ title: item.title, page: index + 1 });
+              } catch {}
+            }
+            draw();
+          });
+        }
+        draw();
+        break;
+      }
+      case 'background': {
+        Object.assign(o, { onTop: o.onTop ?? false, firstOnly: o.firstOnly ?? false });
+        sub.textContent = ts('backgroundSub', 'First file: your document. Second file: the background; its first page is used.');
+        nodes.push(field(ts('placement', 'Placement'), seg(ts('placement', 'Placement'), [[false, ts('behind', 'Behind content')], [true, ts('onTop', 'On top')]], o.onTop, (v) => (o.onTop = v))));
+        nodes.push(field(ts('applyTo', 'Apply to'), seg(t('applyTo'), [[false, t('allPages')], [true, ts('firstPageOnly', 'First page')]], o.firstOnly, (v) => (o.firstOnly = v))));
+        syncPanel = () => (action.disabled = state.files.length !== 2);
+        break;
+      }
       case 'crop': {
         o.m = o.m || [0.06, 0.06, 0.06, 0.06];
         o.scope = o.scope || 'all';
@@ -1206,11 +1317,48 @@ function start(tool, opts = {}) {
           const box = h(`<div class="field"><div class="label">${esc(t('image'))}</div></div>`);
           box.append(pick);
           nodes.push(box);
-        } else if (tool.editor === 'highlight' || tool.editor === 'redact') {
+        } else if (tool.editor === 'stamp') {
+          const grid = h('<div class="stamp-grid"></div>');
+          for (const [key, label, color] of STAMPS) {
+            const c = stampCanvas(ts(key, label), color);
+            const b = h(`<button type="button" class="stamp-pick" aria-label="${esc(ts(key, label))}"></button>`);
+            b.append(c);
+            b.onclick = () => addItem('image', stampCanvas(ts(key, label), color));
+            grid.append(b);
+          }
+          nodes.push(field(esc(ts('stamps', 'Stamps')), grid));
+        } else if (tool.editor === 'draw') {
+          Object.assign(o, { ink: o.ink || '#1d1d1f', inkWidth: o.inkWidth || 0.004, inkMode: o.inkMode || 'draw' });
+          const sw = h('<div class="swatches" style="margin-bottom:12px"></div>');
+          for (const [c, name] of [['#1d1d1f', t('black')], ['#0040dd', t('blue')], ['#d70015', t('red')], ['#ffd60a', t('yellow')]]) {
+            const b = h(`<button type="button" class="swatch" style="background:${c}" aria-label="${esc(name)}" aria-pressed="${c === o.ink}"></button>`);
+            b.onclick = () => {
+              o.ink = c;
+              for (const x of sw.children) x.setAttribute('aria-pressed', 'false');
+              b.setAttribute('aria-pressed', 'true');
+            };
+            sw.append(b);
+          }
+          nodes.push(field(esc(t('colour')), sw));
+          nodes.push(field(esc(ts('lineWidth', 'Line width')), seg(ts('lineWidth', 'Line width'), [[0.0025, t('small')], [0.004, 'M'], [0.008, t('large')]], o.inkWidth, (v) => (o.inkWidth = v))));
+          if (matchMedia('(pointer: coarse)').matches) {
+            nodes.push(field(esc(ts('touchMode', 'Touch')), seg(ts('touchMode', 'Touch'), [['draw', ts('drawMode', 'Draw')], ['scroll', ts('scrollMode', 'Scroll')]], o.inkMode, (v) => ((o.inkMode = v), document.body.classList.toggle('ink-scroll', v === 'scroll')))));
+          }
+          const undo = h(`<button class="btn small" type="button">${esc(ts('undoStroke', 'Undo stroke'))}</button>`);
+          const clear = h(`<button class="btn small" type="button">${esc(ts('clearAll', 'Clear all'))}</button>`);
+          undo.onclick = () => state.ink?.undo();
+          clear.onclick = () => state.ink?.clear();
+          const row = h('<div class="row"></div>');
+          row.append(undo, clear);
+          nodes.push(row);
+          syncPanel = () => (action.disabled = !state.ink?.count());
+          break;
+        } else if (tool.editor === 'highlight' || tool.editor === 'redact' || tool.editor === 'whiteout') {
           const redact = tool.editor === 'redact';
-          o.boxColor = o.boxColor || (redact ? '#000000' : '#ffd60a');
+          const whiteout = tool.editor === 'whiteout';
+          o.boxColor = whiteout ? '#ffffff' : o.boxColor || (redact ? '#000000' : '#ffd60a');
           const box = h(`<div class="field"></div>`);
-          if (!redact) {
+          if (!redact && !whiteout) {
             const swatches = h('<div class="swatches" style="margin-bottom:12px"></div>');
             for (const [c, name] of [['#ffd60a', t('yellow')], ['#30d158', t('green')], ['#ff6482', t('pink')]]) {
               const b = h(`<button type="button" class="swatch" style="background:${c}" aria-label="${esc(name)}" aria-pressed="${c === o.boxColor}"></button>`);
@@ -1223,10 +1371,11 @@ function start(tool, opts = {}) {
             }
             box.append(swatches);
           }
-          const add = h(`<button class="btn block" type="button">${esc(t(redact ? 'addRedaction' : 'addHighlight'))}</button>`);
-          add.onclick = () => addItem('box', { color: o.boxColor, alpha: redact ? 1 : 0.4 });
+          const add = h(`<button class="btn block" type="button">${esc(whiteout ? ts('addWhiteout', 'Add white box') : t(redact ? 'addRedaction' : 'addHighlight'))}</button>`);
+          add.onclick = () => addItem('box', { color: o.boxColor, alpha: redact || whiteout ? 1 : 0.4 });
           box.append(add);
           if (redact) box.append(h(`<p class="hint">${esc(t('redactHint'))}</p>`));
+          if (whiteout) box.append(h(`<p class="hint">${esc(ts('whiteoutHint', 'White boxes only cover content. To remove it from the file, use Redact PDF.'))}</p>`));
           nodes.push(box);
         } else nodes.push(...(tool.slug === 'add-text-to-pdf' ? [text, sig] : [sig, text]));
         syncPanel = () => (action.disabled = !state.items?.length);
@@ -1341,6 +1490,75 @@ function start(tool, opts = {}) {
     }
     // Clicking empty paper deselects.
     list.addEventListener('pointerdown', (e) => !e.target.closest('.placed') && select(null));
+    if (tool.editor === 'draw') state.ink = inkLayer(state.sheets);
+  }
+
+  // Freehand drawing: strokes are stored in page fractions and drawn again at export size.
+  function inkLayer(sheets) {
+    const strokes = new Map();
+    const history = [];
+    const paint = (sheet) => {
+      const c = $('.ink', sheet);
+      const r = sheet.getBoundingClientRect();
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      c.width = r.width * dpr;
+      c.height = r.height * dpr;
+      drawStrokes(c.getContext('2d'), strokes.get(sheet) || [], c.width, c.height);
+    };
+    for (const sheet of sheets) {
+      const c = h('<canvas class="ink"></canvas>');
+      sheet.append(c);
+      new ResizeObserver(() => paint(sheet)).observe(sheet);
+      let current = null;
+      c.addEventListener('pointerdown', (e) => {
+        if (document.body.classList.contains('ink-scroll')) return;
+        c.setPointerCapture(e.pointerId);
+        const r = c.getBoundingClientRect();
+        current = { color: state.options.ink, width: state.options.inkWidth, points: [[(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]] };
+        if (!strokes.has(sheet)) strokes.set(sheet, []);
+        strokes.get(sheet).push(current);
+        history.push(sheet);
+      });
+      c.addEventListener('pointermove', (e) => {
+        if (!current) return;
+        const r = c.getBoundingClientRect();
+        current.points.push([(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]);
+        paint(sheet);
+      });
+      const end = () => {
+        if (current) syncPanel();
+        current = null;
+      };
+      c.addEventListener('pointerup', end);
+      c.addEventListener('pointercancel', end);
+    }
+    return {
+      count: () => history.length,
+      undo() {
+        const sheet = history.pop();
+        if (sheet) (strokes.get(sheet).pop(), paint(sheet), syncPanel());
+      },
+      clear() {
+        strokes.clear();
+        history.length = 0;
+        sheets.forEach(paint);
+        syncPanel();
+      },
+      // One transparent image per page that has drawing on it.
+      export() {
+        return [...strokes.entries()]
+          .filter(([, list]) => list.length)
+          .map(([sheet, list]) => {
+            const ratio = sheet.clientHeight / sheet.clientWidth;
+            const c = document.createElement('canvas');
+            c.width = 1600;
+            c.height = Math.round(1600 * ratio);
+            drawStrokes(c.getContext('2d'), list, c.width, c.height);
+            const data = c.getContext('2d').getImageData(0, 0, c.width, c.height).data;
+            return { page: +sheet.dataset.page, rect: [0, 0, 1, 1], width: c.width, height: c.height, rgba: new Uint8Array(data.buffer.slice(0)) };
+          });
+      },
+    };
   }
 
   function visibleSheet() {
@@ -1377,6 +1595,7 @@ function start(tool, opts = {}) {
       Object.assign(item, { w: 0.5, h: 0.04, color: payload.color, alpha: payload.alpha, x: 0.25 });
       body.style.background = payload.color;
       body.style.opacity = payload.alpha;
+      if (payload.color === '#ffffff') item.el.classList.add('placed-white');
     } else if (kind === 'image') {
       item.canvas = payload;
       const img = new Image();
@@ -1733,7 +1952,7 @@ function start(tool, opts = {}) {
     const o = state.options;
     const f = state.files[0];
     const base = baseName(f.name);
-    const verb = { simple: 'busySave', toText: 'busySave', compare: 'busySave', longImage: 'busyRender', crop: 'busySave', nup: 'busySave', metadata: 'busySave', repair: 'busyRepair', place: 'busySave', merge: 'busyMerge', images: 'busyImages', split: 'busySplit', extract: 'busySplit', compress: 'busyCompress', numbers: 'busyNumbers', watermark: 'busyWatermark', protect: 'busyProtect', unlock: 'busyUnlock', toImages: 'busyRender' }[tool.mode] || 'busySave';
+    const verb = { bookmarks: 'busySave', background: 'busySave', simple: 'busySave', toText: 'busySave', toEpub: 'busyRender', fromEpub: 'busyRender', compare: 'busySave', longImage: 'busyRender', crop: 'busySave', nup: 'busySave', metadata: 'busySave', repair: 'busyRepair', place: 'busySave', merge: 'busyMerge', images: 'busyImages', split: 'busySplit', extract: 'busySplit', compress: 'busyCompress', numbers: 'busyNumbers', watermark: 'busyWatermark', protect: 'busyProtect', unlock: 'busyUnlock', toImages: 'busyRender' }[tool.mode] || 'busySave';
     const spinner = busy(t(verb));
     const copy = (b) => b.slice();
     let out;
@@ -1765,7 +1984,30 @@ function start(tool, opts = {}) {
         name = `${base}-${tool.mode === 'rotate' ? 'rotated' : 'organized'}.pdf`;
         break;
       }
+      case 'bookmarks': {
+        const marks = o.marks || [];
+        out = await engine('setBookmarks', { pdf: copy(f.bytes), titles: marks.map((m) => m.title), pages: marks.map((m) => m.page) });
+        name = `${base}-bookmarks.pdf`;
+        break;
+      }
+      case 'background': {
+        const [a, b] = state.files.map((x) => copy(x.bytes));
+        out = await engine('addBackground', { pdf: a, background: b, onTop: o.onTop, firstOnly: o.firstOnly }, [a.buffer, b.buffer]);
+        name = `${baseName(state.files[0].name)}-letterhead.pdf`;
+        break;
+      }
       case 'delete': {
+        if (tool.splitAtBlank) {
+          // Runs of pages between blank separators become separate files.
+          const groups = [[]];
+          for (const p of state.pages) p.on ? groups.at(-1).length && groups.push([]) : groups.at(-1).push(p.n);
+          const parts = groups.filter((g) => g.length);
+          if (!parts.length) throw new Error(t('errInvalid'));
+          out = await engine('split', { pdf: copy(f.bytes), groups: parts, base });
+          if (parts.length > 1) [name, type] = [`${base}-split.zip`, 'application/zip'];
+          else name = `${base}-part.pdf`;
+          break;
+        }
         const keep = state.pages.filter((p) => !p.on);
         out = await engine('organize', { pdf: copy(f.bytes), pages: keep.map((p) => p.n), rotations: [] });
         name = `${base}-edited.pdf`;
@@ -1812,6 +2054,18 @@ function start(tool, opts = {}) {
         const suffix = { extractImages: 'images', grayscale: 'grayscale', removeImages: 'no-images', reverse: 'reversed', splitBookmarks: 'chapters', flatten: 'flat', removeAnnotations: 'clean' }[tool.op];
         if (['extractImages', 'splitBookmarks'].includes(tool.op)) [name, type] = [`${base}-${suffix}.zip`, 'application/zip'];
         else name = `${base}-${suffix}.pdf`;
+        break;
+      }
+      case 'toEpub': {
+        const files = await pdfToEpub(f.doc, { name: base, layout: o.layout, onPage: (i, n) => spinner.progress?.(i / n) });
+        out = await engine('zip', { files }, files.map((x) => x.data.buffer));
+        [name, type] = [`${base}.epub`, 'application/epub+zip'];
+        break;
+      }
+      case 'fromEpub': {
+        const r = await epubToPdf(f.bytes.slice(), { paper: o.paper, fontSize: o.font });
+        out = r.bytes;
+        name = `${base}.pdf`;
         break;
       }
       case 'toText': {
@@ -1904,6 +2158,12 @@ function start(tool, opts = {}) {
         name = `${base}-repaired.pdf`;
         break;
       case 'place': {
+        if (tool.editor === 'draw') {
+          const items = state.ink.export();
+          out = await engine('place', { pdf: copy(f.bytes), items }, items.map((i) => i.rgba.buffer));
+          name = `${base}-drawing.pdf`;
+          break;
+        }
         if (tool.editor === 'redact') {
           out = await redact(f);
           name = `${base}-redacted.pdf`;
@@ -2292,6 +2552,343 @@ function seg2(options, value, onChange) {
 
 /* ---------- The app (/app/) ---------- */
 
+/* ----- ePub, both ways. Everything happens in this tab. ----- */
+
+const xmlText = (s) => esc(String(s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, ''));
+const RTL_CHARS = /[֐-ࣿיִ-﷿ﹰ-﻿]/g;
+
+// Reads a zip (stored or deflated) with the browser's own decompressor.
+function unzip(bytes) {
+  const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  let e = bytes.length - 22;
+  while (e >= 0 && dv.getUint32(e, true) !== 0x06054b50) e--;
+  if (e < 0) throw new Error('INVALID: not an ePub file');
+  const files = new Map();
+  const dec = new TextDecoder();
+  let p = dv.getUint32(e + 16, true);
+  for (let i = dv.getUint16(e + 10, true); i > 0 && dv.getUint32(p, true) === 0x02014b50; i--) {
+    const method = dv.getUint16(p + 10, true);
+    const size = dv.getUint32(p + 20, true);
+    const nlen = dv.getUint16(p + 28, true);
+    const at = dv.getUint32(p + 42, true);
+    const name = dec.decode(bytes.subarray(p + 46, p + 46 + nlen));
+    p += 46 + nlen + dv.getUint16(p + 30, true) + dv.getUint16(p + 32, true);
+    const start = at + 30 + dv.getUint16(at + 26, true) + dv.getUint16(at + 28, true);
+    files.set(name, { method, raw: bytes.subarray(start, start + size) });
+  }
+  return {
+    has: (name) => files.has(name),
+    async get(name) {
+      const f = files.get(name);
+      if (!f) return null;
+      if (f.method === 0) return f.raw;
+      return new Uint8Array(await new Response(new Blob([f.raw]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
+    },
+    async text(name) {
+      const b = await this.get(name);
+      return b ? new TextDecoder().decode(b) : null;
+    },
+  };
+}
+
+const resolvePath = (from, href) => {
+  try {
+    return decodeURIComponent(new URL(href, `http://x/${from}`).pathname.slice(1));
+  } catch {
+    return href;
+  }
+};
+const dataUrl = async (bytes, type) => {
+  const r = new FileReader();
+  return new Promise((res) => ((r.onload = () => res(r.result)), r.readAsDataURL(new Blob([bytes], { type }))));
+};
+
+// PDF to ePub. "text" makes a reflowable book from the text; "pages" keeps every page as a picture.
+async function pdfToEpub(pdf, { name, layout, onPage }) {
+  const n = pdf.numPages;
+  const meta = await pdf.getMetadata().catch(() => null);
+  const title = meta?.info?.Title?.trim() || name;
+  const author = meta?.info?.Author?.trim() || '';
+  // Sections follow the bookmarks when there are any, else every 20 pages.
+  let starts = [];
+  try {
+    for (const item of (await pdf.getOutline()) || []) {
+      const dest = typeof item.dest === 'string' ? await pdf.getDestination(item.dest) : item.dest;
+      if (dest?.[0]) starts.push({ page: (typeof dest[0] === 'number' ? dest[0] : await pdf.getPageIndex(dest[0])) + 1, title: item.title });
+    }
+  } catch {}
+  starts = starts.filter((s, i, a) => s.page >= 1 && s.page <= n && a.findIndex((x) => x.page === s.page) === i).sort((a, b) => a.page - b.page);
+  if (!starts.length) for (let p = 1; p <= n; p += 20) starts.push({ page: p, title: n > 20 ? `${fill(t('pageWord'), { n: p })}` : title });
+  else if (starts[0].page > 1) starts.unshift({ page: 1, title });
+
+  const files = [];
+  const manifest = [];
+  const spine = [];
+  let rtl = 0;
+  let ltr = 0;
+  let w0 = 0;
+  let h0 = 0;
+  const pageHtml = [];
+
+  for (let i = 1; i <= n; i++) {
+    onPage?.(i, n);
+    const page = await pdf.getPage(i);
+    if (layout === 'pages') {
+      const vp0 = page.getViewport({ scale: 1 });
+      const scale = Math.min(3, 1400 / Math.max(vp0.width, vp0.height));
+      const vp = page.getViewport({ scale });
+      const c = document.createElement('canvas');
+      c.width = Math.round(vp.width);
+      c.height = Math.round(vp.height);
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, c.width, c.height);
+      await page.render({ canvasContext: ctx, viewport: vp, intent: 'print' }).promise;
+      const jpg = new Uint8Array(await (await new Promise((res) => c.toBlob(res, 'image/jpeg', 0.85))).arrayBuffer());
+      if (i === 1) [w0, h0] = [c.width, c.height];
+      files.push({ name: `OEBPS/images/p${i}.jpg`, data: jpg });
+      manifest.push(`<item id="img${i}" href="images/p${i}.jpg" media-type="image/jpeg"${i === 1 ? ' properties="cover-image"' : ''}/>`);
+      pageHtml.push(`<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops"><head><title>${xmlText(fill(t('pageWord'), { n: i }))}</title><meta name="viewport" content="width=${c.width}, height=${c.height}"/><style>html,body{margin:0;padding:0}img{display:block;width:${c.width}px;height:${c.height}px}</style></head><body><img src="images/p${i}.jpg" alt=""/></body></html>`);
+      page.cleanup();
+      continue;
+    }
+    // Text: lines from positioned runs, then paragraphs from the gaps between lines.
+    const tc = await page.getTextContent();
+    const lines = [];
+    let line = null;
+    for (const it of tc.items) {
+      if (!('str' in it)) continue;
+      const y = it.transform[5];
+      const x = it.transform[4];
+      const size = Math.hypot(it.transform[2], it.transform[3]) || it.height || 10;
+      if (it.str) {
+        if (!line || Math.abs(line.y - y) > size * 0.6) lines.push((line = { y, size, text: '', end: x }));
+        else if (x - line.end > size * 0.2 && !/\s$/.test(line.text) && !/^\s/.test(it.str)) line.text += ' ';
+        line.text += it.str;
+        line.size = Math.max(line.size, size);
+        line.end = x + (it.width || 0);
+      }
+      if (it.hasEOL) line = null;
+    }
+    const kept = lines.filter((l) => l.text.trim() && !/^\s*[-–—]?\s*\d{1,4}\s*[-–—]?\s*$/.test(l.text));
+    const sizes = kept.map((l) => l.size).sort((a, b) => a - b);
+    const median = sizes[Math.floor(sizes.length / 2)] || 10;
+    const blocks = [];
+    let prev = null;
+    for (const l of kept) {
+      const text = l.text.replace(/\s+/g, ' ').trim();
+      rtl += (text.match(RTL_CHARS) || []).length;
+      ltr += (text.match(/[A-Za-zÀ-ɏЀ-ӿ]/g) || []).length;
+      const heading = l.size >= median * 1.25 && text.length < 140;
+      const gap = prev ? prev.y - l.y : 0;
+      const last = blocks[blocks.length - 1];
+      if (last && last.heading === heading && gap > 0 && gap < Math.max(prev.size, l.size) * 1.7 && Math.abs(prev.size - l.size) < median * 0.15) {
+        last.text = /[\p{L}]-$/u.test(last.text) ? last.text.slice(0, -1) + text : `${last.text} ${text}`;
+      } else blocks.push({ text, heading });
+      prev = l;
+    }
+    pageHtml.push(blocks);
+    page.cleanup();
+  }
+
+  const dir = layout !== 'pages' && rtl > ltr ? 'rtl' : 'ltr';
+  const id = `urn:uuid:${crypto.randomUUID()}`;
+  const nav = [];
+  if (layout === 'pages') {
+    pageHtml.forEach((html, i) => {
+      files.push({ name: `OEBPS/p${i + 1}.xhtml`, data: html });
+      manifest.push(`<item id="p${i + 1}" href="p${i + 1}.xhtml" media-type="application/xhtml+xml"/>`);
+      spine.push(`<itemref idref="p${i + 1}"/>`);
+    });
+    for (const s of starts) nav.push({ href: `p${s.page}.xhtml`, title: s.title });
+  } else {
+    starts.forEach((s, k) => {
+      const end = (starts[k + 1]?.page || n + 1) - 1;
+      let out = [];
+      for (let p = s.page; p <= end; p++) {
+        const blocks = pageHtml[p - 1];
+        // A paragraph cut by the page break continues on the next page.
+        const first = blocks[0];
+        const last = out[out.length - 1];
+        if (first && last && !first.heading && !last.heading && !/[.!?:;"”»)\]…。！？]$/.test(last.text) && /^[\p{Ll}\p{Lo}]/u.test(first.text)) {
+          last.text = /[\p{L}]-$/u.test(last.text) ? last.text.slice(0, -1) + first.text : `${last.text} ${first.text}`;
+          out = out.concat(blocks.slice(1));
+        } else out = out.concat(blocks);
+      }
+      const body = out.map((b) => (b.heading ? `<h2>${xmlText(b.text)}</h2>` : `<p>${xmlText(b.text)}</p>`)).join('\n');
+      files.push({
+        name: `OEBPS/s${k + 1}.xhtml`,
+        data: `<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" dir="${dir}"><head><title>${xmlText(s.title)}</title><link rel="stylesheet" href="style.css" type="text/css"/></head><body>
+${body || `<p>${xmlText(s.title)}</p>`}
+</body></html>`,
+      });
+      manifest.push(`<item id="s${k + 1}" href="s${k + 1}.xhtml" media-type="application/xhtml+xml"/>`);
+      spine.push(`<itemref idref="s${k + 1}"/>`);
+      nav.push({ href: `s${k + 1}.xhtml`, title: s.title });
+    });
+    files.push({ name: 'OEBPS/style.css', data: 'body{margin:0 4%;line-height:1.5}p{margin:0 0 .8em;text-align:justify;hyphens:auto}h2{font-size:1.3em;line-height:1.25;margin:1.4em 0 .6em;text-align:start}' });
+    manifest.push('<item id="css" href="style.css" media-type="text/css"/>');
+  }
+  const navXhtml = `<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" dir="${dir}"><head><title>${xmlText(title)}</title></head><body>
+<nav epub:type="toc" id="toc"><h1>${xmlText(title)}</h1><ol>${nav.map((x) => `<li><a href="${x.href}">${xmlText(x.title)}</a></li>`).join('')}</ol></nav>
+</body></html>`;
+  const ncx = `<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1"><head><meta name="dtb:uid" content="${id}"/></head><docTitle><text>${xmlText(title)}</text></docTitle><navMap>${nav.map((x, i) => `<navPoint id="n${i + 1}" playOrder="${i + 1}"><navLabel><text>${xmlText(x.title)}</text></navLabel><content src="${x.href}"/></navPoint>`).join('')}</navMap></ncx>`;
+  const fixed = layout === 'pages';
+  const opf = `<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid"${fixed ? ' prefix="rendition: http://www.idpf.org/vocab/rendition/#"' : ''}>
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:identifier id="bookid">${id}</dc:identifier>
+<dc:title>${xmlText(title)}</dc:title>
+<dc:language>${xmlText(meta?.info?.Language || 'und')}</dc:language>
+${author ? `<dc:creator>${xmlText(author)}</dc:creator>` : ''}
+<meta property="dcterms:modified">${new Date().toISOString().replace(/\.\d+Z$/, 'Z')}</meta>
+${fixed ? `<meta property="rendition:layout">pre-paginated</meta><meta property="rendition:spread">auto</meta><meta name="original-resolution" content="${w0}x${h0}"/>` : ''}
+${fixed ? '<meta name="cover" content="img1"/>' : ''}
+</metadata>
+<manifest>
+<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+${manifest.join('\n')}
+</manifest>
+<spine toc="ncx"${dir === 'rtl' ? ' page-progression-direction="rtl"' : ''}>
+${spine.join('\n')}
+</spine>
+</package>`;
+  return [
+    { name: 'mimetype', data: 'application/epub+zip' },
+    { name: 'META-INF/container.xml', data: '<?xml version="1.0" encoding="utf-8"?>\n<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>' },
+    { name: 'OEBPS/content.opf', data: opf },
+    { name: 'OEBPS/nav.xhtml', data: navXhtml },
+    { name: 'OEBPS/toc.ncx', data: ncx },
+    ...files,
+  ].map((f) => ({ name: f.name, data: typeof f.data === 'string' ? new TextEncoder().encode(f.data) : f.data }));
+}
+
+// Opens an ePub: title, the reading order as XHTML, and the book's CSS with
+// pictures and fonts inlined, so each chapter can be drawn without a network.
+async function readEpub(bytes) {
+  const z = unzip(bytes);
+  const parse = (s, type = 'application/xml') => new DOMParser().parseFromString(s, type);
+  const container = await z.text('META-INF/container.xml');
+  const opfPath = container && parse(container).querySelector('rootfile')?.getAttribute('full-path');
+  const opfText = opfPath && (await z.text(opfPath));
+  if (!opfText) throw new Error('INVALID: this ePub has no package file');
+  const opf = parse(opfText);
+  const items = new Map([...opf.getElementsByTagName('item')].map((x) => [x.getAttribute('id'), { href: resolvePath(opfPath, x.getAttribute('href') || ''), type: x.getAttribute('media-type') || '' }]));
+  const typeOf = (path) => [...items.values()].find((x) => x.href === path)?.type || ({ jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', gif: 'image/gif', svg: 'image/svg+xml', webp: 'image/webp', otf: 'font/otf', ttf: 'font/ttf', woff: 'font/woff', woff2: 'font/woff2' }[path.split('.').pop().toLowerCase()] || 'application/octet-stream');
+  const cache = new Map();
+  const inline = async (path) => {
+    if (!cache.has(path)) cache.set(path, z.get(path).then((b) => (b ? dataUrl(b, typeOf(path)) : '')));
+    return cache.get(path);
+  };
+  const inlineCss = async (css, from) => {
+    const urls = [...css.matchAll(/url\(\s*(['"]?)([^'")]+)\1\s*\)/g)];
+    for (const [whole, , href] of urls) {
+      if (/^(data:|#)/.test(href)) continue;
+      const data = await inline(resolvePath(from, href));
+      css = css.split(whole).join(data ? `url("${data}")` : 'none');
+    }
+    return css.replace(/@import[^;]+;/g, '');
+  };
+  const titleEl = opf.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'title')[0];
+  const lang = opf.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'language')[0]?.textContent?.trim();
+  const ppd = opf.getElementsByTagName('spine')[0]?.getAttribute('page-progression-direction');
+  const chapters = [];
+  for (const ref of opf.getElementsByTagName('itemref')) {
+    if (ref.getAttribute('linear') === 'no') continue;
+    const item = items.get(ref.getAttribute('idref'));
+    if (!item || !/html|xml/.test(item.type)) continue;
+    const src = await z.text(item.href);
+    if (!src) continue;
+    let d = parse(src, 'application/xhtml+xml');
+    if (d.getElementsByTagName('parsererror').length) d = parse(src, 'text/html');
+    let css = '';
+    for (const link of [...d.querySelectorAll('link[rel~="stylesheet"][href]')]) css += await inlineCss((await z.text(resolvePath(item.href, link.getAttribute('href')))) || '', resolvePath(item.href, link.getAttribute('href')));
+    for (const st of [...d.querySelectorAll('style')]) css += await inlineCss(st.textContent, item.href);
+    const body = d.body || d.getElementsByTagName('body')[0];
+    if (!body) continue;
+    for (const bad of [...body.querySelectorAll('script, iframe, object, embed, video, audio, form, link, style, meta')]) bad.remove();
+    for (const img of [...body.querySelectorAll('img[src]')]) img.setAttribute('src', await inline(resolvePath(item.href, img.getAttribute('src'))));
+    for (const im of [...body.getElementsByTagNameNS('http://www.w3.org/2000/svg', 'image')]) {
+      const href = im.getAttributeNS('http://www.w3.org/1999/xlink', 'href') || im.getAttribute('href');
+      if (href) im.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', await inline(resolvePath(item.href, href)));
+    }
+    for (const el of [...body.querySelectorAll('[style]')]) el.setAttribute('style', await inlineCss(el.getAttribute('style'), item.href));
+    for (const a of [...body.querySelectorAll('a[href]')]) a.removeAttribute('href');
+    const wrap = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+    wrap.setAttribute('class', `${body.getAttribute('class') || ''} epub-body`);
+    const bdir = body.getAttribute('dir') || d.documentElement.getAttribute('dir');
+    if (bdir) wrap.setAttribute('dir', bdir);
+    for (const child of [...body.childNodes]) wrap.append(document.importNode(child, true));
+    chapters.push({ css, html: new XMLSerializer().serializeToString(wrap) });
+  }
+  if (!chapters.length) throw new Error('INVALID: this ePub has no readable chapters');
+  return { title: titleEl?.textContent?.trim() || '', lang, rtl: ppd === 'rtl', chapters };
+}
+
+// Lays each chapter out in columns, one column per page, and draws the pages
+// through an SVG image so the book's own fonts and styles are kept.
+async function epubToPdf(bytes, { paper, fontSize, onPage }) {
+  const book = await readEpub(bytes);
+  const [W, H] = paper === 'a4' ? [595, 842] : paper === 'letter' ? [612, 792] : [420, 595];
+  const M = Math.round(W * 0.09);
+  const cw = W - 2 * M;
+  const ch = H - 2 * M;
+  const scale = 2.5;
+  const base = `html,body{margin:0;padding:0;background:#fff}
+.flow{position:absolute;left:${M}px;top:${M}px;width:${cw}px;height:${ch}px;column-width:${cw}px;column-gap:${2 * M}px;column-fill:auto;font-family:Georgia,'Iowan Old Style','Times New Roman',serif;font-size:${fontSize}px;line-height:1.5;color:#111;overflow-wrap:break-word}
+.flow img,.flow svg{max-width:100%;max-height:${ch}px;height:auto;object-fit:contain;break-inside:avoid}
+.flow h1,.flow h2,.flow h3{break-after:avoid;line-height:1.25}
+.flow p{orphans:2;widows:2}`;
+  const frame = document.createElement('iframe');
+  frame.setAttribute('aria-hidden', 'true');
+  frame.style.cssText = `position:fixed;left:-20000px;top:0;width:${W}px;height:${H}px;border:0;visibility:hidden`;
+  document.body.append(frame);
+  const images = [];
+  try {
+    const fdoc = frame.contentDocument;
+    let done = 0;
+    for (const chap of book.chapters) {
+      const css = `${chap.css}\n${base}`;
+      fdoc.open();
+      fdoc.write(`<!doctype html><html${book.lang ? ` lang="${esc(book.lang)}"` : ''}${book.rtl ? ' dir="rtl"' : ''}><head><style>${css.replace(/<\/style/gi, '')}</style></head><body><div class="flow">${chap.html}</div></body></html>`);
+      fdoc.close();
+      await new Promise((r) => setTimeout(r, 30));
+      await fdoc.fonts?.ready;
+      await Promise.all([...fdoc.images].map((im) => (im.complete ? null : new Promise((r) => ((im.onload = r), (im.onerror = r))))));
+      const flow = fdoc.querySelector('.flow');
+      const pages = Math.max(1, Math.round((flow.scrollWidth + 2 * M) / W));
+      for (let i = 0; i < pages; i++) {
+        onPage?.(++done);
+        const shift = book.rtl ? i * W : -i * W;
+        const svgText = `<svg xmlns="http://www.w3.org/2000/svg" width="${W * scale}" height="${H * scale}" viewBox="0 0 ${W} ${H}"><foreignObject width="${W}" height="${H}"><html xmlns="http://www.w3.org/1999/xhtml"${book.lang ? ` lang="${esc(book.lang)}"` : ''}${book.rtl ? ' dir="rtl"' : ''}><head><style>${esc(css)}</style></head><body style="width:${W}px;height:${H}px;overflow:hidden;position:relative"><div class="flow" style="transform:translateX(${shift}px)">${chap.html}</div></body></html></foreignObject></svg>`;
+        {
+          const img = new Image();
+          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgText)}`;
+          await img.decode();
+          const c = document.createElement('canvas');
+          c.width = W * scale;
+          c.height = H * scale;
+          const ctx = c.getContext('2d');
+          ctx.fillStyle = '#fff';
+          ctx.fillRect(0, 0, c.width, c.height);
+          ctx.drawImage(img, 0, 0, c.width, c.height);
+          images.push({ jpeg: true, data: new Uint8Array(await (await new Promise((res, rej) => { try { c.toBlob(res, 'image/jpeg', 0.88); } catch (e) { rej(e); } })).arrayBuffer()) });
+        }
+      }
+    }
+  } finally {
+    frame.remove();
+  }
+  const out = await engine('images', { images, paper: paper === 'letter' ? 'letter' : paper === 'a4' ? 'a4' : 'a5', margin: 0 }, images.map((x) => x.data.buffer));
+  return { bytes: out, title: book.title };
+}
+
+
 // Several documents, every tool. Each action runs the tool's own screen inside the app
 // window; a PDF result replaces the active document (with undo), other results download.
 const studioEl = $('#studio');
@@ -2301,7 +2898,7 @@ function startStudio(el) {
   const tools = JSON.parse(el.dataset.tools);
   const groups = JSON.parse(el.dataset.groups);
   const home = el.dataset.home || '/';
-  const S = { docs: [], active: null, pending: null };
+  const S = { docs: [], active: null, pending: null, sel: new Set(), zoom: 190, running: false };
   const doc = () => S.docs.find((d) => d.id === S.active);
   const isPdf = (f) => /pdf$/i.test(f.type) || /\.pdf$/i.test(f.name);
   const svg = (d, w = 18) => `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -2316,6 +2913,10 @@ function startStudio(el) {
     tools: svg('<rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/>'),
     search: svg('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/>', 15),
     chevron: svg('<path d="m9.5 6 6 6-6 6"/>', 13),
+    rotL: svg('<path d="M4 11a8 8 0 1 1 2.3 5.7"/><path d="M4 4v7h7"/>', 16),
+    rotR: svg('<path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>', 16),
+    small: svg('<rect x="7" y="7" width="10" height="12" rx="1.5"/>', 13),
+    large: svg('<rect x="4" y="3" width="16" height="18" rx="2"/>', 16),
   };
   el.innerHTML = `<div class="studio-window sidebar-open">
     <header class="studio-bar">
@@ -2325,8 +2926,9 @@ function startStudio(el) {
       </div>
       <div class="bar-title"><b>Scissor PDF</b><span></span></div>
       <div class="bar-right">
+        <label class="zoom-ctl" title="${esc(t('zoom'))}" hidden>${IC.small}<input type="range" min="120" max="420" step="10" value="190" aria-label="${esc(t('zoom'))}">${IC.large}</label>
         <div class="tb-group"><button class="tb-btn studio-undo" type="button" aria-label="${esc(ts('studioUndo', 'Undo'))}" disabled>${IC.undo}</button><button class="tb-btn studio-redo" type="button" aria-label="${esc(ts('studioRedo', 'Redo'))}" disabled>${IC.redo}</button></div>
-        <div class="studio-menu"><button class="tb-btn studio-open" type="button" aria-haspopup="true">${IC.open}<span>${esc(ts('studioOpen', 'Open'))}</span></button>
+        <div class="studio-menu"><button class="tb-btn studio-open" type="button" aria-haspopup="true" title="${esc(ts('studioOpenShort', 'Open'))} (⌘O)">${IC.open}<span>${esc(ts('studioOpenShort', 'Open'))}</span></button>
           <div class="studio-menu-list" hidden><button type="button" data-open="files">${esc(ts('studioOpenFiles', 'Open files'))}…</button><button type="button" data-open="folder">${esc(ts('studioOpenFolder', 'Open folder'))}…</button></div></div>
         <button class="tb-btn studio-download-all" type="button" aria-label="${esc(ts('studioDownloadAll', 'Download all'))}" title="${esc(ts('studioDownloadAll', 'Download all'))}" hidden>${IC.stack}</button>
         <a class="tb-btn primary studio-download" hidden>${IC.share}<span>${esc(t('download'))}</span></a>
@@ -2334,7 +2936,7 @@ function startStudio(el) {
     </header>
     <div class="studio-main"><nav class="studio-files" aria-label="${esc(ts('studioFiles', 'Files'))}" hidden></nav><div class="studio-body"></div></div>
     <nav class="studio-tabbar" aria-label="${esc(ts('studioTools', 'Tools'))}">
-      <button type="button" class="tab-open">${IC.open}<span>${esc(ts('studioOpen', 'Open'))}</span></button>
+      <button type="button" class="tab-open">${IC.open}<span>${esc(ts('studioOpenShort', 'Open'))}</span></button>
       <button type="button" class="tab-tools">${IC.tools}<span>${esc(ts('studioTools', 'Tools'))}</span></button>
       <button type="button" class="tab-share" disabled>${IC.share}<span>${esc(t('download'))}</span></button>
     </nav>
@@ -2345,7 +2947,7 @@ function startStudio(el) {
   const win = $('.studio-window', el);
   const body = $('.studio-body', el);
   const filesNav = $('.studio-files', el);
-  const fileInput = h('<input type="file" accept="application/pdf,.pdf" multiple hidden>');
+  const fileInput = h('<input type="file" accept="application/pdf,.pdf,application/epub+zip,.epub" multiple hidden>');
   const folderInput = h('<input type="file" webkitdirectory multiple hidden>');
   document.body.append(fileInput, folderInput);
   fileInput.onchange = () => (openFiles([...fileInput.files]), (fileInput.value = ''));
@@ -2366,6 +2968,10 @@ function startStudio(el) {
   $('.studio-undo', el).onclick = () => travel(-1);
   $('.studio-redo', el).onclick = () => travel(1);
   $('.studio-download-all', el).onclick = downloadAll;
+  $('.zoom-ctl input', el).oninput = (e) => {
+    S.zoom = +e.target.value;
+    $('.studio-pages', body)?.style.setProperty('--page-w', `${S.zoom}px`);
+  };
   $('.studio-sidebar-toggle', el).onclick = () => win.classList.toggle('sidebar-open');
   // Phone: bottom tab bar, with Tools as a sheet.
   const sheet = $('.studio-sheet', el);
@@ -2418,37 +3024,103 @@ function startStudio(el) {
     return out.filter(Boolean);
   }
 
-  // The tool list: a search field and sections, like a settings sidebar.
+  // Tools: four tabs with an icon grid, plus a ⌘K palette that searches everything.
+  const toolOf = (slug) => tools.find((x) => x.slug === slug);
+  const tabs = groups.map(([key, label, slugs]) => ({ key, label, list: slugs.map(toolOf).filter(Boolean) })).filter((x) => x.list.length);
+  let tabKey = (() => {
+    try {
+      return localStorage.getItem('scissor-tab') || tabs[0].key;
+    } catch {
+      return tabs[0].key;
+    }
+  })();
+  if (!tabs.some((x) => x.key === tabKey)) tabKey = tabs[0].key;
+
   function toolsList() {
-    return `<div class="tools-search">${IC.search}<input type="search" placeholder="${esc(ts('studioSearch', 'Search tools'))}" aria-label="${esc(ts('studioSearch', 'Search tools'))}"></div>
-      <div class="tools-list">${groups
-        .map(([label, slugs]) => {
-          const list = slugs.map((x) => tools.find((y) => y.slug === x)).filter(Boolean);
-          return list.length ? `<section><h4>${esc(label)}</h4>${list.map((x) => `<button type="button" class="tool-row" data-slug="${x.slug}" data-name="${esc(x.name.toLowerCase())} ${x.slug}">${x.iconSvg}<span>${esc(x.name)}</span>${IC.chevron}</button>`).join('')}</section>` : '';
-        })
-        .join('')}</div>`;
+    const tab = tabs.find((x) => x.key === tabKey);
+    return `<div class="tools-head">
+        <div class="seg" role="tablist">${tabs.map((x) => `<button type="button" role="tab" data-tab="${x.key}" aria-selected="${x.key === tabKey}">${esc(x.label)}</button>`).join('')}</div>
+        <button type="button" class="tools-find" aria-label="${esc(ts('studioSearch', 'Search tools'))}" title="${esc(ts('studioSearch', 'Search tools'))} (⌘K)">${IC.search}<span>${esc(ts('studioSearch', 'Search tools'))}</span><kbd>${/Mac|iP/.test(navigator.platform) ? '⌘' : 'Ctrl+'}K</kbd></button>
+      </div>
+      <div class="tool-grid" role="tabpanel">${tab.list.map((x) => `<button type="button" class="tool-tile" data-slug="${x.slug}" title="${esc(x.name)}">${x.iconSvg}<span>${esc(x.name)}</span></button>`).join('')}</div>`;
+  }
+
+  function pick(slug) {
+    if (doc()) runTool(slug);
+    else {
+      S.pending = slug;
+      fileInput.click();
+    }
   }
 
   function bindTools(scope, after) {
-    for (const b of scope.querySelectorAll('.tool-row')) {
+    for (const b of scope.querySelectorAll('.tool-tile')) b.onclick = () => (after?.(), pick(b.dataset.slug));
+    for (const b of scope.querySelectorAll('[data-tab]'))
       b.onclick = () => {
-        after?.();
-        if (doc()) runTool(b.dataset.slug);
-        else {
-          S.pending = b.dataset.slug;
-          fileInput.click();
-        }
+        tabKey = b.dataset.tab;
+        try {
+          localStorage.setItem('scissor-tab', tabKey);
+        } catch {}
+        const host = b.closest('.inspector, .sheet-content');
+        host.innerHTML = toolsList();
+        bindTools(host, after);
+        $(`[data-tab="${tabKey}"]`, host)?.focus();
       };
-    }
-    const search = $('.tools-search input', scope);
-    search.oninput = () => {
-      const q = search.value.trim().toLowerCase();
-      for (const row of scope.querySelectorAll('.tool-row')) row.hidden = q && !row.dataset.name.includes(q);
-      for (const sec of scope.querySelectorAll('.tools-list section')) sec.hidden = ![...sec.querySelectorAll('.tool-row')].some((r) => !r.hidden);
+    const find = $('.tools-find', scope);
+    if (find) find.onclick = () => (after?.(), palette());
+  }
+
+  // Spotlight-style search over every tool.
+  function palette() {
+    if ($('.palette')) return;
+    const box = h(`<div class="palette-backdrop"><div class="palette" role="dialog" aria-modal="true" aria-label="${esc(ts('studioSearch', 'Search tools'))}">
+      <div class="palette-input">${IC.search}<input type="search" placeholder="${esc(ts('studioSearch', 'Search tools'))}" autocomplete="off" spellcheck="false"></div>
+      <div class="palette-list" role="listbox"></div></div></div>`);
+    document.body.append(box);
+    const input = $('input', box);
+    const list = $('.palette-list', box);
+    const all = tabs.flatMap((tab) => tab.list.map((x) => ({ ...x, tab: tab.label, hay: `${x.name} ${x.slug.replace(/-/g, ' ')} ${tab.label}`.toLowerCase() })));
+    let hits = [];
+    let at = 0;
+    const close = () => box.remove();
+    const paint = () => {
+      const q = input.value.trim().toLowerCase();
+      const words = q.split(/\s+/).filter(Boolean);
+      hits = words.length ? all.filter((x) => words.every((w) => x.hay.includes(w))).sort((x, y) => x.name.toLowerCase().indexOf(words[0]) - y.name.toLowerCase().indexOf(words[0])) : all;
+      at = Math.min(at, Math.max(0, hits.length - 1));
+      list.innerHTML = hits.length
+        ? hits.map((x, i) => `<button type="button" role="option" class="palette-row" data-i="${i}" aria-selected="${i === at}">${x.iconSvg}<span>${esc(x.name)}</span><small>${esc(x.tab)}</small></button>`).join('')
+        : `<p class="palette-empty">${esc(ts('studioNoTools', 'No matching tools'))}</p>`;
+      for (const r of list.querySelectorAll('.palette-row')) {
+        r.onclick = () => (close(), pick(hits[+r.dataset.i].slug));
+        r.onmousemove = () => {
+          if (at === +r.dataset.i) return;
+          at = +r.dataset.i;
+          mark();
+        };
+      }
     };
-    search.onkeydown = (e) => {
-      if (e.key === 'Enter') scope.querySelector('.tool-row:not([hidden])')?.click();
+    const mark = () => {
+      for (const r of list.querySelectorAll('.palette-row')) r.setAttribute('aria-selected', +r.dataset.i === at);
+      list.querySelector(`[data-i="${at}"]`)?.scrollIntoView({ block: 'nearest' });
     };
+    input.oninput = () => ((at = 0), paint());
+    input.onkeydown = (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        at = (at + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % Math.max(1, hits.length);
+        mark();
+      } else if (e.key === 'Enter' && hits[at]) {
+        close();
+        pick(hits[at].slug);
+      } else if (e.key === 'Escape') {
+        e.stopPropagation();
+        close();
+      }
+    };
+    box.onclick = (e) => e.target === box && close();
+    paint();
+    input.focus();
   }
 
   function renderFiles() {
@@ -2459,6 +3131,7 @@ function startStudio(el) {
     for (const d of S.docs) {
       const item = h(`<div class="studio-file-item${d.id === S.active ? ' active' : ''}"><button type="button" class="studio-file-pick"><span class="thumb"></span><span class="studio-file-text"><b>${esc(d.name)}</b><small>${tp('pages', d.pdf.numPages)}</small></span></button><button type="button" class="icon-btn" aria-label="${esc(ts('studioClose', 'Close {name}', { name: d.name }))}">${ICON.close}</button></div>`);
       $('.studio-file-pick', item).onclick = () => {
+        if (S.active !== d.id) S.sel.clear();
         S.active = d.id;
         showHome();
       };
@@ -2473,6 +3146,7 @@ function startStudio(el) {
   }
 
   function showHome() {
+    S.running = false;
     updateBar();
     renderFiles();
     const d = doc();
@@ -2493,15 +3167,178 @@ function startStudio(el) {
       $('[data-open="folder"]', body).onclick = () => folderInput.click();
       return;
     }
-    const grid = $('.studio-pages', body);
+    renderPages(d);
+  }
+
+  /* Pages on the canvas: select, drag to reorder, act on the selection. */
+
+  function renderPages(d) {
+    const canvas = $('.studio-canvas', body);
+    canvas.innerHTML = `<div class="studio-pages" role="listbox" aria-multiselectable="true" aria-label="${esc(tp('pages', d.pdf.numPages))}"></div>
+      <div class="canvas-foot">
+        <div class="selection-bar" hidden>
+          <span class="sel-count"></span>
+          <button class="tb-btn" type="button" data-act="left" title="${esc(ts('studioRotateLeft', 'Rotate Left'))} (⌘[)">${IC.rotL}</button>
+          <button class="tb-btn" type="button" data-act="right" title="${esc(ts('studioRotateRight', 'Rotate Right'))} (⌘])">${IC.rotR}</button>
+          <button class="tb-btn" type="button" data-act="extract">${esc(ts('studioExtract', 'Extract'))}</button>
+          <button class="tb-btn danger" type="button" data-act="delete" title="⌫">${esc(t('stateDelete'))}</button>
+        </div>
+      </div>`;
+    const grid = $('.studio-pages', canvas);
+    grid.style.setProperty('--page-w', `${S.zoom}px`);
+    for (const b of canvas.querySelectorAll('.selection-bar [data-act]')) b.onclick = () => act(b.dataset.act);
     for (let n = 1; n <= d.pdf.numPages; n++) {
-      const card = h(`<figure class="studio-page"><div class="thumb"><div class="skeleton"></div></div><figcaption>${n}</figcaption></figure>`);
+      const card = h(`<figure class="card sortable studio-page" data-key="${n}" role="option" tabindex="${n === 1 ? 0 : -1}" aria-selected="false"><div class="thumb"><div class="skeleton"></div></div><figcaption>${n}</figcaption></figure>`);
       const thumb = $('.thumb', card);
-      thumb._render = () => renderThumb(d.pdf, n, thumb, 300);
+      thumb._render = () => renderThumb(d.pdf, n, thumb, 420);
       lazy.observe(thumb);
+      card.addEventListener('click', (e) => {
+        if (Date.now() - (grid._dragEnded || 0) < 250) return;
+        select(n, e);
+      });
+      card.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        if (!S.sel.has(n)) select(n, {});
+        contextMenu(e.clientX, e.clientY);
+      });
       grid.append(card);
     }
+    sortable(grid, (keys) => {
+      const order = keys.map(Number);
+      if (order.every((n, i) => n === i + 1)) return;
+      organizeDoc(order, [], ts('studioReorder', 'Reorder'));
+    });
+    paintSelection();
   }
+
+  let anchor = null;
+  function select(n, e) {
+    if (e.shiftKey && anchor) {
+      const [a, b] = [Math.min(anchor, n), Math.max(anchor, n)];
+      if (!(e.metaKey || e.ctrlKey)) S.sel.clear();
+      for (let i = a; i <= b; i++) S.sel.add(i);
+    } else if (e.metaKey || e.ctrlKey) {
+      S.sel.has(n) ? S.sel.delete(n) : S.sel.add(n);
+      anchor = n;
+    } else {
+      S.sel = new Set([n]);
+      anchor = n;
+    }
+    paintSelection();
+  }
+
+  function paintSelection() {
+    const grid = $('.studio-pages', body);
+    if (!grid) return;
+    for (const card of grid.children) {
+      const on = S.sel.has(+card.dataset.key);
+      card.classList.toggle('selected', on);
+      card.setAttribute('aria-selected', on);
+    }
+    const bar = $('.selection-bar', body);
+    bar.hidden = !S.sel.size || S.running;
+    $('.sel-count', bar).textContent = ts('studioSelected', '{pages} selected', { pages: tp('pages', S.sel.size) });
+  }
+
+  async function organizeDoc(pages, rotations, label) {
+    const d = doc();
+    try {
+      const out = await engine('organize', { pdf: d.bytes.slice(), pages, rotations });
+      S.sel.clear();
+      await commit(out, label);
+    } catch (e) {
+      toast(e.message);
+    }
+  }
+
+  async function act(kind) {
+    const d = doc();
+    if (!d || !S.sel.size) return;
+    const all = Array.from({ length: d.pdf.numPages }, (_, i) => i + 1);
+    const chosen = all.filter((n) => S.sel.has(n));
+    if (kind === 'left' || kind === 'right') {
+      const keep = new Set(chosen);
+      return organizeDoc(all, all.map((n) => (keep.has(n) ? (kind === 'left' ? 270 : 90) : 0)), ts(kind === 'left' ? 'studioRotateLeft' : 'studioRotateRight', kind === 'left' ? 'Rotate Left' : 'Rotate Right'));
+    }
+    if (kind === 'delete') {
+      if (chosen.length === all.length) return toast(t('errInvalid'));
+      return organizeDoc(all.filter((n) => !S.sel.has(n)), [], t('stateDelete'));
+    }
+    if (kind === 'extract') {
+      const out = await engine('organize', { pdf: d.bytes.slice(), pages: chosen, rotations: [] });
+      const nd = await makeDoc(out, `${baseName(d.name)}-pages.pdf`);
+      if (!nd) return;
+      nd.dirty = true;
+      S.docs.push(nd);
+      S.active = nd.id;
+      S.sel.clear();
+      showHome();
+      toast(ts('studioApplied', '{tool} done', { tool: ts('studioExtract', 'Extract') }));
+    }
+  }
+
+  const menuEl = h('<div class="studio-context" role="menu" hidden></div>');
+  el.append(menuEl);
+  function contextMenu(x, y) {
+    const items = [
+      ['left', ts('studioRotateLeft', 'Rotate Left'), '⌘['],
+      ['right', ts('studioRotateRight', 'Rotate Right'), '⌘]'],
+      ['extract', ts('studioExtract', 'Extract'), ''],
+      ['delete', t('stateDelete'), '⌫'],
+      ['all', t('selectAll'), '⌘A'],
+    ];
+    menuEl.innerHTML = items.map(([k, label, key]) => `<button type="button" role="menuitem" data-k="${k}"><span>${esc(label)}</span><kbd>${key}</kbd></button>`).join('');
+    menuEl.hidden = false;
+    const r = menuEl.getBoundingClientRect();
+    Object.assign(menuEl.style, { left: `${Math.min(x, innerWidth - r.width - 8)}px`, top: `${Math.min(y, innerHeight - r.height - 8)}px` });
+    menuEl.onclick = (e) => {
+      const k = e.target.closest('[data-k]')?.dataset.k;
+      menuEl.hidden = true;
+      if (k === 'all') selectAll();
+      else if (k) act(k);
+    };
+  }
+  addEventListener('click', () => (menuEl.hidden = true));
+  addEventListener('scroll', () => (menuEl.hidden = true), true);
+
+  function selectAll() {
+    const d = doc();
+    if (!d) return;
+    S.sel = new Set(Array.from({ length: d.pdf.numPages }, (_, i) => i + 1));
+    paintSelection();
+  }
+
+  // Keyboard shortcuts, as in Preview.
+  addEventListener('keydown', (e) => {
+    const mod = e.metaKey || e.ctrlKey;
+    const typing = e.target.closest?.('input, textarea, select, [contenteditable="true"], [contenteditable="plaintext-only"]');
+    const k = e.key.toLowerCase();
+    if (k === 'escape') {
+      if ($('.palette')) return $('.palette-backdrop').remove();
+      if (!menuEl.hidden) return (menuEl.hidden = true);
+      if (S.running) return $('.studio-back', el)?.click();
+      if (S.sel.size) return (S.sel.clear(), paintSelection());
+    }
+    if (mod && k === 'o') return (e.preventDefault(), fileInput.click());
+    if (mod && (k === 'f' || k === 'k') && !S.running) return (e.preventDefault(), palette());
+    if (typing) return;
+    if (mod && k === 'z') return (e.preventDefault(), travel(e.shiftKey ? 1 : -1));
+    if (mod && k === 'y') return (e.preventDefault(), travel(1));
+    if (mod && k === 's') return (e.preventDefault(), doc() && $('.studio-download', el).click());
+    if (S.running) return;
+    if (mod && k === 'a') return (e.preventDefault(), selectAll());
+    if (mod && e.key === '[') return (e.preventDefault(), act('left'));
+    if (mod && e.key === ']') return (e.preventDefault(), act('right'));
+    if ((e.key === 'Delete' || e.key === 'Backspace') && S.sel.size) return (e.preventDefault(), act('delete'));
+  });
+
+  // Ask before closing the tab with changes that were not downloaded.
+  addEventListener('beforeunload', (e) => {
+    if (S.docs.some((d) => d.dirty)) {
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
 
   function updateBar() {
     const d = doc();
@@ -2515,8 +3352,10 @@ function startStudio(el) {
       dl.download = d.name;
     }
     dl.hidden = !d;
+    dl.onclick = () => d && (d.dirty = false);
     $('.tab-share', el).disabled = !d;
     $('.studio-download-all', el).hidden = S.docs.length < 2;
+    $('.zoom-ctl', el).hidden = !d || S.running;
     $('.studio-undo', el).disabled = !d || d.index <= 0;
     $('.studio-redo', el).disabled = !d || d.index >= d.history.length - 1;
   }
@@ -2541,11 +3380,25 @@ function startStudio(el) {
   }
 
   async function openFiles(list) {
-    const pdfs = list.filter(isPdf);
+    const isEpub = (f) => /\.epub$/i.test(f.name) || f.type === 'application/epub+zip';
+    const pdfs = list.filter((f) => isPdf(f) || isEpub(f));
     if (!pdfs.length) return toast(ts('studioNoPdfs', 'No PDF files found there.'));
     let first = null;
     for (const file of pdfs) {
-      const d = await makeDoc(new Uint8Array(await file.arrayBuffer()), file.name);
+      let bytes = new Uint8Array(await file.arrayBuffer());
+      let name = file.name;
+      // E-books open as PDFs (A5, like a paperback).
+      if (isEpub(file)) {
+        toast(`${ts('busyRender', 'Rendering…')} ${file.name}`);
+        try {
+          bytes = (await epubToPdf(bytes, { paper: 'a5', fontSize: 12 })).bytes;
+          name = name.replace(/\.epub$/i, '.pdf');
+        } catch (e) {
+          toast(String(e.message || e).replace(/^[A-Z]+:\s*/, ''));
+          continue;
+        }
+      }
+      const d = await makeDoc(bytes, name);
       if (!d) continue;
       S.docs.push(d);
       first ??= d;
@@ -2571,6 +3424,7 @@ function startStudio(el) {
     d.history.push(bytes);
     if (d.history.length > 25) d.history.shift();
     d.index = d.history.length - 1;
+    d.dirty = true;
     await setBytes(d, bytes);
     showHome();
     toast(ts('studioApplied', '{tool} done', { tool: label }));
@@ -2587,14 +3441,26 @@ function startStudio(el) {
   function runTool(slug) {
     const tool = tools.find((x) => x.slug === slug);
     const d = doc();
-    const host = h('<div class="app studio-app"></div>');
-    body.replaceChildren(host);
+    S.running = true;
+    let host;
+    let panelHost;
+    if (PANEL_ONLY.has(tool.mode) && matchMedia('(min-width: 761px)').matches && $('.studio-canvas', body)) {
+      // Options-only tools: pages stay on the canvas, the inspector shows the options.
+      host = $('.studio-canvas', body);
+      panelHost = $('.inspector', body);
+      panelHost.classList.add('running');
+    } else {
+      host = h('<div class="app studio-app"></div>');
+      body.replaceChildren(host);
+    }
     $('.studio-download', el).hidden = true;
+    $('.zoom-ctl', el).hidden = true;
     // Multi-document tools start with every open file (merge) or the first two (compare, mix).
     let docs = [d];
     if (tool.multiple) docs = [d, ...S.docs.filter((x) => x !== d)].slice(0, tool.slug === 'merge-pdf' ? undefined : 2);
     start(tool, {
       root: host,
+      panelHost,
       files: docs.map((x) => new File([x.bytes], x.name, { type: 'application/pdf' })),
       onCancel: showHome,
       onResult: async ({ bytes, name, type }) => {
@@ -2602,6 +3468,7 @@ function startStudio(el) {
           // A merged document opens as a new file next to the originals.
           const merged = await makeDoc(bytes, name);
           if (merged) {
+            merged.dirty = true;
             S.docs.push(merged);
             S.active = merged.id;
           }
@@ -2637,4 +3504,59 @@ function startStudio(el) {
   const wanted = new URLSearchParams(location.search).get('tool');
   if (wanted && tools.some((x) => x.slug === wanted)) S.pending = wanted;
   showHome();
+}
+
+
+/* ---------- Stamps and ink ---------- */
+
+const STAMPS = [
+  ['stampApproved', 'APPROVED', '#1f8a3b'],
+  ['stampRejected', 'REJECTED', '#c8102e'],
+  ['stampPaid', 'PAID', '#0a58ca'],
+  ['stampReceived', 'RECEIVED', '#0a58ca'],
+  ['stampDraft', 'DRAFT', '#6e6e73'],
+  ['stampConfidential', 'CONFIDENTIAL', '#c8102e'],
+  ['stampFinal', 'FINAL', '#1f8a3b'],
+  ['stampCopy', 'COPY', '#6e6e73'],
+];
+
+// A rubber-stamp style label with today's date, drawn at high resolution.
+function stampCanvas(word, color) {
+  const date = new Intl.DateTimeFormat(I18N.code, { dateStyle: 'medium' }).format(new Date());
+  const c = document.createElement('canvas');
+  const ctx = c.getContext('2d');
+  const big = '800 96px -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif';
+  const small = '600 34px -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif';
+  ctx.font = big;
+  const w = Math.max(ctx.measureText(word).width, 260) + 96;
+  c.width = Math.ceil(w);
+  c.height = 210;
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 9;
+  ctx.beginPath();
+  ctx.roundRect(8, 8, c.width - 16, c.height - 16, 26);
+  ctx.stroke();
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.font = big;
+  ctx.fillText(word, c.width / 2, 92);
+  ctx.font = small;
+  ctx.fillText(date, c.width / 2, 160);
+  return c;
+}
+
+function drawStrokes(ctx, strokes, w, h) {
+  ctx.clearRect(0, 0, w, h);
+  ctx.lineCap = ctx.lineJoin = 'round';
+  for (const s of strokes) {
+    ctx.strokeStyle = s.color;
+    ctx.globalAlpha = s.color === '#ffd60a' ? 0.5 : 1;
+    ctx.lineWidth = s.width * w;
+    ctx.beginPath();
+    s.points.forEach(([x, y], i) => (i ? ctx.lineTo(x * w, y * h) : ctx.moveTo(x * w, y * h)));
+    if (s.points.length === 1) ctx.lineTo(s.points[0][0] * w + 0.1, s.points[0][1] * h);
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
 }

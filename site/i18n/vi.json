@@ -62,7 +62,8 @@
   "f3p": "Không đăng ký, không giới hạn mỗi ngày, không watermark, không quảng cáo. Mở trang, thả tệp vào, tải kết quả về.",
   "suggestLang": "Trang này có phiên bản {lang}.",
   "switch": "Chuyển",
-  "dismiss": "Bỏ qua"
+  "dismiss": "Bỏ qua",
+  "chooseEpub": "Chọn tệp ePub"
  },
  "tools": {
   "merge-pdf": {
@@ -1028,6 +1029,92 @@
     {
      "q": "Có miễn phí không? Có cần tài khoản không?",
      "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "pdf-to-epub": {
+   "name": "PDF sang ePub",
+   "short": "Chuyển PDF thành sách điện tử ePub cho Apple Books, Kobo và các trình đọc khác.",
+   "action": "Chuyển sang ePub",
+   "title": "Chuyển PDF sang ePub miễn phí, không tải lên",
+   "description": "Chuyển PDF sang ePub trong trình duyệt: văn bản tự dàn vừa mọi màn hình, hoặc giữ nguyên từng trang. Chương theo dấu trang. Không có gì bị tải lên.",
+   "h1": "Chuyển PDF sang ePub",
+   "howTo": "Cách chuyển PDF sang ePub",
+   "lead": "Đọc PDF thoải mái trên điện thoại hoặc máy đọc sách. Văn bản tự dàn lại cho vừa màn hình, và các chương theo dấu trang của PDF.",
+   "steps": [
+    "Chọn hoặc thả tệp PDF vào.",
+    "Chọn Văn bản để chữ tự dàn lại, hoặc Trang để giữ nguyên từng trang như bản gốc.",
+    "Chọn Chuyển sang ePub rồi mở tệp trong ứng dụng đọc sách của bạn."
+   ],
+   "sections": [
+    {
+     "h": "Văn bản hay Trang",
+     "p": "Văn bản tạo ra một cuốn sách điện tử thực sự: đoạn văn và tiêu đề tự dàn lại, kèm mục lục lấy từ dấu trang. Phù hợp với sách, báo cáo và bài viết. Trang giữ mỗi trang dưới dạng hình ảnh trong ePub bố cục cố định, phù hợp với tạp chí, truyện tranh, slide và bản quét."
+    },
+    {
+     "h": "Kết quả như thế nào",
+     "p": "PDF lưu vị trí chứ không lưu đoạn văn, nên văn bản được dựng lại từ vị trí của các chữ trên trang. Bố cục đơn giản cho kết quả gọn gàng. Bảng, chú thích cuối trang và trang nhiều cột có thể không giữ được cấu trúc; hãy dùng Trang cho những tệp đó. PDF quét không có văn bản, nên cũng hãy dùng Trang."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi chuyển PDF sang ePub không?",
+     "a": "Không. Scissor PDF chuyển đổi tệp ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, chuyển đổi tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Những trình đọc nào mở được tệp ePub này?",
+     "a": "Bất kỳ trình đọc ePub 3 nào, gồm Apple Books, Google Play Books, Kobo, Thorium và Calibre. Các ứng dụng Kindle mới nhận ePub qua Send to Kindle."
+    },
+    {
+     "q": "Hình ảnh có được giữ lại không?",
+     "a": "Với Trang thì có: mỗi trang được giữ nguyên như bản gốc. Với Văn bản, chỉ phần chữ được chuyển đổi."
+    },
+    {
+     "q": "Có dùng được cho ngôn ngữ viết từ phải sang trái không?",
+     "a": "Có. Văn bản tiếng Ả Rập, Ba Tư, Do Thái và Kurd được nhận diện, và sách được đặt để đọc từ phải sang trái."
+    }
+   ]
+  },
+  "epub-to-pdf": {
+   "name": "ePub sang PDF",
+   "short": "Chuyển sách điện tử ePub thành PDF để in hoặc chia sẻ.",
+   "action": "Chuyển sang PDF",
+   "title": "Chuyển ePub sang PDF miễn phí, không tải lên",
+   "description": "Chuyển sách điện tử ePub sang PDF trong trình duyệt, giữ phông chữ, kiểu dáng và hình ảnh của sách. Chọn A5, A4 hoặc Letter. Không có gì bị tải lên.",
+   "h1": "Chuyển ePub sang PDF",
+   "howTo": "Cách chuyển ePub sang PDF",
+   "lead": "In sách điện tử, hoặc chia sẻ cho người không có ứng dụng đọc sách. Các trang giữ phông chữ, kiểu dáng và hình ảnh của sách.",
+   "steps": [
+    "Chọn hoặc thả tệp ePub vào.",
+    "Chọn khổ trang và cỡ chữ.",
+    "Chọn Chuyển sang PDF rồi lưu tệp."
+   ],
+   "sections": [
+    {
+     "h": "Cách dàn trang",
+     "p": "Mỗi chương bắt đầu ở một trang mới và kéo dài qua bao nhiêu trang cần thiết, với phông chữ và kiểu dáng mà cuốn sách được tạo ra. A5 gần với sách bỏ túi; A4 và Letter in trên giấy tiêu chuẩn."
+    },
+    {
+     "h": "Nên biết",
+     "p": "Các trang được lưu dưới dạng hình ảnh độ phân giải cao, nên in sắc nét và hiển thị giống hệt nhau ở mọi nơi, nhưng không thể chọn hay tìm kiếm văn bản. Sách có DRM (bảo vệ bản quyền) không thể mở được."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi chuyển ePub sang PDF không?",
+     "a": "Không. Scissor PDF chuyển đổi tệp ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, chuyển đổi tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể chuyển một cuốn sách đã mua không?",
+     "a": "Chỉ khi sách không có DRM. Hầu hết các cửa hàng đều bảo vệ sách của họ, và không trình chuyển đổi nào mở được tệp đã bảo vệ nếu không có ứng dụng của cửa hàng."
+    },
+    {
+     "q": "Tôi có thể chọn văn bản trong PDF không?",
+     "a": "Không. Mỗi trang được lưu dưới dạng hình ảnh, nhờ đó bố cục giữ chính xác trên mọi trình xem."
+    },
+    {
+     "q": "Tôi nên chọn khổ trang nào?",
+     "a": "A5 để đọc trên màn hình hoặc in thành sách nhỏ; A4 hoặc Letter cho máy in thông thường."
     }
    ]
   },
@@ -2299,6 +2386,288 @@
      "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
     }
    ]
+  },
+  "add-bookmarks-to-pdf": {
+   "name": "Thêm dấu trang vào PDF",
+   "short": "Thêm, đổi tên và sắp xếp lại các dấu trang liên kết tới từng trang.",
+   "action": "Lưu dấu trang",
+   "title": "Thêm dấu trang vào PDF miễn phí, không tải lên",
+   "description": "Thêm dấu trang (bookmark) vào PDF ngay trong trình duyệt. Nhấp vào trang, nhập tiêu đề và lưu mục lục bấm được. Tệp không bao giờ bị tải lên. Miễn phí.",
+   "h1": "Thêm dấu trang vào PDF",
+   "howTo": "Cách thêm dấu trang vào PDF",
+   "lead": "Tạo cho tài liệu dài một mục lục bấm được ở thanh bên, để người đọc nhảy thẳng tới từng chương hay từng phần. Tệp của bạn luôn nằm trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tệp PDF. Các dấu trang có sẵn sẽ hiện trong danh sách.",
+    "Nhấp vào một trang hoặc chọn Thêm dấu trang, nhập tiêu đề và chỉnh số trang nếu cần. Xóa những mục bạn không muốn giữ.",
+    "Chọn Lưu dấu trang và tải kết quả về."
+   ],
+   "sections": [
+    {
+     "h": "Dấu trang được lưu như thế nào",
+     "p": "Khi lưu, dấu trang của PDF được thay bằng danh sách bạn đang thấy, ở một cấp duy nhất. Tệp cũng được đặt để mở sẵn bảng dấu trang, ở những trình đọc hỗ trợ việc này. Tiêu đề có thể viết bằng bất kỳ ngôn ngữ nào."
+    },
+    {
+     "h": "Chỉ một cấp",
+     "p": "Không hỗ trợ dấu trang lồng nhau, chẳng hạn các mục nhỏ bên trong một chương. Khi mở tệp, chỉ dấu trang cấp cao nhất được hiển thị, và nếu tệp có dấu trang lồng nhau, chúng sẽ bị thay bằng danh sách phẳng của bạn khi lưu. Hãy giữ bản gốc nếu bạn còn cần chúng."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi thêm dấu trang vào PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể sửa các dấu trang đã có trong PDF không?",
+     "a": "Có. Các dấu trang cấp cao nhất có sẵn sẽ hiện trong danh sách, nơi bạn có thể đổi tên, đổi số trang hoặc xóa chúng."
+    },
+    {
+     "q": "Tôi có thể tạo dấu trang lồng nhau không?",
+     "a": "Không. Dấu trang được lưu thành một danh sách phẳng. Mọi dấu trang lồng nhau trong tệp gốc sẽ bị thay thế khi bạn lưu."
+    },
+    {
+     "q": "Sao dấu trang không hiện ra khi tôi mở tệp?",
+     "a": "Tệp yêu cầu trình đọc hiển thị bảng dấu trang, nhưng không phải trình đọc nào cũng làm theo. Hãy mở thanh bên hoặc chế độ xem dấu trang trong trình đọc của bạn để thấy chúng."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "add-background-to-pdf": {
+   "name": "Thêm nền vào PDF",
+   "short": "Đặt giấy tiêu đề hoặc một PDF làm nền phía sau các trang.",
+   "action": "Thêm nền",
+   "title": "Chèn giấy tiêu đề vào PDF, không cần tải lên",
+   "description": "Đặt giấy tiêu đề hoặc một PDF làm nền phía sau mọi trang tài liệu, ngay trong trình duyệt. Chữ vẫn sắc nét và tìm kiếm được. Không tải lên.",
+   "h1": "Thêm giấy tiêu đề hoặc nền vào PDF",
+   "howTo": "Cách thêm nền vào PDF",
+   "lead": "Đặt giấy tiêu đề hoặc mẫu giấy in của công ty phía sau thư, hóa đơn hay báo cáo bạn soạn ở nơi khác. Cả hai tệp đều nằm trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tài liệu của bạn, rồi đến PDF làm nền, ví dụ giấy tiêu đề của bạn.",
+    "Chọn đặt nền trên mọi trang hay chỉ trang đầu, và đặt nó phía sau nội dung hay phía trên.",
+    "Chọn Thêm nền và tải kết quả về."
+   ],
+   "sections": [
+    {
+     "h": "Nền được đặt như thế nào",
+     "p": "Trang đầu tiên của PDF làm nền được vẽ lên từng trang tài liệu của bạn, kéo giãn cho vừa trang đó. Để có kết quả tốt nhất, hãy dùng nền có cùng khổ trang với tài liệu, chẳng hạn A4 hoặc Letter."
+    },
+    {
+     "h": "Phía sau hay phía trên",
+     "p": "Mặc định, nền nằm phía sau nội dung, giống như in lên giấy đã in sẵn tiêu đề. Chọn lớp phủ để vẽ nền lên trên, hữu ích khi tài liệu có nền trắng đặc che mất nó. Dù chọn cách nào, chữ của bạn vẫn sắc nét và tìm kiếm được."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi thêm nền vào PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể dùng gì làm nền?",
+     "a": "Bất kỳ PDF nào. Chỉ trang đầu tiên của nó được dùng. Giấy tiêu đề xuất ra PDF từ Word, Pages hay một ứng dụng thiết kế đều dùng tốt."
+    },
+    {
+     "q": "Sao tôi không thấy nền?",
+     "a": "Một số tài liệu có lớp tô trắng đặc trên mọi trang, che mất mọi thứ phía sau. Hãy chọn lớp phủ để vẽ nền lên trên."
+    },
+    {
+     "q": "Tôi có thể dùng ảnh làm nền không?",
+     "a": "Hãy chuyển ảnh thành PDF bằng JPG sang PDF hoặc PNG sang PDF trước, rồi dùng tệp đó làm nền."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "stamp-pdf": {
+   "name": "Đóng dấu PDF",
+   "short": "Đóng dấu Đã duyệt, Đã thanh toán, Bản nháp và các dấu khác có ghi ngày.",
+   "action": "Lưu con dấu",
+   "title": "Đóng dấu PDF miễn phí, không cần tải lên",
+   "description": "Đóng dấu Đã duyệt, Từ chối, Đã thanh toán, Đã nhận, Bản nháp hoặc Mật kèm ngày hôm nay lên PDF, ngay trong trình duyệt. Không tải lên. Miễn phí.",
+   "h1": "Đóng dấu PDF",
+   "howTo": "Cách đóng dấu PDF",
+   "lead": "Đánh dấu hóa đơn là đã thanh toán, hợp đồng là đã duyệt hay tài liệu là bản nháp, kèm theo ngày. Tệp của bạn luôn nằm trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tệp PDF.",
+    "Chọn một con dấu và đặt lên trang bất kỳ. Kéo tới vị trí mong muốn và chỉnh kích thước.",
+    "Chọn Lưu con dấu và tải kết quả về."
+   ],
+   "sections": [
+    {
+     "h": "Con dấu có sẵn",
+     "p": "Chọn từ Đã duyệt, Từ chối, Đã thanh toán, Đã nhận, Bản nháp, Mật, Bản cuối và Bản sao. Mỗi con dấu có ghi ngày hôm nay, và bạn có thể thêm bao nhiêu tùy thích, trên bất kỳ trang nào."
+    },
+    {
+     "h": "Thành một phần của trang",
+     "p": "Con dấu trở thành một phần của trang, không phải bình luận riêng. Chúng hiển thị giống nhau ở mọi trình đọc và khi in, nhưng sau này không thể gỡ bằng công cụ chú thích. Hãy giữ bản gốc nếu bạn có thể cần bản chưa đóng dấu."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi đóng dấu PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Có những con dấu nào?",
+     "a": "Đã duyệt, Từ chối, Đã thanh toán, Đã nhận, Bản nháp, Mật, Bản cuối và Bản sao, mỗi dấu đều kèm ngày hôm nay."
+    },
+    {
+     "q": "Tôi có thể tự viết chữ cho con dấu không?",
+     "a": "Công cụ này thì không. Hãy dùng Thêm chữ vào PDF để viết nội dung riêng, hoặc Chèn watermark PDF để đặt chữ trên mọi trang."
+    },
+    {
+     "q": "Sau này tôi có gỡ con dấu được không?",
+     "a": "Không gỡ được khỏi tệp đã lưu, vì con dấu đã là một phần của trang. Hãy giữ bản gốc nếu bạn cần bản sạch."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "draw-on-pdf": {
+   "name": "Vẽ lên PDF",
+   "short": "Vẽ tự do trên bất kỳ trang nào bằng ngón tay, bút hoặc chuột.",
+   "action": "Lưu bản vẽ",
+   "title": "Vẽ lên PDF miễn phí, không cần tải lên",
+   "description": "Vẽ tự do lên PDF ngay trong trình duyệt bằng ngón tay, Apple Pencil, trackpad hoặc chuột. Chọn màu và độ dày nét. Không tải lên. Miễn phí.",
+   "h1": "Vẽ lên PDF",
+   "howTo": "Cách vẽ lên PDF",
+   "lead": "Khoanh tròn một chi tiết, vẽ mũi tên, đánh dấu bản vẽ mặt bằng hoặc viết tay một ghi chú nhanh. Tệp của bạn luôn nằm trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tệp PDF.",
+    "Chọn màu và độ dày nét, rồi vẽ lên trang bất kỳ. Hoàn tác nét vừa vẽ hoặc xóa sạch một trang nếu cần.",
+    "Chọn Lưu bản vẽ và tải kết quả về."
+   ],
+   "sections": [
+    {
+     "h": "Bút và màu",
+     "p": "Vẽ bằng màu đen, xanh dương, đỏ hoặc vàng, với độ dày nét bạn chọn. Dùng được bằng ngón tay, Apple Pencil, trackpad hoặc chuột. Trên điện thoại, chuyển qua lại giữa Vẽ và Cuộn để lướt tài liệu mà không để lại nét vẽ."
+    },
+    {
+     "h": "Thành một phần của trang",
+     "p": "Bản vẽ của bạn trở thành một phần của trang, không phải bình luận riêng. Nó hiển thị giống nhau ở mọi trình đọc và khi in, nhưng sau này không thể gỡ bằng công cụ chú thích. Hãy giữ bản gốc nếu bạn có thể muốn một bản sạch."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi vẽ lên PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Tôi có thể vẽ trên điện thoại hoặc iPad không?",
+     "a": "Có. Vẽ bằng ngón tay hoặc Apple Pencil. Trên điện thoại, chuyển sang Cuộn để lướt qua các trang, rồi quay lại Vẽ để đánh dấu."
+    },
+    {
+     "q": "Làm sao sửa khi vẽ nhầm?",
+     "a": "Hoàn tác xóa nét vẽ cuối cùng. Xóa hết xóa mọi thứ bạn đã vẽ trên trang hiện tại."
+    },
+    {
+     "q": "Tôi có thể xóa bản vẽ sau khi lưu không?",
+     "a": "Không. Sau khi lưu, bản vẽ đã là một phần của trang. Hãy giữ bản gốc nếu bạn cần bản chưa đánh dấu."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "whiteout-pdf": {
+   "name": "Tô trắng PDF",
+   "short": "Che các phần của trang bằng ô màu trắng.",
+   "action": "Lưu vùng tô trắng",
+   "title": "Tô trắng PDF miễn phí, không cần tải lên",
+   "description": "Che các phần của trang PDF bằng ô trắng ngay trong trình duyệt, ví dụ để xóa trắng một ô trước khi điền lại. Không tải lên. Miễn phí.",
+   "h1": "Tô trắng PDF",
+   "howTo": "Cách tô trắng PDF",
+   "lead": "Xóa trắng một ô đã điền để điền lại, hoặc che một ghi chú, con dấu hay ngày cũ in sẵn. Hoạt động như bút xóa, ngay trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tệp PDF.",
+    "Vẽ các ô trắng lên những phần bạn muốn che, trên trang bất kỳ. Kéo và chỉnh kích thước cho vừa.",
+    "Chọn Lưu vùng tô trắng và tải kết quả về."
+   ],
+   "sections": [
+    {
+     "h": "Giống như bút xóa",
+     "p": "Mỗi ô che phần bên dưới bằng màu trắng trơn, nên chỗ đó trên trang trông như để trống. Sau đó bạn có thể thêm chữ mới vào đó bằng Thêm chữ vào PDF, hoặc in trang ra và viết lên."
+    },
+    {
+     "h": "Tô trắng không phải che thông tin",
+     "p": "Tô trắng chỉ che nội dung về mặt hiển thị. Chữ bên dưới vẫn còn trong tệp và có thể được sao chép, tìm kiếm hoặc khôi phục. Để xóa vĩnh viễn tên, số hay thông tin nhạy cảm khác, hãy dùng Che thông tin PDF."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi tô trắng PDF không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Chữ bị che có bị xóa khỏi tệp không?",
+     "a": "Không. Chữ chỉ bị ẩn khỏi tầm nhìn nhưng vẫn còn trong tệp, nơi nó có thể được sao chép hoặc tìm thấy bằng tìm kiếm. Hãy dùng Che thông tin PDF để xóa hẳn thông tin nhạy cảm."
+    },
+    {
+     "q": "Tôi có thể gõ chữ mới lên ô trắng không?",
+     "a": "Có. Lưu vùng tô trắng, rồi mở kết quả bằng Thêm chữ vào PDF và gõ vào chỗ trống."
+    },
+    {
+     "q": "Có dùng được với tài liệu scan không?",
+     "a": "Có. Các ô trắng che mọi thứ trong vùng đó, dù là chữ hay một phần ảnh scan."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
+  },
+  "split-pdf-at-blank-pages": {
+   "name": "Tách PDF tại trang trống",
+   "short": "Tách bản scan hàng loạt thành nhiều PDF tại mỗi trang trống.",
+   "action": "Tách tại trang trống",
+   "title": "Tách PDF tại trang trống, không cần tải lên",
+   "description": "Tách PDF scan hàng loạt thành nhiều tệp ở mỗi trang trống ngăn cách, ngay trong trình duyệt. Trang trống được bỏ đi. Không có gì bị tải lên.",
+   "h1": "Tách PDF tại trang trống",
+   "howTo": "Cách tách PDF tại trang trống",
+   "lead": "Scan cả chồng tài liệu một lượt với một tờ giấy trắng chèn giữa mỗi tài liệu, rồi biến bản scan thành mỗi tài liệu một PDF. Tệp của bạn luôn nằm trên thiết bị của bạn.",
+   "steps": [
+    "Chọn hoặc kéo thả tệp PDF đã scan. Mọi trang đều được kiểm tra, và các trang trống được hiển thị.",
+    "Xem lại lựa chọn, rồi thêm hoặc bỏ những trang cần được tính là trang ngăn cách.",
+    "Chọn Tách tại trang trống và tải về tệp ZIP chứa mỗi tài liệu một PDF."
+   ],
+   "sections": [
+    {
+     "h": "Dành cho scan hàng loạt",
+     "p": "Chèn một tờ giấy trắng giữa các tài liệu trong khay nạp giấy của máy scan và scan tất cả thành một PDF. Tài liệu được tách tại mỗi trang trống, bản thân các trang trống được bỏ đi, và các tệp riêng được tải về cùng nhau trong một tệp ZIP."
+    },
+    {
+     "h": "Kiểm tra lựa chọn",
+     "p": "Trang trống được nhận diện dựa trên hình thức, nên một trang rất nhạt có thể bị coi là trống, còn tờ ngăn cách có vết bẩn hoặc nhiễu từ máy scan có thể bị bỏ sót. Hãy xem lại các trang đã chọn trước khi tách. Mọi trang đều được hiển thị trong trình duyệt của bạn, nên bản scan dài có thể mất một lúc."
+    }
+   ],
+   "faqs": [
+    {
+     "q": "Tệp của tôi có bị tải lên khi tách PDF tại trang trống không?",
+     "a": "Không. Scissor PDF chạy một công cụ PDF viết bằng Rust và biên dịch sang WebAssembly ngay trong tab trình duyệt của bạn. Tệp được đọc từ ổ đĩa vào bộ nhớ của trang, xử lý tại đó rồi lưu lại về thiết bị của bạn. Trang web không có điểm nhận tải lên (upload endpoint), và Content Security Policy của trang chặn không cho gửi dữ liệu tới bất kỳ máy chủ nào khác."
+    },
+    {
+     "q": "Trang trống được nhận diện như thế nào?",
+     "a": "Mỗi trang được hiển thị trong trình duyệt của bạn và kiểm tra xem bao nhiêu phần của nó để trống. Những trang trông như trống sẽ được chọn sẵn để bạn xem lại."
+    },
+    {
+     "q": "Nếu một trang bị nhận diện sai thì sao?",
+     "a": "Hãy đổi lựa chọn trước khi tách. Nhấp vào một trang để đánh dấu là trang ngăn cách, hoặc để bỏ đánh dấu."
+    },
+    {
+     "q": "Các trang trống có được giữ trong kết quả không?",
+     "a": "Không. Chúng chỉ dùng để xác định chỗ tách và được bỏ ra khỏi các tệp. Để xóa trang trống mà không tách, hãy dùng Xóa trang trống."
+    },
+    {
+     "q": "Có miễn phí không? Có cần tài khoản không?",
+     "a": "Hoàn toàn miễn phí, không cần tài khoản, không giới hạn số lần mỗi ngày và không chèn watermark vào tài liệu của bạn. Vì mọi xử lý diễn ra trên máy tính của bạn, chúng tôi không tốn chi phí máy chủ cho từng tệp nên chẳng cần thu lại."
+    }
+   ]
   }
  },
  "homeFaqs": [
@@ -2620,7 +2989,59 @@
   "studioClose": "Đóng {name}",
   "studioNoPdfs": "Không tìm thấy tệp PDF nào ở đó.",
   "studioHome": "Trang chủ Scissor PDF",
-  "studioSource": "Mã nguồn mở trên GitHub"
+  "studioSource": "Mã nguồn mở trên GitHub",
+  "studioOpenShort": "Mở",
+  "studioExtract": "Trích xuất",
+  "studioReorder": "Sắp xếp",
+  "studioSelected": "Đã chọn {pages}",
+  "studioRotateLeft": "Xoay trái",
+  "studioRotateRight": "Xoay phải",
+  "bookmarksSub": "Nhấp vào một trang để thêm dấu trang cho trang đó, rồi đặt tên.",
+  "bookmarkTitle": "Tiêu đề",
+  "bookmarkPage": "Trang",
+  "noBookmarks": "Chưa có dấu trang nào.",
+  "addBookmark": "Thêm dấu trang",
+  "backgroundSub": "Tệp thứ nhất: tài liệu của bạn. Tệp thứ hai: nền; trang đầu tiên của nó được dùng.",
+  "placement": "Vị trí",
+  "behind": "Phía sau nội dung",
+  "onTop": "Phía trên",
+  "firstPageOnly": "Trang đầu",
+  "stamps": "Con dấu",
+  "stampApproved": "ĐÃ DUYỆT",
+  "stampRejected": "TỪ CHỐI",
+  "stampPaid": "ĐÃ THANH TOÁN",
+  "stampReceived": "ĐÃ NHẬN",
+  "stampDraft": "BẢN NHÁP",
+  "stampConfidential": "MẬT",
+  "stampFinal": "BẢN CUỐI",
+  "stampCopy": "BẢN SAO",
+  "lineWidth": "Độ dày nét",
+  "touchMode": "Cảm ứng",
+  "drawMode": "Vẽ",
+  "scrollMode": "Cuộn",
+  "undoStroke": "Hoàn tác nét vẽ",
+  "clearAll": "Xóa hết",
+  "addWhiteout": "Thêm ô trắng",
+  "whiteoutHint": "Ô trắng chỉ che nội dung. Để xóa hẳn khỏi tệp, hãy dùng Che thông tin PDF.",
+  "splitBlankSub": "Các trang trống được chọn làm trang ngăn cách. Kiểm tra lại, rồi tách.",
+  "tabPages": "Trang",
+  "tabEdit": "Sửa",
+  "tabConvert": "Chuyển",
+  "tabSecure": "Bảo mật",
+  "studioNoTools": "Không có công cụ phù hợp",
+  "errChooseEpub": "Hãy chọn một tệp ePub (.epub).",
+  "toEpubSub": "Tạo sách điện tử mở được trên Apple Books, Kobo và các trình đọc khác.",
+  "epubLayout": "Bố cục",
+  "epubText": "Văn bản",
+  "epubPages": "Trang",
+  "epubTextHint": "Chữ tự dàn lại cho vừa mọi màn hình. Phù hợp nhất với sách và bài viết.",
+  "epubPagesHint": "Mỗi trang được giữ nguyên như bản gốc. Phù hợp nhất với tạp chí, slide và bản quét.",
+  "fromEpubSub": "Mỗi chương bắt đầu ở một trang mới, với phông chữ và hình ảnh của chính cuốn sách.",
+  "textSize": "Cỡ chữ",
+  "sizeSmall": "Nhỏ",
+  "sizeMedium": "Vừa",
+  "sizeLarge": "Lớn",
+  "errUnexpected": "Đã xảy ra lỗi. Tệp của bạn chưa bao giờ rời khỏi thiết bị này. Vui lòng thử lại."
  },
  "studio": {
   "title": "Scissor PDF: Mọi công cụ PDF trong một ứng dụng riêng tư",
